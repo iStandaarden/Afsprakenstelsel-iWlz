@@ -2,7 +2,7 @@
 
 Afsprakenset iWlz *op basis van registers*
 
-Zie publicatie https://zandbak_rr.gitlab.io/dummy2/ 
+Zie publicatie https://istandaarden.github.io/Afsprakenstelsel-iWlz/ 
 
 **Hier komt een andere inhoud en lokatie voor.**
 
