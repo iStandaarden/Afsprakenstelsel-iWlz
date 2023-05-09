@@ -19,4 +19,4 @@ Deze uitwerking is ook gebaseerd op de RFC008 in het afsprakenstelsel. Deze onde
 # 1. Notificatie of melding wat is het verschil
 
 
-<!-- ![Diagram Image Link](.puml/01-notif-melding.puml) -->
+<!-- ![Diagram Image Link](./puml/01-notif-melding.puml) -->
