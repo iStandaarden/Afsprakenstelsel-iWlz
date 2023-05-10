@@ -63,8 +63,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
-      - name: Plantuml for markdown
-        uses: alessandro-marcantoni/puml-markdown@v0.1.1
+
   # Deployment job
   deploy:
     environment:
