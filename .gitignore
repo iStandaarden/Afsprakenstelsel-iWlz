@@ -12,6 +12,9 @@
 .DS_Store
 .gitignore
 
+# complete python dir
+python/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
