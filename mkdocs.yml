@@ -1,0 +1,46 @@
+site_name: GitHub pages test Afsprakenstelsel iWlz Netwerkmodel
+site_url: https://afsprakenstelsel-iwlz-netwerkmodel.github.io/
+theme:
+  name: material
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: green
+      accent: deep orange
+  features:
+      - navigation.top
+      - navigation.sections
+      - navigation.instant
+      - navigation.tracking
+      - navigation.footer
+      - search.highlight
+      - search.suggest
+      - content.code.annotate
+      - content.code.copy
+      - content.tabs.link
+nav:
+  - Home: index.md
+  - Afsprakenstelsel iWlz Netwerkmodel:
+      - Inleiding: afsprakenstelsel-iwzl-netwerkmodel/inleiding.md
+      - Doel: afsprakenstelsel-iwzl-netwerkmodel/doel.md
+      - Scope: afsprakenstelsel-iwzl-netwerkmodel/scope.md
+      - Architectuur: afsprakenstelsel-iwzl-netwerkmodel/architectuur.md
+      - Implementatie: afsprakenstelsel-iwzl-netwerkmodel/implementatie.md
+      - Conclusie: afsprakenstelsel-iwzl-netwerkmodel/conclusie.md
+markdown_extensions: 
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
