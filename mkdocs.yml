@@ -2,22 +2,32 @@ site_name: GitHub pages test Afsprakenstelsel iWlz Netwerkmodel
 site_url: https://afsprakenstelsel-iwlz-netwerkmodel.github.io/
 theme:
   name: material
+  language: nl
   palette:
-    # Dark Mode
-    - scheme: slate
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/weather-sunny
-        name: Dark mode
-      primary: green
-      accent: deep purple
+        icon: material/brightness-auto
+        name: Switch to light mode
 
-    # Light Mode
-    - scheme: default
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
       toggle:
         icon: material/weather-night
-        name: Light mode
-      primary: green
+        name: Switch to dark mode
+      primary: custom
       accent: deep orange
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to system preference
+      primary: custom
+      accent: deep purple
+
   features:
       - navigation.top
       - navigation.sections
@@ -29,23 +39,35 @@ theme:
       - content.code.annotate
       - content.code.copy
       - content.tabs.link
-nav:
-  - Home: index.md
-  - Afsprakenstelsel iWlz Netwerkmodel:
-      - Inleiding: afsprakenstelsel-iwlz-netwerkmodel/inleiding.md
-      - Test: afsprakenstelsel-iwlz-netwerkmodel/Applicatie.md
-      - Applicatie: 
-          - Applicatie: Afsprakenstelsel-iWlz-netwerkmodel/Applicatie.md
-          - Applicatie-Componenten: Afsprakenstelsel-iWlz-netwerkmodel/Applicatie/Applicatiecomponenten.md
-          - Diensten: Afsprakenstelsel-iWlz-netwerkmodel/Applicatie/Diensten.md
-      - Doel: afsprakenstelsel-iwzl-netwerkmodel/doel.md
-      - Scope: afsprakenstelsel-iwzl-netwerkmodel/scope.md
-      - Architectuur: afsprakenstelsel-iwzl-netwerkmodel/architectuur.md
-      - Implementatie: afsprakenstelsel-iwzl-netwerkmodel/implementatie.md
-      - Conclusie: afsprakenstelsel-iwzl-netwerkmodel/conclusie.md
+      - content.tooltips
+      - toc.follow
+extra_css:
+  - css/zin.css
 markdown_extensions: 
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+nav:
+  - Introductie: index.md
+  - Inhoud:
+      - Inleiding: 
+          - Toelichting: afsprakenstelsel-iwlz-netwerkmodel/inleiding.md
+          - Achtergrond & Toelichting: afsprakenstelsel-iwlz-netwerkmodel/achtergrond-toelichting.md
+          - Governance: afsprakenstelsel-iwlz-netwerkmodel/governance.md
+          - Begrippenlijst: afsprakenstelsel-iwlz-netwerkmodel/begrippenlijst.md
+      - Organisatiebeleid:
+          - Toelichting: afsprakenstelsel-iwlz-netwerkmodel/organisatiebeleid.md
+      - Proces:
+          - Toelichting: afsprakenstelsel-iwlz-netwerkmodel/proces.md
+          - Netwerkfuncties: afsprakenstelsel-iwlz-netwerkmodel/proces/netwerkfuncties.md
+      - Applicatie: 
+          - Toelichting Applicatie: Afsprakenstelsel-iWlz-netwerkmodel/Applicatie.md
+          - Applicatie-Componenten: Afsprakenstelsel-iWlz-netwerkmodel/Applicatie/Applicatiecomponenten.md
+          - Diensten: Afsprakenstelsel-iWlz-netwerkmodel/Applicatie/Diensten.md
+      - Doel: afsprakenstelsel-iwzl-netwerkmodel/doel.md
+      - Scope: afsprakenstelsel-iwzl-netwerkmodel/scope.md
+      - Architectuur: afsprakenstelsel-iwzl-netwerkmodel/architectuur.md
+      - Implementatie: afsprakenstelsel-iwzl-netwerkmodel/implementatie.md
+
