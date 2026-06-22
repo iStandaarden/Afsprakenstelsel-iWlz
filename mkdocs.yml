@@ -55,10 +55,15 @@ theme:
 plugins:
   - search
   - glightbox
-  
+
 # Custom CSS
 extra_css:
   - css/zin.css
+
+# extra JavaScript
+extra_javascript:
+  - assets/js/svg-pan-zoom.min.js
+  - assets/js/mermaid-panzoom.js
 
 # Markdown extensions
 markdown_extensions: 
