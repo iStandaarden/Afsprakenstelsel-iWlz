@@ -18,15 +18,15 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     [:octicons-arrow-right-24: lees verder](applicatiecomponenten.md)
 
--   :fontawesome-brands-markdown:{ .lg .middle } __nID netwerkstelsel__
+-   :material-cloud-key:{ .lg .middle } __nID netwerkstelsel__
 
     ---
 
     Dit artikel beschrijft het nID netwerkstelsel en haar netwerkservices zoals autoriseren
 
-    [:octicons-arrow-right-24: Reference](#)
+    [:octicons-arrow-right-24: lees verder](#)
 
--   :material-format-font:{ .lg .middle } __Made to measure__
+-   :material-graphql:{ .lg .middle } __GraphQL over HTTP__
 
     ---
 
@@ -34,7 +34,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     [:octicons-arrow-right-24: Customization](#)
 
--   :material-scale-balance:{ .lg .middle } __Open Source, MIT__
+-   :material-flare:{ .lg .middle } __Tijdelijke voorziening: Silvester__
 
     ---
 
