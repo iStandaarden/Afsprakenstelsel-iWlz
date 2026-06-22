@@ -17,17 +17,16 @@ Het gaat bij het raadplegen van een register om:
 2. Valideren autorisatie door de PEP
 3. Valideren ingediende GraphQL-query door de [**PDP**](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23069870 "https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23069870")
   
-````markdown
+
 ```mermaid
 flowchart LR
     User --> App
     App --> API
     API --> Database
 ```
-````
 
 
-``` mermaid
+```mermaid
 sequenceDiagram
 
 box Deelnemer
