@@ -1,8 +1,12 @@
 site_name: Afsprakenstelsel iWlz Netwerkmodel
 site_url: https://istandaarden.github.io/Afsprakenstelsel-iWlz/
+repo_url: https://github.com/iStandaarden/Afsprakenstelsel-iWlz
+repo_name: iStandaarden/Afsprakenstelsel-iWlz
 theme:
   name: material
   language: nl
+  icon:
+    repo: fontawesome/brands/github
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
