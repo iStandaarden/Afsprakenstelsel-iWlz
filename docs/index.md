@@ -35,7 +35,7 @@ Het Afsprakenstelsel iWlz-netwerkmodel is opgebouwd uit verschillende lagen die 
   
 
 De structuur van het Afsprakenstelsel iWlz-netwerkmodel is hieronder schematisch weergegeven:
-![Structuur afsprakenstelsel iWlz-netwerkmodel](/docs/assets/img/lagen.png)
+![Structuur afsprakenstelsel iWlz-netwerkmodel](./assets/img/lagen.png)
 Structuur afsprakenstelsel iWlz-netwerkmodel
 
 ## 2. Voor wie?

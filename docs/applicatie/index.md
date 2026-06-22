@@ -16,7 +16,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     De applicatiecomponenten die nodig zijn voor de invulling van het iWlz-netwerkmodel
 
-    [:octicons-arrow-right-24: Getting started](#)
+    [:octicons-arrow-right-24: lees verder](applicatiecomponenten.md)
 
 -   :fontawesome-brands-markdown:{ .lg .middle } __nID netwerkstelsel__
 
@@ -42,10 +42,17 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     [:octicons-arrow-right-24: License](#)
 
-    :material-cog-sync-outline: { .lg .middel } __Diensten__
+-   :material-cog-sync-outline: { .lg .middel } __Diensten__
+
+    ---
 
     Diensten die van toepassing zijn in het iWlz-netwerk:
 
+    [:octicons-arrow-right-24: lees verder](./diensten/index.md)
+
+    [:octicons-arrow-right-24: direct naar notificeren en melden](./diensten/notificeren-en-melden.md)
+
+    
 
 
 </div>
