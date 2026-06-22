@@ -51,6 +51,11 @@ theme:
       - content.tooltips
       - toc.follow
 
+# plugins
+plugins:
+  - search
+  - glightbox
+  
 # Custom CSS
 extra_css:
   - css/zin.css
