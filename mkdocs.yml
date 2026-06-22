@@ -63,9 +63,9 @@ nav:
           - Toelichting: afsprakenstelsel-iwlz-netwerkmodel/proces.md
           - Netwerkfuncties: afsprakenstelsel-iwlz-netwerkmodel/proces/netwerkfuncties.md
       - Applicatie: 
-          - Toelichting Applicatie: Afsprakenstelsel-iWlz-netwerkmodel/Applicatie.md
-          - Applicatie-Componenten: Afsprakenstelsel-iWlz-netwerkmodel/Applicatie/Applicatiecomponenten.md
-          - Diensten: Afsprakenstelsel-iWlz-netwerkmodel/Applicatie/Diensten.md
+          - Toelichting: applicatie.md
+          - Applicatie-Componenten: afsprakenstelsel-iwlz-netwerkmodel/applicatie/applicatiecomponenten.md
+          - Diensten: afsprakenstelsel-iwlz-netwerkmodel/applicatie/Diensten.md
       - Doel: afsprakenstelsel-iwzl-netwerkmodel/doel.md
       - Scope: afsprakenstelsel-iwzl-netwerkmodel/scope.md
       - Architectuur: afsprakenstelsel-iwzl-netwerkmodel/architectuur.md
