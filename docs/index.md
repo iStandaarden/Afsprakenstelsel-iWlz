@@ -21,7 +21,7 @@
     Per artikel wordt indien relevant aangegeven welke onderdelen nog niet van toepassing zijn. Bij iedere volgende implementatiestap wordt het afsprakenstelsel geactualiseerd zodat duidelijk is welke onderdelen worden toegevoegd. 
 
 
-# 1\. Leeswijzer
+## 1\. Leeswijzer
 
 Het Afsprakenstelsel iWlz-netwerkmodel is opgebouwd uit verschillende lagen die de afspraken beschrijven die nodig zijn voor de totstandkoming, het uitvoeren en het beheer van het iWlz-netwerkmodel. Het [Nictiz interoperabiliteitsmodel](https://nictiz.nl/wat-we-doen/zorginformatiestelsel/interoperabiliteit/ "https://nictiz.nl/wat-we-doen/zorginformatiestelsel/interoperabiliteit/") is als basis voor deze structuur gekozen. Van boven naar onder worden de onderwerpen steeds specifieker. Het afsprakenstelsel bestaat uit de volgende lagen:
 
@@ -35,10 +35,10 @@ Het Afsprakenstelsel iWlz-netwerkmodel is opgebouwd uit verschillende lagen die 
   
 
 De structuur van het Afsprakenstelsel iWlz-netwerkmodel is hieronder schematisch weergegeven:
-![Structuur afsprakenstelsel iWlz-netwerkmodel](/docs/assets/img/lagen.png)
+![Structuur afsprakenstelsel iWlz-netwerkmodel](/assets/img/lagen.png)
 Structuur afsprakenstelsel iWlz-netwerkmodel
 
-# 2\. Voor wie?
+## 2\. Voor wie?
 
 Het Afsprakenstelsel iWlz-netwerkmodel is primair opgesteld voor de volgende doelgroepen:
 
@@ -51,7 +51,7 @@ Het Afsprakenstelsel iWlz-netwerkmodel is primair opgesteld voor de volgende doe
 
 > **N.B.:** Cliënten zijn deelnemers aan het iWlz-netwerkmodel maar het Afsprakenstelsel iWlz-netwerkmodel is niet primair voor deze doelgroep opgesteld.
 
-# 3\. Status implementatie iWlz-netwerkmodel
+## 3\. Status implementatie iWlz-netwerkmodel
 
 Het iWlz-netwerkmodel wordt incrementeel geïmplementeerd aan de hand van het Afsprakenstelsel iWlz-netwerkmodel. Het eerste deel dat is geïmplementeerd is het Indicatieregister. Vanaf 16-01-2025 is Indicatieregister 2 van toepassing. Voor deze tussenstap is het Afsprakenstelsel iWlz-netwerkmodel bijgewerkt in januari 2025 vanwege een aantal elementaire aanpassingen in de werking van de basisinfrastructuur.
 
@@ -59,7 +59,7 @@ Het Bemiddelingsregister wordt toegevoegd per april 2026. Met de december 2025 r
 
 In de [release notes](https://wlz.atlassian.net/wiki/spaces/IWLZAS/overview#5.-Release-notes "https://wlz.atlassian.net/wiki/spaces/IWLZAS/overview#5.-Release-notes") is per artikel aangegeven wat deze wijzigingen zijn. Hierin is ook aangegeven welke artikelen zijn komen te vervallen.
 
-# 4\. Navigatietips
+## 4\. Navigatietips
 
 * **Inhoudsopgave**  
   Aan de linkerkant van het scherm staat de inhoudsopgave. Door op de pijltjes te klikken worden onderliggende artikelen zichtbaar. Door op de naam van een artikel te klikken wordt het desbetreffende artikel geopend. Het is ook mogelijk om de inhoudsopgave tijdelijk te verbergen door **CTRL + \[** in te toetsen, hiermee kan de inhoudsopgave ook weer worden teruggehaald.
@@ -71,9 +71,9 @@ In de [release notes](https://wlz.atlassian.net/wiki/spaces/IWLZAS/overview#5.-R
   Wanneer je een link in een nieuw tabblad wilt openen, houd dan de CTRL-toets (Windows) of Command-toets (macOS) ingedrukt terwijl je op de link klikt.
   
 
-# 5\. Release notes
+## 5\. Release notes
 
-Release notes 17-12-2025:
+### Release notes 17-12-2025:
 
 | Laag | Status | Wijzigingen t.o.v. release 09-04-2025 |
 | :-- | :-- | :-- |
@@ -85,7 +85,7 @@ Release notes 17-12-2025:
 | IT-infrastructuur | Definitief | Identificatie & authenticatie: geactualiseerd op basis artikelen Architectuur, Rollen en deelnemers en nID netwerkstelsel.Netwerk: nieuw artikel.Logging: nieuw artikel op basis van RFC0022a - Tracelogging - TraceID en SpanID. |
 | Uitwisselprofielen | Definitief | Uitwisselprofiel Indicatie: qua structuur in lijn gebracht met Uitwisselprofiel Bemiddeling.Uitwisselprofiel Bemiddeling: nieuw artikel. |
 
-Release notes 09-04-2025
+### Release notes 09-04-2025
 
 | Laag | Status | Wijzigingen t.o.v. release 17-01-2025 |
 | :-- | :-- | :-- |
@@ -93,7 +93,7 @@ Release notes 09-04-2025
 | Applicatie | Definitief | Notificeren: Verwijzingen geactualiseerd naar het informatiemodel. |
 | Uitwisselprofielen | Definitief | Uitwisselprofiel Indicatie: Verwijzingen geactualiseerd (van informatiemodel naar GitHub). |
 
-Release notes 17-01-2025
+### Release notes 17-01-2025
 
 | Laag | Status | Wijzigingen t.o.v. release 25-05-2023 |
 | :-- | :-- | :-- |
@@ -106,12 +106,11 @@ Release notes 17-01-2025
 | IT-infrastructuur | ​Definitief | Geen wijziging |
 | Uitwisselprofielen | Definitief | Uitwisselprofiel Indicatie: update n.a.v. Indicatie 2. |
 
-# 6\. Colofon
+## 6\. Colofon
 
 | Titel | Afsprakenstelsel iWlz-netwerkmodel |
 | :-- | :-- |
 | Publicatiedatum | 17 december 2025 (grote publicatie: update vanwege toevoeging Bemiddelingsregister)4 april 2025 (technische publicatie: update vanwege aanpassen externe links)17 januari 2025 (beperkte publicatie: update vanwege een aantal elementaire aanpassingen in de werking van de basisinfrastructuur)25 mei 2023 (grote publicatie: oorspronkelijke publicatiedatum) |
 | Auteurs | Het Afsprakenstelsel iWlz-netwerkmodel is opgesteld door het Actieprogramma iWlz in samenwerking met technisch en inhoudelijk experts, beleidsmedewerkers en juristen van betrokken partijen. |
-| Contact | Zorginstituut NederlandPostbus 3201110 AH Diemen​ |
+| Contact | Zorginstituut Nederland Postbus 320 1110 AH Diemen​ |
 
-* * *
