@@ -73,16 +73,17 @@ markdown_extensions:
 # Navigation structure
 nav:
   - Welkom: index.md
-  - Inleiding: 
-      - Toelichting: afsprakenstelsel-iwlz-netwerkmodel/inleiding.md
-      - Achtergrond & Toelichting: afsprakenstelsel-iwlz-netwerkmodel/achtergrond-toelichting.md
-      - Governance: afsprakenstelsel-iwlz-netwerkmodel/governance.md
-      - Begrippenlijst: afsprakenstelsel-iwlz-netwerkmodel/begrippenlijst.md
+  - Inleiding:
+      - inleiding/index.md 
+      # - Toelichting: afsprakenstelsel-iwlz-netwerkmodel/inleiding.md
+      # - Achtergrond & Toelichting: afsprakenstelsel-iwlz-netwerkmodel/achtergrond-toelichting.md
+      # - Governance: afsprakenstelsel-iwlz-netwerkmodel/governance.md
+      # - Begrippenlijst: afsprakenstelsel-iwlz-netwerkmodel/begrippenlijst.md
   - Organisatiebeleid:
-      - Toelichting: afsprakenstelsel-iwlz-netwerkmodel/organisatiebeleid.md
+      - organisatiebeleid/index.md
   - Proces:
-      - Toelichting: afsprakenstelsel-iwlz-netwerkmodel/proces.md
-      - Netwerkfuncties: afsprakenstelsel-iwlz-netwerkmodel/proces/netwerkfuncties.md
+      - proces/index.md
+      # - Netwerkfuncties: afsprakenstelsel-iwlz-netwerkmodel/proces/netwerkfuncties.md
   - Applicatie: 
       - applicatie/index.md
       - Applicatie-Componenten: applicatie/applicatiecomponenten.md
