@@ -1,23 +1,25 @@
 # Afsprakenstelsel iWlz-netwerkmodel 
 
 
-!!! note
+!!! info
     Versie: *17-12-2025* | Status: *Definitief*
 
 
-## Toelichting 
+!!! note
+    ## Toelichting 
 
-Dit is de introductiepagina van het Afsprakenstelsel iWlz-netwerkmodel. 
+    Dit is de introductiepagina van het Afsprakenstelsel iWlz-netwerkmodel. 
 
-Het iWlz-netwerkmodel biedt zorgaanbieders, zorgkantoren en andere partijen die actief zijn in de langdurige zorg de mogelijkheid om zorgadministratieve gegevens direct bij de bron te raadplegen. Deze gegevens worden opgeslagen bij de bronhouder en zijn beschikbaar voor aangesloten partijen (afnemers). Met de invoering van het iWlznetwerkmodel beogen partijen in de langdurige zorg de administratieve lasten te verminderen, de informatiepositie van cliënten te verbeteren en de kwaliteit van de dienstverlening te verhogen. 
+    Het iWlz-netwerkmodel biedt zorgaanbieders, zorgkantoren en andere partijen die actief zijn in de langdurige zorg de mogelijkheid om zorgadministratieve gegevens direct bij de bron te raadplegen. Deze gegevens worden opgeslagen bij de bronhouder en zijn beschikbaar voor aangesloten partijen (afnemers). Met de invoering van het iWlznetwerkmodel beogen partijen in de langdurige zorg de administratieve lasten te verminderen, de informatiepositie van cliënten te verbeteren en de kwaliteit van de dienstverlening te verhogen. 
 
-Het afsprakenstelsel heeft als doel deelnemers aan het iWlz-netwerkmodel op een uniforme en eenduidige wijze te informeren over de geldende afspraken, procedures en regels. Het vormt daarmee de basis voor samenwerking en gegevensuitwisseling binnen het iWlz-netwerkmodel. 
+    Het afsprakenstelsel heeft als doel deelnemers aan het iWlz-netwerkmodel op een uniforme en eenduidige wijze te informeren over de geldende afspraken, procedures en regels. Het vormt daarmee de basis voor samenwerking en gegevensuitwisseling binnen het iWlz-netwerkmodel. 
 
-## Incrementele implementatie 
+!!! warning
+    ## Incrementele implementatie 
 
-Het iWlz-netwerkmodel wordt incrementeel geïmplementeerd aan de hand van het Afsprakenstelsel iWlz-netwerkmodel. Het eerste deel dat is geïmplementeerd is het Indicatieregister. Het tweede deel is het Bemiddelingsregister, wat naar verwachting per april 2026 operationeel wordt. 
+    Het iWlz-netwerkmodel wordt incrementeel geïmplementeerd aan de hand van het Afsprakenstelsel iWlz-netwerkmodel. Het eerste deel dat is geïmplementeerd is het Indicatieregister. Het tweede deel is het Bemiddelingsregister, wat naar verwachting per april 2026 operationeel wordt. 
 
-De implementatie van het iWlz-netwerkmodel vindt incrementeel plaats aan de hand van het afsprakenstelsel. Het eerste onderdeel dat in gebruik is genomen, betreft het Indicatieregister. Het tweede onderdeel, het Bemiddelingsregister, wordt naar verwachting in april 2026 operationeel. Deze versie van het Afsprakenstelsel iWlz-netwerkmodel is geactualiseerd ten behoeve van de implementatie van het Bemiddelingsregister. 
+    De implementatie van het iWlz-netwerkmodel vindt incrementeel plaats aan de hand van het afsprakenstelsel. Het eerste onderdeel dat in gebruik is genomen, betreft het Indicatieregister. Het tweede onderdeel, het Bemiddelingsregister, wordt naar verwachting in april 2026 operationeel. Deze versie van het Afsprakenstelsel iWlz-netwerkmodel is geactualiseerd ten behoeve van de implementatie van het Bemiddelingsregister. 
 
 Per artikel wordt indien relevant aangegeven welke onderdelen nog niet van toepassing zijn. Bij iedere volgende implementatiestap wordt het afsprakenstelsel geactualiseerd zodat duidelijk is welke onderdelen worden toegevoegd. 
 
