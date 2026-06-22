@@ -5,8 +5,7 @@
     Versie: *17-12-2025* | Status: *Definitief*
 
 
-!!! note
-    ## Toelichting 
+???+ note "Toelichting" 
 
     Dit is de introductiepagina van het Afsprakenstelsel iWlz-netwerkmodel. 
 
@@ -14,8 +13,7 @@
 
     Het afsprakenstelsel heeft als doel deelnemers aan het iWlz-netwerkmodel op een uniforme en eenduidige wijze te informeren over de geldende afspraken, procedures en regels. Het vormt daarmee de basis voor samenwerking en gegevensuitwisseling binnen het iWlz-netwerkmodel. 
 
-!!! warning
-    ## Incrementele implementatie 
+???+ warning "Incrementele implementatie" 
 
     Het iWlz-netwerkmodel wordt incrementeel geïmplementeerd aan de hand van het Afsprakenstelsel iWlz-netwerkmodel. Het eerste deel dat is geïmplementeerd is het Indicatieregister. Het tweede deel is het Bemiddelingsregister, wat naar verwachting per april 2026 operationeel wordt. 
 
@@ -23,19 +21,6 @@
 
 Per artikel wordt indien relevant aangegeven welke onderdelen nog niet van toepassing zijn. Bij iedere volgende implementatiestap wordt het afsprakenstelsel geactualiseerd zodat duidelijk is welke onderdelen worden toegevoegd. 
 
-## Inhoudsopgave: 
-
-1. Leeswijzer 
-
-2. Voor wie? 
-
-3. Status implementatie iWlz-netwerkmodel 
-
-4. Navigatietips 
-
-5. Release notes 
-
-6. Colofon 
 
 ## 1. Leeswijzer 
 
