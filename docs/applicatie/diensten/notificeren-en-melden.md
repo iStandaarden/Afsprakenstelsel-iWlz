@@ -1,39 +1,10 @@
 # Notificeren en Melden
 
-VERSIE: 17-12-2025 Status: Definitief
+!!! note
+    Versie: *17-12-2025* | Status: *Definitief*
 
-**Inhoudsopgave:**
 
-* 1 [1\. Inleiding](#1.-Inleiding)
-* 2 [2\. Generieke basis Notificeren en Melden](#2.-Generieke-basis-Notificeren-en-Melden)
-  * 2.1 [2.1 Notificeren en melden, wat is het verschil?](#2.1-Notificeren-en-melden%2C-wat-is-het-verschil%3F)
-  * 2.2 [2.2 Structuur notificatie of melding](#2.2-Structuur-notificatie-of-melding)
-    * 2.2.1 [2.2.1 Code afzenderIDType of ontvangerIDType](#2.2.1-Code-afzenderIDType-of-ontvangerIDType)
-  * 2.3 [2.3 GraphQL](#2.3-GraphQL)
-  * 2.4 [2.4 Specifieke autorisatiemeldingen](#2.4-Specifieke-autorisatiemeldingen)
-* 3 [3\. Notificaties](#3.-Notificaties)
-  * 3.1 [3.1 Doel notificatie](#3.1-Doel-notificatie)
-  * 3.2 [3.2 Uitgangspunten notificaties](#3.2-Uitgangspunten-notificaties)
-  * 3.3 [3.3 Typen notificatie](#3.3-Typen-notificatie)
-  * 3.4 [3.4 Scopes voor notificeren](#3.4-Scopes-voor-notificeren)
-  * 3.5 [3.5 Sequentiediagram notificeren](#3.5-Sequentiediagram-notificeren)
-  * 3.6 [3.6 Voorbeeld van notificatie](#3.6-Voorbeeld-van-notificatie)
-    * 3.6.1 [3.6.1 Voorbeeld van GraphQL mutation: zendNotificatie](#3.6.1-Voorbeeld-van-GraphQL-mutation%3A-zendNotificatie)
-    * 3.6.2 [3.6.2 Voorbeeld input parameters](#3.6.2-Voorbeeld-input-parameters)
-    * 3.6.3 [3.6.3 Voorbeeld response](#3.6.3-Voorbeeld-response)
-* 4 [4\. Meldingen](#4.-Meldingen)
-  * 4.1 [4.1 Doel melding](#4.1-Doel-melding)
-  * 4.2 [4.2 Uitgangspunten meldingen](#4.2-Uitgangspunten-meldingen)
-  * 4.3 [4.3 Typen melding](#4.3-Typen-melding)
-  * 4.4 [4.4 Scopes voor melden](#4.4-Scopes-voor-melden)
-  * 4.5 [4.5 Sequentiediagram melden](#4.5-Sequentiediagram-melden)
-  * 4.6 [4.6 Implementatie foutmelding binnen het iWlz netwerkmodel](#4.6-Implementatie-foutmelding-binnen-het-iWlz-netwerkmodel)
-  * 4.7 [4.7 Voorbeeld iWlz foutmelding](#4.7-Voorbeeld-iWlz-foutmelding)
-    * 4.7.1 [4.7.1 Voorbeeld van GraphQL mutation: zendMelding](#4.7.1-Voorbeeld-van-GraphQL-mutation%3A-zendMelding)
-    * 4.7.2 [4.7.2 Voorbeeld Input variabelen afzender is de (fout-)melder zelf:](#4.7.2-Voorbeeld-Input-variabelen-afzender-is-de-\(fout-\)melder-zelf%3A)
-    * 4.7.3 [4.7.3 Voorbeeld response:](#4.7.3-Voorbeeld-response%3A)
-
-# 1\. Inleiding
+## 1. Inleiding
 
 Binnen het iWlz-netwerkmodel werken we met generieke technische oplossingen en contracten om minimaal afhankelijk te zijn van gezamenlijke releases. Daarom werken we bijvoorbeeld met GraphQL, zodat het uitleveren van extra gegevens via een register geen impact heeft op de overige deelnemers aan het netwerk.
 
@@ -45,11 +16,11 @@ Andersom kan een deelnemer ook de bronhouder voorzien van (nieuwe) informatie. I
 
 Dit artikel beschrijft de werking van notificeren en melden in het iWlz-netwerkmodel.
 
-# 2\. Generieke basis Notificeren en Melden
+## 2. Generieke basis Notificeren en Melden
 
 De basis voor een **notificatie** of een **melding** is gelijk. Alleen op inhoud zijn er verschillen om duidelijk te maken met welke soort bericht er sprake is.
 
-## 2.1 Notificeren en melden, wat is het verschil?
+### 2.1 Notificeren en melden, wat is het verschil?
 
 image-20241212-151758.png openen
 
@@ -68,7 +39,7 @@ plantUML-source
 | Notificeren | Bronhouder | Deelnemer | Op de hoogte stellen van een deelnemer dat er nieuwe (of gewijzigde) informatie in een bron beschikbaar is die directe of afgeleide betrekking heeft op die deelnemer. |
 | Melden | Deelnemer | Bronhouder | Verzoek tot muteren of het beschikbaar stellen van nieuwe informatie naar aanleiding van een gebeurtenis van een deelnemer richting een bron. |
 
-## 2.2 Structuur notificatie of melding
+### 2.2 Structuur notificatie of melding
 
 Op basis van de inhoud van een notificatie moet de ontvanger van de notificatie onder andere kunnen bepalen:
 
@@ -121,7 +92,7 @@ Plantuml-source
 
 \*2 Datetime volgens ISO-8601 zie [![](https://en.wikipedia.org/static/favicon/wikipedia.ico)ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) en [DateTime — GraphQL Custom Scalar](https://scalars.graphql.org/andimarek/date-time). Formaat is bijvoorbeeld: *2016-07-20T17:30:15Z* of *2016-07-20T17:30:15+05:30* of *2016-07-20T17:30:15.234890+05:30.*
 
-### 2.2.1 Code afzenderIDType of ontvangerIDType
+#### 2.2.1 Code afzenderIDType of ontvangerIDType
 
 Voor het vullen van de afzenderIDType of ontvangerIDType zijn de volgende codes toegestaan:
 
@@ -134,7 +105,7 @@ Voor het vullen van de afzenderIDType of ontvangerIDType zijn de volgende codes 
 
 \* Op dit moment registreert VECOZO geen OIN bij overheidsorganisaties waardoor er geen claim kan worden afgegeven op basis van OIN. Bij de eerste implementatie van notificaties zal voor de identificatie van het CIZ het KVK-nummer (62253778) worden gebruikt.
 
-## 2.3 GraphQL
+### 2.3 GraphQL
 
 Binnen het iWlz Netwerk verlopen raadplegingen via GraphQL en zijn registers gedefinieerd door middel van GraphQL schema’s. Om uniformiteit binnen het netwerk te versterken is er daarom voor gekozen om voor notificeren of melden ook gebruik te maken van GraphQL.
 
@@ -142,7 +113,7 @@ Een notificatie of melding is technisch vormgegeven met de GraphQL-operatie “`
 
 In de onderdelen **Notificaties** en **Melden** is de toepassing van respectievelijk de GraphQL-operaties `zendMelding` en `zendNotificatie`.
 
-## 2.4 Specifieke autorisatiemeldingen
+### 2.4 Specifieke autorisatiemeldingen
 
 Het autorisatiemechanisme binnen nID is ontworpen om meldingen en notificaties op een consistente en betrouwbare manier te verzenden naar geautoriseerde partijen binnen de iWlz-keten. Dit proces wordt ondersteund door de GraphQL-operaties `zendMelding` en `zendNotificatie`, die verantwoordelijk zijn voor het initiëren van respectievelijk meldingen en notificaties.
 
@@ -174,15 +145,15 @@ plantUML-source diagram
 | 400 Bad Request GRAPHQL_VALIDATION_FAILED event_type is not valid | Het opgegeven event type komt niet voor in de lijst met toegestane types |
 | 400 Bad Request GRAPHQL_VALIDATION_FAILED ontvanger is not valid | De combinatie van ontvangerIDType en eventType is niet toegestaan |
 
-# 3\. Notificaties
+## 3. Notificaties
 
-## 3.1 Doel notificatie
+### 3.1 Doel notificatie
 
 Het doel van een notificatie is het op de hoogte stellen van een deelnemer door een bron over nieuwe (of gewijzigde) informatie die directe of afgeleide betrekking heeft op die deelnemer en daarmee de deelnemer in staat stellen op basis van die notificatie de nieuwe informatie te raadplegen. Een notificatie verloopt altijd van bronhouder naar deelnemer.
 
 De reden voor notificatie is altijd de registratie of wijziging van gegevens in een bronregister. Dit is de *notificatie-trigger* en beschrijft welk event op een register leidt tot een notificatie.
 
-## 3.2 Uitgangspunten notificaties
+### 3.2 Uitgangspunten notificaties
 
 * Notificaties worden gestuurd op basis van wettelijke en vrijwillige abonnementen. Vrijwillige abonnementen worden in deze release nog niet geïmplementeerd.
 * Een notificatie stelt de ontvanger in staat te bepalen welke informatie opgevraagd kan worden.
@@ -190,7 +161,7 @@ De reden voor notificatie is altijd de registratie of wijziging van gegevens in 
 * Er is een lijst beschikbaar met notificatie end-points. Dit is het tijdelijk adresboek wat later wordt vervangen door de generieke functie Adresboek zodra deze beschikbaar komt. Zie: [![](https://github.com/fluidicon.png)GitHub - iStandaarden/iWlz-adresboek-public: Tijdelijk alternatief voor ZorgAB aansluiting](https://github.com/iStandaarden/iWlz-adresboek-public)
   
 
-## 3.3 Typen notificatie
+### 3.3 Typen notificatie
 
 Er zijn twee typen notificaties gedefinieerd, waarbij het onderscheid zit in de vrijwilligheid van het ontvangen van de notificatie door een deelnemer of het noodzakelijk ontvangen van de notificatie door de deelnemer. Wanneer het voor de afgesproken werking van de iWlz noodzakelijk is een deelnemer van een event in een register op de hoogte te stellen is er sprake van een **verplichte** notificatie. Een bronhouder moet deze notificatie versturen en een deelnemer hoeft zich voor de deze notificatie niet te abonneren. Is voor een goede werking van de iWlz gewenst dat een deelnemer op de hoogte wordt gesteld van een event, maar niet noodzakelijk, dan hoeft een bronhouder een notificatie alleen te versturen wanneer de deelnemer zich heeft geabonneerd op deze notificatie (vrijwillige notificatie).
 
@@ -203,7 +174,7 @@ De twee typen iWlz notificaties zijn daarom:
 | Verplicht | Altijd, geen keuze deelnemer. De bronhouder is verplicht om de notificatie te verzenden. | Voor twee registers zijn verplichte notificaties gespecificeerd. Deze zijn beschikbaar op GitHub en per register via de volgende links te raadplegen:IndicatieregisterBemiddelingsregister |
 | Vrijwillig | Alleen aan abonnees, keuze voor het ontvangen ligt bij deelnemer. | In de eerste implementatie zal er alleen sprake zijn van iWlz-verplichte notificaties. Er zal geen functionaliteit worden ondersteund voor de iWlz-vrijwillige notificatie en er zal verder in dit artikel niet worden besproken. |
 
-## 3.4 Scopes voor notificeren
+### 3.4 Scopes voor notificeren
 
 Binnen het iWlz-netwerkmodel zijn er specifieke scopes gedefinieerd voor de dienst Notificeren. Deze scopes bepalen de rechten en acties die gebruikers mogen uitvoeren binnen het systeem. Elke scope is gekoppeld aan een specifieke resource en beschrijft welke acties geautoriseerd zijn.
 
@@ -212,7 +183,7 @@ Binnen het iWlz-netwerkmodel zijn er specifieke scopes gedefinieerd voor de dien
 | Zorgkantoor | organisaties/zorgkantoor/notificaties/notificatie:create | Geeft recht om een notificatie te sturen aan het zorgkantoor. |
 | Zorgaanbieder | organisaties/zorgaanbieder/notificaties/notificatie:create | Geeft recht om een notificatie te sturen aan een zorgaanbieder. |
 
-## 3.5 Sequentiediagram notificeren
+### 3.5 Sequentiediagram notificeren
 
 De flow beschrijft alleen het notificeren zelf. Voor het notificeren is autorisatie nodig. Het aanvragen van autorisatie en de daar bijhorende flow is beschreven in artikel [nID netwerkstelsel](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537 "https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537").
 
@@ -239,7 +210,7 @@ plantUML source sequentiediagram
 | GraphQL 200 response | Deelnemer stuurt ontvangst bevestiging |  |
 | Verwerk GraphQL 200 response | Bronhouder ontvangt en verwerkt de ontvangstbevestiging |  |
 
-## 3.6 Voorbeeld van notificatie
+### 3.6 Voorbeeld van notificatie
 
 **Scenario**: De registratie van een Wlz Indicatie leidt tot het moeten versturen van een notificatie.
 
@@ -250,7 +221,7 @@ plantUML source sequentiediagram
 | bepaal notificatietype | Het notificatietype is NIEUWE_INDICATIE_ZORKANTOOR dat verzonden moet worden aan het initieel verantwoordelijke zorgkantoor. |  |
 | genereer GraphQL notificatie | Onder andere het notificatietype NIEUWE_INDICATIE_ZORKANTOOR, de uzovicode van het initieel verantwoordelijke zorgkantoor en het wlzIndicatieID van de zojuist geregistreerde Wlz Indicatie zijn onderdeel van de notificatie |  |
 
-### 3.6.1 Voorbeeld van GraphQL mutation: `zendNotificatie`
+#### 3.6.1 Voorbeeld van GraphQL mutation: `zendNotificatie`
 
 Gebruik voor de notificatie de GraphQL mutation `zendNotificatie`uit het schema:
 
@@ -258,7 +229,7 @@ Gebruik voor de notificatie de GraphQL mutation `zendNotificatie`uit het schema:
 mutation zendNotificatie( $afzenderID: String! $afzenderIDType: IDTypeEnum! $eventType: String! $ontvangerID: String! $ontvangerIDType: IDTypeEnum! $timestamp: DateTime! $subjectList: [SubjectEntity!]! ) { zendNotificatie( notificatieInput: { afzenderID: $afzenderID afzenderIDType: $afzenderIDType eventType: $eventType ontvangerID: $ontvangerID ontvangerIDType: $ontvangerIDType timestamp: $timestamp subjectList: $subjectList } ) { notificatieID } }
 ```
 
-### 3.6.2 Voorbeeld input parameters
+#### 3.6.2 Voorbeeld input parameters
 
 Op basis van het scenario ziet het json-object met de input parameters er als volgt uit:
 
@@ -288,7 +259,7 @@ In dit voorbeeld zijn `subject` en `recordID` gelijk. Dit hoeft niet altijd zo t
 
 Ga voor meer over de specificaties van de notificaties naar de paragraaf over “Typen notificatie” en kies daar een register.
 
-### 3.6.3 Voorbeeld response
+#### 3.6.3 Voorbeeld response
 
 Voorbeeld succesvolle aflevering van de notificatie (non-normative):
 
@@ -302,19 +273,19 @@ Voorbeeld onsuccesvolle aflevering notificatie (non-normative):
 HTTP/1.1 400 Bad Request { "errors": [ { "message": "ZendNotificatie mutation: afzenderIDType is not valid", "extensions": { "code": "GRAPHQL_VALIDATION_FAILED" } } ] }
 ```
 
-# 4\. Meldingen
+## 4. Meldingen
 
-## 4.1 Doel melding
+### 4.1 Doel melding
 
 Door middel van een melding kan een raadpleger van een bron de bronhouder voorzien van nieuwe informatie die direct betrekking heeft op data in die bron. Een melding loopt altijd van deelnemer (raadpleger) naar een bronhouder.
 
-## 4.2 Uitgangspunten meldingen
+### 4.2 Uitgangspunten meldingen
 
 * Deze request for comments beschrijft het proces van meldingen en verschillende vormen. In de eerste implementatie zal alleen de foutmelding worden geïmplementeerd.
 * Er is een lijst beschikbaar met end-points voor meldingen. Dit is het tijdelijk adresboek wat later wordt vervangen door de generieke functie Adresboek zodra deze beschikbaar komt. Zie: [![](https://github.com/fluidicon.png)GitHub - iStandaarden/iWlz-adresboek-public: Tijdelijk alternatief voor ZorgAB aansluiting](https://github.com/iStandaarden/iWlz-adresboek-public)
   
 
-## 4.3 Typen melding
+### 4.3 Typen melding
 
 Er zijn drie typen van meldingen gedefinieerd aan de hand van de gestructureerdheid van de informatie in de melding en of die informatie direct betrekking heeft op gegevens in het register.
 
@@ -326,7 +297,7 @@ Er zijn drie typen van meldingen gedefinieerd aan de hand van de gestructureerdh
 
 De huidige uitwerking van **Meldingen** bevat alleen de implementatie van de **Foutmelding** voor gebruik binnen de **iStandaard iWlz.** In de uitwerking daarvan is rekening gehouden met gebruik van de Foutmeldingen binnen de andere iStandaarden en de implementatie van de overige twee type meldingen.
 
-## 4.4 Scopes voor melden
+### 4.4 Scopes voor melden
 
 Binnen het iWlz-netwerkmodel zijn er specifieke scopes gedefinieerd voor de dienst Melden. Deze scopes bepalen de rechten en acties die gebruikers mogen uitvoeren binnen het systeem. Elke scope is gekoppeld aan een specifieke resource en beschrijft welke acties geautoriseerd zijn.
 
@@ -336,7 +307,7 @@ Binnen het iWlz-netwerkmodel zijn er specifieke scopes gedefinieerd voor de dien
 | Zorgkantoor | organisaties/zorgkantoor/meldingen/melding:create | Geeft recht om een melding te sturen aan het zorgkantoor |
 | Zorgaanbieder | organisaties/zorgaanbieder/meldingen/melding:create | Geeft recht om een melding te sturen aan een zorgaanbieder |
 
-## 4.5 Sequentiediagram melden
+### 4.5 Sequentiediagram melden
 
 De hier beschreven flow beschrijft alleen het melden. Voor het melden is autorisatie nodig. Het aanvragen van autorisatie en de bijbehorende flow is beschreven in artikel [nID netwerkstelsel](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537 "https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537").
 
@@ -361,7 +332,7 @@ plantUML source
 | 07 | GraphQL 200 response | De bronhouder stuurt de ontvangstbevestiging aan deelnemer (via autorisatievoorziening) |
 | 08 | Verwerk response | Deelnemer verwerkt response |
 
-## 4.6 Implementatie foutmelding binnen het iWlz netwerkmodel
+### 4.6 Implementatie foutmelding binnen het iWlz netwerkmodel
 
 Voor het gebruik van de foutmelding binnen het iWlz-netwerkmodel is afgesproken dat de inhoud van het subject gevuld wordt met de foutcode van de regel die is overtreden. Binnen het iWlz-netwerkmodel zijn er twee typen regels die kunnen leiden tot foutmeldingen:
 
@@ -382,7 +353,7 @@ Op basis van de voorbeelden betekent dit dat bij foutmelding het subject GGR0001
 
 Naast deze twee typen regels zijn er ook *Uitgangspunten, Bedrijfsregels, Invulinstructies en Autorisatieregels*. Deze leiden niet tot een iWlz foutmelding.
 
-## 4.7 Voorbeeld iWlz foutmelding
+### 4.7 Voorbeeld iWlz foutmelding
 
 **Situatie**: In een door het zorgkantoor geraadpleegde Wlz indicatie voldoet in de klasse `Stoornis` de waarde van element `DiagnoseSubcodelijst` niet en overlappen periodes voor `GeindiceerdeZorgzwaartepakketten`.
 
@@ -393,7 +364,7 @@ Naast deze twee typen regels zijn er ook *Uitgangspunten, Bedrijfsregels, Invuli
 | bepaal foutcode(s) | Regel IRG0012 luidt: “DiagnoseSubcodelijst vullen conform opgegeven DiagnoseCodelijst". De iWlz Foutcode daarvan is “IRG0012”.Regel IRG0028 luidt: “Wanneer WlzIndicatie meer GeindiceerdeZorgzwaartepakketten bevat, dan mogen de geldigheidsduren van deze GeindiceerdeZorgzwaartepakketten elkaar niet overlappen”. De iWlz Foutcode daarvan is “IRG0028”. |  |
 | genereer GraphQL melding | Omdat het element niet afzonderlijk is te duiden, bevat het recordID de verwijzing naar het record in de klasse Stoornis, waar het element DiagnoseSubcodelijst onderdeel van is.Omdat niet duidelijk is welke van de aanwezig GeindiceerdeZorgzwaartepakketten foutief is, bevat het recordID de verwijzing naar het record van de parent-klasse Wlzindicatie. |  |
 
-### 4.7.1 Voorbeeld van GraphQL mutation: `zendMelding`
+#### 4.7.1 Voorbeeld van GraphQL mutation: `zendMelding`
 
 Gebruik voor de melding de GraphQL mutation `zendMelding` uit het schema.
 
@@ -401,7 +372,7 @@ Gebruik voor de melding de GraphQL mutation `zendMelding` uit het schema.
 mutation zendMelding( $timestamp: DateTime! $afzenderIDType: String! $afzenderID: String! $ontvangerIDType: String! $ontvangerID: String! $ontvangerKenmerk: String $eventType: String! $subjectList: [SubjectEntity!]! ) { zendMelding( meldingInput: { timestamp: $timestamp afzenderIDType: $afzenderIDType afzenderID: $afzenderID ontvangerIDType: $ontvangerIDType ontvangerID: $ontvangerID ontvangerKenmerk: $ontvangerKenmerk eventType: $eventType subjectList: $subjectList } ) { meldingID } }
 ```
 
-### 4.7.2 Voorbeeld Input variabelen afzender is de (fout-)melder zelf:
+#### 4.7.2 Voorbeeld Input variabelen afzender is de (fout-)melder zelf:
 
 Op basis van het scenario ziet het json-object met de input parameters er als volgt uit:
 
@@ -423,7 +394,7 @@ Toelichting:
 | ../subject | verwijzing naar de foutcode |
 | ../recordID | verwijzing naar het specifieke recordID waarop de fout is geconstateerd |
 
-### 4.7.3 Voorbeeld response:
+#### 4.7.3 Voorbeeld response:
 
 Voorbeeld succesvolle aflevering van de melding (non-normative)
 

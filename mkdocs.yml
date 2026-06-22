@@ -1,7 +1,12 @@
+# Site information
 site_name: Afsprakenstelsel iWlz Netwerkmodel
 site_url: https://istandaarden.github.io/Afsprakenstelsel-iWlz/
+
+# Repository information
 repo_url: https://github.com/iStandaarden/Afsprakenstelsel-iWlz
 repo_name: iStandaarden/Afsprakenstelsel-iWlz
+
+# Theme configuration
 theme:
   name: material
   language: nl
@@ -13,7 +18,6 @@ theme:
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
-
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default 
@@ -22,7 +26,6 @@ theme:
         name: Switch to dark mode
       primary: custom
       accent: deep orange
-
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -31,13 +34,15 @@ theme:
         name: Switch to system preference
       primary: custom
       accent: deep purple
-
   features:
       - navigation.top
       - navigation.sections
-      - navigation.instant
+      # - navigation.instant
       - navigation.tracking
       - navigation.footer
+      - navigation.tabs
+      - navigation.expand
+      - navigation.indexes
       - search.highlight
       - search.suggest
       - content.code.annotate
@@ -45,33 +50,44 @@ theme:
       - content.tabs.link
       - content.tooltips
       - toc.follow
+
+# Custom CSS
 extra_css:
   - css/zin.css
+
+# Markdown extensions
 markdown_extensions: 
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
+
+# Navigation structure
 nav:
-  - Introductie: index.md
-  - Inhoud:
-      - Inleiding: 
-          - Toelichting: afsprakenstelsel-iwlz-netwerkmodel/inleiding.md
-          - Achtergrond & Toelichting: afsprakenstelsel-iwlz-netwerkmodel/achtergrond-toelichting.md
-          - Governance: afsprakenstelsel-iwlz-netwerkmodel/governance.md
-          - Begrippenlijst: afsprakenstelsel-iwlz-netwerkmodel/begrippenlijst.md
-      - Organisatiebeleid:
-          - Toelichting: afsprakenstelsel-iwlz-netwerkmodel/organisatiebeleid.md
-      - Proces:
-          - Toelichting: afsprakenstelsel-iwlz-netwerkmodel/proces.md
-          - Netwerkfuncties: afsprakenstelsel-iwlz-netwerkmodel/proces/netwerkfuncties.md
-      - Applicatie: 
-          - Toelichting: applicatie.md
-          - Applicatie-Componenten: afsprakenstelsel-iwlz-netwerkmodel/applicatie/applicatiecomponenten.md
-          - Diensten: afsprakenstelsel-iwlz-netwerkmodel/applicatie/Diensten.md
-      - Doel: afsprakenstelsel-iwzl-netwerkmodel/doel.md
-      - Scope: afsprakenstelsel-iwzl-netwerkmodel/scope.md
-      - Architectuur: afsprakenstelsel-iwzl-netwerkmodel/architectuur.md
-      - Implementatie: afsprakenstelsel-iwzl-netwerkmodel/implementatie.md
+  - Welkom: index.md
+  - Inleiding: 
+      - Toelichting: afsprakenstelsel-iwlz-netwerkmodel/inleiding.md
+      - Achtergrond & Toelichting: afsprakenstelsel-iwlz-netwerkmodel/achtergrond-toelichting.md
+      - Governance: afsprakenstelsel-iwlz-netwerkmodel/governance.md
+      - Begrippenlijst: afsprakenstelsel-iwlz-netwerkmodel/begrippenlijst.md
+  - Organisatiebeleid:
+      - Toelichting: afsprakenstelsel-iwlz-netwerkmodel/organisatiebeleid.md
+  - Proces:
+      - Toelichting: afsprakenstelsel-iwlz-netwerkmodel/proces.md
+      - Netwerkfuncties: afsprakenstelsel-iwlz-netwerkmodel/proces/netwerkfuncties.md
+  - Applicatie: 
+      - applicatie/index.md
+      - Applicatie-Componenten: applicatie/applicatiecomponenten.md
+      - Diensten: 
+          - applicatie/diensten/index.md
+          - Notificeren en Melden: applicatie/diensten/notificeren-en-melden.md
+
 

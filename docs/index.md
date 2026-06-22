@@ -1,6 +1,9 @@
-## Afsprakenstelsel iWlz-netwerkmodel 
+# Afsprakenstelsel iWlz-netwerkmodel 
 
-VERSIE: 17-12-2025 STATUS: DEFINITIEF 
+
+!!! note
+    Versie: *17-12-2025* | Status: *Definitief*
+
 
 ## Toelichting 
 
