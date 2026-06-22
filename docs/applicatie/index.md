@@ -34,14 +34,6 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     [:octicons-arrow-right-24: lees verder](#)
 
--   :material-flare:{ .lg .middle } __Tijdelijke voorziening: Silvester__
-
-    ---
-
-    Beschrijving van de hybride situatie waarin nog niet alle deelnemers over zijn naar het iWlz-netwerk.
-
-    [:octicons-arrow-right-24: License](#)
-
 -   :material-cog-sync-outline:{ .lg .middel } __Diensten__
 
     ---
@@ -59,5 +51,15 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
     [:octicons-arrow-right-24: direct naar: Uittreden](./diensten/notificeren-en-melden.md)
 
     [:octicons-arrow-right-24: direct naar: Testen](./diensten/notificeren-en-melden.md)
+
+-   :material-flare:{ .lg .middle } __Tijdelijke voorziening: Silvester__
+
+    ---
+
+    Beschrijving van de hybride situatie waarin nog niet alle deelnemers over zijn naar het iWlz-netwerk.
+
+    [:octicons-arrow-right-24: lees verder](#)
+
+
 
 </div>
