@@ -1,6 +1,6 @@
 # Applicatie
 
-VERSIE: 17-12-2025 Status: Definitief
+!!! info "Versie: *17-12-2025* | Status: *Definitief*"
 
 **Inleiding**  
 Dit hoofdstuk beschrijft de invulling van de applicatie laag van de architectuur op een generieke manier. Deze onderdelen zijn namelijk van toepassing op alle registers en uitwisselprofielen.
@@ -10,20 +10,19 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
 <div class="grid cards" markdown>
 
--   :material-clock-fast:{ .lg .middle } __Set up in 5 minutes__
+-   :material-clock-fast:{ .lg .middle } __Applicatiecomponenten__
 
     ---
 
-    Install [`mkdocs-material`](#) with [`pip`](#) and get up
-    and running in minutes
+    De applicatiecomponenten die nodig zijn voor de invulling van het iWlz-netwerkmodel
 
     [:octicons-arrow-right-24: Getting started](#)
 
--   :fontawesome-brands-markdown:{ .lg .middle } __It's just Markdown__
+-   :fontawesome-brands-markdown:{ .lg .middle } __nID netwerkstelsel__
 
     ---
 
-    Focus on your content and generate a responsive and searchable static site
+    Dit artikel beschrijft het nID netwerkstelsel en haar netwerkservices zoals autoriseren
 
     [:octicons-arrow-right-24: Reference](#)
 
@@ -31,7 +30,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     ---
 
-    Change the colors, fonts, language, icons, logo and more with a few lines
+    Beschrijving van de manier waarop binnen het iWlz-netwerkmodel GraphQL-verzoeken via GraphQL over HTTP worden afgehandeld.
 
     [:octicons-arrow-right-24: Customization](#)
 
@@ -39,22 +38,28 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     ---
 
-    Material for MkDocs is licensed under MIT and available on [GitHub]
+    Beschrijving van de hybride situatie waarin nog niet alle deelnemers over zijn naar het iWlz-netwerk.
 
     [:octicons-arrow-right-24: License](#)
+
+    :material-cog-sync-outline: { .lg .middel } __Diensten__
+
+    Diensten die van toepassing zijn in het iWlz-netwerk:
+
+
 
 </div>
 
 1. [Applicatiecomponenten](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23070881)Voorvertoning
-  * De applicatiecomponenten die nodig zijn voor de invulling van het iWlz-netwerkmodel
+  * 
 2. [nID netwerkstelsel](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537)Voorvertoning
-  * Dit artikel beschrijft het nID netwerkstelsel en haar netwerkservices zoals autoriseren
+  * 
 3. [GraphQL over HTTP](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/690552899)Voorvertoning
-  * Beschrijving van de manier waarop binnen het iWlz-netwerkmodel GraphQL-verzoeken via GraphQL over HTTP worden afgehandeld.
+  * 
 4. [Tijdelijke voorziening overgangsfase (Silvester)](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/690454703)Voorvertoning
-  * Beschrijving van de hybride situatie waarin nog niet alle deelnemers over zijn naar het iWlz-netwerk.
+  * 
 5. [Diensten](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071007)Voorvertoning
-  * Diensten die van toepassing zijn in het iWlz-netwerk:
+  * 
     * [Notificeren en Melden](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071204)Voorvertoning
     * [Raadplegen](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071274)Voorvertoning
     * [Toetreden](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/691044381)Voorvertoning
