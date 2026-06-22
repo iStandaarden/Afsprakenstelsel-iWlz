@@ -42,17 +42,22 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     [:octicons-arrow-right-24: License](#)
 
--   :material-cog-sync-outline: { .lg .middel } __Diensten__
+-   :material-cog-sync-outline:{ .lg .middel } __Diensten__
 
     ---
 
     Diensten die van toepassing zijn in het iWlz-netwerk:
 
     [:octicons-arrow-right-24: lees verder...](./diensten/index.md)
+
     [:octicons-arrow-right-24: direct naar: Notificeren en melden](./diensten/notificeren-en-melden.md)
+
     [:octicons-arrow-right-24: direct naar: Raadplegen](./diensten/raadplegen.md)
+
     [:octicons-arrow-right-24: direct naar: Toetreden](./diensten/notificeren-en-melden.md)
+
     [:octicons-arrow-right-24: direct naar: Uittreden](./diensten/notificeren-en-melden.md)
+
     [:octicons-arrow-right-24: direct naar: Testen](./diensten/notificeren-en-melden.md)
 
 </div>
