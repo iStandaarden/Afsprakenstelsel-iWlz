@@ -4,11 +4,7 @@
 !!! info
     Versie: *17-12-2025* | Status: *Definitief*
 
-???+ note
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+!!! info "Versie: *17-12-2025* | Status: *Definitief*"
 
 
 ???+ note "Toelichting" 
@@ -25,7 +21,7 @@
 
     De implementatie van het iWlz-netwerkmodel vindt incrementeel plaats aan de hand van het afsprakenstelsel. Het eerste onderdeel dat in gebruik is genomen, betreft het Indicatieregister. Het tweede onderdeel, het Bemiddelingsregister, wordt naar verwachting in april 2026 operationeel. Deze versie van het Afsprakenstelsel iWlz-netwerkmodel is geactualiseerd ten behoeve van de implementatie van het Bemiddelingsregister. 
 
-Per artikel wordt indien relevant aangegeven welke onderdelen nog niet van toepassing zijn. Bij iedere volgende implementatiestap wordt het afsprakenstelsel geactualiseerd zodat duidelijk is welke onderdelen worden toegevoegd. 
+    Per artikel wordt indien relevant aangegeven welke onderdelen nog niet van toepassing zijn. Bij iedere volgende implementatiestap wordt het afsprakenstelsel geactualiseerd zodat duidelijk is welke onderdelen worden toegevoegd. 
 
 
 ## 1. Leeswijzer 
