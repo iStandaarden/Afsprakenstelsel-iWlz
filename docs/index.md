@@ -8,7 +8,7 @@
 
     Dit is de introductiepagina van het Afsprakenstelsel iWlz-netwerkmodel. 
 
-    Het iWlz-netwerkmodel biedt zorgaanbieders, zorgkantoren en andere partijen die actief zijn in de langdurige zorg de mogelijkheid om zorgadministratieve gegevens direct bij de bron te raadplegen. Deze gegevens worden opgeslagen bij de bronhouder en zijn beschikbaar voor aangesloten partijen (afnemers). Met de invoering van het iWlznetwerkmodel beogen partijen in de langdurige zorg de administratieve lasten te verminderen, de informatiepositie van cliënten te verbeteren en de kwaliteit van de dienstverlening te verhogen. 
+    Het iWlz-netwerkmodel biedt zorgaanbieders, zorgkantoren en andere partijen die actief zijn in de langdurige zorg de mogelijkheid om zorgadministratieve gegevens direct bij de bron te raadplegen. Deze gegevens worden opgeslagen bij de bronhouder en zijn beschikbaar voor aangesloten partijen (afnemers). Met de invoering van het iWlz netwerkmodel beogen partijen in de langdurige zorg de administratieve lasten te verminderen, de informatiepositie van cliënten te verbeteren en de kwaliteit van de dienstverlening te verhogen. 
 
     Het afsprakenstelsel heeft als doel deelnemers aan het iWlz-netwerkmodel op een uniforme en eenduidige wijze te informeren over de geldende afspraken, procedures en regels. Het vormt daarmee de basis voor samenwerking en gegevensuitwisseling binnen het iWlz-netwerkmodel. 
 
