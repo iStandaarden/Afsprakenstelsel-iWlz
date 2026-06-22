@@ -84,7 +84,7 @@ nav:
       - proces/index.md
   - Applicatie: 
       - applicatie/index.md
-      - Applicatie-Componenten: applicatie/applicatiecomponenten.md
+      - Applicatiecomponenten: applicatie/applicatiecomponenten.md
       - Diensten: 
           - applicatie/diensten/index.md
           - Notificeren en Melden: applicatie/diensten/notificeren-en-melden.md

@@ -48,9 +48,12 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Diensten die van toepassing zijn in het iWlz-netwerk:
 
-    [:octicons-arrow-right-24: lees verder](./diensten/index.md)
-
-    [:octicons-arrow-right-24: direct naar notificeren en melden](./diensten/notificeren-en-melden.md)
+    [:octicons-arrow-right-24: lees verder...](./diensten/index.md)
+    [:octicons-arrow-right-24: direct naar: Notificeren en melden](./diensten/notificeren-en-melden.md)
+    [:octicons-arrow-right-24: direct naar: Raadplegen](./diensten/notificeren-en-melden.md)
+    [:octicons-arrow-right-24: direct naar: Toetreden](./diensten/notificeren-en-melden.md)
+    [:octicons-arrow-right-24: direct naar: Uittreden](./diensten/notificeren-en-melden.md)
+    [:octicons-arrow-right-24: direct naar: Testen](./diensten/notificeren-en-melden.md)
 
     
 
