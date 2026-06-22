@@ -10,7 +10,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
 <div class="grid cards" markdown>
 
--   :material-clock-fast:{ .lg .middle } __Applicatiecomponenten__
+-   :material-view-dashboard-outline:{ .lg .middle } __Applicatiecomponenten__
 
     ---
 
@@ -32,7 +32,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Beschrijving van de manier waarop binnen het iWlz-netwerkmodel GraphQL-verzoeken via GraphQL over HTTP worden afgehandeld.
 
-    [:octicons-arrow-right-24: Customization](#)
+    [:octicons-arrow-right-24: lees verder](#)
 
 -   :material-flare:{ .lg .middle } __Tijdelijke voorziening: Silvester__
 
@@ -48,7 +48,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Diensten die van toepassing zijn in het iWlz-netwerk:
 
-    [:octicons-arrow-right-24: lees verder...](./diensten/index.md)
+    [:octicons-arrow-right-24: lees verder](./diensten/index.md)
 
     [:octicons-arrow-right-24: direct naar: Notificeren en melden](./diensten/notificeren-en-melden.md)
 
