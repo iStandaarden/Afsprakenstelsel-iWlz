@@ -1,26 +1,6 @@
 # Applicatiecomponenten
 
-**Versie:** 17-12-2025  
-**Status:** DEFINITIEF
-
-## Inhoudsopgave
-
-- [Applicatiecomponenten](#applicatiecomponenten)
-  - [Inhoudsopgave](#inhoudsopgave)
-  - [1. Inleiding](#1-inleiding)
-  - [2. Systeemrollen](#2-systeemrollen)
-    - [Primaire systeemrollen](#primaire-systeemrollen)
-    - [Vertrouwen](#vertrouwen)
-    - [Vindbaarheid](#vindbaarheid)
-    - [Beheer](#beheer)
-    - [2.1 Systeemrollen Indicatie- en bemiddelingsregister](#21-systeemrollen-indicatie--en-bemiddelingsregister)
-  - [3. De applicatiecomponenten](#3-de-applicatiecomponenten)
-    - [Applicatiecomponenten per systeemrol](#applicatiecomponenten-per-systeemrol)
-    - [Generieke functies](#generieke-functies)
-  - [4. Technische specificaties (RFC's)](#4-technische-specificaties-rfcs)
-  - [5. iWlz-datastation en hun leveranciers](#5-iwlz-datastation-en-hun-leveranciers)
-    - [Huidige situatie](#huidige-situatie)
-    - [Toekomstige situatie](#toekomstige-situatie)
+!!! info "Versie: *17-12-2025* | Status: *Definitief*"
 
 ## 1. Inleiding
 

@@ -1,6 +1,6 @@
 # Diensten
 
-VERSIE: 17-12-2025 Status: Definitief
+!!! info "Versie: *17-12-2025* | Status: *Definitief*"
 
 **Inleiding**  
 Dit hoofdstuk beschrijft de diensten die van toepassing zijn in het iWlz-netwerk. Ieder register biedt één of meerdere van deze diensten aan. De specifieke invulling van de diensten wordt toegelicht de uitwisselprofielen van de registers.
