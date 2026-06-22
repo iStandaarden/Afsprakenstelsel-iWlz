@@ -50,30 +50,9 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     [:octicons-arrow-right-24: lees verder...](./diensten/index.md)
     [:octicons-arrow-right-24: direct naar: Notificeren en melden](./diensten/notificeren-en-melden.md)
-    [:octicons-arrow-right-24: direct naar: Raadplegen](./diensten/notificeren-en-melden.md)
+    [:octicons-arrow-right-24: direct naar: Raadplegen](./diensten/raadplegen.md)
     [:octicons-arrow-right-24: direct naar: Toetreden](./diensten/notificeren-en-melden.md)
     [:octicons-arrow-right-24: direct naar: Uittreden](./diensten/notificeren-en-melden.md)
     [:octicons-arrow-right-24: direct naar: Testen](./diensten/notificeren-en-melden.md)
 
-    
-
-
 </div>
-
-1. [Applicatiecomponenten](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23070881)Voorvertoning
-  * 
-2. [nID netwerkstelsel](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537)Voorvertoning
-  * 
-3. [GraphQL over HTTP](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/690552899)Voorvertoning
-  * 
-4. [Tijdelijke voorziening overgangsfase (Silvester)](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/690454703)Voorvertoning
-  * 
-5. [Diensten](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071007)Voorvertoning
-  * 
-    * [Notificeren en Melden](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071204)Voorvertoning
-    * [Raadplegen](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071274)Voorvertoning
-    * [Toetreden](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/691044381)Voorvertoning
-    * [Uittreden](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/690356266)Voorvertoning
-    * [Testen](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/690225160)Voorvertoning
-      
-
