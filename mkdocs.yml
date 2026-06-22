@@ -52,9 +52,9 @@ theme:
       - toc.follow
 
 # plugins
-# plugins:
-#   - search
-#   - glightbox
+plugins:
+  - search
+  - glightbox
   
 # Custom CSS
 extra_css:
