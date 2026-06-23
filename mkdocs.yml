@@ -20,7 +20,7 @@ theme:
         name: Switch to light mode
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default 
+      scheme: default
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
@@ -35,21 +35,21 @@ theme:
       primary: custom
       accent: deep purple
   features:
-      - navigation.top
-      - navigation.sections
-      # - navigation.instant
-      - navigation.tracking
-      - navigation.footer
-      - navigation.tabs
-      - navigation.expand
-      - navigation.indexes
-      - search.highlight
-      - search.suggest
-      - content.code.annotate
-      - content.code.copy
-      - content.tabs.link
-      - content.tooltips
-      - toc.follow
+    - navigation.top
+    - navigation.sections
+    # - navigation.instant
+    - navigation.tracking
+    - navigation.footer
+    - navigation.tabs
+    - navigation.expand
+    - navigation.indexes
+    - search.highlight
+    - search.suggest
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - toc.follow
 
 # plugins
 plugins:
@@ -62,13 +62,12 @@ extra_css:
 
 # extra JavaScript
 extra_javascript:
+  - assets/javascripts/svg-pan-zoom.min.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js
-  - assets/js/mermaid-init.js
-  - assets/js/svg-pan-zoom.min.js
-  - assets/js/mermaid-panzoom.js
+  - assets/javascripts/mermaid-panzoom.js
 
 # Markdown extensions
-markdown_extensions: 
+markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
@@ -84,20 +83,19 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
-
 # Navigation structure
 nav:
   - Welkom: index.md
   - Inleiding:
-      - inleiding/index.md 
+      - inleiding/index.md
   - Organisatiebeleid:
       - organisatiebeleid/index.md
   - Proces:
       - proces/index.md
-  - Applicatie: 
+  - Applicatie:
       - applicatie/index.md
       - Applicatiecomponenten: applicatie/applicatiecomponenten.md
-      - Diensten: 
+      - Diensten:
           - applicatie/diensten/index.md
           - Notificeren en Melden: applicatie/diensten/notificeren-en-melden.md
           - Raadplegen: applicatie/diensten/raadplegen.md
