@@ -62,6 +62,8 @@ extra_css:
 
 # extra JavaScript
 extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+  - assets/js/mermaid-init.js
   - assets/js/svg-pan-zoom.min.js
   - assets/js/mermaid-panzoom.js
 
