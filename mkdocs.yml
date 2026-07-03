@@ -59,12 +59,14 @@ plugins:
 # Custom CSS
 extra_css:
   - css/zin.css
+  - css/mermaid-zoom.css
 
 # extra JavaScript
 extra_javascript:
   - assets/javascripts/svg-pan-zoom.min.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js
-  - assets/javascripts/mermaid-panzoom.js
+#  - assets/javascripts/mermaid-panzoom.js
+  - assets/javascripts/mermaid-zoom.js
 
 # Markdown extensions
 markdown_extensions:
@@ -80,7 +82,7 @@ markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
-          class: mermaid
+          class: mermaid-zoom
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 # Navigation structure
