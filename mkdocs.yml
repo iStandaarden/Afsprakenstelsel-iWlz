@@ -12,6 +12,8 @@ theme:
   language: nl
   icon:
     repo: fontawesome/brands/github
+    logo: material/file-sign
+  favicon: assets/file-sign-custom.png
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
