@@ -34,8 +34,5 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     [:octicons-arrow-right-24: lees verder](#)
 
-
-
-
 </div>
 

@@ -38,13 +38,15 @@ theme:
       accent: deep purple
   features:
     - navigation.top
-    - navigation.sections
-    # - navigation.instant
+    # - navigation.sections
+    - navigation.instant
     - navigation.tracking
     - navigation.footer
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.expand
     - navigation.indexes
+    - navigation.path
     - search.highlight
     - search.suggest
     - content.code.annotate
@@ -52,6 +54,7 @@ theme:
     - content.tabs.link
     - content.tooltips
     - toc.follow
+    # - toc.integrate
 
 # plugins
 plugins:
@@ -92,14 +95,45 @@ nav:
   - Welkom: index.md
   - Inleiding:
       - inleiding/index.md
+      - Achtergrond en toelichting: inleiding/achtergrond_toelichting.md
+      - Governance: inleiding/governance.md
+      - Begrippenlijst: inleiding/begrippenlijst.md
   - Organisatiebeleid:
       - organisatiebeleid/index.md
+      - Randvoorwaarden: organisatiebeleid/randvoorwaarden.md
+      - Ontwerpkeuzes: organisatiebeleid/ontwerpkeuzes.md
+      - Architectuur: organisatiebeleid/architectuur.md
+      - Serviceafspraken:
+          - organisatiebeleid/serviceafspraken/index.md
+          - Operationeel netwerkbeheer serviceafspraken: organisatiebeleid/serviceafspraken/operationeel_netwerkbeheer.md
+          - Bronhoudersdeel serviceafspraken: organisatiebeleid/serviceafspraken/bronhoudersdeel.md
+          - Afnemersdeel serviceafspraken: organisatiebeleid/serviceafspraken/afnemersdeel.md
+      - Releasebeleid: organisatiebeleid/releasebeleid.md
+      - Wijzigingsverzoeken: organisatiebeleid/wijzigingsverzoeken.md
   - Proces:
       - proces/index.md
+      - Netwerkfuncties: proces/netwerkfuncties.md
+      - Procesmodel: proces/procesmodel.md
+  - Informatie:
+      - informatie/index.md
+      - Informatiestandaard: informatie/informatiestandaard.md
   - Applicatie:
       - applicatie/index.md
       - Applicatiecomponenten: applicatie/applicatiecomponenten.md
+      - nID netwerkstelsel: applicatie/nid_netwerkstelsel.md
+      - GraphQL over HTTP: applicatie/graphql_over_http.md
+      - Silvester - Tijdelijke voorziening overgangsfase: applicatie/silvester.md
       - Diensten:
           - applicatie/diensten/index.md
           - Notificeren en Melden: applicatie/diensten/notificeren-en-melden.md
           - Raadplegen: applicatie/diensten/raadplegen.md
+  - IT-Infrastructuur:
+      - it-infrastructuur/index.md
+      - Identificatie & authenticatie: it-infrastructuur/identificatie_authenticatie.md
+      - Netwerk: it-infrastructuur/netwerk.md
+      - Logging: it-infrastructuur/logging.md
+  - Uitwisselprofielen:
+      - uitwisselprofiel/index.md
+      - Uitwisselprofiel Indicatie: uitwisselprofiel/uitwisselprofiel_indicatie.md
+      - Uitwisselprofiel Bemiddeling: uitwisselprofiel/uitwisselprofiel_bemiddeling.md
+
