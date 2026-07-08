@@ -40,7 +40,7 @@ In dit hoofdstuk wordt ingegaan op de volgende aspecten:
 
     [:octicons-arrow-right-24: lees verder](#)
 
--   :material-alphabetical:{ .lg .middle } __Serviceafspraken__
+-   :material-book-cog-outline:{ .lg .middle } __Serviceafspraken__
 
     ---
 
@@ -48,7 +48,7 @@ In dit hoofdstuk wordt ingegaan op de volgende aspecten:
 
     [:octicons-arrow-right-24: lees verder](#)
 
--   :material-alphabetical:{ .lg .middle } __Releasebeleid__
+-   :simple-semanticrelease:{ .lg .middle } __Releasebeleid__
 
     ---
 
@@ -56,7 +56,7 @@ In dit hoofdstuk wordt ingegaan op de volgende aspecten:
 
     [:octicons-arrow-right-24: lees verder](#)
 
--   :material-alphabetical:{ .lg .middle } __Wijzigingsverzoeken__
+-   :simple-changedetection:{ .lg .middle } __Wijzigingsverzoeken__
 
     ---
 

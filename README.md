@@ -31,6 +31,7 @@ Om te publiceren is dit dus niet noodzakelijk, wel handig.
 3. Type `source venv/bin/activate` to activate the virtual environment
 4. Install mkdocs material - `pip install mkdocs-material`
 5. Install plugin glightbox voor het kunnen vergroten van plaatjes in een pop-up: `pip install mkdocs-glightbox`
+6. Install plugin voor het genereren van een pdf: `pip install mkdocs-with-pdf` 
 
 Hierna kan je een lokale server opstarten: 
 

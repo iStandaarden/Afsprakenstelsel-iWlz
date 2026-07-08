@@ -60,6 +60,14 @@ theme:
 plugins:
   - search
   - glightbox
+  - with-pdf:
+      enabled_if_env: ENABLED_PDF_EXPORT
+      cover_title: Afsprakenstelsel iWlz
+      cover_subtitle: pdf van Afsprakenstelsel iWlz https://istandaarden.github.io/Afsprakenstelsel-iWlz/
+      output_path: pdf/afsprakenstelsel-iWlz.pdf
+      toc_title: Inhoudsopgave
+      cover: true
+      back_cover: false
 
 # Custom CSS
 extra_css:
@@ -105,9 +113,9 @@ nav:
       - Architectuur: organisatiebeleid/architectuur.md
       - Serviceafspraken:
           - organisatiebeleid/serviceafspraken/index.md
-          - Operationeel netwerkbeheer serviceafspraken: organisatiebeleid/serviceafspraken/operationeel_netwerkbeheer.md
-          - Bronhoudersdeel serviceafspraken: organisatiebeleid/serviceafspraken/bronhoudersdeel.md
-          - Afnemersdeel serviceafspraken: organisatiebeleid/serviceafspraken/afnemersdeel.md
+          - Operationeel netwerkbeheer: organisatiebeleid/serviceafspraken/operationeel_netwerkbeheer.md
+          - Bronhoudersdeel: organisatiebeleid/serviceafspraken/bronhoudersdeel.md
+          - Afnemersdeel: organisatiebeleid/serviceafspraken/afnemersdeel.md
       - Releasebeleid: organisatiebeleid/releasebeleid.md
       - Wijzigingsverzoeken: organisatiebeleid/wijzigingsverzoeken.md
   - Proces:
@@ -127,6 +135,9 @@ nav:
           - applicatie/diensten/index.md
           - Notificeren en Melden: applicatie/diensten/notificeren-en-melden.md
           - Raadplegen: applicatie/diensten/raadplegen.md
+          - Toetreden: applicatie/diensten/toetreden.md
+          - Uittreden: applicatie/diensten/uittreden.md
+          - Testen: applicatie/diensten/testen.md
   - IT-Infrastructuur:
       - it-infrastructuur/index.md
       - Identificatie & authenticatie: it-infrastructuur/identificatie_authenticatie.md

@@ -12,7 +12,7 @@ Dit hoofdstuk bevat onder andere de volgende onderdelen:
 
 <div class="grid cards" markdown>
 
--   :material-bullseye-arrow:{ .lg .middle } __Identificatie & authenticatie__
+-   :material-identifier:{ .lg .middle } __Identificatie & authenticatie__
 
     ---
 
@@ -20,7 +20,7 @@ Dit hoofdstuk bevat onder andere de volgende onderdelen:
 
     [:octicons-arrow-right-24: lees verder](#)
 
--   :material-gavel:{ .lg .middle } __Netwerk__
+-   :fontawesome-solid-network-wired:{ .lg .middle } __Netwerk__
 
     ---
 
@@ -28,7 +28,7 @@ Dit hoofdstuk bevat onder andere de volgende onderdelen:
 
     [:octicons-arrow-right-24: lees verder](#)
 
--   :material-alphabetical:{ .lg .middle } __Logging__
+-   :fontawesome-solid-file-signature:{ .lg .middle } __Logging__
 
     ---
 

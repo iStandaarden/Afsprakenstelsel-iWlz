@@ -7,7 +7,7 @@ In dit hoofdstuk worden de afspraken toegelicht die gelden voor de gegevens die 
 
 <div class="grid cards" markdown>
 
--   :material-alphabetical:{ .lg .middle } __Informatiestandaard iWlz__
+-   :material-information-box:{ .lg .middle } __Informatiestandaard iWlz__
 
     ---
 
