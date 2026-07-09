@@ -14,6 +14,7 @@ theme:
     repo: fontawesome/brands/github
     logo: material/file-sign
   favicon: assets/file-sign-custom.png
+  custom_dir: docs/overrides
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -64,8 +65,13 @@ plugins:
       enabled_if_env: ENABLED_PDF_EXPORT
       cover_title: Afsprakenstelsel iWlz
       cover_subtitle: pdf van Afsprakenstelsel iWlz https://istandaarden.github.io/Afsprakenstelsel-iWlz/
+      cover_logo: docs/assets/ZinBanner.png
+      copyright: "iStandaarden.nl"
       output_path: pdf/afsprakenstelsel-iWlz.pdf
       toc_title: Inhoudsopgave
+      toc_level: 2
+      # heading_shift: true
+      # ordered_chapter_level: 2
       cover: true
       back_cover: false
 
@@ -73,6 +79,7 @@ plugins:
 extra_css:
   - css/zin.css
   - css/mermaid-zoom.css
+  - css/print.css
 
 # extra JavaScript
 extra_javascript:
@@ -80,6 +87,9 @@ extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js
 #  - assets/javascripts/mermaid-panzoom.js
   - assets/javascripts/mermaid-zoom.js
+
+extra:
+  pdf_url: pdf/afsprakenstelsel-iWlz.pdf
 
 # Markdown extensions
 markdown_extensions:
