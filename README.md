@@ -5,6 +5,97 @@ Afsprakenset iWlz
 Zie publicatie https://istandaarden.github.io/Afsprakenstelsel-iWlz/ 
 
 ---
+## Beheer van de publicatie
+
+### Beheer van het menu
+
+De indeling en inhoud van het menu wordt bepaald door twee onderdelen:
+1. De inhoud van het document: `mkdocs.yml`
+2. De directory-structuur onder de map `docs/` 
+
+#### 1. Inhoud `mkdocs.yml`
+In het yaml-document is er een hoofdtag `nav:`hieronder wordt de menustructuur gedefinieerd.  De opbouw volgt de structuur : 
+> `{Titel op het scherm}: {verwijzing naar het brondocument}`
+
+bijvoorbeeld:
+```yml
+  - Welkom: index.md
+  - Inleiding:
+      - inleiding/index.md
+      - Achtergrond en toelichting: inleiding/achtergrond_toelichting.md
+      - Governance: inleiding/governance.md
+      - Begrippenlijst: inleiding/begrippenlijst.md
+  - Organisatiebeleid:
+      - organisatiebeleid/index.md
+      - Randvoorwaarden: organisatiebeleid/randvoorwaarden.md
+  - ...
+```
+
+Hieruit valt op te maken dat er een **Inleiding** is waarvan de bron is te vinden in `inleiding/index.md` 
+
+
+#### 2. De structuur onder `docs/`
+De structuur onder `docs/` volgt de structuur zoals beschreven in `mkdocs.yml` in het deel `{verwijzing naar het brondocument}`
+
+        |-- docs                                            # Hoofddirectory publicatie
+        |   |-- applicatie/                                 # Documenten mbt artikel APPLICCATIE
+        |   |   |-- applicatiecomponenten.md
+        |   |   |-- diensten
+        |   |   |   |-- index.md
+        |   |   |   |-- notificeren-en-melden.md
+        |   |   |   |-- raadplegen.md
+        |   |   |   |-- testen.md
+        |   |   |   |-- toetreden.md
+        |   |   |   `-- uittreden.md
+        |   |   |-- graphql_over_http.md
+        |   |   |-- index.md
+        |   |   |-- nid_netwerkstelsel.md
+        |   |   `-- silvester.md
+        |   |-- assets/                                     # Nodig voor publicatie
+        |   |-- css/                                        # Nodig voor publicatie
+        |   |-- img/                                        # Afbeeldingen uit de diverse artikelen
+        |   |   `-- welkom-lagen.png
+        |   |-- informatie/                                 # Documenten mbt artikel INFORMATIE
+        |   |   |-- index.md
+        |   |   `-- informatiestandaard.md
+        |   |-- inleiding/                                  # Documenten mbt artikel INLEIDING
+        |   |   |-- achtergrond_toelichting.md
+        |   |   |-- begrippenlijst.md
+        |   |   |-- governance.md
+        |   |   `-- index.md
+        |   |-- it-infrastructuur/                          # Documenten mbt artikel IT-INFRASTRUCTUUR
+        |   |   |-- identificatie_authenticatie.md
+        |   |   |-- index.md
+        |   |   |-- logging.md
+        |   |   `-- netwerk.md
+        |   |-- organisatiebeleid/                          # Documenten mbt artikel ORGANISATIEBELEID
+        |   |   |-- architectuur.md
+        |   |   |-- index.md
+        |   |   |-- ontwerpkeuzes.md
+        |   |   |-- randvoorwaarden.md
+        |   |   |-- releasebeleid.md
+        |   |   |-- serviceafspraken/
+        |   |   |   |-- afnemersdeel.md
+        |   |   |   |-- bronhoudersdeel.md
+        |   |   |   |-- index.md
+        |   |   |   `-- operationeel_netwerkbeheer.md
+        |   |   `-- wijzigingsverzoeken.md
+        |   |-- overrides/                                  # Nodig voor publicatie
+        |   |-- proces/                                     # Documenten mbt artikel PROCES
+        |   |   |-- index.md
+        |   |   |-- netwerkfuncties.md
+        |   |   `-- procesmodel.md
+        |   `-- uitwisselprofiel/                           # Documenten mbt artikel UITWISSELPROFIEL
+        |       |-- index.md
+        |       |-- uitwisselprofiel_bemiddeling.md
+        |       `-- uitwisselprofiel_indicatie.md
+        |-- index.md                                        # Homepage publicatie
+        |-- mkdocs.yml.                                     # Configuratiebestand publicatie
+        `-- README.md 
+
+
+
+
 ## Installatie
 Onderdelen
 - MkDocs: https://www.mkdocs.org
