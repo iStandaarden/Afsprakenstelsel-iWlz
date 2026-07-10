@@ -14,9 +14,8 @@ De volgende onderwerpen komen hierbij aan bod:
 - iWlz-datastation
 - Dienstverleners
 
-De kenmerken die specifiek zijn voor een bepaald register/uitwisselprofiel worden niet in dit artikel maar in de blauwe laag **‘Uitwisselprofielen/registers’** beschreven (zie lagenmodel Afsprakenstelsel).
+De kenmerken die specifiek zijn voor een bepaald register/uitwisselprofiel worden niet in dit artikel maar in de blauwe laag **‘Uitwisselprofielen/registers’** beschreven (zie [lagenmodel Afsprakenstelsel](../img/welkom-lagen.png)).
 
----
 
 ## 2. Systeemrollen
 
@@ -24,30 +23,33 @@ Het op een veilige en betrouwbare manier delen van iWlz-gegevens met behulp van 
 
 De systeemrollen zijn gegroepeerd in de volgende bouwstenen:
 
-### Primaire systeemrollen
+**Primaire systeemrollen**
 
 - Bronhouder
 - Afnemer
 - Gegevensregisseur
 - Gezondheidsregisseur
 
-### Vertrouwen
+**Vertrouwen**
 
 - Vertrouwensleverancier
 - Ledenadministratie
 - Bevoegde uitgever van verklaringen
 
-### Vindbaarheid
+**Vindbaarheid**
 
 - Gegevensgids
 
-### Beheer
+**Beheer**
 
 - Stelselbeheerder
 - Verzekeraar betrouwbaarheid
 - Operationeel netwerkbeheerder
 
-> Afbeelding: Overzicht bouwstenen en systeemrollen
+ In het onderstaande figuur zijn de registers, bouwstenen en systeemrollen schematisch weergegeven.
+
+![Overzicht bouwstenen en systeemrollen](../img/applicatiecomponenten-Overzicht_bouwstenen_en_systeemrollen.png)
+<figcaption>Afbeelding: Overzicht bouwstenen en systeemrollen</figcaption>
 
 De functionele uitwerking van deze bouwstenen en systeemrollen is opgenomen in het artikel *Architectuur*. Een gedetailleerde beschrijving van de systeemrollen is opgenomen in het artikel *Rollen en deelnemers*.
 
@@ -64,9 +66,9 @@ Op dit moment is:
 
 Een deel van de systeemrolleninformatiestelsel.
 
-> Afbeelding: Invulling bouwstenen en systeemrollen in implementatiestappen Indicatie- en bemiddelingsregister
+![Invulling bouwstenen en systeemrollen in implementatiestappen Indicatie- en bemiddelingsregister](../img/applicatiecomponenten-Invulling-bouwstenen-en-systeemrollen-in-implementatiestappen-Indicatie-en-bemiddelingsregister.png)
+> *Afbeelding: Invulling bouwstenen en systeemrollen in implementatiestappen Indicatie- en bemiddelingsregister*
 
----
 
 ## 3. De applicatiecomponenten
 
@@ -74,9 +76,10 @@ Het technisch realiseren van de verantwoordelijkheden van een systeemrol vindt p
 
 Hieronder wordt weergegeven welke applicatiecomponenten nodig zijn. Toekomstige invullingen van functies zoals de Lokalisatievoorziening en het Adresboek worden wel genoemd maar niet nader uitgewerkt.
 
-> Afbeelding: Overzicht applicatiecomponenten
+![Overzicht applicatiecomponenten](../img/applicatiecomponenten-Overzicht-applicatiecomponenten.png)
+> *Afbeelding: Overzicht applicatiecomponenten*
 
-### Applicatiecomponenten per systeemrol
+### 3.1 Applicatiecomponenten per systeemrol
 
 | Systeemrol | Applicatiecomponent | Toelichting |
 |------------|--------------------|-------------|
@@ -94,7 +97,7 @@ Hieronder wordt weergegeven welke applicatiecomponenten nodig zijn. Toekomstige 
 | Afnemer | Resource Server | Zorgt ervoor dat opgehaalde gegevens in een gestandaardiseerd formaat kunnen worden opgeslagen in het doelsysteem. **Capabilities:** GraphQL, AAA Proxy, Subscriptions, OpenAPI, Activity log |
 | Afnemer | Doelsysteem | Het backofficesysteem van de afnemer. **Capabilities:** mTLS, OpenAPI, Activity log |
 
-### Generieke functies
+### 3.2 Generieke functies
 
 | Systeemrol | Generieke functie | Toelichting |
 |------------|------------------|-------------|
@@ -112,9 +115,10 @@ nID handelt zowel aan de zijde van de afnemer als aan de zijde van de bronhouder
 
 Voor de realisatie van het Zorgleveringsregister wordt gewerkt aan interoperabiliteit tussen **NUTS** en **nID**.
 
-> Afbeelding: Overzicht applicatiecomponenten en nID-inrichting
+![Overzicht applicatiecomponenten en nID-inrichting](../img/applicatiecomponenten-Overzicht-applicatiecomponenten-en-nID-inrichting.png)
+> *Afbeelding: Overzicht applicatiecomponenten en nID-inrichting*
 
----
+
 
 ## 4. Technische specificaties (RFC's)
 
@@ -126,7 +130,7 @@ Vanuit het afsprakenstelsel iWlz-netwerkmodel wordt waar relevant naar specifiek
 
 Het artikel **RFC's iWlz-netwerkmodel** bevat een overzicht van deze RFC's.
 
----
+
 
 ## 5. iWlz-datastation en hun leveranciers
 
@@ -152,7 +156,8 @@ Deelnemers kunnen voor de invulling van hun datastation gebruikmaken van één o
 
 De deelnemers wisselen via hun datastations gegevens met elkaar uit. De datastations communiceren veilig en betrouwbaar via internet.
 
-> Afbeelding: Samenwerking tussen iWlz-datastations
+![Samenwerking tussen iWlz-datastations](../img/applicatiecomponenten-Samenwerking-tussen-iWlz-datastations.png)
+> *Afbeelding: Samenwerking tussen iWlz-datastations*
 
 Een dienst voor de invulling van een datastation wordt ook wel:
 
@@ -161,9 +166,10 @@ Een dienst voor de invulling van een datastation wordt ook wel:
 
 De koppeling tussen een iWlz-datastation en het bron- of doelsysteem valt buiten de standaardisatie van het afsprakenstelsel en kan tussen deelnemer en leverancier worden afgestemd.
 
-> Afbeelding: Verschillende dienstverleners voor iWlz-datastations
+![Verschillende dienstverleners voor iWlz-datastations](../img/applicatiecomponenten-Verschillende-dienstverleners-vooriWlz-datastations.png)
+> *Afbeelding: Verschillende dienstverleners voor iWlz-datastations*
 
-### Huidige situatie
+### 5.1 Huidige situatie
 
 Voor de implementatiestappen van het Indicatieregister en Bemiddelingsregister zijn slechts enkele datastations nodig:
 
@@ -174,7 +180,7 @@ Deze worden gerealiseerd door **VECOZO**.
 
 De Resource Server wordt door verschillende deelnemers zelf geleverd. De overige applicatiecomponenten worden via **nID** ingevuld.
 
-### Toekomstige situatie
+### 5.2 Toekomstige situatie
 
 Wanneer zorgaanbieders en het CAK aansluiten op het netwerk, hebben zij in eerste instantie alleen de functionaliteit nodig die vereist is voor de rol van afnemer.
 
@@ -182,4 +188,5 @@ Bij de realisatie van het Zorgleveringsregister hebben zorgaanbieders de volledi
 
 De verwachte situatie gaat ervan uit dat een deel van de zorgaanbieders via **NUTS** en hun **ECD-leverancier** aansluit.
 
-> Afbeelding: Verwachte situatie met dienstverleners
+![Verwachte situatie met dienstverleners](../img/applicatiecomponenten-Verwachte-situatie-met-dienstverleners.png)
+> *Afbeelding: Verwachte situatie met dienstverleners*

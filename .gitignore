@@ -12,6 +12,8 @@
 .DS_Store
 .gitignore
 site/
+venv/
+*.sh
 
 # complete python dir
 python/

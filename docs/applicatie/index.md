@@ -42,21 +42,23 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     [:octicons-arrow-right-24: lees verder](./diensten/index.md)
 
-    [:octicons-arrow-right-24: direct naar: Notificeren en melden](./diensten/notificeren-en-melden.md)
+    of ga direct naar:
 
-    [:octicons-arrow-right-24: direct naar: Raadplegen](./diensten/raadplegen.md)
+    [:octicons-arrow-right-24: Notificeren en melden](./diensten/notificeren-en-melden.md)
 
-    [:octicons-arrow-right-24: direct naar: Toetreden](./diensten/notificeren-en-melden.md)
+    [:octicons-arrow-right-24: Raadplegen](./diensten/raadplegen.md)
 
-    [:octicons-arrow-right-24: direct naar: Uittreden](./diensten/notificeren-en-melden.md)
+    [:octicons-arrow-right-24: Toetreden](./diensten/notificeren-en-melden.md)
 
-    [:octicons-arrow-right-24: direct naar: Testen](./diensten/notificeren-en-melden.md)
+    [:octicons-arrow-right-24: Uittreden](./diensten/notificeren-en-melden.md)
+
+    [:octicons-arrow-right-24: Testen](./diensten/notificeren-en-melden.md)
 
 -   :material-flare:{ .lg .middle } __Tijdelijke voorziening: Silvester__
 
     ---
 
-    Beschrijving van de hybride situatie waarin nog niet alle deelnemers over zijn naar het iWlz-netwerk.
+    Beschrijving van de hybride situatie waarin nog niet alle deelnemers over zijn naar het iWlz-netwerk en de tijdelijke voorziening Silvester die dit ondersteunt.
 
     [:octicons-arrow-right-24: lees verder](#)
 
