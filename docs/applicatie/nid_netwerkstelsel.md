@@ -26,6 +26,7 @@ De bovenstaande onderdelen en netwerkservices van het nID netwerkstelsel worden 
 ```mermaid
 
 flowchart TD
+    
     AuthServer["Autorisatieserver"]
     Client(["Client"])
     PEP["Policy Enforcement Point<br/>(PEP)"]
@@ -60,8 +61,6 @@ flowchart TD
 ```
 > *Afbeelding: Algeheel overzicht relaties*
 
-![algeheel-overzicht-relaties.png](../img/nID-netwerkstelsel-algeheel-overzicht-relaties.png)
-> *Afbeelding: Algeheel overzicht relaties*
 
 
 ## 2. Deelnemers
@@ -95,15 +94,19 @@ In het onderstaande schema wordt de basis uitgelegd voor het aanvragen van autor
 
 ```mermaid
 sequenceDiagram
+    autonumber
     actor Client as Deelnemer (Client)
     participant AuthzServer as Autorisatieserver
 
-    Client->>AuthzServer: 1. Aanvragen van autorisatie<br/>(scope, authenticatiemiddel)
-    AuthzServer->>AuthzServer: 2. Valideer authenticatiemiddel
-    AuthzServer->>AuthzServer: 3. Beoordeel scope<br/>(beleidsregels)
-    AuthzServer->>AuthzServer: 4. Controleer audience
-    AuthzServer-->>Client: 5. Genereer en retourneer<br/>(access token)
-    AuthzServer--xClient: 6. Foutmeldingen<br/>(400/403/500)
+    Client->>AuthzServer: Aanvragen van autorisatie<br/>(scope, authenticatiemiddel)
+    AuthzServer->>AuthzServer: Valideer authenticatiemiddel
+    AuthzServer->>AuthzServer: Beoordeel scope<br/>(beleidsregels)
+    AuthzServer->>AuthzServer: Controleer audience
+    AuthzServer-->>Client: Genereer en retourneer<br/>(access token)
+
+    rect pink
+    AuthzServer--xClient: Foutmeldingen<br/>(400/403/500)
+    end
 ```
 
 
@@ -201,11 +204,36 @@ POST https://api.vecozo.nl/netwerkmodel/v3/auth/token
 }
 ```
 
-`POST https://api.vecozo.nl/netwerkmodel/v3/auth/token { "grant_type": "client_credentials", "scope": "registers/wlzindicatieregister/indicaties:read", "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql" }`
 
 De response is een JWT:
 
-`{ "iss":"auth.nid", "sub":"20001000001131", "aud":"https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql", "exp":1731318519, "nbf":1730713599, "iat":1730713719, "jti":"eaa55b46-8d97-46ab-82a3-3a5a44170c67", "_claim_names":{ "agb":"localhost", "uzovi":"localhost" }, "_claim_sources":{ "localhost":{ "jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2IiOiIwMTIzNDUxMjMiLCJ1em92aSI6bnVsbH0.Y6XJZI7Ri0gV8Xqh6HZ0kk97oLu6sixc3T2v2K2GKfU" } }, "client_id":"20001000001131", "subjects":null, "scopes":[ "registers/wlzindicatieregister/indicaties:read" ], "consent_id":"7a8ddf4d-8953-4232-9714-4d1926888a65", "client_metadata":null }`
+```json linenums="01" 
+{
+  "iss":"auth.nid",
+  "sub":"20001000001131",
+  "aud":"https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql",
+  "exp":1731318519,
+  "nbf":1730713599,
+  "iat":1730713719,
+  "jti":"eaa55b46-8d97-46ab-82a3-3a5a44170c67",
+  "_claim_names":{
+    "agb":"localhost",
+    "uzovi":"localhost"
+  },
+  "_claim_sources":{
+    "localhost":{
+      "jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2IiOiIwMTIzNDUxMjMiLCJ1em92aSI6bnVsbH0.Y6XJZI7Ri0gV8Xqh6HZ0kk97oLu6sixc3T2v2K2GKfU"
+    }
+  },
+  "client_id":"20001000001131",
+  "subjects":null,
+  "scopes":[
+    "registers/wlzindicatieregister/indicaties:read"
+  ],
+  "consent_id":"7a8ddf4d-8953-4232-9714-4d1926888a65",
+  "client_metadata":null
+}
+```
 
 ##### 3.2.4.2 Een Access-token aanvragen namens een andere partij
 
@@ -218,11 +246,51 @@ Wanneer als actor een request wordt ingediend, moet het token worden uitgebreid 
 
 Voorbeeld Access-token request als actor namens een zorgkantoor:
 
-`POST https://api.vecozo.nl/netwerkmodel/v3/auth/token { "grant_type": "client_credentials", "scope": "registers/wlzindicatieregister/indicaties:read", "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql", "access_token" : { "sub" : "uzovi:5000" } }`
+```bash linenums="1"
+POST https://api.vecozo.nl/netwerkmodel/v3/auth/token
+
+{
+    "grant_type": "client_credentials",
+    "scope": "registers/wlzindicatieregister/indicaties:read",
+    "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql",
+    "access_token" : {
+       "sub" : "uzovi:5000"
+    }
+}
+```
 
 De response is een JWT:
 
-`{ "iss":"auth.nid", "sub":"20001000001131", "aud":"https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql", "exp":1731318519, "nbf":1730713599, "iat":1730713719, "jti":"eaa55b46-8d97-46ab-82a3-3a5a44170c67", "_claim_names":{ "agb":"localhost", "uzovi":"localhost" }, "_claim_sources":{ "localhost":{ "jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2IiOm51bGwsInV6b3ZpIjoiNTAwMCJ9.9mRf50AuhkVfGwIcqYA4I_8fChcXg_N9h-VHhMo2MlE" } }, "client_id":"uzovi:5000", "subjects":null, "scopes":[ "registers/wlzindicatieregister/indicaties:read" ], "consent_id":"7a8ddf4d-8953-4232-9714-4d1926888a65", "client_metadata":null, "act":{ "sub":"20001000001131" } }`
+```json linenums="1"
+{
+  "iss":"auth.nid",
+  "sub":"20001000001131",
+  "aud":"https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql",
+  "exp":1731318519,
+  "nbf":1730713599,
+  "iat":1730713719,
+  "jti":"eaa55b46-8d97-46ab-82a3-3a5a44170c67",
+  "_claim_names":{
+    "agb":"localhost",
+    "uzovi":"localhost"
+  },
+  "_claim_sources":{
+    "localhost":{
+      "jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2IiOm51bGwsInV6b3ZpIjoiNTAwMCJ9.9mRf50AuhkVfGwIcqYA4I_8fChcXg_N9h-VHhMo2MlE"
+    }
+  },
+  "client_id":"uzovi:5000",
+  "subjects":null,
+  "scopes":[
+    "registers/wlzindicatieregister/indicaties:read"
+  ],
+  "consent_id":"7a8ddf4d-8953-4232-9714-4d1926888a65",
+  "client_metadata":null,
+  "act":{
+    "sub":"20001000001131"
+  }
+}
+```
 
 ## 4. Datatoegangspunten (Resource-server)
 
@@ -270,13 +338,24 @@ De datatoegangspunten hebben in het algemeen een aantal functies die hieronder w
 
 Hier is een diagram dat de interactie met een datatoegangspunt schematisch weergeeft:
 
-interactie-datatoegangspunt.png openen
+```mermaid
+sequenceDiagram
+    autonumber
+    box lightgrey Deelnemer
+    actor Client
+    end
+    box lightgrey nID
+    participant PEP
+    end
+    box lightgrey Register
+    participant AccessPoint as Data Accesspoint
+    end
 
-![interactie-datatoegangspunt](../img/nID-netwerkstelsel-interactie-datatoegangspunt.png)
-
-PlantUML
-
-`@startuml skinparam monochrome true skinparam defaultTextAlignment center actor "Deelnemer (Client)" as Client participant "Policy Enforcement Point\n(PEP)" as PEP participant "Datatoegangspunt\n(Resource-Server)" as AccessPoint autonumber "<b>[000]" Client -> PEP : "GraphQL-query\n+ access-token" PEP -> AccessPoint : "Doorsturen geautoriseerd verzoek" AccessPoint --> PEP : "Gevraagde data" PEP -> Client : "Gevraagde data" @enduml`
+    Client->>PEP: GraphQL-query<br/>+ access-token
+    PEP->>AccessPoint: Doorsturen geautoriseerd verzoek
+    AccessPoint-->>PEP: Gevraagde data
+    PEP->>Client: Gevraagde data
+```
 
 | **#** | **Processtap** | **Beschrijving** |
 | --- | --- | --- |
@@ -307,15 +386,43 @@ Het huidige endpoint dat wordt aangesproken is de resource-server. Hier wordt ee
 
 Hier is een diagram dat de interactie met een PEP schematisch weergeeft:
 
-interactie-pep.png openen
+```mermaid
+sequenceDiagram
+    autonumber
+    box lightgrey Deelnemer
+    participant Client
+    end
+    box lightgrey nID
+    participant PEP
+    participant PDP
+    end
+    box lightgrey Register
+    participant resourceserver as Resource-Server
+    end
 
-Procesflow PEP
+    Client->>PEP: GraphQL Request<br/>Authenticatiemiddel + JWT Access-Token + Query
+    activate Client
+    activate PEP
+    Note right of PEP: Inline filtering requests
+    PEP->>PEP: Valideer Authenticatiemiddel
+    PEP->>PEP: Valideer Access-Token
+    PEP->>PDP: Query met policy valideren
+    activate PDP
+    PDP->>PDP: Valideer query
+    PDP->>PDP: Verify context information
+    PDP->>PEP: Query allowed
+    deactivate PDP
+    PEP->>resourceserver: GraphQL Request
+    deactivate PEP
+    activate resourceserver
+    resourceserver-->>PEP: 200 Response (GraphQL)
+    deactivate resourceserver
+    activate PEP
+    PEP-->>Client: 200 Response (GraphQL)
+    deactivate PEP
+    deactivate Client
+```
 
-![interactie-pep](../img/nID-netwerkstelsel-interactie-pep.png)
-
-PlantUML
-
-`@startuml graphql_request skinparam ParticipantPadding 20 skinparam BoxPadding 10 box "Deelnemer" participant "Client" as Client end box box "nID" participant "PEP" as PEP participant "PDP" as PDP end box box "Register" participant "Resource-Server" as resourceserver end box autonumber "<b>[000]" Client -> PEP: **GraphQL Request**\nAuthenticatiemiddel + JWT Access-Token + Query activate Client activate PEP note right of PEP: Inline filtering requests PEP -> PEP: Valideer Authenticatiemiddel PEP -> PEP: Valideer Access-Token PEP -> PDP: Query met policy valideren activate PEP #LightGray activate PDP PDP -> PDP: Valideer query PDP -> PDP: Verify context information PDP -> PEP: Query allowed deactivate PDP PEP -> resourceserver: GraphQL Request deactivate PEP activate resourceserver resourceserver --> PEP: 200 Response (GraphQL) deactivate resourceserver PEP --> Client: 200 Response (GraphQL) deactivate PEP deactivate Client @enduml`
 
 | **#** | **Processtap** | **Beschrijving** |
 | --- | --- | --- |
@@ -334,7 +441,36 @@ Na stap 8 van bovenstaande procesflow wordt het request dat is toegestaan doorge
 
 Voorbeeld van een request header ‘claims’:
 
-`{ "iss": "auth.nid", "sub": "uzovi:5529", "aud": "https://koppelpunt.test.ciz.nl/iwlz/indicatieregister/v2/graphql", "exp": 1729689721, "nbf": 1729084801, "iat": 1729084921, "jti": "38679b9f-6495-44d4-9875-503aff8e669e", "_claim_names": { "agb": "localhost", "uzovi": "localhost" }, "_claim_sources": { "localhost": { "jwt": "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJhZ2IiOiBudWxsLCAidXpvdmkiOiAiNTUyOSJ9.4YmLNTMhftIz7jL3_BOuJG0uBVHA2MobjsbMXJ9hctw" } }, "client_id": "uzovi:5529", "subjects": null, "scopes": [ "registers/wlzindicatieregister/indicaties:read" ], "consent_id": "5879861e-ddee-4212-974c-1cdbb4a0c61b", "client_metadata": null, "act": { "sub": "40000000100507" } }`
+```json
+{
+  "iss": "auth.nid",
+  "sub": "uzovi:5529",
+  "aud": "https://koppelpunt.test.ciz.nl/iwlz/indicatieregister/v2/graphql",
+  "exp": 1729689721,
+  "nbf": 1729084801,
+  "iat": 1729084921,
+  "jti": "38679b9f-6495-44d4-9875-503aff8e669e",
+  "_claim_names": {
+    "agb": "localhost",
+    "uzovi": "localhost"
+  },
+  "_claim_sources": {
+    "localhost": {
+      "jwt": "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJhZ2IiOiBudWxsLCAidXpvdmkiOiAiNTUyOSJ9.4YmLNTMhftIz7jL3_BOuJG0uBVHA2MobjsbMXJ9hctw"
+    }
+  },
+  "client_id": "uzovi:5529",
+  "subjects": null,
+  "scopes": [
+    "registers/wlzindicatieregister/indicaties:read"
+  ],
+  "consent_id": "5879861e-ddee-4212-974c-1cdbb4a0c61b",
+  "client_metadata": null,
+  "act": {
+    "sub": "40000000100507"
+  }
+}
+```
 
 ### 5.3 PEP Endpoints
 
@@ -351,15 +487,22 @@ Het Policy Decision Point (PDP) speelt een centrale rol in de toegangscontrole. 
 
 Hieronder een diagram dat de interactie tussen het PDP en andere componenten schetst:
 
-interactie-pdp-2.png openen
+```mermaid
+sequenceDiagram
+    autonumber
+    box lightgrey nID
+    participant PEP as Policy Enforcement Point<br/>(PEP)
+    participant PDP as Policy Decision Point<br/>(PDP)
+    end
+    participant PRP as Policy Retrieval Point<br/>(PRP)
+    participant Log as Decision Log
 
-![interactie-pdp-2](../img/nID-netwerkstelsel-interactie-pdp-2.png)
-
-Procesflow interactie PDP
-
-PlantUML
-
-`@startuml skinparam monochrome true skinparam defaultTextAlignment center participant "Policy Enforcement Point\n(PEP)" as PEP participant "Policy Decision Point\n(PDP)" as PDP participant "Policy Retrieval Point\n(PRP)" as PRP participant "Decision Log" as Log autonumber "<b>[000]" PEP -> PDP : "GraphQL-query\n+ access-token" PDP -> PRP : "Ophalen beleidsregels" PRP -> PDP : "Beleidsregels retourneren" PDP -> PEP : "Besluit toestaan/weigeren" PDP -> Log : "Besluit vastleggen" autonumber stop @enduml`
+    PEP->>PDP: GraphQL-query<br/>+ access-token
+    PDP->>PRP: Ophalen beleidsregels
+    PRP->>PDP: Beleidsregels retourneren
+    PDP->>PEP: Besluit toestaan/weigeren
+    PDP->>Log: Besluit vastleggen
+```
 
 In onderstaande stappen wordt uitgelegd hoe het Policy Decision Point PDP werkt.
 
@@ -377,15 +520,25 @@ Het Policy Retrieval Point (PRP) speelt een cruciale rol in het beheer en de lev
 
 Daarnaast biedt het PRP transparantie door gebruik te maken van een versiebeheersysteem, zoals GitHub, waarmee alle wijzigingen in beleidsregels inzichtelijk en traceerbaar zijn. Dit maakt het eenvoudig om beleidsregels te beheren, bij te werken en wijzigingen consistent door te voeren in het hele netwerk, wat de beheerbaarheid aanzienlijk vergroot.
 
-image-20250114-105000.png openen
-
 Procesflow PRP
 
-![image-20250114-105000](../img/nID-netwerkstelsel-image-20250114-105000.png)
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Client as Deelnemer (Client)
+    box lightgrey nID
+    participant PEP as Policy Enforcement Point<br/>(PEP)
+    participant PDP as Policy Decision Point<br/>(PDP)
+    end
+    participant PRP as Policy Retrieval Point<br/>(PRP)
 
-PlantUML
-
-`@startuml skinparam monochrome true actor "Deelnemer (Client)" as Client rectangle "Policy Enforcement Point\n(PEP)" as PEP rectangle "Policy Decision Point\n(PDP)" as PDP rectangle "Policy Retrieval Point\n(PRP)" as PRP Client -> PEP : "[1] Toegangsverzoek" PEP -down-> PDP : "[2] Valideren verzoek" PDP -down-> PRP : "[3] Ophalen beleidsregels" PRP -> PDP : "[4] Beleidsregels retourneren" PDP -> PEP : "[5] Besluit: toestaan of weigeren" PEP -> Client : "[6] Resultaat terugsturen" @enduml`
+    Client->>PEP: Toegangsverzoek
+    PEP->>PDP: Valideren verzoek
+    PDP->>PRP: Ophalen beleidsregels
+    PRP->>PDP: Beleidsregels retourneren
+    PDP->>PEP: Besluit: toestaan of weigeren
+    PEP->>Client: Resultaat terugsturen
+```
 
 | **#** | **Processtap** | **Beschrijving** |
 | --- | --- | --- |
@@ -428,14 +581,21 @@ Het Policy Administration Point (PAP) is verantwoordelijk voor het beheren en on
 
 Het proces van het PAP bestaat uit een reeks stappen die zorgen voor een gestructureerd beheer en veilige implementatie van beleidsregels. Hieronder wordt de procesflow beschreven.
 
-interactie-pap.png openen
 
-![interactie-pap](../img/nID-netwerkstelsel-interactie-pap.png)
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Admin as Beheerder
+    participant PAP as Policy Administration Point<br/>(PAP)
+    participant PRP as Policy Retrieval Point<br/>(PRP)
+    participant PDP as Policy Decision Point<br/>(PDP)
 
-PlantUML
-
-`@startuml skinparam monochrome true skinparam defaultTextAlignment center actor "Beheerder" as Admin participant "Policy Administration Point\n(PAP)" as PAP participant "Policy Retrieval Point\n(PRP)" as PRP participant "Policy Decision Point\n(PDP)" as PDP autonumber "<b>[000]" Admin -> PAP : "Creëren of aanpassen van beleidsregels" PAP -> PAP : "Validatie van beleidsregels" PAP -> PAP : "Opslaan in versiebeheersysteem" PAP -> PRP : "Publicatie van beleidsregels" PAP -> PDP : "Synchronisatie met beleidsregels" @enduml`
-
+    Admin->>PAP: Creëren of aanpassen van beleidsregels
+    PAP->>PAP: Validatie van beleidsregels
+    PAP->>PAP: Opslaan in versiebeheersysteem
+    PAP->>PRP: Publicatie van beleidsregels
+    PAP->>PDP: Synchronisatie met beleidsregels
+```
 Procesflow van het PAP
 
 | **#** | **Processtap** | **Beschrijving** |
@@ -482,15 +642,30 @@ Het PIP kan worden gekoppeld aan externe systemen, zoals registers of databases,
 
 Met deze combinatie van flexibiliteit, real-time capaciteiten en schaalbaarheid vormt het PIP een onmisbare schakel in het toegangscontroleproces.
 
-interactie-pip-2.png openen
-
-![interactie-pip-2](../img/nID-netwerkstelsel-interactie-pip-2.png)
 
 Procesflow PIP
 
-PlantUML
+```mermaid
+sequenceDiagram
+    autonumber
+    box lightgrey nID
+    participant PEP as Policy Enforcement Point<br/>(PEP)
+    participant PDP as Policy Decision Point<br/>(PDP)
+    participant PIP as Policy Information Point<br/>(PIP)
+    end
 
-`@startuml skinparam monochrome true skinparam defaultTextAlignment center participant "Policy Enforcement Point\n(PEP)" as PEP participant "Policy Decision Point\n(PDP)" as PDP participant "Policy Information Point\n(PIP)" as PIP participant "Externe bron\nof interne database" as DataSource autonumber "<b>[000]" PEP -> PDP : "Toegangsverzoek" PDP -> PIP : "Behoefte aan aanvullende informatie" PDP -> PIP : "Contextinformatie opvragen" PIP -> DataSource : "Gegevens ophalen" DataSource --> PIP : "Gegevens retourneren" PIP --> PDP : "Informatie terugkoppelen" PDP --> PEP : "Besluit toestaan/weigeren" autonumber stop @enduml`
+    box lightgrey register
+    participant DataSource as Externe bron<br/>of interne database
+    end
+
+    PEP->>PDP: Toegangsverzoek
+    PDP->>PDP: Behoefte aan aanvullende informatie
+    PDP->>PIP: Contextinformatie opvragen
+    PIP->>DataSource: Gegevens ophalen
+    DataSource-->>PIP: Gegevens retourneren
+    PIP-->>PDP: Informatie terugkoppelen
+    PDP-->>PEP: Besluit toestaan/weigeren
+```
 
 | **#** | **Processtap** | **Beschrijving** |
 | --- | --- | --- |
@@ -520,25 +695,91 @@ Let op: foutmeldingen kunnen afhankelijk van de geïmplementeerde client anders 
 >
 > Het overzicht geeft de mogelijke HTTP Error responses vanuit voornamelijk de PEP. Dezelfde fouten kunnen ook voorkomen bij de Resource-server. Een onderscheid in afzender moet mogelijk zijn. In een volgende update zal er afzenderinformatie in de message-body moeten worden toegevoegd.
 
-![](https://github.com/iStandaarden/iWlz-RequestForComment/raw/main/plantUMLsrc/rfc0014-02-foutmeldingen_overzicht.svg)
+
+```mermaid
+
+sequenceDiagram
+    Box lightgrey Deelnemer 
+    participant Client as Client
+    end
+
+    Box lightgrey nID
+    participant AuthzServer as Autorisatieserver
+    participant PEP as PEP
+    end
+    
+    Box lightgrey Register
+    participant ResourceServer as Resource-Server
+    end
+
+    Client->>AuthzServer: [001] Aanvragen van autorisatie<br/>"scope": "registers/resource:read"<br/>Authenticatiemiddel
+
+    rect pink
+    Client--xAuthzServer: [10.1] Autorisatie foutmeldingen
+
+    end
+
+    AuthzServer->>AuthzServer: [002] Valideer Authenticatiemiddel
+    AuthzServer->>AuthzServer: [003] Run Rule-engine o.b.v. scope(s)
+
+    AuthzServer-->>Client: [004] 200 Response (Access-Token)
+
+    Client->>PEP: [005] GraphQL Request<br/>Authenticatiemiddel + Access-Token + query
+    Note right of PEP: Inline filtering requests
+
+    rect pink
+    Client--xPEP: [10.2] PEP Foutmeldingen
+    end
+
+    PEP->>ResourceServer: [006] GraphQL Request
+    ResourceServer-->>PEP: [007] 200 Response (GraphQL)
+    PEP-->>Client: [008] 200 Response (GraphQL)
+```
+
+
 
 ### 10.1 Foutmeldingen Aanvraag van Autorisatie
 
-foutmeldingen-aanvragen-van-autorisatie.png openen
+```mermaid
+sequenceDiagram
+    Box lightgrey Deelnemer 
+    participant Client as Client
+    end
 
-![foutmeldingen-aanvragen-van-autorisatie](../img/nID-netwerkstelsel-foutmeldingen-aanvragen-van-autorisatie.png)
+    Box lightgrey nID
+    participant AuthzServer as Autorisatieserver
+    participant PEP as PEP
+    end
+    
+    Box lightgrey Register
+    participant ResourceServer as Resource-Server
+    end
 
-PlantUML
+    Client->>AuthzServer: [001] Aanvragen van autorisatie<br/>"scope": "registers/resource:read"<br/>Authenticatiemiddel
 
-`@startuml skinparam ParticipantPadding 20 skinparam BoxPadding 10 box "Deelnemer" participant "Client" as Client end box box "nID" participant "Autorisatieserver" as AuthzServer end box autonumber "<b>[000]" activate Client Client -> AuthzServer: **Aanvragen van autorisatie**\n"scope": "registers/wlzindicatieregister/indicaties:read"\nAuthenticatiemiddel autonumber stop Client <-[#red]-X AuthzServer:<color:red>[1] 400 Audience Required Client <-[#red]-X AuthzServer:<color:red>[2] 403 Not Allowed Client <-[#red]-X AuthzServer:<color:red>[3] 403 Invalid Client Certificate Client <-[#red]-X AuthzServer:<color:red>[4] 404 Not Found Client <-[#red]-X AuthzServer:<color:red>[5] 500 Internal Server Error autonumber resume activate AuthzServer AuthzServer -> AuthzServer: Valideer Authenticatiemiddel AuthzServer -> AuthzServer: Run Rule-engine o.b.v. scope(s) deactivate AuthzServer AuthzServer --> Client --: 200 Response (Access-Token) deactivate Client @enduml`
+    rect pink
+    Client--xAuthzServer: [01] 400 Audience Required
+    Client--xAuthzServer: [02] 401 Unauthorized
+    Client--xAuthzServer: [03] 403 Not Allowed
+    Client--xAuthzServer: [04] 403 Invalid client certificate
+    Client--xAuthzServer: [05] 404 Not found
+    Client--xAuthzServer: [06] 500 Internal Server Error
+    end
+
+    AuthzServer->>AuthzServer: [002] Valideer Authenticatiemiddel
+    AuthzServer->>AuthzServer: [003] Run Rule-engine o.b.v. scope(s)
+
+    AuthzServer-->>Client: [004] 200 Response (Access-Token)
+```
 
 #### [01] 400 Audience Required
 
 - **HTTP Response:**
   `HTTP/1.1 400 Bad Request "audience is required"`
 - **Details**:
-Controleer of alle headers op de juiste manier worden meegegeven zoals: ‘content-type’. Het netwerkmodel gebruikt de flow standaard (grant\_type) “client\_credentials”. Een _**audience**_ en _**scope**_parameter zijn vereist bij het aanvragen van een token. Voeg deze toe aan de request body.
-  Bijvoorbeeld:
+Controleer of alle headers op de juiste manier worden meegegeven zoals: ‘content-type’. Het netwerkmodel gebruikt de flow standaard (grant\_type) “client\_credentials”. Een _**audience**_ en _**scope**_parameter zijn vereist bij het aanvragen van een token. Voeg deze toe aan de request body.  
+
+  Bijvoorbeeld:  
   `{ "grant_type": "client_credentials", "scope": "registers/wlzindicatieregister/indicaties:read", "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/graphql/v2/graphql" }`
 
 #### [02] 401 Unauthorized
@@ -549,10 +790,12 @@ Controleer of alle headers op de juiste manier worden meegegeven zoals: ‘conte
 Er kan niet geacteerd worden namens een partij (subject), omdat hier geen rechten voor zijn geregistreerd. Indien subject en actor hetzelfde zijn, dan wordt deze foutmelding ook gegeven.
   - Controleer of acteren mogelijk moet zijn en neem contact op met VECOZO.
   - Verander de body zodat er als directe partij een aanvraag wordt gedaan.
-  Voorbeeld body als er geacteerd wordt namens een partij:
-  `{ "grant_type": "client_credentials", "scope": "registers/wlzindicatieregister/indicaties:read", "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql", "access_token": { "sub": "uzovi:5000" } }`
-  Voorbeeld body als aanvraag wordt gedaan als directe partij:
-  `{ "grant_type": "client_credentials", "scope": "registers/wlzindicatieregister/indicaties:read", "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql" }`
+    
+    Voorbeeld body als er geacteerd wordt namens een partij:  
+    `{ "grant_type": "client_credentials", "scope": "registers/wlzindicatieregister/indicaties:read", "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql", "access_token": { "sub": "uzovi:5000" } }`
+  
+    Voorbeeld body als aanvraag wordt gedaan als directe partij:  
+    `{ "grant_type": "client_credentials", "scope": "registers/wlzindicatieregister/indicaties:read", "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql" }`
 
 #### [03] 403 Not Allowed
 
@@ -569,7 +812,7 @@ Mogelijke oorzaken zijn:
 - **HTTP Response**:
   `HTTP/1.1 403 Invalid Client Certificate`
 - **Details**:
-Het certificaat ontbreekt, is ongeldig of verlopen (van toepassing bij gebruik van een VECOZO-systeemcertificaat). Zorg ervoor dat het authenticatiemiddel overeenkomt met de juiste omgeving. Zie deze VECOZO website [![](https://www.vecozo.nl/favicon.ico)Uw certificaat installeren of vernieuwen | VECOZO](https://www.vecozo.nl/certificaten-installerenvernieuwen/) of neem contact op met VECOZO Functioneel Beheer.
+Het certificaat ontbreekt, is ongeldig of verlopen (van toepassing bij gebruik van een VECOZO-systeemcertificaat). Zorg ervoor dat het authenticatiemiddel overeenkomt met de juiste omgeving. Zie deze VECOZO website [Uw certificaat installeren of vernieuwen | VECOZO](https://www.vecozo.nl/certificaten-installerenvernieuwen/) of neem contact op met VECOZO Functioneel Beheer.
 
 #### [05] 404 Not Found
 
@@ -587,13 +830,47 @@ Een onverwachte fout is opgetreden op de autorisatieserver. Probeer het later op
 
 ### 10.2 Foutmeldingen PEP endpoint bij GraphQL request
 
-foutmeldingen-graphql-request.png openen
 
-![foutmeldingen-graphql-request](../img/nID-netwerkstelsel-foutmeldingen-graphql-request.png)
 
-PlantUML
+```mermaid
 
-`@startuml skinparam ParticipantPadding 20 skinparam BoxPadding 10 box "Deelnemer" participant "Client" as Client end box box "nID" participant "PEP" as Filter end box box "Register" participant "Resource-Server" as resourceserver end box autonumber "<b>[000]" activate Client Client -> Filter: **GraphQL Request**\nAuthenticatiemiddel + Access-Token note right of Filter: Inline filtering requests autonumber stop Client <-[#red]-X Filter: <color:red>[1] 400 Invalid Query Syntax Client <-[#red]-X Filter: <color:red>[2] 400 No Operation Client <-[#red]-X Filter: <color:red>[3] 401 Access Denied, Invalid Scope Client <-[#red]-X Filter: <color:red>[4] 401 Unauthorized Client <-[#red]-X Filter: <color:red>[5] 401 Not Allowed Client <-[#red]-X Filter: <color:red>[6] 403 Invalid Client Certificate Client <-[#red]-X Filter: <color:red>[7] 403 Policy: Access Denied Client <-[#red]-X Filter: <color:red>[8] 403 Request Does Not Match Scopes Client <-[#red]-X Filter: <color:red>[9] 500 Internal Server Error Client <-[#red]-X Filter: <color:red>[10] 502 Bad Gateway Client <-[#red]-X Filter: <color:red>[11] 504 Gateway Timeout autonumber resume activate Filter Filter -> resourceserver: **GraphQL Request** resourceserver --> Filter: **200 Response (GraphQL)** deactivate Filter Filter --> Client: **200 Response (GraphQL)** deactivate Client @enduml`
+sequenceDiagram
+    Box lightgrey Deelnemer 
+    participant Client as Client
+    end
+
+    Box lightgrey nID
+    participant AuthzServer as Autorisatieserver
+    participant PEP as PEP
+    end
+    
+    Box lightgrey Register
+    participant ResourceServer as Resource-Server
+    end
+
+
+    Client->>PEP: [001] GraphQL Request<br/>Authenticatiemiddel + Access-Token + query
+    Note right of PEP: Inline filtering requests
+
+    rect pink
+    Client--xPEP: [01] 400 Invalid Query Syntax
+    Client--xPEP: [02] 400 No operation
+    Client--xPEP: [03] 400 Invalid scope
+    Client--xPEP: [04] 401 Unauthorized
+    Client--xPEP: [05] 403 Invallid Client Certificate
+    Client--xPEP: [06] 403 Not Allowed
+    Client--xPEP: [07] 403 Policy Acces Denied
+    Client--xPEP: [08] 403 Request does not match scopes
+    Client--xPEP: [09] 500 Internal server error
+    Client--xPEP: [10] 502 Bad gateway
+    Client--xPEP: [11] 504 Gateway timeout
+    end
+
+    PEP->>ResourceServer: [002] GraphQL Request
+    ResourceServer-->>PEP: [003] 200 Response (GraphQL)
+    PEP-->>Client: [004] 200 Response (GraphQL)
+```
+
 
 #### [01] 400 Invalid Query Syntax
 
@@ -639,7 +916,7 @@ Mogelijke oorzaken zijn:
   `HTTP/1.1 403 Invalid Client Certificate`
 - **Details**:
 Het certificaat ontbreekt, is ongeldig of verlopen (van toepassing bij gebruik van een VECOZO-systeemcertificaat). Zorg ervoor dat het authenticatiemiddel overeenkomt met de juiste omgeving.
-  Voor meer informatie ga naar: [![](https://www.vecozo.nl/favicon.ico)Uw certificaat installeren of vernieuwen | VECOZO](https://www.vecozo.nl/certificaten-installerenvernieuwen/) of neem contact op met VECOZO Functioneel Beheer
+  Voor meer informatie ga naar: [Uw certificaat installeren of vernieuwen | VECOZO](https://www.vecozo.nl/certificaten-installerenvernieuwen/) of neem contact op met VECOZO Functioneel Beheer
 
 #### [07] 403 Policy: Access Denied
 
