@@ -2,7 +2,7 @@
 
 > [!NOTE]
 > **Publicatie** op: https://istandaarden.github.io/Afsprakenstelsel-iWlz/  
-> **Staging** (pre-publicatie) op: https://istandaarden.github.io/Afsprakenstelsel-iWlz/staging/
+> **Staging** (pre-publicatie) op: `https://istandaarden.github.io/Afsprakenstelsel-iWlz/staging##/` zie [3. Publicatie proces](#3-publicatie-proces) voor de juiste url.
 
 ---
 
