@@ -1,9 +1,9 @@
-name: publish afsprakenstelsel
+name: publish site
 on:
   push:
     branches:
       - main
-      - staging
+      - 'staging*'
 
 permissions:
   contents: write
@@ -55,11 +55,11 @@ jobs:
           destination_dir: .
           keep_files: true
 
-      - name: Deploy staging (staging → /staging)
-        if: github.ref == 'refs/heads/staging'
+      - name: Deploy staging branch (staging* → /staging/<branch-name>)
+        if: startsWith(github.ref, 'refs/heads/staging')
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-          destination_dir: staging
+          destination_dir: staging/${{ github.ref_name }}
           keep_files: true
