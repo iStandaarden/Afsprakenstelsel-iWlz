@@ -7,13 +7,20 @@
 ---
 
 # Beheer van de publicatie
-1. [Beheer van het menu en inhoud](#1-beheer-van-het-menu-en-inhoud)
-2. [Beheer van de pagina's](#2-beheer-van-de-paginas)
-3. Beheer van de publicatie
-4. Publicatie proces
-5. PDF
-6. Framework
-7. Locale installatie (*optioneel - niet noodzakelijk voor beheer*)
+- [Afsprakenstelsel iWlz](#afsprakenstelsel-iwlz)
+- [Beheer van de publicatie](#beheer-van-de-publicatie)
+  - [1. Beheer van het menu en inhoud](#1-beheer-van-het-menu-en-inhoud)
+    - [1.1 Opbouw menu](#11-opbouw-menu)
+    - [1.2 Verwijzing naar de inhoud](#12-verwijzing-naar-de-inhoud)
+  - [2. Beheer van de pagina's](#2-beheer-van-de-paginas)
+    - [2.1 Markdown](#21-markdown)
+    - [2.2 Diagrammen](#22-diagrammen)
+    - [2.3 Afbeeldingen](#23-afbeeldingen)
+  - [3. Publicatie proces](#3-publicatie-proces)
+  - [4. PDF generatie](#4-pdf-generatie)
+  - [5. Overige instellingen publicatie](#5-overige-instellingen-publicatie)
+  - [6. Framework](#6-framework)
+  - [7. Lokale installatie](#7-lokale-installatie)
 
 
 ## 1. Beheer van het menu en inhoud
@@ -173,130 +180,54 @@ Toelichting:
 | 6. | Controleer de wijzigingen op: https://istandaarden.github.io/Afsprakenstelsel-iWlz/ (productie omgeving) | 
 | 7. | Verwijder de aangemaakte staging-branch. Dit zorgt er ook voor dat de staging publicatie zal worden verwijderd!
 
+## 4. PDF generatie
+Met elke publicatie wordt er een PDF gegeneerd die beschikbaar en te downloaden is via https://istandaarden.github.io/Afsprakenstelsel-iWlz/pdf/afsprakenstelsel-iWlz.pdf
+
+De instellingen van de PDF-generatie staan in het bestand `mkdocs.yml` onder de sectie **- plugins**:
+
+```yml
+  - with-pdf:
+      enabled_if_env: ENABLED_PDF_EXPORT
+      cover_title: Afsprakenstelsel iWlz
+      cover_subtitle: pdf van Afsprakenstelsel iWlz https://istandaarden.github.io/Afsprakenstelsel-iWlz/
+      cover_logo: docs/assets/ZinBanner.png
+      copyright: "iStandaarden.nl"
+      output_path: pdf/afsprakenstelsel-iWlz.pdf
+      toc_title: Inhoudsopgave
+      toc_level: 2
+      # heading_shift: true
+      # ordered_chapter_level: 2
+      cover: true
+      back_cover: false
+``` 
 
 
 
 
 
-
-## 4. Beheer van de publicatie
+## 5. Overige instellingen publicatie
 Hieronder volgt een korte beschrijving van de overige onderdelen.
 
-```shell
-|-- docs                                            # Hoofddirectory publicatie
-|   |-- applicatie/                                 # Documenten mbt artikel APPLICATIE
-|   |   |-- applicatiecomponenten.md
-|   |   |-- diensten
-|   |   |   |-- index.md
-|   |   |   |-- notificeren-en-melden.md
-|   |   |   |-- raadplegen.md
-|   |   |   |-- testen.md
-|   |   |   |-- toetreden.md
-|   |   |   `-- uittreden.md
-|   |   |-- graphql_over_http.md
-|   |   |-- index.md
-|   |   |-- nid_netwerkstelsel.md
-|   |   `-- silvester.md
-|   |-- assets/                                     # Nodig voor publicatie
-|   |-- css/                                        # Nodig voor publicatie
-|   |-- img/                                        # Afbeeldingen uit de diverse artikelen
-|   |   `-- welkom-lagen.png
-|   |-- informatie/                                 # Documenten mbt artikel INFORMATIE
-|   |   |-- index.md
-|   |   `-- informatiestandaard.md
-|   |-- inleiding/                                  # Documenten mbt artikel INLEIDING
-|   |   |-- achtergrond_toelichting.md
-|   |   |-- begrippenlijst.md
-|   |   |-- governance.md
-|   |   `-- index.md
-|   |-- it-infrastructuur/                          # Documenten mbt artikel IT-INFRASTRUCTUUR
-|   |   |-- identificatie_authenticatie.md
-|   |   |-- index.md
-|   |   |-- logging.md
-|   |   `-- netwerk.md
-|   |-- organisatiebeleid/                          # Documenten mbt artikel ORGANISATIEBELEID
-|   |   |-- architectuur.md
-|   |   |-- index.md
-|   |   |-- ontwerpkeuzes.md
-|   |   |-- randvoorwaarden.md
-|   |   |-- releasebeleid.md
-|   |   |-- serviceafspraken/
-|   |   |   |-- afnemersdeel.md
-|   |   |   |-- bronhoudersdeel.md
-|   |   |   |-- index.md
-|   |   |   `-- operationeel_netwerkbeheer.md
-|   |   `-- wijzigingsverzoeken.md
-|   |-- overrides/                                  # Nodig voor publicatie
-|   |-- proces/                                     # Documenten mbt artikel PROCES
-|   |   |-- index.md
-|   |   |-- netwerkfuncties.md
-|   |   `-- procesmodel.md
-|   `-- uitwisselprofiel/                           # Documenten mbt artikel UITWISSELPROFIEL
-|       |-- index.md
-|       |-- uitwisselprofiel_bemiddeling.md
-|       `-- uitwisselprofiel_indicatie.md
-|-- index.md                                        # Homepage publicatie
+```bash
+|-- docs/                                           # Hoofddirectory publicatie
+| ..
+|   |-- assets/                                     # Onderdelen voor de generieke look and feel van de publicatie
+|   |-- css/                                        # Styling van de publicatie
+| ..
+|   |-- overrides/partials                          # Opbouw van het toplevel menu
+| ..
 |-- mkdocs.yml.                                     # Configuratiebestand publicatie
-`-- README.md 
+`-- README.md                                       # Dit bestand
 ```
 
 
-## Installatie
-Onderdelen
-- MkDocs: https://www.mkdocs.org
+## 6. Framework
+
+De publicatie maakt gebruik van de volgende onderdelen: 
+
+- GitHub Pages: https://docs.github.com/en/pages
 - Materials for MkDocs: https://squidfunk.github.io/mkdocs-material/
+- MkDocs: https://www.mkdocs.org
 
-### Instructies
-1. Volg de handleiding van James Willet: https://jameswillett.dev/getting-started-with-material-for-mkdocs/
-
-Er is eventueel meer informatie via:
-1. https://www.mkdocs.org/user-guide/installation/
-3. https://squidfunk.github.io/mkdocs-material/getting-started/
- 
-
-### Handleiding
-- https://squidfunk.github.io/mkdocs-material/setup/
-
-## local install obv Python - MacOS
-Hiermee installeer je de onderdelen om lokaal een server te draaien zodat je op je eigen omgeving in een preview kan testen. Doe je dit niet dan krijg je pas iets te zien als de Git-publicatie is voltooid. 
-
-Om te publiceren is dit dus niet noodzakelijk, wel handig.
-
-1. Python: `brew install python` 
-2. Pango (voor pdf-generatie): `brew install pango`
-3. Add to `~/.zshrc` or `~/.bash_profile`: `export DYLD_LIBRARY_PATH="/opt/homebrew/lib:$DYLD_LIBRARY_PATH"` 
-4. Setup a Python virtual environment by typing `python -m venv venv`
-5. Type `source venv/bin/activate` to activate the virtual environment
-6. Install mkdocs material - `pip install mkdocs-material`
-7. Install plugin glightbox voor het kunnen vergroten van plaatjes in een pop-up: `pip install mkdocs-glightbox`
-8. Install plugin voor het genereren van een pdf: `pip install mkdocs-with-pdf` 
-
-### Opstarten lokale server:
-
-1. Als de virtual environment nog niet is geactiveerd: `source .venv/bin/activate`
-2. Lokale server starten: `mkdocs serve`
-3. Lokale server is beschikbaar op http://localhost:8000/Afsprakenstelsel-iWlz
-
-### Afsluiten lokale server:
-
-1. `CTRL`+ `C` - sluit de server af
-2. `deactivate` - om de python VM af te sluiten
-
-### PDF lokaal aanmaken
-Standaard wordt er lokaal geen PDF gegenereerd. Dit is om het publicatie proces van de website te versnellen en er niet elke keer opnieuw een pdf zal worden gegenereerd. 
-
-**Fysieke pdf lokaal**  
-Wil je dit wel een keer laten genereren voer dan het volgende uit in de terminal nadat de Python VM is opgestart:  
-`ENABLED_PDF_EXPORT=1 mkdocs build`
-
-Daarna zal er een pdf beschikbaar zijn onder: `./site/pdf`
-
-**pdf in runtime lokaal**
-
-PDF beschikbaar stellen in lokale website:  
-`ENABLED_PDF_EXPORT=1 mkdocs serve`
-
-Daarna zal er een pdf beschikbaar zijn via: http://localhost:8000/Afsprakenstelsel-iWlz/pdf/afsprakenstelsel-iWlz.pdf
-
-### PDF op website
-Vanuit Github gebeurd dit wel telkens wanneer er een nieuwe commit plaatsvindt tenzij je dit aanpast in de action. 
+## 7. Lokale installatie
+Alleen op omgeving met admin-rechten: zie [local_install.md](./local_install.md)
