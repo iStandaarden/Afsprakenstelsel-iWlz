@@ -5,13 +5,49 @@
 **Inleiding**  
 Dit hoofdstuk beschrijft de diensten die van toepassing zijn in het iWlz-netwerk. Ieder register biedt één of meerdere van deze diensten aan. De specifieke invulling van de diensten wordt toegelicht de uitwisselprofielen van de registers.
 
-In dit hoofdstuk worden de diensten generiek beschreven. Het gaat om de volgende diensten:
+In dit hoofdstuk worden de diensten generiek beschreven.   
 
-* [Notificeren en Melden](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071204)Voorvertoning
-* [Raadplegen](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071274)Voorvertoning
-* [Toetreden](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/691044381)Voorvertoning
-* [Uittreden](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/690356266)Voorvertoning
-* [Testen](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/690225160)Voorvertoning
-  
+Het gaat om de volgende diensten:    
 
-* * *
+<div class="grid cards" markdown>
+
+-   :octicons-arrow-switch-24:{ .lg .middle } __Notificeren en Melden__
+
+    ---
+
+    ... Hier korte beschrijving ...
+
+    [:octicons-arrow-right-24: lees verder](./notificeren-en-melden.md)
+
+-   :octicons-codescan-24:{ .lg .middle } __Raadplegen__
+
+    ---
+
+    ... Hier korte beschrijving ...
+
+    [:octicons-arrow-right-24: lees verder](./raadplegen.md)
+
+-   :octicons-sign-in-24:{ .lg .middle } __Toetreden__
+
+    ---
+
+    ... Hier korte beschrijving ...
+
+    [:octicons-arrow-right-24: lees verder](./toetreden.md)
+
+-   :octicons-sign-out-24:{ .lg .middle } __Uittreden__
+
+    ---
+
+    ... Hier korte beschrijving ...
+
+    [:octicons-arrow-right-24: lees verder](./uittreden.md)
+
+-   :octicons-beaker-24:{ .lg .middle } __Testen__
+
+    ---
+
+    ... Hier korte beschrijving ...
+
+    [:octicons-arrow-right-24: lees verder](./testen.md)
+</div>

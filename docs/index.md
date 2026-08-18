@@ -73,7 +73,7 @@ In de [release notes](https://wlz.atlassian.net/wiki/spaces/IWLZAS/overview#5.-R
 
 ## 5. Release notes
 
-### Release notes 17-12-2025:
+### Release notes 17-12-2025
 
 | Laag | Status | Wijzigingen t.o.v. release 09-04-2025 |
 | :-- | :-- | :-- |
