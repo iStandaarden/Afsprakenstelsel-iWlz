@@ -88,6 +88,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#logging" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1848,6 +1853,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2029,6 +2036,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -2096,9 +2105,118 @@
   
 
 
-  <h1>Logging</h1>
+<h1 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Versie: <em>17-12-2025</em> | Status: <em>Definitief</em></p>
+</div>
+<h1 id="1-inleiding">1. Inleiding<a class="headerlink" href="#1-inleiding" title="Permanent link">¶</a></h1>
+<p>Binnen het iWlz-netwerkmodel is gestandaardiseerde tracelogging verplicht. Het doel hiervan is om transacties en gebeurtenissen in de keten end-to-end te kunnen volgen en analyseren. Hiermee kan sneller worden vastgesteld waar een fout optreedt, hoe een verzoek zich door het netwerk beweegt en welke partijen betrokken zijn.</p>
+<h1 id="2-traceid-en-spanid">2. TraceId en SpanId<a class="headerlink" href="#2-traceid-en-spanid" title="Permanent link">¶</a></h1>
+<p>Elke ketenverwerking krijgt een unieke <strong>TraceId</strong> toegewezen. Deze wordt bij het starten van een nieuw verzoek gegenereerd en doorgegeven aan alle opvolgende diensten. Alle logregels die bij hetzelfde verzoek horen, zijn daardoor aan elkaar te koppelen.</p>
+<p>Voor iedere afzonderlijke verwerkingsstap binnen een keten wordt aanvullend een unieke <strong>SpanId</strong> gebruikt. Hiermee wordt inzichtelijk welke bewerkingen onderdeel uitmaken van dezelfde keten en kan de verwerking stap voor stap gevolgd worden.</p>
+<h1 id="3-technische-afspraken">3. Technische afspraken<a class="headerlink" href="#3-technische-afspraken" title="Permanent link">¶</a></h1>
+<h2 id="31-standaardisatie-van-traceid-en-spanid-generatie-via-opentelemetry">3.1 Standaardisatie van TraceId- en SpanId-generatie via OpenTelemetry<a class="headerlink" href="#31-standaardisatie-van-traceid-en-spanid-generatie-via-opentelemetry" title="Permanent link">¶</a></h2>
+<p>Om de kans op botsingen in een gedistribueerde omgeving te minimaliseren, moeten zowel <code>TraceId</code>- als <code>SpanId</code>-waarden worden gegenereerd met een mechanisme dat voldoet aan de eisen van randomness en voldoende entropie.</p>
+<p>Alle partijen dienen gebruik te maken van dezelfde library voor het genereren van deze identifiers. Om consistentie te waarborgen gebruiken alle partijen de <a href="https://opentelemetry.io/docs/">OpenTelemetry SDK</a> voor het genereren van <code>TraceId</code>- als <code>SpanId</code>-waarden. Voor vrijwel alle gangbare programmeertalen zijn OpenTelemetry-implementaties beschikbaar.</p>
+<p>In de praktijk kan bijvoorbeeld gebruik worden gemaakt van de volgende compliant libraries:</p>
+<ul>
+<li><code>@opentelemetry/api</code> (JavaScript/Node.js)</li>
+<li><code>io.opentelemetry:opentelemetry-api</code> (Java)</li>
+<li><code>opentelemetry-api</code> (Python)</li>
+</ul>
+<p>Hiermee wordt gegarandeerd dat alle gegenereerde <code>TraceId</code>- en <code>SpanId</code>-waarden voldoen aan de juiste lengte, entropie en formatvereisten.</p>
+<p>Voor elke ontvangen request wordt een nieuwe <code>SpanId</code> gegenereerd. Indien een service bestaat uit meerdere verwerkingsstappen (zoals authenticatie, validatie of routering), mag hiervoor per stap ook een aparte <code>SpanId</code> worden aangemaakt.</p>
+<h2 id="32-toevoegen-aan-requests">3.2 Toevoegen aan requests<a class="headerlink" href="#32-toevoegen-aan-requests" title="Permanent link">¶</a></h2>
+<p>Zowel de <code>TraceId</code> als de <code>SpanId</code> worden toegevoegd aan de headers van elk verzoek dat binnen het netwerkmodel naar een andere dienst wordt verstuurd.</p>
+<p>Gebruik hiervoor de volgende headers, conform de <a href="https://github.com/openzipkin/b3-propagation">B3 Propagation-standaard</a>:</p>
+<ul>
+<li><code>X-B3-TraceId</code> – een unieke ID voor het volledige ketenverzoek.</li>
+<li><code>X-B3-SpanId</code> – een unieke ID voor de huidige verwerkingsstap.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Let op:</p>
+<p>HTTP-headers zijn niet hoofdlettergevoelig. Conform de B3-standaard wordt aanbevolen de headers te noteren als <code>X-B3-TraceId</code> en <code>X-B3-SpanId</code> (in kebab-case met hoofdletters).</p>
+</div>
+<h2 id="33-randvoorwaarden-voor-traceid">3.3 Randvoorwaarden voor TraceId<a class="headerlink" href="#33-randvoorwaarden-voor-traceid" title="Permanent link">¶</a></h2>
+<p>Een <code>TraceId</code> moet:</p>
+<ul>
+<li>Exact 16 bytes groot zijn, wat overeenkomt met 32 hexadecimale tekens (lowercase).</li>
+<li>Niet uitsluitend uit nullen bestaan (bijv. <code>0000000000000000</code> is ongeldig).</li>
+<li>Uniek zijn. TraceIds dienen gegenereerd te worden met behulp van een UUID-generator of via de OpenTelemetry SDK om duplicaten binnen een trace te voorkomen.</li>
+</ul>
+<p><strong>Voorbeeld van een geldig TraceID:</strong></p>
+<p><code>X-B3-TraceId: 463ac35c9f6413ad48485a3953bb6124</code></p>
+<h2 id="34-randvoorwaarden-voor-spanid">3.4 Randvoorwaarden voor SpanId<a class="headerlink" href="#34-randvoorwaarden-voor-spanid" title="Permanent link">¶</a></h2>
+<p>Een <code>SpanId</code> moet:</p>
+<ul>
+<li>Exact 8 bytes groot zijn, wat overeenkomt met 16 hexadecimale tekens (lowercase).</li>
+<li>Niet uitsluitend uit nullen bestaan (bijv. <code>0000000000000000</code> is ongeldig).</li>
+<li>Uniek zijn. SpanIds worden gegenereerd met behulp van de OpenTelemetry SDK, zodat duplicaten binnen een trace worden voorkomen.</li>
+</ul>
+<p><strong>Voorbeeld van een geldig SpanId:</strong></p>
+<p><code>X-B3-SpanId: 0020000000000001</code></p>
+<h2 id="35-validatie-van-traceid">3.5 Validatie van TraceId<a class="headerlink" href="#35-validatie-van-traceid" title="Permanent link">¶</a></h2>
+<p>Bij binnenkomst wordt gecontroleerd of een <code>TraceId</code> aanwezig is. Indien aanwezig, wordt deze gebruikt voor verdere verwerking.</p>
+<h2 id="36-voorbeeldimplementatie-van-tracelogging-niet-normatief">3.6 Voorbeeldimplementatie van tracelogging (niet-normatief)<a class="headerlink" href="#36-voorbeeldimplementatie-van-tracelogging-niet-normatief" title="Permanent link">¶</a></h2>
+<p>Onderstaande flow toont een mogelijke implementatie van traceerbaarheid binnen een ketenverzoek. De flow omvat zowel het aanvragen van autorisatie als het uitvoeren van een gegevensopvraag (GraphQL) en laat zien hoe <code>TraceId</code> en <code>SpanId</code> zich door de verschillende onderdelen van het netwerkmodel verspreiden.
+Dit voorbeeld is afkomstig uit een specifieke context en dient ter illustratie van de werking; de exacte inrichting kan verschillen per ketenpartner of toepassing</p>
+<pre class="mermaid-zoom"><code>
 
+sequenceDiagram
+    box "Deelnemer"
+        participant Client as Client
+    end
+    box "nID"
+        participant AuthzServer as autorisatieserver
+        participant Filter as nID Filter
+        participant nIDResourceServer as Resource-server
+    end
+    box "Register"
+        participant BEMRegister as Resource
+    end
 
+    autonumber
+
+    activate Client
+    Client-&gt;&gt;AuthzServer: **Aanvragen van autorisatie**&lt;br/&gt;"scope": "registers/resource:read"&lt;br/&gt;Authenticatiemiddel&lt;br/&gt;X-B3-TraceId: 463ac35c9f6413ad48485a3953bb6124&lt;br/&gt;X-B3-SpanId: a2fb4a1d1a96d312
+
+    activate AuthzServer
+    AuthzServer-&gt;&gt;AuthzServer: Valideer Authenticatiemiddel
+    AuthzServer-&gt;&gt;AuthzServer: Run Rule-engine o.b.v. scope(s)&lt;br/&gt;X-B3-TraceId: 463ac35c9f6413ad48485a3953bb6124&lt;br/&gt;X-B3-SpanId: 34cfd3ee730bbe13
+
+    activate AuthzServer
+    AuthzServer-&gt;&gt;AuthzServer: Valideer autorisatie
+    AuthzServer-&gt;&gt;AuthzServer: Genereer Access-Token&lt;br/&gt;X-B3-TraceId: 463ac35c9f6413ad48485a3953bb6124&lt;br/&gt;X-B3-SpanId: 34cfd3ee730bbe13
+
+    activate AuthzServer
+    deactivate AuthzServer
+    deactivate AuthzServer
+
+    AuthzServer--&gt;&gt;Client: 200 Response (Access-Token)
+    deactivate AuthzServer
+    deactivate Client
+
+    Client-&gt;&gt;Filter: **GraphQL Query**&lt;br/&gt;Authenticatiemiddel + Access-Token&lt;br/&gt;X-B3-TraceId: 463ac35c9f6413ad48485a3953bb6124&lt;br/&gt;X-B3-SpanId: 2edb09379a27bfb1
+    activate Filter
+    Note right of Filter: Inline filtering requests
+    activate Client
+
+    Filter-&gt;&gt;Filter: Valideer Authenticatiemiddel
+    Filter-&gt;&gt;Filter: Valideer Access-Token
+    Filter-&gt;&gt;Filter: Valideer GraphQL
+    Filter-&gt;&gt;Filter: Valideer GraphQL request met scope(s)
+    Filter-&gt;&gt;nIDResourceServer: 
+    deactivate Filter
+
+    activate nIDResourceServer
+    activate BEMRegister
+    nIDResourceServer-&gt;&gt;BEMRegister: GraphQL Request&lt;br/&gt;X-B3-TraceId: 463ac35c9f6413ad48485a3953bb6124&lt;br/&gt;X-B3-SpanId: 75c38117346fa472
+    BEMRegister--&gt;&gt;nIDResourceServer: 200 Response (GraphQL)
+    deactivate BEMRegister
+
+    nIDResourceServer--&gt;&gt;Client: 200 Response (GraphQL)
+    deactivate nIDResourceServer
+    deactivate Client</code></pre>
 
 
 
