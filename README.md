@@ -5,9 +5,14 @@
 > **Staging** (pre-publicatie) op: `https://istandaarden.github.io/Afsprakenstelsel-iWlz/staging##/` zie [3. Publicatie proces](#3-publicatie-proces) voor de juiste url.
 
 ---
+# Layout Afsprakenstelel
+ ![afbeelding toelichting layout afsprakenstelsel](./src/layout.png)
+
+Voor verdere toelichting op de aanpassing hiervan zie Beheer van de publicatie.
 
 # Beheer van de publicatie
 - [Afsprakenstelsel iWlz](#afsprakenstelsel-iwlz)
+- [Layout Afsprakenstelel](#layout-afsprakenstelel)
 - [Beheer van de publicatie](#beheer-van-de-publicatie)
   - [1. Beheer van het menu en inhoud](#1-beheer-van-het-menu-en-inhoud)
     - [1.1 Opbouw menu](#11-opbouw-menu)
@@ -21,6 +26,7 @@
   - [5. Overige instellingen publicatie](#5-overige-instellingen-publicatie)
   - [6. Framework](#6-framework)
   - [7. Lokale installatie](#7-lokale-installatie)
+
 
 
 ## 1. Beheer van het menu en inhoud
