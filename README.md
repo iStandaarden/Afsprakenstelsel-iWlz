@@ -2,7 +2,8 @@
 
 > [!NOTE]
 > **Publicatie** op: https://istandaarden.github.io/Afsprakenstelsel-iWlz/  
-> **Staging** (pre-publicatie) op: `https://istandaarden.github.io/Afsprakenstelsel-iWlz/staging##/` zie [3. Publicatie proces](#3-publicatie-proces) voor de juiste url.
+> **Staging** (pre-publicatie) op: `https://istandaarden.github.io/Afsprakenstelsel-iWlz/staging/{branch-naam}`  
+> zie [3. Publicatie proces](#3-publicatie-proces) voor de samenstelling van de juiste staging-url.
 
 ---
 # Layout Afsprakenstelel
@@ -178,13 +179,13 @@ direction LR
 Toelichting:
 | Stap | Uitleg |
 | --: | :-- |
-| 1. | Maak een staging branch aan. De branchnaam **moet** beginnen met `staging`. Bijvoorbeeld `staging_260817` of `staging_remo`. Iets wat voor jou herkenbaar is. |
+| 1. | Maak een staging branch aan. Bijvoorbeeld `staging_260817` of `staging_remo`. Iets wat voor jou herkenbaar is. |
 | 2. | Voer de benodigde wijzigingen door op/in de zojuist aangemaakt staging-branch
-| 3. | Elke commit op de staging-branch zorgt voor een nieuwe publicatie op https://istandaarden.github.io/Afsprakenstelsel-iWlz/< staging-branch-naam >, bijvoorbeeld: https://istandaarden.github.io/Afsprakenstelsel-iWlz/staging_260817/ |
+| 3. | Elke commit op de staging-branch zorgt voor een nieuwe publicatie in de staging-map. Deze is nadat de action is voltooid te vinden op https://istandaarden.github.io/Afsprakenstelsel-iWlz/staging/{branch-naam}, bijvoorbeeld: https://istandaarden.github.io/Afsprakenstelsel-iWlz/staging/staging_260817/ |
 | 4. | Controleer de wijzigingen |
-| 5. | Als de wijzigingen zijn zoals verwacht, merge dan de staging-branch naar `main` |
-| 6. | Controleer de wijzigingen op: https://istandaarden.github.io/Afsprakenstelsel-iWlz/ (productie omgeving) | 
-| 7. | Verwijder de aangemaakte staging-branch. Dit zorgt er ook voor dat de staging publicatie zal worden verwijderd!
+| 5. | Als de wijzigingen zijn zoals verwacht, merge dan de staging-branch naar `main`. Maak daarvoor een merge-request aan en vraag of iemand die wil controleren of overrule dit. |
+| 6. | Controleer de wijzigingen in de uiteindelijke publicatie op: https://istandaarden.github.io/Afsprakenstelsel-iWlz/  | 
+| 7. | Verwijder de aangemaakte staging-branch. Dit zorgt er ook voor dat de staging publicatie zal worden verwijderd! |
 
 ## 4. PDF generatie
 Met elke publicatie wordt er een PDF gegeneerd die beschikbaar en te downloaden is via https://istandaarden.github.io/Afsprakenstelsel-iWlz/pdf/afsprakenstelsel-iWlz.pdf
