@@ -15,7 +15,7 @@ Het gaat om de volgende diensten:
 
     ---
 
-    ...
+    ... Hier korte beschrijving ...
 
     [:octicons-arrow-right-24: lees verder](./notificeren-en-melden.md)
 
@@ -23,7 +23,7 @@ Het gaat om de volgende diensten:
 
     ---
 
-    ...
+    ... Hier korte beschrijving ...
 
     [:octicons-arrow-right-24: lees verder](./raadplegen.md)
 
@@ -31,7 +31,7 @@ Het gaat om de volgende diensten:
 
     ---
 
-    ...
+    ... Hier korte beschrijving ...
 
     [:octicons-arrow-right-24: lees verder](./toetreden.md)
 
@@ -39,7 +39,7 @@ Het gaat om de volgende diensten:
 
     ---
 
-    ...
+    ... Hier korte beschrijving ...
 
     [:octicons-arrow-right-24: lees verder](./uittreden.md)
 
@@ -47,7 +47,7 @@ Het gaat om de volgende diensten:
 
     ---
 
-    ...
+    ... Hier korte beschrijving ...
 
     [:octicons-arrow-right-24: lees verder](./testen.md)
 </div>
