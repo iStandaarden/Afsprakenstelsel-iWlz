@@ -2,11 +2,11 @@
 
 !!! info "Versie: *17-12-2025* | Status: *Definitief*"
 
-# 1. Inleiding
+## 1. Inleiding
 
 Alle communicatie binnen het iWlz-netwerkmodel vindt plaats via internet, er wordt dus geen gebruik gemaakt van private netwerken. Gezien de gevoelige aard van de gegevens zijn alle deelnemers aan het iWlz netwerk verplicht gebruik te maken van DNSSEC.
 
-# 2. Domain Name System Security Extensions (DNSSEC)
+## 2. Domain Name System Security Extensions (DNSSEC)
 
 Met DNSSEC kan de ontvanger de echtheid van de domeinnaaminformatie (waaronder IP-adressen) controleren. Dit voorkomt bijvoorbeeld dat een aanvaller het IP-adres ongemerkt manipuleert (DNS-spoofing) en daarmee internetverkeer omleidt naar een eigen server.
 
@@ -14,7 +14,7 @@ Een domeinnaamhouder kan met DNSSEC een digitale handtekening toevoegen aan DNS-
 
 Zie ook: [DNSSEC | Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden/dnssec)
 
-# 3. Transportbeveiliging (TLS)
+## 3. Transportbeveiliging (TLS)
 
 Alle communicatie tussen verschillende deelnemers aan het iWlz-netwerkmodel over het netwerk is gebaseerd op het artikel [Identificatie & authenticatie](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071502).
 
