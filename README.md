@@ -185,7 +185,7 @@ Toelichting:
 | 4. | Controleer de wijzigingen |
 | 5. | Als de wijzigingen zijn zoals verwacht, merge dan de staging-branch naar `main`. Maak daarvoor een merge-request aan en vraag of iemand die wil controleren of overrule dit. |
 | 6. | Controleer de wijzigingen in de uiteindelijke publicatie op: https://istandaarden.github.io/Afsprakenstelsel-iWlz/  | 
-| 7. | Verwijder de aangemaakte staging-branch. Dit zorgt er ook voor dat de staging publicatie zal worden verwijderd! |
+| 7. | Als alles in orde is, verwijder de aangemaakte staging-branch als deze niet meer direct nodig is. Dit zorgt er ook voor dat de staging publicatie zal worden verwijderd! Ga hiervoor naar https://github.com/iStandaarden/Afsprakenstelsel-iWlz/branches en delete de betreffende branch. |
 
 ## 4. PDF generatie
 Met elke publicatie wordt er een PDF gegeneerd die beschikbaar en te downloaden is via https://istandaarden.github.io/Afsprakenstelsel-iWlz/pdf/afsprakenstelsel-iWlz.pdf
