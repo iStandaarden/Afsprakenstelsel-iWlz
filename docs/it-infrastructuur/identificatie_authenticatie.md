@@ -35,7 +35,7 @@ In de communicatie tussen deelnemers en het iWlz-netwerkmodel wordt gebruik gema
 
 ## 2.3 Publiceren publieke sleutels voor authenticatie
 
-De publieke sleutel van de VECOZO G4 rootcertificaat is te downloaden van de VECOZO website: [![](https://www.vecozo.nl/favicon.ico)Public key client certificaat | VECOZO](https://www.vecozo.nl/technische-informatie/public-key-vecozo-client-certificaat/)
+De publieke sleutel van de VECOZO G4 rootcertificaat is te downloaden van de VECOZO website: [Public key client certificaat | VECOZO](https://www.vecozo.nl/technische-informatie/public-key-vecozo-client-certificaat/)
 
 ## 2.4 Controle op IP-adressen
 
