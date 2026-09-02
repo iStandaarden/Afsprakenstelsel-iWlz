@@ -1,4 +1,4 @@
-:root  > * {
+:root > * {
   --md-primary-fg-color:        #026e06;
   --md-primary-fg-color--light: #06950a;
   --md-primary-fg-color--dark:  #06950a;
@@ -8,4 +8,33 @@
   max-width: 100% !important;
   width: 1200px;
   height: auto;
+}
+
+/* Shrink the prev/next navigation footer */
+.md-footer__inner {
+  min-height: auto !important;
+  padding: 0.05rem 0.6rem !important;  /* was 0.4rem */
+}
+
+.md-footer__title {
+  font-size: 0.7rem !important;
+  margin-top: 0.15rem !important;
+}
+
+.md-footer__direction {
+  font-size: 0.6rem !important;
+}
+
+.md-footer__button.md-icon svg {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+/* Shrink the bottom copyright bar */
+.md-footer-meta__inner {
+  padding: 0.3rem 0.6rem !important;
+}
+
+.md-copyright {
+  font-size: 0.65rem !important;
 }
