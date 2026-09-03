@@ -4,29 +4,25 @@ on:
     branches:
       - main
       - 'staging*'
-
 permissions:
   contents: write
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
+        with:
+          fetch-depth: 0  # mike heeft de volledige geschiedenis nodig om de gh-pages branch te kunnen bijwerken
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-
       - uses: actions/cache@v4
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
           restore-keys: |
             mkdocs-material-
-
       - name: Install system dependencies for WeasyPrint
         run: |
           sudo apt-get update
@@ -37,24 +33,14 @@ jobs:
             libffi-dev \
             libcairo2 \
             shared-mime-info
-
-      - run: pip install mkdocs-material mkdocs-glightbox mkdocs-with-pdf
-
+      - run: pip install mkdocs-material mkdocs-glightbox mkdocs-with-pdf mike
       - name: Enable PDF export
         run: echo "ENABLED_PDF_EXPORT=1" >> $GITHUB_ENV
 
+      # --- Staging ---
       - name: Build site
+        if: startsWith(github.ref, 'refs/heads/staging')
         run: mkdocs build --site-dir site
-
-      - name: Deploy production (main → /)
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          destination_dir: .
-          keep_files: true
-
       - name: Deploy staging branch (staging* → /staging/<branch-name>)
         if: startsWith(github.ref, 'refs/heads/staging')
         uses: peaceiris/actions-gh-pages@v4
@@ -63,3 +49,21 @@ jobs:
           publish_dir: ./site
           destination_dir: staging/${{ github.ref_name }}
           keep_files: true
+
+      # --- Main: loopt via mike-versioning i.p.v. rechtstreeks naar de root ---
+      - name: Configure git user for mike
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Read huidige versie
+        if: github.ref == 'refs/heads/main'
+        id: version
+        run: echo "value=$(tr -d '[:space:]' < mike-version.txt)" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy production version with mike (main → /<versie>/, alias latest → /)
+        if: github.ref == 'refs/heads/main'
+        run: |
+          mike deploy --push --update-aliases "${{ steps.version.outputs.value }}" latest
+          mike set-default --push latest

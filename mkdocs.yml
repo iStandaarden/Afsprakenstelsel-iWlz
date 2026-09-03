@@ -85,11 +85,18 @@ extra_css:
 extra_javascript:
   - assets/javascripts/svg-pan-zoom.min.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js
-#  - assets/javascripts/mermaid-panzoom.js
+  # - assets/javascripts/mermaid-panzoom.js
   - assets/javascripts/mermaid-zoom.js
 
 extra:
   pdf_url: pdf/afsprakenstelsel-iWlz.pdf
+  # --- mike-versioning ---
+  # 'provider: mike' activeert de versie-dropdown in de header van Material.
+  # 'default: latest' zorgt dat bezoekers die op de root-url landen (.../Afsprakenstelsel-iWlz/)
+  # altijd de meest recente versie zien (via de 'latest'-alias, zie de release-workflow).
+  version:
+    provider: mike
+    default: latest
 
 # Markdown extensions
 markdown_extensions:
@@ -164,5 +171,5 @@ nav:
       - uitwisselprofiel/index.md
       - Uitwisselprofiel Indicatie: uitwisselprofiel/uitwisselprofiel_indicatie.md
       - Uitwisselprofiel Bemiddeling: uitwisselprofiel/uitwisselprofiel_bemiddeling.md
-  - Andere versies: 
+  - Andere versies:
       - versies/index.md
