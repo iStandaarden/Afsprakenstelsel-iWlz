@@ -1,19 +1,7 @@
 [
   {
-    "version": "v1.1.0",
-    "title": "v1.1.0 (future - concept)",
-    "aliases": [
-      "future"
-    ]
-  },
-  {
     "version": "v1.0.0",
-    "title": "v1.0.0 (current)",
-    "aliases": []
-  },
-  {
-    "version": "v1.0.0(huidig)",
-    "title": "v1.0.0(huidig)",
+    "title": "v1.0.0 (huidige)",
     "aliases": [
       "current"
     ]
