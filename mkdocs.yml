@@ -92,11 +92,13 @@ extra:
   pdf_url: pdf/afsprakenstelsel-iWlz.pdf
   # --- mike-versioning ---
   # 'provider: mike' activeert de versie-dropdown in de header van Material.
-  # 'default: latest' zorgt dat bezoekers die op de root-url landen (.../Afsprakenstelsel-iWlz/)
-  # altijd de meest recente versie zien (via de 'latest'-alias, zie de release-workflow).
+  # 'default: current' zorgt dat bezoekers die op de root-url landen (.../Afsprakenstelsel-iWlz/)
+  # altijd de geldige/huidige versie zien (via de 'current'-alias, zie de publish-site workflow).
+  # De 'future'-versie (in ontwikkeling) is alleen bereikbaar via de dropdown of een directe URL,
+  # nooit via de root.
   version:
     provider: mike
-    default: latest
+    default: current
 
 # Markdown extensions
 markdown_extensions:
@@ -171,5 +173,5 @@ nav:
       - uitwisselprofiel/index.md
       - Uitwisselprofiel Indicatie: uitwisselprofiel/uitwisselprofiel_indicatie.md
       - Uitwisselprofiel Bemiddeling: uitwisselprofiel/uitwisselprofiel_bemiddeling.md
-  - Andere versies:
+  - Versiebeheer:
       - versies/index.md
