@@ -1,18 +1,17 @@
 # Versies
 
-!!! info "Versie: *02-09-2026* | Status: *Concept*"
 
-## Huidig geldende versie  
+## Huidig geldende versie  (current)
 
 | Versie | Datum ingang | Status | Datum status|
 | :-- | :-- | :-- | :-- |
-| [Versie: 1.0](https://istandaarden.github.io/Afsprakenstelsel-iWlz/) | *17-12-2025* | *Definitief*  |  *17-12-2025* |
+| [Versie: 1.0.0](https://istandaarden.github.io/Afsprakenstelsel-iWlz/) | *17-12-2025* | *Definitief*  |  *17-12-2025* |
 
-## In Ontwikkeling 
+## In Ontwikkeling (future)
 
 | Versie | Datum ingang | Status | Datum status |
 | :-- | :-- | :-- | :-- |
-| [Versie 1.x](https://istandaarden.github.io/Afsprakenstelsel-iWlz/staging/staging_remo) | n.t.b. | Concept | 01-09-2026 |
+| [Versie 1.x]() | n.t.b. | Concept | 01-09-2026 |
 
 
 
