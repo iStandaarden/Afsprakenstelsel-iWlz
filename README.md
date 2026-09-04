@@ -22,11 +22,12 @@ Voor verdere toelichting op de aanpassing hiervan zie Beheer van de publicatie.
     - [2.1 Markdown](#21-markdown)
     - [2.2 Diagrammen](#22-diagrammen)
     - [2.3 Afbeeldingen](#23-afbeeldingen)
-  - [3. Publicatie proces](#3-publicatie-proces)
+- [3. Publicatie proces](#3-publicatie-proces)
+  - [3.1 Staging](#31-staging)
+  - [3.2 `main`-branch en `future`-branch](#32-main-branch-en-future-branch)
   - [4. PDF generatie](#4-pdf-generatie)
   - [5. Overige instellingen publicatie](#5-overige-instellingen-publicatie)
   - [6. Framework](#6-framework)
-  - [7. Lokale installatie](#7-lokale-installatie)
 
 
 
@@ -141,11 +142,14 @@ Bij de publicatie wordt de mermaid-code omgezet naar een leesbaar diagram.
 
 Wanneer het niet mogelijk is gebruik te maken van een Mermaid-diagram, plaats je een afbeelding in: `/docs/img/` waarbij je de afbeelding begint met de naam van het artikel waarin het wordt gebruikt. Zo komt in het artikel 'Welkom' een afbeelding voor met de lagen-structuur. De naam van de afbeelding is `welkom-lagen.png`.
 
-## 3. Publicatie proces
+# 3. Publicatie proces
 
 De toelichting onder [1. Beheer van het menu en inhoud](#1-beheer-van-het-menu-en-inhoud) en [2. Beheer van de pagina's](#2-beheer-van-de-paginas) is voldoende om de publicatie van het Afsprakenstelsel iWlz inhoudelijk te beheren.
 
 Aanpassingen aan het menu gaat op basis van aanpassingen in `mkdocs.yml` en `/docs/` (zie 1. Beheer van het menu en inhoud). Aanpassingen in de inhoud van de artikelen gaat door middel van het aanpassen van het betreffende markdown document. 
+
+## 3.1 Staging
+Om eerst wijzigingen in een preview eerst te 'testen' kan je gebruik maken van een *Staging* publicatie. Deze publicatie verschijnt niet in de versie-dropdown. Je moet weten hoe je de staging-branch hebt genoemd om de publicatie te vinden. 
 
 Het proces om aanpassingen in een nieuwe publicatie te verwerken is als volgt: 
 
@@ -179,13 +183,22 @@ direction LR
 Toelichting:
 | Stap | Uitleg |
 | --: | :-- |
-| 1. | Maak een staging branch aan. Bijvoorbeeld `staging_260817` of `staging_remo`. Iets wat voor jou herkenbaar is. |
+| 1. | Maak een staging branch aan van `main` of `future`. Bijvoorbeeld `staging_260817` of `staging_remo`. Iets wat voor jou herkenbaar is. Belangrijk is dat de branch begint met "`staging_`"|
 | 2. | Voer de benodigde wijzigingen door op/in de zojuist aangemaakt staging-branch
 | 3. | Elke commit op de staging-branch zorgt voor een nieuwe publicatie in de staging-map. Deze is nadat de action is voltooid te vinden op https://istandaarden.github.io/Afsprakenstelsel-iWlz/staging/{branch-naam}, bijvoorbeeld: https://istandaarden.github.io/Afsprakenstelsel-iWlz/staging/staging_260817/ |
 | 4. | Controleer de wijzigingen |
-| 5. | Als de wijzigingen zijn zoals verwacht, merge dan de staging-branch naar `main`. Maak daarvoor een merge-request aan en vraag of iemand die wil controleren of overrule dit. |
+| 5. | Als de wijzigingen zijn zoals verwacht, merge dan de staging-branch naar `main` of `future`. Maak daarvoor een merge-request aan en vraag of iemand die wil controleren of overrule dit. |
 | 6. | Controleer de wijzigingen in de uiteindelijke publicatie op: https://istandaarden.github.io/Afsprakenstelsel-iWlz/  | 
 | 7. | Als alles in orde is, verwijder de aangemaakte staging-branch als deze niet meer direct nodig is. Dit zorgt er ook voor dat de staging publicatie zal worden verwijderd! Ga hiervoor naar https://github.com/iStandaarden/Afsprakenstelsel-iWlz/branches en delete de betreffende branch. |
+
+## 3.2 `main`-branch en `future`-branch
+
+Voor het ondersteunen van een **HUIDIGE** (ook wel Lopende) versie en een **In Ontwikkeling** versie zijn twee branches belangrijk. De `main`-branch en `future`-branch.
+
+current-version.txt / future-version.txt. Delete script en publicatie future.
+
+> [!CAUTION]
+> LET OP! elke keer als current-version.txt / future-version.txt wijzigt geeft dat een nieuwe versie in de versie-dropdown. Wees er dus bewust van wanneer dit nodig is. 
 
 ## 4. PDF generatie
 Met elke publicatie wordt er een PDF gegeneerd die beschikbaar en te downloaden is via https://istandaarden.github.io/Afsprakenstelsel-iWlz/pdf/afsprakenstelsel-iWlz.pdf
@@ -236,5 +249,4 @@ De publicatie maakt gebruik van de volgende onderdelen:
 - Materials for MkDocs: https://squidfunk.github.io/mkdocs-material/
 - MkDocs: https://www.mkdocs.org
 
-## 7. Lokale installatie
-Alleen op omgeving met admin-rechten: zie [local_install.md](./local_install.md)
+

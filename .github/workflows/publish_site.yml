@@ -76,7 +76,9 @@ jobs:
       - name: Deploy current version with mike (main → /<versie>/, alias current → /)
         if: github.ref == 'refs/heads/main'
         run: |
-          mike deploy --push --update-aliases "${{ steps.current_version.outputs.value }}" current
+          mike deploy --push --update-aliases \
+            --title "${{ steps.current_version.outputs.value }} (current)" \
+            "${{ steps.current_version.outputs.value }}" current
           mike set-default --push current
 
       # --- Future: alleen bij handmatige trigger, vanaf de door jou gekozen branch ---

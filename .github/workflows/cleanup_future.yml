@@ -1,0 +1,35 @@
+name: Verwijder future-versie
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Typ exact "verwijder" om te bevestigen'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  delete-future:
+    runs-on: ubuntu-latest
+    if: ${{ inputs.confirm == 'verwijder' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Configure git user for mike
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - run: pip install mike
+
+      - name: Verwijder future-versie en -alias
+        run: mike delete future --push
