@@ -216,8 +216,24 @@ Het is ook mogelijk om de huidige versie te bewaren en een nieuwe versie te cre√
 
 De `future` branch is er om de eerst volgende versie alvast beschikbaar te maken. Aanwezigheid van een `future` publicatie is afzonderlijk te beheren en te versioneren.  
 
+Nog verder uit te werken. Stappen
+1. Haal eerst de laatste versie van de lopende versie over als je een future wilt starten (merge naar future branch)
+2. voer wijzigingen door en pas future-version.txt aan
+3. publiceer future branch via de handmatige actie "publish"
+4. De nieuwe versie is beschikbaar in de dropdown
 
-/ future-version.txt. Delete script en publicatie future.
+Overzetten naar main
+1. Pas in de future-branch: current-version.txt aan
+2. merge future naar main
+3. main is nu dezelfde versie als future, maar dan als (current)
+4. verwijder de future uit de dropdown dmv future delete action
+5. 
+
+
+Verwijderen versies:
+1. ga naar gh_pages branch
+2. pas versions.json aan
+3. verwijder eventueel ook de directories (gaat makkelijkste in VSC)
 
 ## 4. PDF generatie
 Met elke publicatie wordt er een PDF gegeneerd die beschikbaar en te downloaden is via https://istandaarden.github.io/Afsprakenstelsel-iWlz/pdf/afsprakenstelsel-iWlz.pdf
