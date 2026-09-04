@@ -1,15 +1,5 @@
 [
   {
-    "version": "v1.1.1",
-    "title": "v1.1.1 (concept)",
-    "aliases": []
-  },
-  {
-    "version": "v1.1.0",
-    "title": "v1.1.0 (TEST)",
-    "aliases": []
-  },
-  {
     "version": "v1.0.0",
     "title": "v1.0.0 (current)",
     "aliases": [
