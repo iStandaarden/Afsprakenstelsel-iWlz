@@ -6,14 +6,14 @@
 > zie [3. Publicatie proces](#3-publicatie-proces) voor de samenstelling van de juiste staging-url.
 
 ---
-# Layout Afsprakenstelel
+# Layout afsprakenstelsel
  ![afbeelding toelichting layout afsprakenstelsel](./src/layout.png)
 
 Voor verdere toelichting op de aanpassing hiervan zie Beheer van de publicatie.
 
 # Beheer van de publicatie
 - [Afsprakenstelsel iWlz](#afsprakenstelsel-iwlz)
-- [Layout Afsprakenstelel](#layout-afsprakenstelel)
+- [Layout afsprakenstelsel](#layout-afsprakenstelsel)
 - [Beheer van de publicatie](#beheer-van-de-publicatie)
   - [1. Beheer van het menu en inhoud](#1-beheer-van-het-menu-en-inhoud)
     - [1.1 Opbouw menu](#11-opbouw-menu)
@@ -25,6 +25,8 @@ Voor verdere toelichting op de aanpassing hiervan zie Beheer van de publicatie.
 - [3. Publicatie proces](#3-publicatie-proces)
   - [3.1 Staging](#31-staging)
   - [3.2 `main`-branch en `future`-branch](#32-main-branch-en-future-branch)
+    - [3.2.1 Publicatie 'main' branch (current)](#321-publicatie-main-branch-current)
+    - [3.2.2 Publicatie `future` branch (future)](#322-publicatie-future-branch-future)
   - [4. PDF generatie](#4-pdf-generatie)
   - [5. Overige instellingen publicatie](#5-overige-instellingen-publicatie)
   - [6. Framework](#6-framework)
@@ -33,7 +35,7 @@ Voor verdere toelichting op de aanpassing hiervan zie Beheer van de publicatie.
 
 ## 1. Beheer van het menu en inhoud
 
-De indeling van het menu en de veerwijzing naar de inhoud per menu-item verloopt via `mkdocs.yml`. In het yaml-document [`mkdocs.yml`](./mkdocs.yml) is er de hoofdtag `nav:`. 
+De indeling van het menu en de verwijzing naar de inhoud per menu-item verloopt via `mkdocs.yml`. In het yaml-document [`mkdocs.yml`](./mkdocs.yml) is er de hoofd tag `nav:`. 
 bijvoorbeeld (deel van de inhoud)
 ```yml
   - Welkom: index.md
@@ -53,9 +55,9 @@ bijvoorbeeld (deel van de inhoud)
 De menu-items op het hoogste niveau, staan vooraan in de 'tree'. Dit zijn in het voorbeeld: 
 - *Welkom*, 
 - *Inleiding* en 
-- *Organisatebeleid*. 
+- *organisatiebeleid*. 
 
-Onderdelen van een submenu staan weer een niveau lager onder het hoofdemenu. In het voorbeeld zijn onder de 
+Onderdelen van een submenu staan weer een niveau lager onder het hoofdmenu. In het voorbeeld zijn onder de 
 - Inleiding: 
   - *Achtergrond en toelichting*,
   - *Governance* en 
@@ -193,12 +195,27 @@ Toelichting:
 
 ## 3.2 `main`-branch en `future`-branch
 
-Voor het ondersteunen van een **HUIDIGE** (ook wel Lopende) versie en een **In Ontwikkeling** versie zijn twee branches belangrijk. De `main`-branch en `future`-branch.
+Voor het ondersteunen van een **HUIDIGE** (ook wel Lopende) versie en een **In Ontwikkeling** versie zijn twee branches belangrijk. De `main`-branch en `future`-branch. Elk van deze branches hebben een eigen doel en publicatie.
 
-current-version.txt / future-version.txt. Delete script en publicatie future.
+### 3.2.1 Publicatie 'main' branch (current)
+
+De inhoud van de 'main' branch zorgt voor de publicatie van de **Lopende** versie. De versie die op geldig is op het moment dat het Afsprakenstelsel word geraadpleegd. Standaard opent de versie die op dat moment in `main` wordt bijgehouden. 
+
+Deze versie is herkenbaar door het achtervoegsel "*(current)*". 
+
+**Correcties binnen dezelfde versie**  
+Correcties op de Lopende versie zijn mogelijk door een branch te maken van de `main` branch (bijvoorbeeld `staging_92`) en die weer te mergen naar `main`. Dit zorgt dat er een nieuwe publicatie zal plaatsvinden binnen dezelfde versie. Denk bijvoorbeeld aan spelfouten.
+
+**Correcties met nieuwe versie**  
+Het is ook mogelijk om de huidige versie te bewaren en een nieuwe versie te creëren van de **Lopende** versie. Het werkt als hierboven, maar pas dan ook het versienummer aan in [`current-version.txt`](./current-version.txt). Hiermee komt er een nieuwe keuze in het dropdown menu.
 
 > [!CAUTION]
 > LET OP! elke keer als current-version.txt / future-version.txt wijzigt geeft dat een nieuwe versie in de versie-dropdown. Wees er dus bewust van wanneer dit nodig is. 
+
+### 3.2.2 Publicatie `future` branch (future)
+
+De `future` branch is er om de eerst volgende versie alvast beschikbaar te maken. 
+/ future-version.txt. Delete script en publicatie future.
 
 ## 4. PDF generatie
 Met elke publicatie wordt er een PDF gegeneerd die beschikbaar en te downloaden is via https://istandaarden.github.io/Afsprakenstelsel-iWlz/pdf/afsprakenstelsel-iWlz.pdf
@@ -234,7 +251,7 @@ Hieronder volgt een korte beschrijving van de overige onderdelen.
 |   |-- assets/                                     # Onderdelen voor de generieke look and feel van de publicatie
 |   |-- css/                                        # Styling van de publicatie
 | ..
-|   |-- overrides/partials                          # Opbouw van het toplevel menu
+|   |-- overrides/partials                          # Opbouw van het top level menu
 | ..
 |-- mkdocs.yml.                                     # Configuratiebestand publicatie
 `-- README.md                                       # Dit bestand
