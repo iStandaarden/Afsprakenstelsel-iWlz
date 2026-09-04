@@ -29,7 +29,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - run: pip install mike
+      # - run: pip install mike
+      - run: pip install mike mkdocs mkdocs-material
 
       - name: Verwijder future-versie en -alias
         run: mike delete future --push
