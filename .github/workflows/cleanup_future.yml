@@ -30,7 +30,8 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       # - run: pip install mike
-      - run: pip install mike mkdocs mkdocs-material
+      # - run: pip install mike mkdocs mkdocs-material
+      - run: pip install mike mkdocs mkdocs-material mkdocs-glightbox mkdocs-with-pdf
 
       - name: Verwijder future-versie en -alias
         run: mike delete future --push
