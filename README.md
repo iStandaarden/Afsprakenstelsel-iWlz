@@ -214,7 +214,9 @@ Het is ook mogelijk om de huidige versie te bewaren en een nieuwe versie te creÃ
 
 ### 3.2.2 Publicatie `future` branch (future)
 
-De `future` branch is er om de eerst volgende versie alvast beschikbaar te maken. 
+De `future` branch is er om de eerst volgende versie alvast beschikbaar te maken. Aanwezigheid van een `future` publicatie is afzonderlijk te beheren en te versioneren.  
+
+
 / future-version.txt. Delete script en publicatie future.
 
 ## 4. PDF generatie
