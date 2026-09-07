@@ -239,7 +239,7 @@ De reden voor notificatie is altijd de registratie of wijziging van gegevens in 
 * Notificaties worden gestuurd op basis van wettelijke en vrijwillige abonnementen. Vrijwillige abonnementen worden in deze release nog niet geïmplementeerd.
 * Een notificatie stelt de ontvanger in staat te bepalen welke informatie opgevraagd kan worden.
 * Notificaties die randvoorwaardelijk zijn om een wettelijke taak uit te kunnen voeren worden door de bronhouder verstuurd zonder dat daar een apart abonnement per deelnemer voor nodig is.
-* Er is een lijst beschikbaar met notificatie end-points. Dit is het tijdelijk adresboek wat later wordt vervangen door de generieke functie Adresboek zodra deze beschikbaar komt. Zie: [![](https://github.com/fluidicon.png)GitHub - iStandaarden/iWlz-adresboek-public: Tijdelijk alternatief voor ZorgAB aansluiting](https://github.com/iStandaarden/iWlz-adresboek-public)
+* Er is een lijst beschikbaar met notificatie end-points. Dit is het tijdelijk adresboek wat later wordt vervangen door de generieke functie Adresboek zodra deze beschikbaar komt. Zie: [GitHub - iStandaarden/iWlz-adresboek-public: Tijdelijk alternatief voor ZorgAB aansluiting](https://github.com/iStandaarden/iWlz-adresboek-public)
   
 
 ### 3.3 Typen notificatie
@@ -266,18 +266,68 @@ Binnen het iWlz-netwerkmodel zijn er specifieke scopes gedefinieerd voor de dien
 
 ### 3.5 Sequentiediagram notificeren
 
-De flow beschrijft alleen het notificeren zelf. Voor het notificeren is autorisatie nodig. Het aanvragen van autorisatie en de daar bijhorende flow is beschreven in artikel [nID netwerkstelsel](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537 "https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537").
+De flow beschrijft alleen het notificeren zelf. Voor het notificeren is autorisatie nodig. Het aanvragen van autorisatie en de daar bijhorende flow is beschreven in artikel [nID netwerkstelsel](../nid_netwerkstelsel).
 
-image-20250612-095647.png openen
+```mermaid
+sequenceDiagram
+    box bronhouder
+        participant Resource
+        participant Register as Register-data
+    end
 
-![image-20250612-095647.png](https://media-cdn.atlassian.com/file/fe2c1308-7eb8-47ae-874e-c82329491c03/image/cdn?allowAnimated=true&client=ff03941b-d0af-436c-a833-5f701a18aa9f&collection=contentId-23071204&height=125&max-age=2592000&mode=full-fit&source=mediaCard&token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmZjAzOTQxYi1kMGFmLTQzNmMtYTgzMy01ZjcwMWExOGFhOWYiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpjb2xsZWN0aW9uOmNvbnRlbnRJZC0yMzA3MTIwNCI6WyJyZWFkIl19LCJleHAiOjE3ODIxMTU4NjYsIm5iZiI6MTc4MjExMjk4NiwiYWFJZCI6IjU1NzA1ODo3NDIwYzc0ZS1lMzNkLTRkYjAtODM1Ny1iZGQ3NWY3NzQ0ZWEiLCJodHRwczovL2lkLmF0bGFzc2lhbi5jb20vYXBwQWNjcmVkaXRlZCI6ZmFsc2UsImF1dGhUeXBlIjoic2Vzc2lvbiJ9.KbT1vw9Tu9nIq8styT2dHPcJ1tl1Gqas3WDSQ4ZAjEc&width=1011#media-blob-url=true&id=fe2c1308-7eb8-47ae-874e-c82329491c03&clientId=ff03941b-d0af-436c-a833-5f701a18aa9f&contextId=contentId-23071204&collection=contentId-23071204)
+    box nID
+        participant AuthzServer as autorisatieserver
+        participant PEP
+        participant PDP
+    end
 
-Sequentiediagram Notificeren
+    box deelnemer
+        participant ResServer as Resource-Server
+    end
 
-plantUML source sequentiediagram
+    Note over PEP: De volledige validatie en autorisatie flow<br/>is beschreven in het artikel<br/>nID netwerkstelsel
 
-```
-@startuml rfc008-02-notificatie_sequence skinparam participantpadding 20 skinparam boxpadding 40 box bronhouder #lightblue participant "Resource" as Resource participant "Register- \ndata" as Register end box box "nID" participant "autorisatieserver" as AuthzServer participant "PEP" as PEP participant "PDP" as PDP end box box deelnemer #lightyellow participant "Resource-\nServer" as ResServer end box note over PEP #lightgreen: De volledige validatie en autorisatie flow \nis beschreven in het artikel \nnID netwerkstelsel autonumber "<b>[00]" Resource -> Register : <b>registratie data activate Resource activate Register Register -> Register: <b>event trigger Register -> Resource : <b>bepaal notificatietype deactivate Register Resource -> Resource: <b>genereer GraphQL notificatie autonumber stop Resource -> AuthzServer: Aanvragen van autorisatie\n"scope": "../notificaties/notificatie:create" activate AuthzServer #Darkgrey AuthzServer --> Resource --: 200 Response (JWT Access-Token) deactivate AuthzServer autonumber resume Resource -> PEP: **GraphQL Request **\nAuthenticatiemiddel + JWT Access-Token + notificatie autonumber stop activate PEP PEP -> PEP: Valideer Authenticatie en \nAccess PEP -> PDP: GraphQL met policy valideren activate PEP #LightGray activate PDP PDP -> PDP: Valideer graphql autonumber stop PDP -> PEP: Graphql allowed deactivate PDP PEP -> ResServer: **[05] GraphQL Request** deactivate PEP autonumber resume activate ResServer ResServer -> ResServer: <b>ontvang \n<b>notificatie ResServer --> PEP: <b>GraphQL 200 response deactivate ResServer autonumber stop PEP --> Resource: <b>[07] GraphQL 200 response deactivate PEP Resource --> Resource: <b>[08] verwerk GraphQL 200 response @enduml
+    Resource->>Register: [00] registratie data
+    activate Resource
+    activate Register
+
+    Register->>Register: event trigger
+    Register->>Resource: bepaal notificatietype
+    deactivate Register
+
+    Resource->>Resource: genereer GraphQL notificatie
+
+    Resource->>AuthzServer: Aanvragen van autorisatie<br/>scope: ../notificaties/notificatie:create
+    activate AuthzServer
+    AuthzServer-->>Resource: 200 Response (JWT Access-Token)
+    deactivate AuthzServer
+
+    Resource->>PEP: GraphQL Request<br/>Authenticatiemiddel + JWT Access-Token + notificatie
+    activate PEP
+
+    PEP->>PEP: Valideer Authenticatie en Access
+    PEP->>PDP: GraphQL met policy valideren
+
+    activate PDP
+    PDP->>PDP: Valideer GraphQL
+    PDP-->>PEP: GraphQL allowed
+    deactivate PDP
+
+    PEP->>ResServer: [05] GraphQL Request
+    deactivate PEP
+
+    activate ResServer
+    ResServer->>ResServer: ontvang notificatie
+    ResServer-->>PEP: GraphQL 200 response
+    deactivate ResServer
+
+    activate PEP
+    PEP-->>Resource: [07] GraphQL 200 response
+    deactivate PEP
+
+    Resource->>Resource: [08] verwerk GraphQL 200 response
+    deactivate Resource
+
 ```
 
 | # | Beschrijving | Toelichting |
@@ -306,16 +356,52 @@ plantUML source sequentiediagram
 
 Gebruik voor de notificatie de GraphQL mutation `zendNotificatie`uit het schema:
 
-```
-mutation zendNotificatie( $afzenderID: String! $afzenderIDType: IDTypeEnum! $eventType: String! $ontvangerID: String! $ontvangerIDType: IDTypeEnum! $timestamp: DateTime! $subjectList: [SubjectEntity!]! ) { zendNotificatie( notificatieInput: { afzenderID: $afzenderID afzenderIDType: $afzenderIDType eventType: $eventType ontvangerID: $ontvangerID ontvangerIDType: $ontvangerIDType timestamp: $timestamp subjectList: $subjectList } ) { notificatieID } }
+```gql
+mutation zendNotificatie(
+  $afzenderID: String!
+  $afzenderIDType: IDTypeEnum!
+  $eventType: String!
+  $ontvangerID: String!
+  $ontvangerIDType: IDTypeEnum!
+  $timestamp: DateTime!
+  $subjectList: [SubjectEntity!]!
+) {
+  zendNotificatie(
+    notificatieInput: {
+      afzenderID: $afzenderID
+      afzenderIDType: $afzenderIDType
+      eventType: $eventType
+      ontvangerID: $ontvangerID
+      ontvangerIDType: $ontvangerIDType
+      timestamp: $timestamp
+      subjectList: $subjectList
+    }
+  ) {
+    notificatieID
+  }
+}
 ```
 
 #### 3.6.2 Voorbeeld input parameters
 
 Op basis van het scenario ziet het json-object met de input parameters er als volgt uit:
 
-```
-{ "afzenderID": "62253778", "afzenderIDType": "KVK", "eventType": "NIEUWE_INDICATIE_ZORGKANTOOR", "ontvangerID": "5151", "ontvangerIDType": "UZOVI", "timestamp": "2024-07-02T00:00:00Z", "subjectList": [ { "recordID": "WlzIndicatie/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6", "subject": "WlzIndicatie/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6" } ] }
+```json
+{
+  "afzenderID": "62253778",
+  "afzenderIDType": "KVK",
+  "eventType": "NIEUWE_INDICATIE_ZORGKANTOOR",
+  "ontvangerID": "5151",
+  "ontvangerIDType": "UZOVI",
+  "timestamp": "2024-07-02T00:00:00Z",
+  "subjectList": [
+    {
+      "recordID": "WlzIndicatie/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6",
+      "subject": "WlzIndicatie/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6"
+    }
+  ]
+}
+}
 ```
 
 Toelichting:
@@ -334,8 +420,21 @@ Toelichting:
 
 In dit voorbeeld zijn `subject` en `recordID` gelijk. Dit hoeft niet altijd zo te zijn. Bijvoorbeeld voor de notificatie `NIEUWE_BEMIDDELINGSPECIFICATIE_ZORGAANBIEDER` is dit niet het geval.
 
-```
-{ "afzenderID": "5050", "afzenderIDType": "UZOVI", "eventType": "NIEUWE_BEMIDDELINGSPECIFICATIE_ZORGAANBIEDER", "ontvangerID": "12345678", "ontvangerIDType": "AGBCODE", "timestamp": "2024-07-02T00:00:00Z", "subjectList": [ { "subject": "Bemiddeling/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6", "recordID": "Bemiddelingspecificatie/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6" } ] }
+```json
+{
+  "afzenderID": "5050",
+  "afzenderIDType": "UZOVI",
+  "eventType": "NIEUWE_BEMIDDELINGSPECIFICATIE_ZORGAANBIEDER",
+  "ontvangerID": "12345678",
+  "ontvangerIDType": "AGBCODE",
+  "timestamp": "2024-07-02T00:00:00Z",
+  "subjectList": [
+    {
+      "subject": "Bemiddeling/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6",
+      "recordID": "Bemiddelingspecificatie/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6"
+    }
+  ]
+}
 ```
 
 Ga voor meer over de specificaties van de notificaties naar de paragraaf over “Typen notificatie” en kies daar een register.
@@ -344,14 +443,30 @@ Ga voor meer over de specificaties van de notificaties naar de paragraaf over �
 
 Voorbeeld succesvolle aflevering van de notificatie (non-normative):
 
-```
-HTTP/1.1 200 { "data": { "zendNotificatie": { "notificatieID": "e2d8c3c2-7453-4948-95c8-de86688461e5" } } }
+```http
+HTTP/1.1 200 
+  {
+    "data": {
+      "zendNotificatie": {
+        "notificatieID": "e2d8c3c2-7453-4948-95c8-de86688461e5"
+      }
+    }
+  }
 ```
 
 Voorbeeld onsuccesvolle aflevering notificatie (non-normative):
 
-```
-HTTP/1.1 400 Bad Request { "errors": [ { "message": "ZendNotificatie mutation: afzenderIDType is not valid", "extensions": { "code": "GRAPHQL_VALIDATION_FAILED" } } ] }
+```http
+HTTP/1.1 400 Bad Request 
+  {
+    "errors": [
+      {
+        "message": "ZendNotificatie mutation: afzenderIDType is not valid",
+        "extensions": { "code": "GRAPHQL_VALIDATION_FAILED" }
+      }
+    ]
+  }
+
 ```
 
 ## 4. Meldingen
@@ -363,7 +478,7 @@ Door middel van een melding kan een raadpleger van een bron de bronhouder voorzi
 ### 4.2 Uitgangspunten meldingen
 
 * Deze request for comments beschrijft het proces van meldingen en verschillende vormen. In de eerste implementatie zal alleen de foutmelding worden geïmplementeerd.
-* Er is een lijst beschikbaar met end-points voor meldingen. Dit is het tijdelijk adresboek wat later wordt vervangen door de generieke functie Adresboek zodra deze beschikbaar komt. Zie: [![](https://github.com/fluidicon.png)GitHub - iStandaarden/iWlz-adresboek-public: Tijdelijk alternatief voor ZorgAB aansluiting](https://github.com/iStandaarden/iWlz-adresboek-public)
+* Er is een lijst beschikbaar met end-points voor meldingen. Dit is het tijdelijk adresboek wat later wordt vervangen door de generieke functie Adresboek zodra deze beschikbaar komt. Zie: [GitHub - iStandaarden/iWlz-adresboek-public: Tijdelijk alternatief voor ZorgAB aansluiting](https://github.com/iStandaarden/iWlz-adresboek-public)
   
 
 ### 4.3 Typen melding
@@ -398,8 +513,61 @@ Sequentiediagram Melden
 
 plantUML source
 
-```
-@startuml rfc008-02-foutmelden_sequence skinparam participantpadding 20 skinparam boxpadding 40 box deelnemer #lightyellow participant "Resource" as Resource end box box "nID" participant "autorisatieserver" as AuthzServer participant "PEP" as PEP participant "PDP" as PDP end box box bronhouder #lightblue participant "Resource-\nServer" as ResServer end box note over PEP #lightgreen: Het autorisatie en validatie-proces \nis beschreven in RFC0014 \nFunctionele uitwerking aanvragen autorisatie \n(oAuth2.0) autonumber "<b>[00]" ResServer o-> Resource: <b>ontvang data uit register activate Resource Resource -> Resource: <b>valideer data Resource -x Resource : <b>bepaal foutcode Resource -> Resource: <b>genereer GraphQL foutmelding autonumber stop Resource -> AuthzServer: Aanvragen van autorisatie\n"scope": "..meldingen/melding:create" activate AuthzServer #Darkgrey AuthzServer --> Resource --: 200 Response (JWT Access-Token) deactivate AuthzServer autonumber resume Resource -> PEP: **GraphQL Request **\nAuthenticatiemiddel + JWT Access-Token + foutmelding autonumber stop activate PEP #Darkgrey PEP -> PEP: Valideer Authenticatie en \nAccess PEP -> PDP: GraphQL met policy valideren activate PEP #Darkgrey activate PDP #Darkgrey PDP -> PDP: Valideer graphql autonumber stop PDP --> PEP: Graphql allowed deactivate PDP PEP -> ResServer: **[05] GraphQL Request** deactivate PEP autonumber resume activate ResServer ResServer -> ResServer: <b>ontvang \n<b>melding ResServer --> PEP: <b>GraphQL 200 response deactivate ResServer autonumber stop PEP --> Resource: <b>[07] GraphQL 200 response deactivate PEP Resource --> Resource: <b>[08] verwerk GraphQL 200 response @enduml
+```mermaid
+sequenceDiagram
+    box deelnemer
+        participant Resource
+    end
+
+    box nID
+        participant AuthzServer as autorisatieserver
+        participant PEP
+        participant PDP
+    end
+
+    box bronhouder
+        participant ResServer as Resource-Server
+    end
+
+    Note over PEP: Het autorisatie en validatie-proces<br/>is beschreven in RFC0014<br/>Functionele uitwerking aanvragen autorisatie<br/>(OAuth2.0)
+
+    ResServer->>Resource: [00] ontvang data uit register
+
+    activate Resource
+    Resource->>Resource: valideer data
+    Resource-xResource: bepaal foutcode
+    Resource->>Resource: genereer GraphQL foutmelding
+
+    Resource->>AuthzServer: Aanvragen van autorisatie<br/>scope: ../meldingen/melding:create
+    activate AuthzServer
+    AuthzServer-->>Resource: 200 Response (JWT Access-Token)
+    deactivate AuthzServer
+
+    Resource->>PEP: GraphQL Request<br/>Authenticatiemiddel + JWT Access-Token + foutmelding
+    activate PEP
+
+    PEP->>PEP: Valideer Authenticatie en Access
+    PEP->>PDP: GraphQL met policy valideren
+
+    activate PDP
+    PDP->>PDP: Valideer GraphQL
+    PDP-->>PEP: GraphQL allowed
+    deactivate PDP
+
+    PEP->>ResServer: [05] GraphQL Request
+    deactivate PEP
+
+    activate ResServer
+    ResServer->>ResServer: ontvang melding
+    ResServer-->>PEP: GraphQL 200 response
+    deactivate ResServer
+
+    activate PEP
+    PEP-->>Resource: [07] GraphQL 200 response
+    deactivate PEP
+
+    Resource->>Resource: [08] verwerk GraphQL 200 response
+    deactivate Resource
 ```
 
 | # | Beschrijving | Toelichting |
@@ -449,16 +617,57 @@ Naast deze twee typen regels zijn er ook *Uitgangspunten, Bedrijfsregels, Invuli
 
 Gebruik voor de melding de GraphQL mutation `zendMelding` uit het schema.
 
-```
-mutation zendMelding( $timestamp: DateTime! $afzenderIDType: String! $afzenderID: String! $ontvangerIDType: String! $ontvangerID: String! $ontvangerKenmerk: String $eventType: String! $subjectList: [SubjectEntity!]! ) { zendMelding( meldingInput: { timestamp: $timestamp afzenderIDType: $afzenderIDType afzenderID: $afzenderID ontvangerIDType: $ontvangerIDType ontvangerID: $ontvangerID ontvangerKenmerk: $ontvangerKenmerk eventType: $eventType subjectList: $subjectList } ) { meldingID } }
+```gql
+mutation zendMelding(
+  $timestamp: DateTime!
+  $afzenderIDType: String!
+  $afzenderID: String!
+  $ontvangerIDType: String!
+  $ontvangerID: String!
+  $ontvangerKenmerk: String
+  $eventType: String!
+  $subjectList: [SubjectEntity!]!
+) {
+  zendMelding(
+    meldingInput: {
+      timestamp: $timestamp
+      afzenderIDType: $afzenderIDType
+      afzenderID: $afzenderID
+      ontvangerIDType: $ontvangerIDType
+      ontvangerID: $ontvangerID
+      ontvangerKenmerk: $ontvangerKenmerk
+      eventType: $eventType
+      subjectList: $subjectList
+    }
+  ) {
+    meldingID
+  }
+}
 ```
 
 #### 4.7.2 Voorbeeld Input variabelen afzender is de (fout-)melder zelf:
 
 Op basis van het scenario ziet het json-object met de input parameters er als volgt uit:
 
-```
-{ "timestamp": "2024-07-02T00:00:00Z", "afzenderIDType": "UZOVI", "afzenderID": "5151", "ontvangerIDType": "KVK", "ontvangerID": "12345678", "eventType": "IWLZFOUTMELDING", "subjectList": [ { "subject": "IRG0012", "recordID": "wlzindicatie/Stoornis/da8ebd42-d29b-4508-8604-ae7d2c6bbddd" }, { "subject": "IRG0028", "recordID": "wlzindicatie/5850ad49-7cf4-4711-8215-e160715900e7" } ] }
+```json
+{
+  "timestamp": "2024-07-02T00:00:00Z",
+  "afzenderIDType": "UZOVI",
+  "afzenderID": "5151",
+  "ontvangerIDType": "KVK",
+  "ontvangerID": "12345678",
+  "eventType": "IWLZFOUTMELDING",
+  "subjectList": [
+    {
+      "subject": "IRG0012",
+      "recordID": "wlzindicatie/Stoornis/da8ebd42-d29b-4508-8604-ae7d2c6bbddd"
+    },
+    {
+      "subject": "IRG0028",
+      "recordID": "wlzindicatie/5850ad49-7cf4-4711-8215-e160715900e7"
+    }
+  ]
+}
 ```
 
 Toelichting:
@@ -479,12 +688,29 @@ Toelichting:
 
 Voorbeeld succesvolle aflevering van de melding (non-normative)
 
-```
-HTTP/1.1 200 { "data": { "zendMelding": { "meldingID": "86978bf6-f1b6-4c5c-aeac-f0b436fa3d3e" } } }
+```http
+HTTP/1.1 200
+{
+  "data": {
+    "zendMelding": {
+      "meldingID": "86978bf6-f1b6-4c5c-aeac-f0b436fa3d3e"
+    }
+  }
+}
 ```
 
 Voorbeeld onsuccesvolle aflevering van de melding (non-normative):
 
-```
-HTTP/1.1 400 Bad Request { "errors": [ { "message": "ZendNotificatie mutation: afzenderIDType is not valid", "extensions": { "code": "GRAPHQL_VALIDATION_FAILED" } } ] }
+```http
+HTTP/1.1 400 Bad Request
+{
+  "errors": [
+    {
+      "message": "ZendNotificatie mutation: afzenderIDType is not valid",
+      "extensions": {
+        "code": "GRAPHQL_VALIDATION_FAILED"
+      }
+    }
+  ]
+}
 ```
