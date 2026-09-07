@@ -216,7 +216,10 @@ Het is ook mogelijk om de huidige versie te bewaren en een nieuwe versie te creÃ
 
 De `future` branch is er om de eerst volgende versie alvast beschikbaar te maken. Aanwezigheid van een `future` publicatie is afzonderlijk te beheren en te versioneren.  
 
-Nog verder uit te werken. Stappen
+> [!WARNING]
+> Nog verder uit te werken. 
+
+Globale Stappen
 1. Haal eerst de laatste versie van de lopende versie over als je een future wilt starten (merge naar future branch)
 2. voer wijzigingen door en pas future-version.txt aan
 3. publiceer future branch via de handmatige actie "publish"
@@ -227,7 +230,6 @@ Overzetten naar main
 2. merge future naar main
 3. main is nu dezelfde versie als future, maar dan als (current)
 4. verwijder de future uit de dropdown dmv future delete action
-5. 
 
 
 Verwijderen versies:
