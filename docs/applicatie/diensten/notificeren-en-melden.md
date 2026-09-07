@@ -21,16 +21,38 @@ De basis voor een **notificatie** of een **melding** is gelijk. Alleen op inhoud
 
 ### 2.1 Notificeren en melden, wat is het verschil?
 
-image-20241212-151758.png openen
+```mermaid
+sequenceDiagram
+    autonumber
 
-![](https://media-cdn.atlassian.com/file/51895ebb-b505-44e0-a2c9-766146f8aaba/image/cdn?allowAnimated=true&client=ff03941b-d0af-436c-a833-5f701a18aa9f&collection=contentId-23071204&height=125&max-age=2592000&mode=full-fit&source=mediaCard&token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmZjAzOTQxYi1kMGFmLTQzNmMtYTgzMy01ZjcwMWExOGFhOWYiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpjb2xsZWN0aW9uOmNvbnRlbnRJZC0yMzA3MTIwNCI6WyJyZWFkIl19LCJleHAiOjE3ODIxMTU4NjYsIm5iZiI6MTc4MjExMjk4NiwiYWFJZCI6IjU1NzA1ODo3NDIwYzc0ZS1lMzNkLTRkYjAtODM1Ny1iZGQ3NWY3NzQ0ZWEiLCJodHRwczovL2lkLmF0bGFzc2lhbi5jb20vYXBwQWNjcmVkaXRlZCI6ZmFsc2UsImF1dGhUeXBlIjoic2Vzc2lvbiJ9.KbT1vw9Tu9nIq8styT2dHPcJ1tl1Gqas3WDSQ4ZAjEc&width=448#media-blob-url=true&id=51895ebb-b505-44e0-a2c9-766146f8aaba&clientId=ff03941b-d0af-436c-a833-5f701a18aa9f&contextId=contentId-23071204&collection=contentId-23071204)
+    box LightBlue bronhouder
+        participant bs as bronhouder
+    end
 
-Notificeren en melden
+    box LightYellow deelnemer
+        participant dbs as deelnemer
+    end
 
-plantUML-source
+    rect rgb(230,240,255)
+        Note over bs,dbs: Notificeren
+        bs->>dbs: sturen notificatie
+        Note over bs: notificatie
+        activate bs
+        activate dbs
+        dbs-->>bs: response
+        deactivate bs
+    end
 
-```
-@startuml rfc008-01-notificatie_melding title notificeren en melden skinparam handwritten false skinparam participantpadding 20 skinparam boxpadding 40 autonumber "<b>[00]" box  #lightblue participant "bronhouder" as bs end box box  #lightyellow participant "deelnemer" as dbs end box Group Notificeren     bs -> dbs : sturen notificatie     hnote over bs #GreenYellow :notificatie     activate bs     activate dbs     return response     deactivate bs end Group Melden     dbs -> bs: sturen melding     hnote over dbs #GreenYellow :melding     activate bs     activate dbs     return response     deactivate dbs end @enduml
+    rect rgb(255,245,200)
+        Note over bs,dbs: Melden
+        dbs->>bs: sturen melding
+        Note over dbs: melding
+        activate bs
+        activate dbs
+        bs-->>dbs: response
+        deactivate dbs
+    end
+
 ```
 
 |  | Van | Naar | Omschrijving |
@@ -62,17 +84,28 @@ Daarnaast moet de autorisatievoorziening voldoende informatie hebben om te kunne
 
 De structuur voor een notificatie of melding is uit de volgende elementen opgebouwd:
 
-image-20250611-143327.png openen
+```mermaid
+classDiagram
 
-![image-20250611-143327.png](https://media-cdn.atlassian.com/file/7f1041e6-71b3-4cef-b8fc-f6733cf70c94/image/cdn?allowAnimated=true&client=ff03941b-d0af-436c-a833-5f701a18aa9f&collection=contentId-23071204&height=125&max-age=2592000&mode=full-fit&source=mediaCard&token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmZjAzOTQxYi1kMGFmLTQzNmMtYTgzMy01ZjcwMWExOGFhOWYiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpjb2xsZWN0aW9uOmNvbnRlbnRJZC0yMzA3MTIwNCI6WyJyZWFkIl19LCJleHAiOjE3ODIxMTU4NjYsIm5iZiI6MTc4MjExMjk4NiwiYWFJZCI6IjU1NzA1ODo3NDIwYzc0ZS1lMzNkLTRkYjAtODM1Ny1iZGQ3NWY3NzQ0ZWEiLCJodHRwczovL2lkLmF0bGFzc2lhbi5jb20vYXBwQWNjcmVkaXRlZCI6ZmFsc2UsImF1dGhUeXBlIjoic2Vzc2lvbiJ9.KbT1vw9Tu9nIq8styT2dHPcJ1tl1Gqas3WDSQ4ZAjEc&width=255#media-blob-url=true&id=7f1041e6-71b3-4cef-b8fc-f6733cf70c94&clientId=ff03941b-d0af-436c-a833-5f701a18aa9f&contextId=contentId-23071204&collection=contentId-23071204)
+class notificatie_melding {
+    +Datetime timestamp
+    +string afzenderIDType
+    +string afzenderID
+    +string ontvangerIDType
+    +string ontvangerID
+    +string ontvangerKenmerk [0..1]
+    +string eventType
+}
 
-Structuur notificatie of melding
+class SubjectList {
+    +string subject
+    +string recordID
+}
 
-Plantuml-source
+notificatie_melding "1" --> "1..*" SubjectList : contains
 
 ```
-@startuml entity notificatie_melding { timestamp : Datetime, afzenderIDType : string, afzenderID : string, ontvangerIDType : string, ontvangerID : string, ontvangerKenmerk : string[0..1], eventType : string, } entity SubjectList { subject : string recordID : string } notificatie_melding"1" -- "1.." SubjectList: contains @enduml
-```
+
 
 | Element | Algemene beschrijving | V/O* | Type | Specifiek voor notificatie | Specifiek voor melding |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -89,7 +122,7 @@ Plantuml-source
 
 \* V = verplicht / O = Optioneel
 
-\*2 Datetime volgens ISO-8601 zie [![](https://en.wikipedia.org/static/favicon/wikipedia.ico)ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) en [DateTime — GraphQL Custom Scalar](https://scalars.graphql.org/andimarek/date-time). Formaat is bijvoorbeeld: *2016-07-20T17:30:15Z* of *2016-07-20T17:30:15+05:30* of *2016-07-20T17:30:15.234890+05:30.*
+\*2 Datetime volgens ISO-8601 zie [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) en [DateTime — GraphQL Custom Scalar](https://scalars.graphql.org/andimarek/date-time). Formaat is bijvoorbeeld: *2016-07-20T17:30:15Z* of *2016-07-20T17:30:15+05:30* of *2016-07-20T17:30:15.234890+05:30.*
 
 #### 2.2.1 Code afzenderIDType of ontvangerIDType
 
@@ -108,7 +141,7 @@ Voor het vullen van de afzenderIDType of ontvangerIDType zijn de volgende codes 
 
 Binnen het iWlz Netwerk verlopen raadplegingen via GraphQL en zijn registers gedefinieerd door middel van GraphQL schema’s. Om uniformiteit binnen het netwerk te versterken is er daarom voor gekozen om voor notificeren of melden ook gebruik te maken van GraphQL.
 
-Een notificatie of melding is technisch vormgegeven met de GraphQL-operatie “`mutation`”. De definitie van het GraphQL-schema is te vinden in GitHub: [![](https://github.com/fluidicon.png)GitHub - iStandaarden/iWlz-generiek: Koppelvlak specificaties met netwerk brede functionaliteit](https://github.com/iStandaarden/iWlz-generiek/tree/master).
+Een notificatie of melding is technisch vormgegeven met de GraphQL-operatie “`mutation`”. De definitie van het GraphQL-schema is te vinden in GitHub: [GitHub - iStandaarden/iWlz-generiek: Koppelvlak specificaties met netwerk brede functionaliteit](https://github.com/iStandaarden/iWlz-generiek/).
 
 In de onderdelen **Notificaties** en **Melden** is de toepassing van respectievelijk de GraphQL-operaties `zendMelding` en `zendNotificatie`.
 
@@ -122,18 +155,67 @@ De response codes zijn gebaseerd op gestandaardiseerde HTTP-statuscodes, uitgebr
 
 Hieronder wordt een tabel weergegeven met de mogelijke response codes, foutberichten en oorzaken die kunnen optreden bij de uitvoering van de GraphQL-verzoeken `zendMelding` en `zendNotificatie`. Deze tabel dient als leidraad voor een correcte interpretatie van de responses en het oplossen van eventuele problemen.
 
-De hieronder beschreven foutcodes ontstaan bij het valideren van de ingezonden GraphQL in nID, onderdeel PDP (zie artikel [nID netwerkstelsel](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537 "https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537")).
+De hieronder beschreven foutcodes ontstaan bij het valideren van de ingezonden GraphQL in nID, onderdeel PDP (zie artikel [nID netwerkstelsel](../nid_netwerkstelsel)).
 
-image-20250612-091158.png openen
 
-![image-20250612-091158.png](https://media-cdn.atlassian.com/file/1e9ef623-5779-42b6-be90-de4df3936bc1/image/cdn?allowAnimated=true&client=ff03941b-d0af-436c-a833-5f701a18aa9f&collection=contentId-23071204&height=125&max-age=2592000&mode=full-fit&source=mediaCard&token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmZjAzOTQxYi1kMGFmLTQzNmMtYTgzMy01ZjcwMWExOGFhOWYiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpjb2xsZWN0aW9uOmNvbnRlbnRJZC0yMzA3MTIwNCI6WyJyZWFkIl19LCJleHAiOjE3ODIxMTU4NjYsIm5iZiI6MTc4MjExMjk4NiwiYWFJZCI6IjU1NzA1ODo3NDIwYzc0ZS1lMzNkLTRkYjAtODM1Ny1iZGQ3NWY3NzQ0ZWEiLCJodHRwczovL2lkLmF0bGFzc2lhbi5jb20vYXBwQWNjcmVkaXRlZCI6ZmFsc2UsImF1dGhUeXBlIjoic2Vzc2lvbiJ9.KbT1vw9Tu9nIq8styT2dHPcJ1tl1Gqas3WDSQ4ZAjEc&width=1002#media-blob-url=true&id=1e9ef623-5779-42b6-be90-de4df3936bc1&clientId=ff03941b-d0af-436c-a833-5f701a18aa9f&contextId=contentId-23071204&collection=contentId-23071204)
+```mermaid
+sequenceDiagram
+    box Verzender
+        participant Resource
+    end
 
-Foutmeldingen nID met betrekking tot notificeren en melden
+    box nID
+        participant AuthzServer as autorisatieserver
+        participant PEP
+        participant PDP
+    end
 
-plantUML-source diagram
+    box Ontvanger
+        participant ResServer as Resource-Server
+    end
 
-```
-@startuml rfc0008-04-error-flow skinparam participantpadding 20 skinparam boxpadding 40 box Verzender participant "Resource" as Resource end box box "nID" participant "autorisatieserver" as AuthzServer participant "PEP" as PEP participant "PDP" as PDP end box box Ontvanger participant "Resource-\nServer" as ResServer end box note over PEP #lightgreen: De volledige validatie en autorisatie flow \nis beschreven in het onderdeel \nnID netwerkstelsel activate Resource Resource -> Resource: genereer GraphQL-mutatition Resource -> AuthzServer: Aanvragen van autorisatie\n"scope": "../notificaties/notificatie:create" \nof "scope": "../meldingen/melding:create" activate AuthzServer #Darkgrey AuthzServer --> Resource --: 200 Response (JWT Access-Token) deactivate AuthzServer Resource -> PEP: GraphQL Request + \nAuthenticatiemiddel + JWT Access-Token activate PEP PEP -> PEP: Valideer Authenticatie en \nAccess PEP -> PDP: GraphQL met policy valideren activate PEP #LightGray activate PDP PDP -> PDP: Valideer graphql autonumber "<color:red><b>[00]" Resource <-[#red]-X PDP: <color:red> **400 Bad Request** Resource <-[#red]-X PDP: <color:red> **400 Bad Request:** **GRAPHQL_VALIDATION_FAILED** autonumber stop PDP -> PEP: Graphql allowed deactivate PDP PEP -> ResServer: GraphQL Request deactivate PEP activate ResServer ResServer -> ResServer: ontvang notificatie ResServer --> PEP: GraphQL 200 response deactivate ResServer PEP --> Resource: GraphQL 200 response deactivate PEP Resource --> Resource: verwerk GraphQL 200 response @enduml
+    Note over PEP: De volledige validatie en autorisatie flow<br/>is beschreven in het onderdeel<br/>nID netwerkstelsel
+
+    activate Resource
+    Resource->>Resource: genereer GraphQL-mutatie
+
+    Resource->>AuthzServer: Aanvragen van autorisatie<br/>scope: ../notificaties/notificatie:create<br/>of scope: ../meldingen/melding:create
+    activate AuthzServer
+    AuthzServer-->>Resource: 200 Response (JWT Access-Token)
+    deactivate AuthzServer
+
+    Resource->>PEP: GraphQL Request +<br/>Authenticatiemiddel + JWT Access-Token
+    activate PEP
+
+    PEP->>PEP: Valideer Authenticatie en Access
+    PEP->>PDP: GraphQL met policy valideren
+
+    activate PDP
+    PDP->>PDP: Valideer GraphQL
+
+    alt [00] 400 Bad Request
+        PDP--x Resource: 400 Bad Request
+    else GRAPHQL_VALIDATION_FAILED
+        PDP--x Resource: 400 Bad Request: GRAPHQL_VALIDATION_FAILED
+    end
+
+    PDP-->>PEP: GraphQL allowed
+    deactivate PDP
+
+    PEP->>ResServer: GraphQL Request
+    deactivate PEP
+
+    activate ResServer
+    ResServer->>ResServer: ontvang notificatie
+    ResServer-->>PEP: GraphQL 200 response
+    deactivate ResServer
+
+    activate PEP
+    PEP-->>Resource: GraphQL 200 response
+    deactivate PEP
+
+    Resource->>Resource: verwerk GraphQL 200 response
+    deactivate Resource
 ```
 
 | Response | Oorzaak |

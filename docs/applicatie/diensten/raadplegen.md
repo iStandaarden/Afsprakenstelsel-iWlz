@@ -1,9 +1,5 @@
 # Raadplegen
 
-!!! info "Versie: *17-12-2025* | Status: *Definitief*"
-
-**Inhoudsopgave:**
-
 
 ## 1. Inleiding
 
@@ -71,7 +67,7 @@ Dit artikel gaat over wat er nodig is voor de succesvolle validatie van een raad
 
 In de *stap 3 - Query met policy valideren* door de PDP, toetst de PDP of de ingediende GraphQL-query is toegestaan voor de indiener en of de query juist is opgesteld.
 
-Het Informatiemodel iWlz dat te vinden is via de website: [![](https://informatiemodel.istandaarden.nl/favicon.png)Informatiemodel](https://informatiemodel.istandaarden.nl/) beschrijft voor elke register de toegangsregels voor een deelnemer op dat register. Per register zijn er voor de huidige deelnemers van het netwerk autorisatieregels en bijbehorende autorisatiematrix opgesteld die beschrijven welke informatie mag worden geraadpleegd.
+Het Informatiemodel iWlz dat te vinden is via de website: [Informatiemodel](https://informatiemodel.istandaarden.nl/) beschrijft voor elke register de toegangsregels voor een deelnemer op dat register. Per register zijn er voor de huidige deelnemers van het netwerk autorisatieregels en bijbehorende autorisatiematrix opgesteld die beschrijven welke informatie mag worden geraadpleegd.
 
 De combinatie van deze autorisatieregels en autorisatiematrix zijn voor automatische toetsing vertaald naar policy’s. De policy’s zijn de machine-leesbare vertalingen van autorisatieregels en autorisatiematrix. Met de policy’s kan de PDP beoordelen of een ingediende GraphQL query voldoet.
 
@@ -81,7 +77,7 @@ De samenhang tussen de policy en de ingediende GraphQL-query luistert zeer nauw 
 
 De GraphQL query-templates beschrijven het template hoe een raadpleger vanuit zijn rol informatie kan raadplegen die is toegestaan voor die raadpleger. Deze templates volgen altijd het GraphQL-schema maar moeten op bepaalde momenten aan vaste patronen voldoen vanwege de geldende autorisatie voor die raadpleger op dat moment. Gaat een raadpleger buiten dit patroon dan zal de query worden afgekeurd en krijgt de raadpleger geen inzicht in de data.
 
-Om een raadpleger te helpen bij het op de juiste wijze en volgorde van uitvoeren van de raadplegingen zijn er per register *Raadpleeg use-cases* opgesteld. Ga hiervoor naar de [Uitwisselprofielen](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071549)Voorvertoning. De use-case bevat de koppeling met een of meer query-templates.
+Om een raadpleger te helpen bij het op de juiste wijze en volgorde van uitvoeren van de raadplegingen zijn er per register *Raadpleeg use-cases* opgesteld. Ga hiervoor naar de [Uitwisselprofielen](../../uitwisselprofiel/)Voorvertoning. De use-case bevat de koppeling met een of meer query-templates.
 
 ### 3.1 Voorbeeld raadplegen Indicatieregister
 
@@ -138,12 +134,12 @@ query WlzIndicatie(
 ```
 
 *(De volledige query-template is te vinden op:*  
-[GitHub - iStandaarden/iWlz-indicatie: Koppelvlak specificatie Indicatieregister](https://github.com/iStandaarden/iWlz-indicatie/tree/Indicatieregister-2) *)*
+[GitHub - iStandaarden/iWlz-indicatie: Koppelvlak specificatie Indicatieregister](https://github.com/iStandaarden/iWlz-indicatie/) *)*
 
 **Let op**: Of het raadplegende zorgkantoor uiteindelijk gegevens ontvangt, hangt er ook van af of de combinatie van *initieelVerantwoordelijkZorgkantoor* en *wlzIndicatieID* daadwerkelijk in het register voorkomt.
 
 ### 3.2 Response
 
-De response vanuit de *Resource-server* is beschreven in het artikel: [GraphQL over HTTP](../diensten/index.md)
+De response vanuit de *Resource-server* is beschreven in het artikel: [GraphQL over HTTP](../graphql_over_http)
 
 * * *
