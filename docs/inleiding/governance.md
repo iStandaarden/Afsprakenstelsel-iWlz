@@ -35,4 +35,3 @@ Het afsprakenstelsel bevat geharmoniseerde afspraken die door alle zorgaanbieder
 
 Twiin is generiek van aard en vormt een overkoepelend raamwerk dat voortdurend in ontwikkeling is. Wij werken samen met Twiin aan de harmonisatie van verschillende afsprakenstelsels. Waar mogelijk verwijzen we in dit afsprakenstelsel naar de generieke afspraken binnen Twiin als LVS. Waar nodig lichten we aanvullend toe hoe deze afspraken specifiek toegepast worden in het kader van het iWlz-netwerkmodel.
 
----

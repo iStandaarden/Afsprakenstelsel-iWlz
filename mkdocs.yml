@@ -126,7 +126,9 @@ markdown_extensions:
 
 # Navigation structure
 nav:
-  - Welkom: index.md
+  - Welkom: 
+      - index.md
+      - Release notes: welkom/release_notes.md
   - Inleiding:
       - inleiding/index.md
       - Achtergrond en toelichting: inleiding/achtergrond_toelichting.md
@@ -173,5 +175,3 @@ nav:
       - uitwisselprofiel/index.md
       - Uitwisselprofiel Indicatie: uitwisselprofiel/uitwisselprofiel_indicatie.md
       - Uitwisselprofiel Bemiddeling: uitwisselprofiel/uitwisselprofiel_bemiddeling.md
-  - Versiebeheer:
-      - versies/index.md

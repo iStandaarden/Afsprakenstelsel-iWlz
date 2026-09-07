@@ -1,6 +1,5 @@
 # Inleiding
 
-!!! info "Versie: *17-12-2025* | Status: *Definitief*"
 
 **Inleiding**  
 In dit hoofdstuk wordt beschreven hoe het iWlz-netwerkmodel is ontstaan en welke doelen het heeft. Er wordt ook ingegaan op de samenwerkingsafspraken die hiervoor gemaakt zijn en welke begrippen er in het model worden gebruikt. Dit hoofdstuk is gericht op het geven van informatie en is niet bedoeld als normatief document.
