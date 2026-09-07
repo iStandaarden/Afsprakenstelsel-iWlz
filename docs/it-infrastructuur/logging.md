@@ -53,7 +53,9 @@ Een `TraceId` moet:
 
 **Voorbeeld van een geldig TraceID:**
 
-`X-B3-TraceId: 463ac35c9f6413ad48485a3953bb6124`
+```
+X-B3-TraceId: 463ac35c9f6413ad48485a3953bb6124
+```
 
 ### 3.4 Randvoorwaarden voor SpanId
 
@@ -65,8 +67,9 @@ Een `SpanId` moet:
 
 **Voorbeeld van een geldig SpanId:**
 
-`X-B3-SpanId: 0020000000000001`
-
+```
+X-B3-SpanId: 0020000000000001
+```
 ### 3.5 Validatie van TraceId
 
 Bij binnenkomst wordt gecontroleerd of een `TraceId` aanwezig is. Indien aanwezig, wordt deze gebruikt voor verdere verwerking.

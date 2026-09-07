@@ -5,7 +5,7 @@
 ## 1. Inleiding
 
 !!! note
-    Dit artikel beschrijft het nID netwerkstelsel en haar netwerkservices zoals autoriseren. Met de juiste autorisatie kunnen bronhouders en deelnemers acties uitvoeren zoals notificaties versturen en registers bevragen. De inhoud van dit artikel is gebaseerd op [_RFC0014 Functionele uitwerking aanvragen van autorisatie_](https://github.com/iStandaarden/iWlz-RequestForComment/blob/main/RFC/RFC0014%20-%20Functionele%20uitwerking%20aanvragen%20van%20autorisatie.md) die is vastgesteld in december 2024.
+    Dit artikel beschrijft het nID netwerkstelsel en haar netwerkservices zoals autoriseren. Met de juiste autorisatie kunnen bronhouders en deelnemers acties uitvoeren zoals notificaties versturen en registers bevragen. De inhoud van dit artikel is gebaseerd op [_RFC0014 Functionele uitwerking aanvragen van autorisatie_](https://github.com/iStandaarden/iWlz_RequestForChange/blob/main/RequestforComments/RFC0014%20-%20Functionele%20uitwerking%20aanvragen%20van%20autorisatie.md) die is vastgesteld in december 2024.
 
 Het nID netwerkstelsel is de basisinfrastructuur voor veilige gegevensuitwisseling binnen het iWlz-netwerkmodel. Het ondersteunt processen zoals authenticatie, autorisatie, en gegevensraadpleging door gebruik te maken van een federatief model. De kern van het stelsel wordt beheerd door VECOZO en maakt gebruik van open-source componenten, waaronder Open Policy Agent (OPA).
 
