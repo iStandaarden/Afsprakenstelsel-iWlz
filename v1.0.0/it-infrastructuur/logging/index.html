@@ -2442,7 +2442,8 @@
 <li>Uniek zijn. TraceIds dienen gegenereerd te worden met behulp van een UUID-generator of via de OpenTelemetry SDK om duplicaten binnen een trace te voorkomen.</li>
 </ul>
 <p><strong>Voorbeeld van een geldig TraceID:</strong></p>
-<p><code>X-B3-TraceId: 463ac35c9f6413ad48485a3953bb6124</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>X-B3-TraceId: 463ac35c9f6413ad48485a3953bb6124
+</span></code></pre></div>
 <h3 id="34-randvoorwaarden-voor-spanid">3.4 Randvoorwaarden voor SpanId<a class="headerlink" href="#34-randvoorwaarden-voor-spanid" title="Permanent link">¶</a></h3>
 <p>Een <code>SpanId</code> moet:</p>
 <ul>
@@ -2451,7 +2452,8 @@
 <li>Uniek zijn. SpanIds worden gegenereerd met behulp van de OpenTelemetry SDK, zodat duplicaten binnen een trace worden voorkomen.</li>
 </ul>
 <p><strong>Voorbeeld van een geldig SpanId:</strong></p>
-<p><code>X-B3-SpanId: 0020000000000001</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>X-B3-SpanId: 0020000000000001
+</span></code></pre></div>
 <h3 id="35-validatie-van-traceid">3.5 Validatie van TraceId<a class="headerlink" href="#35-validatie-van-traceid" title="Permanent link">¶</a></h3>
 <p>Bij binnenkomst wordt gecontroleerd of een <code>TraceId</code> aanwezig is. Indien aanwezig, wordt deze gebruikt voor verdere verwerking.</p>
 <h3 id="36-voorbeeldimplementatie-van-tracelogging-niet-normatief">3.6 Voorbeeldimplementatie van tracelogging (niet-normatief)<a class="headerlink" href="#36-voorbeeldimplementatie-van-tracelogging-niet-normatief" title="Permanent link">¶</a></h3>
