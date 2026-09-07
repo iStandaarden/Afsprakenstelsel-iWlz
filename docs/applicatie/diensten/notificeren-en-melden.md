@@ -1,8 +1,3 @@
-# Notificeren en Melden
-
-!!! info "Versie: *17-12-2025* | Status: *Definitief*"
-
-
 ## 1. Inleiding
 
 Binnen het iWlz-netwerkmodel werken we met generieke technische oplossingen en contracten om minimaal afhankelijk te zijn van gezamenlijke releases. Daarom werken we bijvoorbeeld met GraphQL, zodat het uitleveren van extra gegevens via een register geen impact heeft op de overige deelnemers aan het netwerk.
