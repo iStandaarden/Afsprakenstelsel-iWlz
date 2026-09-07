@@ -2358,10 +2358,6 @@
 
 
 <h1 id="raadplegen">Raadplegen<a class="headerlink" href="#raadplegen" title="Permanent link">¶</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Versie: <em>17-12-2025</em> | Status: <em>Definitief</em></p>
-</div>
-<p><strong>Inhoudsopgave:</strong></p>
 <h2 id="1-inleiding">1. Inleiding<a class="headerlink" href="#1-inleiding" title="Permanent link">¶</a></h2>
 <p>Dit artikel beschrijft de dienst Raadplegen. Deze dienst wordt door bronhouders aangeboden aan (toekomstige) afnemers.</p>
 <p>De volledige validatie flow voor het raadplegen van een register is beschreven in het artikel <a href="https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537">nID netwerkstelsel</a>Voorvertoning en verloopt in de basis op dezelfde wijze als <a href="https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071204">Notificeren en Melden</a>Voorvertoning .</p>
@@ -2418,12 +2414,12 @@ Client -&gt;&gt; PEP: **[2] - GraphQL Request**\nAuthenticatiemiddel + JWT Acces
 <p>Dit artikel gaat over wat er nodig is voor de succesvolle validatie van een raadpleging door de <strong>PDP.</strong></p>
 <h2 id="2-policys-en-pdp">2. Policy’s en PDP<a class="headerlink" href="#2-policys-en-pdp" title="Permanent link">¶</a></h2>
 <p>In de <em>stap 3 - Query met policy valideren</em> door de PDP, toetst de PDP of de ingediende GraphQL-query is toegestaan voor de indiener en of de query juist is opgesteld.</p>
-<p>Het Informatiemodel iWlz dat te vinden is via de website: <a href="https://informatiemodel.istandaarden.nl/"><img alt="" src="https://informatiemodel.istandaarden.nl/favicon.png">Informatiemodel</a> beschrijft voor elke register de toegangsregels voor een deelnemer op dat register. Per register zijn er voor de huidige deelnemers van het netwerk autorisatieregels en bijbehorende autorisatiematrix opgesteld die beschrijven welke informatie mag worden geraadpleegd.</p>
+<p>Het Informatiemodel iWlz dat te vinden is via de website: <a href="https://informatiemodel.istandaarden.nl/">Informatiemodel</a> beschrijft voor elke register de toegangsregels voor een deelnemer op dat register. Per register zijn er voor de huidige deelnemers van het netwerk autorisatieregels en bijbehorende autorisatiematrix opgesteld die beschrijven welke informatie mag worden geraadpleegd.</p>
 <p>De combinatie van deze autorisatieregels en autorisatiematrix zijn voor automatische toetsing vertaald naar policy’s. De policy’s zijn de machine-leesbare vertalingen van autorisatieregels en autorisatiematrix. Met de policy’s kan de PDP beoordelen of een ingediende GraphQL query voldoet.</p>
 <p>De samenhang tussen de policy en de ingediende GraphQL-query luistert zeer nauw daarom zijn er query-templates beschikbaar gesteld.</p>
 <h2 id="3-raadpleeg-use-cases-en-graphql-query-templates">3. Raadpleeg use-cases en GraphQL query-templates<a class="headerlink" href="#3-raadpleeg-use-cases-en-graphql-query-templates" title="Permanent link">¶</a></h2>
 <p>De GraphQL query-templates beschrijven het template hoe een raadpleger vanuit zijn rol informatie kan raadplegen die is toegestaan voor die raadpleger. Deze templates volgen altijd het GraphQL-schema maar moeten op bepaalde momenten aan vaste patronen voldoen vanwege de geldende autorisatie voor die raadpleger op dat moment. Gaat een raadpleger buiten dit patroon dan zal de query worden afgekeurd en krijgt de raadpleger geen inzicht in de data.</p>
-<p>Om een raadpleger te helpen bij het op de juiste wijze en volgorde van uitvoeren van de raadplegingen zijn er per register <em>Raadpleeg use-cases</em> opgesteld. Ga hiervoor naar de <a href="https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071549">Uitwisselprofielen</a>Voorvertoning. De use-case bevat de koppeling met een of meer query-templates.</p>
+<p>Om een raadpleger te helpen bij het op de juiste wijze en volgorde van uitvoeren van de raadplegingen zijn er per register <em>Raadpleeg use-cases</em> opgesteld. Ga hiervoor naar de <a href="../../uitwisselprofiel/">Uitwisselprofielen</a>Voorvertoning. De use-case bevat de koppeling met een of meer query-templates.</p>
 <h3 id="31-voorbeeld-raadplegen-indicatieregister">3.1 Voorbeeld raadplegen Indicatieregister<a class="headerlink" href="#31-voorbeeld-raadplegen-indicatieregister" title="Permanent link">¶</a></h3>
 <blockquote>
 <p><strong>Benodigde scope: registers/wlzindicatieregister/indicaties:read</strong></p>
@@ -2472,10 +2468,10 @@ Client -&gt;&gt; PEP: **[2] - GraphQL Request**\nAuthenticatiemiddel + JWT Acces
 </span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="err">}</span>
 </span></code></pre></div>
 <p><em>(De volledige query-template is te vinden op:</em>&nbsp; 
-<a href="https://github.com/iStandaarden/iWlz-indicatie/tree/Indicatieregister-2">GitHub - iStandaarden/iWlz-indicatie: Koppelvlak specificatie Indicatieregister</a> <em>)</em></p>
+<a href="https://github.com/iStandaarden/iWlz-indicatie/">GitHub - iStandaarden/iWlz-indicatie: Koppelvlak specificatie Indicatieregister</a> <em>)</em></p>
 <p><strong>Let op</strong>: Of het raadplegende zorgkantoor uiteindelijk gegevens ontvangt, hangt er ook van af of de combinatie van <em>initieelVerantwoordelijkZorgkantoor</em> en <em>wlzIndicatieID</em> daadwerkelijk in het register voorkomt.</p>
 <h3 id="32-response">3.2 Response<a class="headerlink" href="#32-response" title="Permanent link">¶</a></h3>
-<p>De response vanuit de <em>Resource-server</em> is beschreven in het artikel: <a href="../">GraphQL over HTTP</a></p>
+<p>De response vanuit de <em>Resource-server</em> is beschreven in het artikel: <a href="../graphql_over_http">GraphQL over HTTP</a></p>
 <hr>
 
 

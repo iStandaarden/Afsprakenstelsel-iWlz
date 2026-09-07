@@ -2746,12 +2746,37 @@
 <h2 id="2-generieke-basis-notificeren-en-melden">2. Generieke basis Notificeren en Melden<a class="headerlink" href="#2-generieke-basis-notificeren-en-melden" title="Permanent link">¶</a></h2>
 <p>De basis voor een <strong>notificatie</strong> of een <strong>melding</strong> is gelijk. Alleen op inhoud zijn er verschillen om duidelijk te maken met welke soort bericht er sprake is.</p>
 <h3 id="21-notificeren-en-melden-wat-is-het-verschil">2.1 Notificeren en melden, wat is het verschil?<a class="headerlink" href="#21-notificeren-en-melden-wat-is-het-verschil" title="Permanent link">¶</a></h3>
-<p>image-20241212-151758.png openen</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://media-cdn.atlassian.com/file/51895ebb-b505-44e0-a2c9-766146f8aaba/image/cdn?allowAnimated=true&amp;client=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;collection=contentId-23071204&amp;height=125&amp;max-age=2592000&amp;mode=full-fit&amp;source=mediaCard&amp;token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmZjAzOTQxYi1kMGFmLTQzNmMtYTgzMy01ZjcwMWExOGFhOWYiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpjb2xsZWN0aW9uOmNvbnRlbnRJZC0yMzA3MTIwNCI6WyJyZWFkIl19LCJleHAiOjE3ODIxMTU4NjYsIm5iZiI6MTc4MjExMjk4NiwiYWFJZCI6IjU1NzA1ODo3NDIwYzc0ZS1lMzNkLTRkYjAtODM1Ny1iZGQ3NWY3NzQ0ZWEiLCJodHRwczovL2lkLmF0bGFzc2lhbi5jb20vYXBwQWNjcmVkaXRlZCI6ZmFsc2UsImF1dGhUeXBlIjoic2Vzc2lvbiJ9.KbT1vw9Tu9nIq8styT2dHPcJ1tl1Gqas3WDSQ4ZAjEc&amp;width=448#media-blob-url=true&amp;id=51895ebb-b505-44e0-a2c9-766146f8aaba&amp;clientId=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;contextId=contentId-23071204&amp;collection=contentId-23071204" data-desc-position="bottom"><img alt="" src="https://media-cdn.atlassian.com/file/51895ebb-b505-44e0-a2c9-766146f8aaba/image/cdn?allowAnimated=true&amp;client=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;collection=contentId-23071204&amp;height=125&amp;max-age=2592000&amp;mode=full-fit&amp;source=mediaCard&amp;token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmZjAzOTQxYi1kMGFmLTQzNmMtYTgzMy01ZjcwMWExOGFhOWYiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpjb2xsZWN0aW9uOmNvbnRlbnRJZC0yMzA3MTIwNCI6WyJyZWFkIl19LCJleHAiOjE3ODIxMTU4NjYsIm5iZiI6MTc4MjExMjk4NiwiYWFJZCI6IjU1NzA1ODo3NDIwYzc0ZS1lMzNkLTRkYjAtODM1Ny1iZGQ3NWY3NzQ0ZWEiLCJodHRwczovL2lkLmF0bGFzc2lhbi5jb20vYXBwQWNjcmVkaXRlZCI6ZmFsc2UsImF1dGhUeXBlIjoic2Vzc2lvbiJ9.KbT1vw9Tu9nIq8styT2dHPcJ1tl1Gqas3WDSQ4ZAjEc&amp;width=448#media-blob-url=true&amp;id=51895ebb-b505-44e0-a2c9-766146f8aaba&amp;clientId=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;contextId=contentId-23071204&amp;collection=contentId-23071204"></a></p>
-<p>Notificeren en melden</p>
-<p>plantUML-source</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>@startuml rfc008-01-notificatie_melding title notificeren en melden skinparam handwritten false skinparam participantpadding 20 skinparam boxpadding 40 autonumber "&lt;b&gt;[00]" box &nbsp;#lightblue participant "bronhouder" as bs end box box &nbsp;#lightyellow participant "deelnemer" as dbs end box Group Notificeren &nbsp; &nbsp; bs -&gt; dbs : sturen notificatie &nbsp; &nbsp; hnote over bs #GreenYellow :notificatie &nbsp; &nbsp; activate bs &nbsp; &nbsp; activate dbs &nbsp; &nbsp; return response &nbsp; &nbsp; deactivate bs end Group Melden &nbsp; &nbsp; dbs -&gt; bs: sturen melding &nbsp; &nbsp; hnote over dbs #GreenYellow :melding &nbsp; &nbsp; activate bs &nbsp; &nbsp; activate dbs &nbsp; &nbsp; return response &nbsp; &nbsp; deactivate dbs end @enduml
-</span></code></pre></div>
+<pre class="mermaid-zoom"><code>sequenceDiagram
+    autonumber
+
+    box LightBlue bronhouder
+        participant bs as bronhouder
+    end
+
+    box LightYellow deelnemer
+        participant dbs as deelnemer
+    end
+
+    rect rgb(230,240,255)
+        Note over bs,dbs: Notificeren
+        bs-&gt;&gt;dbs: sturen notificatie
+        Note over bs: notificatie
+        activate bs
+        activate dbs
+        dbs--&gt;&gt;bs: response
+        deactivate bs
+    end
+
+    rect rgb(255,245,200)
+        Note over bs,dbs: Melden
+        dbs-&gt;&gt;bs: sturen melding
+        Note over dbs: melding
+        activate bs
+        activate dbs
+        bs--&gt;&gt;dbs: response
+        deactivate dbs
+    end
+</code></pre>
 <table>
 <thead>
 <tr>
@@ -2795,12 +2820,25 @@
 </ul>
 <p>Daarnaast moet de autorisatievoorziening voldoende informatie hebben om te kunnen bepalen dat de notificatie (type) door verzender mag worden verstuurd. Bijvoorbeeld: Notificatietype mag verzonden worden door verzender en stuurt naar juiste type ontvanger.</p>
 <p>De structuur voor een notificatie of melding is uit de volgende elementen opgebouwd:</p>
-<p>image-20250611-143327.png openen</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://media-cdn.atlassian.com/file/7f1041e6-71b3-4cef-b8fc-f6733cf70c94/image/cdn?allowAnimated=true&amp;client=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;collection=contentId-23071204&amp;height=125&amp;max-age=2592000&amp;mode=full-fit&amp;source=mediaCard&amp;token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmZjAzOTQxYi1kMGFmLTQzNmMtYTgzMy01ZjcwMWExOGFhOWYiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpjb2xsZWN0aW9uOmNvbnRlbnRJZC0yMzA3MTIwNCI6WyJyZWFkIl19LCJleHAiOjE3ODIxMTU4NjYsIm5iZiI6MTc4MjExMjk4NiwiYWFJZCI6IjU1NzA1ODo3NDIwYzc0ZS1lMzNkLTRkYjAtODM1Ny1iZGQ3NWY3NzQ0ZWEiLCJodHRwczovL2lkLmF0bGFzc2lhbi5jb20vYXBwQWNjcmVkaXRlZCI6ZmFsc2UsImF1dGhUeXBlIjoic2Vzc2lvbiJ9.KbT1vw9Tu9nIq8styT2dHPcJ1tl1Gqas3WDSQ4ZAjEc&amp;width=255#media-blob-url=true&amp;id=7f1041e6-71b3-4cef-b8fc-f6733cf70c94&amp;clientId=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;contextId=contentId-23071204&amp;collection=contentId-23071204" data-desc-position="bottom"><img alt="image-20250611-143327.png" src="https://media-cdn.atlassian.com/file/7f1041e6-71b3-4cef-b8fc-f6733cf70c94/image/cdn?allowAnimated=true&amp;client=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;collection=contentId-23071204&amp;height=125&amp;max-age=2592000&amp;mode=full-fit&amp;source=mediaCard&amp;token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmZjAzOTQxYi1kMGFmLTQzNmMtYTgzMy01ZjcwMWExOGFhOWYiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpjb2xsZWN0aW9uOmNvbnRlbnRJZC0yMzA3MTIwNCI6WyJyZWFkIl19LCJleHAiOjE3ODIxMTU4NjYsIm5iZiI6MTc4MjExMjk4NiwiYWFJZCI6IjU1NzA1ODo3NDIwYzc0ZS1lMzNkLTRkYjAtODM1Ny1iZGQ3NWY3NzQ0ZWEiLCJodHRwczovL2lkLmF0bGFzc2lhbi5jb20vYXBwQWNjcmVkaXRlZCI6ZmFsc2UsImF1dGhUeXBlIjoic2Vzc2lvbiJ9.KbT1vw9Tu9nIq8styT2dHPcJ1tl1Gqas3WDSQ4ZAjEc&amp;width=255#media-blob-url=true&amp;id=7f1041e6-71b3-4cef-b8fc-f6733cf70c94&amp;clientId=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;contextId=contentId-23071204&amp;collection=contentId-23071204"></a></p>
-<p>Structuur notificatie of melding</p>
-<p>Plantuml-source</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@startuml entity notificatie_melding { timestamp : Datetime, afzenderIDType : string, afzenderID : string, ontvangerIDType : string, ontvangerID : string, ontvangerKenmerk : string[0..1], eventType : string, } entity SubjectList { subject : string recordID : string } notificatie_melding"1" -- "1.." SubjectList: contains @enduml
-</span></code></pre></div>
+<pre class="mermaid-zoom"><code>classDiagram
+
+class notificatie_melding {
+    +Datetime timestamp
+    +string afzenderIDType
+    +string afzenderID
+    +string ontvangerIDType
+    +string ontvangerID
+    +string ontvangerKenmerk [0..1]
+    +string eventType
+}
+
+class SubjectList {
+    +string subject
+    +string recordID
+}
+
+notificatie_melding "1" --&gt; "1..*" SubjectList : contains
+</code></pre>
 <table>
 <thead>
 <tr>
@@ -2896,7 +2934,7 @@
 </tbody>
 </table>
 <p>* V = verplicht / O = Optioneel</p>
-<p>*2 Datetime volgens ISO-8601 zie <a href="https://en.wikipedia.org/wiki/ISO_8601"><img alt="" src="https://en.wikipedia.org/static/favicon/wikipedia.ico">ISO 8601</a> en <a href="https://scalars.graphql.org/andimarek/date-time">DateTime — GraphQL Custom Scalar</a>. Formaat is bijvoorbeeld: <em>2016-07-20T17:30:15Z</em> of <em>2016-07-20T17:30:15+05:30</em> of <em>2016-07-20T17:30:15.234890+05:30.</em></p>
+<p>*2 Datetime volgens ISO-8601 zie <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> en <a href="https://scalars.graphql.org/andimarek/date-time">DateTime — GraphQL Custom Scalar</a>. Formaat is bijvoorbeeld: <em>2016-07-20T17:30:15Z</em> of <em>2016-07-20T17:30:15+05:30</em> of <em>2016-07-20T17:30:15.234890+05:30.</em></p>
 <h4 id="221-code-afzenderidtype-of-ontvangeridtype">2.2.1 Code afzenderIDType of ontvangerIDType<a class="headerlink" href="#221-code-afzenderidtype-of-ontvangeridtype" title="Permanent link">¶</a></h4>
 <p>Voor het vullen van de afzenderIDType of ontvangerIDType zijn de volgende codes toegestaan:</p>
 <table>
@@ -2938,20 +2976,71 @@
 <p>* Op dit moment registreert VECOZO geen OIN bij overheidsorganisaties waardoor er geen claim kan worden afgegeven op basis van OIN. Bij de eerste implementatie van notificaties zal voor de identificatie van het CIZ het KVK-nummer (62253778) worden gebruikt.</p>
 <h3 id="23-graphql">2.3 GraphQL<a class="headerlink" href="#23-graphql" title="Permanent link">¶</a></h3>
 <p>Binnen het iWlz Netwerk verlopen raadplegingen via GraphQL en zijn registers gedefinieerd door middel van GraphQL schema’s. Om uniformiteit binnen het netwerk te versterken is er daarom voor gekozen om voor notificeren of melden ook gebruik te maken van GraphQL.</p>
-<p>Een notificatie of melding is technisch vormgegeven met de GraphQL-operatie “<code>mutation</code>”. De definitie van het GraphQL-schema is te vinden in GitHub: <a href="https://github.com/iStandaarden/iWlz-generiek/tree/master"><img alt="" src="https://github.com/fluidicon.png">GitHub - iStandaarden/iWlz-generiek: Koppelvlak specificaties met netwerk brede functionaliteit</a>.</p>
+<p>Een notificatie of melding is technisch vormgegeven met de GraphQL-operatie “<code>mutation</code>”. De definitie van het GraphQL-schema is te vinden in GitHub: <a href="https://github.com/iStandaarden/iWlz-generiek/">GitHub - iStandaarden/iWlz-generiek: Koppelvlak specificaties met netwerk brede functionaliteit</a>.</p>
 <p>In de onderdelen <strong>Notificaties</strong> en <strong>Melden</strong> is de toepassing van respectievelijk de GraphQL-operaties <code>zendMelding</code> en <code>zendNotificatie</code>.</p>
 <h3 id="24-specifieke-autorisatiemeldingen">2.4 Specifieke autorisatiemeldingen<a class="headerlink" href="#24-specifieke-autorisatiemeldingen" title="Permanent link">¶</a></h3>
 <p>Het autorisatiemechanisme binnen nID is ontworpen om meldingen en notificaties op een consistente en betrouwbare manier te verzenden naar geautoriseerde partijen binnen de iWlz-keten. Dit proces wordt ondersteund door de GraphQL-operaties <code>zendMelding</code> en <code>zendNotificatie</code>, die verantwoordelijk zijn voor het initiëren van respectievelijk meldingen en notificaties.</p>
 <p>De responses van deze GraphQL-operaties bieden een gestandaardiseerde manier om de uitkomst van het verzoek te communiceren. Ze bevatten zowel statusinformatie als foutmeldingen, die essentieel zijn voor het begrijpen en diagnosticeren van het notificatieproces. Dit maakt het mogelijk om problemen in de keten snel te identificeren en te verhelpen.</p>
 <p>De response codes zijn gebaseerd op gestandaardiseerde HTTP-statuscodes, uitgebreid met specifieke foutberichten en contextuele informatie om de aard van de uitkomst of fout te verduidelijken. Zowel technische als functionele foutscenario's worden behandeld, zodat ontwikkelaars en beheerders een volledig inzicht krijgen in de verwerking van notificaties.</p>
 <p>Hieronder wordt een tabel weergegeven met de mogelijke response codes, foutberichten en oorzaken die kunnen optreden bij de uitvoering van de GraphQL-verzoeken <code>zendMelding</code> en <code>zendNotificatie</code>. Deze tabel dient als leidraad voor een correcte interpretatie van de responses en het oplossen van eventuele problemen.</p>
-<p>De hieronder beschreven foutcodes ontstaan bij het valideren van de ingezonden GraphQL in nID, onderdeel PDP (zie artikel <a href="https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537" title="https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537">nID netwerkstelsel</a>).</p>
-<p>image-20250612-091158.png openen</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://media-cdn.atlassian.com/file/1e9ef623-5779-42b6-be90-de4df3936bc1/image/cdn?allowAnimated=true&amp;client=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;collection=contentId-23071204&amp;height=125&amp;max-age=2592000&amp;mode=full-fit&amp;source=mediaCard&amp;token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmZjAzOTQxYi1kMGFmLTQzNmMtYTgzMy01ZjcwMWExOGFhOWYiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpjb2xsZWN0aW9uOmNvbnRlbnRJZC0yMzA3MTIwNCI6WyJyZWFkIl19LCJleHAiOjE3ODIxMTU4NjYsIm5iZiI6MTc4MjExMjk4NiwiYWFJZCI6IjU1NzA1ODo3NDIwYzc0ZS1lMzNkLTRkYjAtODM1Ny1iZGQ3NWY3NzQ0ZWEiLCJodHRwczovL2lkLmF0bGFzc2lhbi5jb20vYXBwQWNjcmVkaXRlZCI6ZmFsc2UsImF1dGhUeXBlIjoic2Vzc2lvbiJ9.KbT1vw9Tu9nIq8styT2dHPcJ1tl1Gqas3WDSQ4ZAjEc&amp;width=1002#media-blob-url=true&amp;id=1e9ef623-5779-42b6-be90-de4df3936bc1&amp;clientId=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;contextId=contentId-23071204&amp;collection=contentId-23071204" data-desc-position="bottom"><img alt="image-20250612-091158.png" src="https://media-cdn.atlassian.com/file/1e9ef623-5779-42b6-be90-de4df3936bc1/image/cdn?allowAnimated=true&amp;client=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;collection=contentId-23071204&amp;height=125&amp;max-age=2592000&amp;mode=full-fit&amp;source=mediaCard&amp;token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmZjAzOTQxYi1kMGFmLTQzNmMtYTgzMy01ZjcwMWExOGFhOWYiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpjb2xsZWN0aW9uOmNvbnRlbnRJZC0yMzA3MTIwNCI6WyJyZWFkIl19LCJleHAiOjE3ODIxMTU4NjYsIm5iZiI6MTc4MjExMjk4NiwiYWFJZCI6IjU1NzA1ODo3NDIwYzc0ZS1lMzNkLTRkYjAtODM1Ny1iZGQ3NWY3NzQ0ZWEiLCJodHRwczovL2lkLmF0bGFzc2lhbi5jb20vYXBwQWNjcmVkaXRlZCI6ZmFsc2UsImF1dGhUeXBlIjoic2Vzc2lvbiJ9.KbT1vw9Tu9nIq8styT2dHPcJ1tl1Gqas3WDSQ4ZAjEc&amp;width=1002#media-blob-url=true&amp;id=1e9ef623-5779-42b6-be90-de4df3936bc1&amp;clientId=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;contextId=contentId-23071204&amp;collection=contentId-23071204"></a></p>
-<p>Foutmeldingen nID met betrekking tot notificeren en melden</p>
-<p>plantUML-source diagram</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>@startuml rfc0008-04-error-flow skinparam participantpadding 20 skinparam boxpadding 40 box Verzender participant "Resource" as Resource end box box "nID" participant "autorisatieserver" as AuthzServer participant "PEP" as PEP participant "PDP" as PDP end box box Ontvanger participant "Resource-\nServer" as ResServer end box note over PEP #lightgreen: De volledige validatie en autorisatie flow \nis beschreven in het onderdeel \nnID netwerkstelsel activate Resource Resource -&gt; Resource: genereer GraphQL-mutatition Resource -&gt; AuthzServer: Aanvragen van autorisatie\n"scope": "../notificaties/notificatie:create" \nof "scope": "../meldingen/melding:create" activate AuthzServer #Darkgrey AuthzServer --&gt; Resource --: 200 Response (JWT Access-Token) deactivate AuthzServer Resource -&gt; PEP: GraphQL Request + \nAuthenticatiemiddel + JWT Access-Token activate PEP PEP -&gt; PEP: Valideer Authenticatie en \nAccess PEP -&gt; PDP: GraphQL met policy valideren activate PEP #LightGray activate PDP PDP -&gt; PDP: Valideer graphql autonumber "&lt;color:red&gt;&lt;b&gt;[00]" Resource &lt;-[#red]-X PDP: &lt;color:red&gt; **400 Bad Request** Resource &lt;-[#red]-X PDP: &lt;color:red&gt; **400 Bad Request:** **GRAPHQL_VALIDATION_FAILED** autonumber stop PDP -&gt; PEP: Graphql allowed deactivate PDP PEP -&gt; ResServer: GraphQL Request deactivate PEP activate ResServer ResServer -&gt; ResServer: ontvang notificatie ResServer --&gt; PEP: GraphQL 200 response deactivate ResServer PEP --&gt; Resource: GraphQL 200 response deactivate PEP Resource --&gt; Resource: verwerk GraphQL 200 response @enduml
-</span></code></pre></div>
+<p>De hieronder beschreven foutcodes ontstaan bij het valideren van de ingezonden GraphQL in nID, onderdeel PDP (zie artikel <a href="../nid_netwerkstelsel">nID netwerkstelsel</a>).</p>
+<pre class="mermaid-zoom"><code>sequenceDiagram
+    box Verzender
+        participant Resource
+    end
+
+    box nID
+        participant AuthzServer as autorisatieserver
+        participant PEP
+        participant PDP
+    end
+
+    box Ontvanger
+        participant ResServer as Resource-Server
+    end
+
+    Note over PEP: De volledige validatie en autorisatie flow&lt;br/&gt;is beschreven in het onderdeel&lt;br/&gt;nID netwerkstelsel
+
+    activate Resource
+    Resource-&gt;&gt;Resource: genereer GraphQL-mutatie
+
+    Resource-&gt;&gt;AuthzServer: Aanvragen van autorisatie&lt;br/&gt;scope: ../notificaties/notificatie:create&lt;br/&gt;of scope: ../meldingen/melding:create
+    activate AuthzServer
+    AuthzServer--&gt;&gt;Resource: 200 Response (JWT Access-Token)
+    deactivate AuthzServer
+
+    Resource-&gt;&gt;PEP: GraphQL Request +&lt;br/&gt;Authenticatiemiddel + JWT Access-Token
+    activate PEP
+
+    PEP-&gt;&gt;PEP: Valideer Authenticatie en Access
+    PEP-&gt;&gt;PDP: GraphQL met policy valideren
+
+    activate PDP
+    PDP-&gt;&gt;PDP: Valideer GraphQL
+
+    alt [00] 400 Bad Request
+        PDP--x Resource: 400 Bad Request
+    else GRAPHQL_VALIDATION_FAILED
+        PDP--x Resource: 400 Bad Request: GRAPHQL_VALIDATION_FAILED
+    end
+
+    PDP--&gt;&gt;PEP: GraphQL allowed
+    deactivate PDP
+
+    PEP-&gt;&gt;ResServer: GraphQL Request
+    deactivate PEP
+
+    activate ResServer
+    ResServer-&gt;&gt;ResServer: ontvang notificatie
+    ResServer--&gt;&gt;PEP: GraphQL 200 response
+    deactivate ResServer
+
+    activate PEP
+    PEP--&gt;&gt;Resource: GraphQL 200 response
+    deactivate PEP
+
+    Resource-&gt;&gt;Resource: verwerk GraphQL 200 response
+    deactivate Resource</code></pre>
 <table>
 <thead>
 <tr>
@@ -3047,7 +3136,7 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://media-cdn.atlassian.com/file/fe2c1308-7eb8-47ae-874e-c82329491c03/image/cdn?allowAnimated=true&amp;client=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;collection=contentId-23071204&amp;height=125&amp;max-age=2592000&amp;mode=full-fit&amp;source=mediaCard&amp;token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmZjAzOTQxYi1kMGFmLTQzNmMtYTgzMy01ZjcwMWExOGFhOWYiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpjb2xsZWN0aW9uOmNvbnRlbnRJZC0yMzA3MTIwNCI6WyJyZWFkIl19LCJleHAiOjE3ODIxMTU4NjYsIm5iZiI6MTc4MjExMjk4NiwiYWFJZCI6IjU1NzA1ODo3NDIwYzc0ZS1lMzNkLTRkYjAtODM1Ny1iZGQ3NWY3NzQ0ZWEiLCJodHRwczovL2lkLmF0bGFzc2lhbi5jb20vYXBwQWNjcmVkaXRlZCI6ZmFsc2UsImF1dGhUeXBlIjoic2Vzc2lvbiJ9.KbT1vw9Tu9nIq8styT2dHPcJ1tl1Gqas3WDSQ4ZAjEc&amp;width=1011#media-blob-url=true&amp;id=fe2c1308-7eb8-47ae-874e-c82329491c03&amp;clientId=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;contextId=contentId-23071204&amp;collection=contentId-23071204" data-desc-position="bottom"><img alt="image-20250612-095647.png" src="https://media-cdn.atlassian.com/file/fe2c1308-7eb8-47ae-874e-c82329491c03/image/cdn?allowAnimated=true&amp;client=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;collection=contentId-23071204&amp;height=125&amp;max-age=2592000&amp;mode=full-fit&amp;source=mediaCard&amp;token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmZjAzOTQxYi1kMGFmLTQzNmMtYTgzMy01ZjcwMWExOGFhOWYiLCJhY2Nlc3MiOnsidXJuOmZpbGVzdG9yZTpjb2xsZWN0aW9uOmNvbnRlbnRJZC0yMzA3MTIwNCI6WyJyZWFkIl19LCJleHAiOjE3ODIxMTU4NjYsIm5iZiI6MTc4MjExMjk4NiwiYWFJZCI6IjU1NzA1ODo3NDIwYzc0ZS1lMzNkLTRkYjAtODM1Ny1iZGQ3NWY3NzQ0ZWEiLCJodHRwczovL2lkLmF0bGFzc2lhbi5jb20vYXBwQWNjcmVkaXRlZCI6ZmFsc2UsImF1dGhUeXBlIjoic2Vzc2lvbiJ9.KbT1vw9Tu9nIq8styT2dHPcJ1tl1Gqas3WDSQ4ZAjEc&amp;width=1011#media-blob-url=true&amp;id=fe2c1308-7eb8-47ae-874e-c82329491c03&amp;clientId=ff03941b-d0af-436c-a833-5f701a18aa9f&amp;contextId=contentId-23071204&amp;collection=contentId-23071204"></a></p>
 <p>Sequentiediagram Notificeren</p>
 <p>plantUML source sequentiediagram</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>@startuml rfc008-02-notificatie_sequence skinparam participantpadding 20 skinparam boxpadding 40 box bronhouder #lightblue participant "Resource" as Resource participant "Register- \ndata" as Register end box box "nID" participant "autorisatieserver" as AuthzServer participant "PEP" as PEP participant "PDP" as PDP end box box deelnemer #lightyellow participant "Resource-\nServer" as ResServer end box note over PEP #lightgreen: De volledige validatie en autorisatie flow \nis beschreven in het artikel \nnID netwerkstelsel autonumber "&lt;b&gt;[00]" Resource -&gt; Register : &lt;b&gt;registratie data activate Resource activate Register Register -&gt; Register: &lt;b&gt;event trigger Register -&gt; Resource : &lt;b&gt;bepaal notificatietype deactivate Register Resource -&gt; Resource: &lt;b&gt;genereer GraphQL notificatie autonumber stop Resource -&gt; AuthzServer: Aanvragen van autorisatie\n"scope": "../notificaties/notificatie:create" activate AuthzServer #Darkgrey AuthzServer --&gt; Resource --: 200 Response (JWT Access-Token) deactivate AuthzServer autonumber resume Resource -&gt; PEP: **GraphQL Request **\nAuthenticatiemiddel + JWT Access-Token + notificatie autonumber stop activate PEP PEP -&gt; PEP: Valideer Authenticatie en \nAccess PEP -&gt; PDP: GraphQL met policy valideren activate PEP #LightGray activate PDP PDP -&gt; PDP: Valideer graphql autonumber stop PDP -&gt; PEP: Graphql allowed deactivate PDP PEP -&gt; ResServer: **[05] GraphQL Request** deactivate PEP autonumber resume activate ResServer ResServer -&gt; ResServer: &lt;b&gt;ontvang \n&lt;b&gt;notificatie ResServer --&gt; PEP: &lt;b&gt;GraphQL 200 response deactivate ResServer autonumber stop PEP --&gt; Resource: &lt;b&gt;[07] GraphQL 200 response deactivate PEP Resource --&gt; Resource: &lt;b&gt;[08] verwerk GraphQL 200 response @enduml
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>@startuml rfc008-02-notificatie_sequence skinparam participantpadding 20 skinparam boxpadding 40 box bronhouder #lightblue participant "Resource" as Resource participant "Register- \ndata" as Register end box box "nID" participant "autorisatieserver" as AuthzServer participant "PEP" as PEP participant "PDP" as PDP end box box deelnemer #lightyellow participant "Resource-\nServer" as ResServer end box note over PEP #lightgreen: De volledige validatie en autorisatie flow \nis beschreven in het artikel \nnID netwerkstelsel autonumber "&lt;b&gt;[00]" Resource -&gt; Register : &lt;b&gt;registratie data activate Resource activate Register Register -&gt; Register: &lt;b&gt;event trigger Register -&gt; Resource : &lt;b&gt;bepaal notificatietype deactivate Register Resource -&gt; Resource: &lt;b&gt;genereer GraphQL notificatie autonumber stop Resource -&gt; AuthzServer: Aanvragen van autorisatie\n"scope": "../notificaties/notificatie:create" activate AuthzServer #Darkgrey AuthzServer --&gt; Resource --: 200 Response (JWT Access-Token) deactivate AuthzServer autonumber resume Resource -&gt; PEP: **GraphQL Request **\nAuthenticatiemiddel + JWT Access-Token + notificatie autonumber stop activate PEP PEP -&gt; PEP: Valideer Authenticatie en \nAccess PEP -&gt; PDP: GraphQL met policy valideren activate PEP #LightGray activate PDP PDP -&gt; PDP: Valideer graphql autonumber stop PDP -&gt; PEP: Graphql allowed deactivate PDP PEP -&gt; ResServer: **[05] GraphQL Request** deactivate PEP autonumber resume activate ResServer ResServer -&gt; ResServer: &lt;b&gt;ontvang \n&lt;b&gt;notificatie ResServer --&gt; PEP: &lt;b&gt;GraphQL 200 response deactivate ResServer autonumber stop PEP --&gt; Resource: &lt;b&gt;[07] GraphQL 200 response deactivate PEP Resource --&gt; Resource: &lt;b&gt;[08] verwerk GraphQL 200 response @enduml
 </span></code></pre></div>
 <table>
 <thead>
@@ -3135,11 +3224,11 @@
 </table>
 <h4 id="361-voorbeeld-van-graphql-mutation-zendnotificatie">3.6.1 Voorbeeld van GraphQL mutation: <code>zendNotificatie</code><a class="headerlink" href="#361-voorbeeld-van-graphql-mutation-zendnotificatie" title="Permanent link">¶</a></h4>
 <p>Gebruik voor de notificatie de GraphQL mutation <code>zendNotificatie</code>uit het schema:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mutation zendNotificatie( $afzenderID: String! $afzenderIDType: IDTypeEnum! $eventType: String! $ontvangerID: String! $ontvangerIDType: IDTypeEnum! $timestamp: DateTime! $subjectList: [SubjectEntity!]! ) { zendNotificatie( notificatieInput: { afzenderID: $afzenderID afzenderIDType: $afzenderIDType eventType: $eventType ontvangerID: $ontvangerID ontvangerIDType: $ontvangerIDType timestamp: $timestamp subjectList: $subjectList } ) { notificatieID } }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mutation zendNotificatie( $afzenderID: String! $afzenderIDType: IDTypeEnum! $eventType: String! $ontvangerID: String! $ontvangerIDType: IDTypeEnum! $timestamp: DateTime! $subjectList: [SubjectEntity!]! ) { zendNotificatie( notificatieInput: { afzenderID: $afzenderID afzenderIDType: $afzenderIDType eventType: $eventType ontvangerID: $ontvangerID ontvangerIDType: $ontvangerIDType timestamp: $timestamp subjectList: $subjectList } ) { notificatieID } }
 </span></code></pre></div>
 <h4 id="362-voorbeeld-input-parameters">3.6.2 Voorbeeld input parameters<a class="headerlink" href="#362-voorbeeld-input-parameters" title="Permanent link">¶</a></h4>
 <p>Op basis van het scenario ziet het json-object met de input parameters er als volgt uit:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>{ "afzenderID": "62253778", "afzenderIDType": "KVK", "eventType": "NIEUWE_INDICATIE_ZORGKANTOOR", "ontvangerID": "5151", "ontvangerIDType": "UZOVI", "timestamp": "2024-07-02T00:00:00Z", "subjectList": [ { "recordID": "WlzIndicatie/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6", "subject": "WlzIndicatie/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6" } ] }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{ "afzenderID": "62253778", "afzenderIDType": "KVK", "eventType": "NIEUWE_INDICATIE_ZORGKANTOOR", "ontvangerID": "5151", "ontvangerIDType": "UZOVI", "timestamp": "2024-07-02T00:00:00Z", "subjectList": [ { "recordID": "WlzIndicatie/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6", "subject": "WlzIndicatie/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6" } ] }
 </span></code></pre></div>
 <p>Toelichting:</p>
 <table>
@@ -3189,15 +3278,15 @@
 </tbody>
 </table>
 <p>In dit voorbeeld zijn <code>subject</code> en <code>recordID</code> gelijk. Dit hoeft niet altijd zo te zijn. Bijvoorbeeld voor de notificatie <code>NIEUWE_BEMIDDELINGSPECIFICATIE_ZORGAANBIEDER</code> is dit niet het geval.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>{ "afzenderID": "5050", "afzenderIDType": "UZOVI", "eventType": "NIEUWE_BEMIDDELINGSPECIFICATIE_ZORGAANBIEDER", "ontvangerID": "12345678", "ontvangerIDType": "AGBCODE", "timestamp": "2024-07-02T00:00:00Z", "subjectList": [ { "subject": "Bemiddeling/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6", "recordID": "Bemiddelingspecificatie/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6" } ] }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{ "afzenderID": "5050", "afzenderIDType": "UZOVI", "eventType": "NIEUWE_BEMIDDELINGSPECIFICATIE_ZORGAANBIEDER", "ontvangerID": "12345678", "ontvangerIDType": "AGBCODE", "timestamp": "2024-07-02T00:00:00Z", "subjectList": [ { "subject": "Bemiddeling/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6", "recordID": "Bemiddelingspecificatie/ef88ce35-58fa-4e6d-ac7a-6e298dd211d6" } ] }
 </span></code></pre></div>
 <p>Ga voor meer over de specificaties van de notificaties naar de paragraaf over “Typen notificatie” en kies daar een register.</p>
 <h4 id="363-voorbeeld-response">3.6.3 Voorbeeld response<a class="headerlink" href="#363-voorbeeld-response" title="Permanent link">¶</a></h4>
 <p>Voorbeeld succesvolle aflevering van de notificatie (non-normative):</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>HTTP/1.1 200 { "data": { "zendNotificatie": { "notificatieID": "e2d8c3c2-7453-4948-95c8-de86688461e5" } } }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>HTTP/1.1 200 { "data": { "zendNotificatie": { "notificatieID": "e2d8c3c2-7453-4948-95c8-de86688461e5" } } }
 </span></code></pre></div>
 <p>Voorbeeld onsuccesvolle aflevering notificatie (non-normative):</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>HTTP/1.1 400 Bad Request { "errors": [ { "message": "ZendNotificatie mutation: afzenderIDType is not valid", "extensions": { "code": "GRAPHQL_VALIDATION_FAILED" } } ] }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>HTTP/1.1 400 Bad Request { "errors": [ { "message": "ZendNotificatie mutation: afzenderIDType is not valid", "extensions": { "code": "GRAPHQL_VALIDATION_FAILED" } } ] }
 </span></code></pre></div>
 <h2 id="4-meldingen">4. Meldingen<a class="headerlink" href="#4-meldingen" title="Permanent link">¶</a></h2>
 <h3 id="41-doel-melding">4.1 Doel melding<a class="headerlink" href="#41-doel-melding" title="Permanent link">¶</a></h3>
@@ -3265,7 +3354,7 @@
 <p>image-20250612-075629.png openen</p>
 <p>Sequentiediagram Melden</p>
 <p>plantUML source</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>@startuml rfc008-02-foutmelden_sequence skinparam participantpadding 20 skinparam boxpadding 40 box deelnemer #lightyellow participant "Resource" as Resource end box box "nID" participant "autorisatieserver" as AuthzServer participant "PEP" as PEP participant "PDP" as PDP end box box bronhouder #lightblue participant "Resource-\nServer" as ResServer end box note over PEP #lightgreen: Het autorisatie en validatie-proces \nis beschreven in RFC0014 \nFunctionele uitwerking aanvragen autorisatie \n(oAuth2.0) autonumber "&lt;b&gt;[00]" ResServer o-&gt; Resource: &lt;b&gt;ontvang data uit register activate Resource Resource -&gt; Resource: &lt;b&gt;valideer data Resource -x Resource : &lt;b&gt;bepaal foutcode Resource -&gt; Resource: &lt;b&gt;genereer GraphQL foutmelding autonumber stop Resource -&gt; AuthzServer: Aanvragen van autorisatie\n"scope": "..meldingen/melding:create" activate AuthzServer #Darkgrey AuthzServer --&gt; Resource --: 200 Response (JWT Access-Token) deactivate AuthzServer autonumber resume Resource -&gt; PEP: **GraphQL Request **\nAuthenticatiemiddel + JWT Access-Token + foutmelding autonumber stop activate PEP #Darkgrey PEP -&gt; PEP: Valideer Authenticatie en \nAccess PEP -&gt; PDP: GraphQL met policy valideren activate PEP #Darkgrey activate PDP #Darkgrey PDP -&gt; PDP: Valideer graphql autonumber stop PDP --&gt; PEP: Graphql allowed deactivate PDP PEP -&gt; ResServer: **[05] GraphQL Request** deactivate PEP autonumber resume activate ResServer ResServer -&gt; ResServer: &lt;b&gt;ontvang \n&lt;b&gt;melding ResServer --&gt; PEP: &lt;b&gt;GraphQL 200 response deactivate ResServer autonumber stop PEP --&gt; Resource: &lt;b&gt;[07] GraphQL 200 response deactivate PEP Resource --&gt; Resource: &lt;b&gt;[08] verwerk GraphQL 200 response @enduml
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>@startuml rfc008-02-foutmelden_sequence skinparam participantpadding 20 skinparam boxpadding 40 box deelnemer #lightyellow participant "Resource" as Resource end box box "nID" participant "autorisatieserver" as AuthzServer participant "PEP" as PEP participant "PDP" as PDP end box box bronhouder #lightblue participant "Resource-\nServer" as ResServer end box note over PEP #lightgreen: Het autorisatie en validatie-proces \nis beschreven in RFC0014 \nFunctionele uitwerking aanvragen autorisatie \n(oAuth2.0) autonumber "&lt;b&gt;[00]" ResServer o-&gt; Resource: &lt;b&gt;ontvang data uit register activate Resource Resource -&gt; Resource: &lt;b&gt;valideer data Resource -x Resource : &lt;b&gt;bepaal foutcode Resource -&gt; Resource: &lt;b&gt;genereer GraphQL foutmelding autonumber stop Resource -&gt; AuthzServer: Aanvragen van autorisatie\n"scope": "..meldingen/melding:create" activate AuthzServer #Darkgrey AuthzServer --&gt; Resource --: 200 Response (JWT Access-Token) deactivate AuthzServer autonumber resume Resource -&gt; PEP: **GraphQL Request **\nAuthenticatiemiddel + JWT Access-Token + foutmelding autonumber stop activate PEP #Darkgrey PEP -&gt; PEP: Valideer Authenticatie en \nAccess PEP -&gt; PDP: GraphQL met policy valideren activate PEP #Darkgrey activate PDP #Darkgrey PDP -&gt; PDP: Valideer graphql autonumber stop PDP --&gt; PEP: Graphql allowed deactivate PDP PEP -&gt; ResServer: **[05] GraphQL Request** deactivate PEP autonumber resume activate ResServer ResServer -&gt; ResServer: &lt;b&gt;ontvang \n&lt;b&gt;melding ResServer --&gt; PEP: &lt;b&gt;GraphQL 200 response deactivate ResServer autonumber stop PEP --&gt; Resource: &lt;b&gt;[07] GraphQL 200 response deactivate PEP Resource --&gt; Resource: &lt;b&gt;[08] verwerk GraphQL 200 response @enduml
 </span></code></pre></div>
 <table>
 <thead>
@@ -3371,11 +3460,11 @@
 </table>
 <h4 id="471-voorbeeld-van-graphql-mutation-zendmelding">4.7.1 Voorbeeld van GraphQL mutation: <code>zendMelding</code><a class="headerlink" href="#471-voorbeeld-van-graphql-mutation-zendmelding" title="Permanent link">¶</a></h4>
 <p>Gebruik voor de melding de GraphQL mutation <code>zendMelding</code> uit het schema.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>mutation zendMelding( $timestamp: DateTime! $afzenderIDType: String! $afzenderID: String! $ontvangerIDType: String! $ontvangerID: String! $ontvangerKenmerk: String $eventType: String! $subjectList: [SubjectEntity!]! ) { zendMelding( meldingInput: { timestamp: $timestamp afzenderIDType: $afzenderIDType afzenderID: $afzenderID ontvangerIDType: $ontvangerIDType ontvangerID: $ontvangerID ontvangerKenmerk: $ontvangerKenmerk eventType: $eventType subjectList: $subjectList } ) { meldingID } }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>mutation zendMelding( $timestamp: DateTime! $afzenderIDType: String! $afzenderID: String! $ontvangerIDType: String! $ontvangerID: String! $ontvangerKenmerk: String $eventType: String! $subjectList: [SubjectEntity!]! ) { zendMelding( meldingInput: { timestamp: $timestamp afzenderIDType: $afzenderIDType afzenderID: $afzenderID ontvangerIDType: $ontvangerIDType ontvangerID: $ontvangerID ontvangerKenmerk: $ontvangerKenmerk eventType: $eventType subjectList: $subjectList } ) { meldingID } }
 </span></code></pre></div>
 <h4 id="472-voorbeeld-input-variabelen-afzender-is-de-fout-melder-zelf">4.7.2 Voorbeeld Input variabelen afzender is de (fout-)melder zelf:<a class="headerlink" href="#472-voorbeeld-input-variabelen-afzender-is-de-fout-melder-zelf" title="Permanent link">¶</a></h4>
 <p>Op basis van het scenario ziet het json-object met de input parameters er als volgt uit:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>{ "timestamp": "2024-07-02T00:00:00Z", "afzenderIDType": "UZOVI", "afzenderID": "5151", "ontvangerIDType": "KVK", "ontvangerID": "12345678", "eventType": "IWLZFOUTMELDING", "subjectList": [ { "subject": "IRG0012", "recordID": "wlzindicatie/Stoornis/da8ebd42-d29b-4508-8604-ae7d2c6bbddd" }, { "subject": "IRG0028", "recordID": "wlzindicatie/5850ad49-7cf4-4711-8215-e160715900e7" } ] }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>{ "timestamp": "2024-07-02T00:00:00Z", "afzenderIDType": "UZOVI", "afzenderID": "5151", "ontvangerIDType": "KVK", "ontvangerID": "12345678", "eventType": "IWLZFOUTMELDING", "subjectList": [ { "subject": "IRG0012", "recordID": "wlzindicatie/Stoornis/da8ebd42-d29b-4508-8604-ae7d2c6bbddd" }, { "subject": "IRG0028", "recordID": "wlzindicatie/5850ad49-7cf4-4711-8215-e160715900e7" } ] }
 </span></code></pre></div>
 <p>Toelichting:</p>
 <table>
@@ -3426,10 +3515,10 @@
 </table>
 <h4 id="473-voorbeeld-response">4.7.3 Voorbeeld response:<a class="headerlink" href="#473-voorbeeld-response" title="Permanent link">¶</a></h4>
 <p>Voorbeeld succesvolle aflevering van de melding (non-normative)</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>HTTP/1.1 200 { "data": { "zendMelding": { "meldingID": "86978bf6-f1b6-4c5c-aeac-f0b436fa3d3e" } } }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>HTTP/1.1 200 { "data": { "zendMelding": { "meldingID": "86978bf6-f1b6-4c5c-aeac-f0b436fa3d3e" } } }
 </span></code></pre></div>
 <p>Voorbeeld onsuccesvolle aflevering van de melding (non-normative):</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>HTTP/1.1 400 Bad Request { "errors": [ { "message": "ZendNotificatie mutation: afzenderIDType is not valid", "extensions": { "code": "GRAPHQL_VALIDATION_FAILED" } } ] }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>HTTP/1.1 400 Bad Request { "errors": [ { "message": "ZendNotificatie mutation: afzenderIDType is not valid", "extensions": { "code": "GRAPHQL_VALIDATION_FAILED" } } ] }
 </span></code></pre></div>
 
 
