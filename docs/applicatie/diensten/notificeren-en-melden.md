@@ -505,13 +505,9 @@ Binnen het iWlz-netwerkmodel zijn er specifieke scopes gedefinieerd voor de dien
 
 ### 4.5 Sequentiediagram melden
 
-De hier beschreven flow beschrijft alleen het melden. Voor het melden is autorisatie nodig. Het aanvragen van autorisatie en de bijbehorende flow is beschreven in artikel [nID netwerkstelsel](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537 "https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537").
+De hier beschreven flow beschrijft alleen het melden. Voor het melden is autorisatie nodig. Het aanvragen van autorisatie en de bijbehorende flow is beschreven in artikel [nID netwerkstelsel](../nid_netwerkstelsel)).
 
-image-20250612-075629.png openen
 
-Sequentiediagram Melden
-
-plantUML source
 
 ```mermaid
 sequenceDiagram
