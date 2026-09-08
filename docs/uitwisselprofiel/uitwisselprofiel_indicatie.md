@@ -23,12 +23,12 @@ De basis voor dit uitwisselprofiel wordt gevormd door de artikelen uit dit afspr
 
 **Afspraken bij twijfels/vragen over de kwaliteit van data?**
 
-- Wanneer het een afwijking is op de gegevensregels van de iStandaard iWlz (overtreding gegevensregel) verloopt de terugkoppeling aan de bronhouder via de (fout)melding. Zie het artikel [Notificeren en Melden - 4. meldingen](../applicatie/diensten/notificeren-en-melden#4-meldingen).
+- Wanneer het een afwijking is op de gegevensregels van de iStandaard iWlz (overtreding gegevensregel) verloopt de terugkoppeling aan de bronhouder via de (fout)melding. Zie het artikel [Notificeren en Melden - 4. meldingen](../../applicatie/diensten/notificeren-en-melden#4-meldingen).
 - Gaat het om andere twijfels/vragen: dan contact opnemen met bronhouder Indicatiesteller CIZ via telefoon of notitieverkeer.
 
 ## 4. Wet- en regelgeving
 
-In het artikel [Randvoorwaarden](../organisatiebeleid/randvoorwaarden)Voorvertoning is aangegeven welke wet- en regelgeving voor het Indicatieregister van toepassing is.
+In het artikel [Randvoorwaarden](../../organisatiebeleid/randvoorwaarden)Voorvertoning is aangegeven welke wet- en regelgeving voor het Indicatieregister van toepassing is.
 
 Specifiek voor het Indicatieregister zijn de volgende grondslagen van toepassing:
 
@@ -41,11 +41,12 @@ Het Indicatieregister ondersteund één proces.
 
 **Proces Beoordelen**
 
-Het proces beoordelen en afgeven indicatiebesluit is beschreven in het Artikel Proces. Zie [Procesmodel | CIZ: Beoordelen en afgeven indicatiebesluit](../proces/procesmodel)
+Het proces beoordelen en afgeven indicatiebesluit is beschreven in het Artikel Proces. Zie [Procesmodel | CIZ: Beoordelen en afgeven indicatiebesluit](../../proces/procesmodel)
 
 ## 6. Informatie
 
-!!! question **Geen van de onderstaande criteria/voorwaarden  staan in het artikel Informatie**
+!!! question 
+    Geen van de onderstaande criteria/voorwaarden  staan in het artikel Informatie
 
 **Peildata/peilperiode van gegevens**
 
@@ -78,7 +79,8 @@ Het Informatiemodel brengt de samenhang in processen, regels en registerspecific
 
 Het [Informatiemodel](https://informatiemodel.istandaarden.nl/) van het indicatieregister gaat specifiek in op het proces rondom en de inrichting van het [Indicatieregister](https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/). Het bevat de volgende onderdelen:
 
-!!! question Onderstaande verplaatsen naar het artikel Informatie > Informatiemodel. 
+!!! question 
+    Onderstaande verplaatsen naar het artikel Informatie > Informatiemodel. 
     Het gaat hier nauwelijks om specifieke context
 
 **Proces**
@@ -112,13 +114,14 @@ Het [Informatiemodel](https://informatiemodel.istandaarden.nl/) van het indicati
 
 Dit hoofdstuk beschrijft de specifieke invulling van de applicatie laag voor het Indicatieregister.
 
-### [Applicatiecomponenten](../applicatie/applicatiecomponenten)
+### 8.1 [Applicatiecomponenten](../applicatie/applicatiecomponenten)
 
 In het netwerkmodel voor het indicatieregister worden de **diensten**:
-  - Abonneren, 
-  - Autoriseren, 
-  - Notificeren en 
-  - raadplegen gebruikt. 
+
+- Abonneren, 
+- Autoriseren, 
+- Notificeren en 
+- raadplegen gebruikt. 
 
 De **bronhouder** van het Indicatieregister is indicatiesteller CIZ. 
 
@@ -128,7 +131,7 @@ De **bronhouder** van het Indicatieregister is indicatiesteller CIZ.
 
 VECOZO treedt op als **operationeel netwerkbeheerder**.
 
-### nID netwerkstelsel - scopes
+### 8.2 nID netwerkstelsel - scopes
 
 Het Access-token bevat specifieke gegevens die worden gebruikt om de toegang tot resources te autoriseren en te valideren. Een van de gegevens is de scope. Voor het indicatieregister zijn momenteel de volgende scopes actief.
 
@@ -162,7 +165,7 @@ Voor het mogen versturen van meldingen **aan** het indicatieorgaan moet de volge
 organisaties/indicatieorgaan/meldingen/melding:create
 ```
 
-### Dienst raadplegen
+### 8.4 Dienst raadplegen
 
 In het netwerkmodel vind informatiedeling plaats via GraphQL.
 
@@ -196,13 +199,13 @@ Naast de raadpleeg use-cases is per use-case ook toegangscontrole beschrijving o
 
 De toegangscontrole en raadpleeg use-cases zijn te vinden via: [Raadplegen Indicatieregister](https://github.com/iStandaarden/iWlz-indicatie?tab=readme-ov-file#raadplegen-indicatieregister)
 
-#### 7.3.4 Access Policy uitwisselprofiel Indicatie
+#### Access Policy uitwisselprofiel Indicatie
 
 De vertaling van autorisatieregel en autorisatiematrix naar machine-leesbare code is een policy. De PDP doet op basis van deze policy of een raadpleging is toegestaan.
 
 Momenteel zijn de policies nog niet publiekelijk beschikbaar.
 
-### Dienst notificeren
+### 8.5 Dienst notificeren
 
 De bronhouder is verantwoordelijk voor tijdige notificatie en correcte aflevering daarvan. Wanneer er aanleiding is voor het versturen van een notificatie, verstuurt het CIZ de notificatie die hoort bij die aanleiding en controleert of de notificatie is ontvangen.
 
@@ -210,7 +213,7 @@ De bronhouder is verantwoordelijk voor tijdige notificatie en correcte afleverin
 
 Een overzicht van de notificaties die het CIZ moet versturen en de aanleiding daarvoor is beschikbaar in Github: [GitHub - iStandaarden/iWlz-indicatie: Koppelvlak specificatie Indicatieregister](https://github.com/iStandaarden/iWlz-indicatie?tab=readme-ov-file#notificaties)
 
-#### 7.4.2 Controle
+#### Controle
 
 Het CIZ verifieert door middel van de ontvangst van een HTTP 200 OK response zonder inhoudelijke verwijzing naar ‘errors’ dat een notificatie succesvol is afgeleverd. Is dit niet het geval dan onderzoekt CIZ de oorzaak, zo nodig herstelt en verzend de notificatie opnieuw.
 
