@@ -1,7 +1,5 @@
 # Applicatie
 
-!!! info "Versie: *17-12-2025* | Status: *Definitief*"
-
 **Inleiding**  
 Dit hoofdstuk beschrijft de invulling van de applicatie laag van de architectuur op een generieke manier. Deze onderdelen zijn namelijk van toepassing op alle registers en uitwisselprofielen.
 

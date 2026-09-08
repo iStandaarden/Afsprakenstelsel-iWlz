@@ -1,4 +1,4 @@
-## **1. Inleiding**
+## 1. Inleiding
 
 Dit artikel beschrijft de dienst toetreden, bestaande uit twee onderdelen:
 

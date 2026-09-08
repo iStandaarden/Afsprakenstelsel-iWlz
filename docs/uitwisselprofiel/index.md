@@ -12,7 +12,7 @@ De uitwisselprofielen bevatten specifieke afspraken per register. In ieder uitwi
 
     ---
 
-    ...
+    Specifieke afspraken en technische specificaties voor aansluiting op het Indicatieregister.
 
     [:octicons-arrow-right-24: lees verder](#)
 
@@ -20,7 +20,7 @@ De uitwisselprofielen bevatten specifieke afspraken per register. In ieder uitwi
 
     ---
 
-    ...
+    Specifieke afspraken en technische specificaties voor aansluiting op het Bemiddelingsregister.
 
     [:octicons-arrow-right-24: lees verder](#)
 
@@ -28,7 +28,7 @@ De uitwisselprofielen bevatten specifieke afspraken per register. In ieder uitwi
 
     ---
 
-    ...
+    Specifieke afspraken en technische specificaties voor aansluiting op het Leveringregister.
 
     [:octicons-arrow-right-24: lees verder](#)
 

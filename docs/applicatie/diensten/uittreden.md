@@ -1,3 +1,5 @@
+# Uittreden
+
 ## 1. Inleiding
 
 Dit artikel beschrijft de dienst _uittreden_ binnen het iWlz-netwerkmodel. De dienst regelt de beëindiging van de aansluiting van een zorgaanbieder op het netwerk en de bijbehorende gegevensdiensten.
