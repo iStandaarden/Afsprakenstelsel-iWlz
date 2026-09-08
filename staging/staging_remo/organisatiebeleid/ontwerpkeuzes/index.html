@@ -88,6 +88,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1-inleiding" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -861,6 +866,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontwerpkeuzes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -877,6 +900,45 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-inleiding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Inleiding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ontwerpkeuzes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Ontwerpkeuzes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2144,6 +2206,36 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-inleiding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Inleiding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ontwerpkeuzes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Ontwerpkeuzes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2170,7 +2262,209 @@
 
   <h1>Ontwerpkeuzes</h1>
 
-
+<h3 id="1-inleiding">1. Inleiding<a class="headerlink" href="#1-inleiding" title="Permanent link">¶</a></h3>
+<p>Dit artikel beschrijft de ontwerpkeuzes die worden toegepast bij het ontwerpen, opstellen, beheren en doorontwikkelen van het iWlz-netwerkmodel. Deze ontwerpkeuzes vormen de architectuurprincipes waarop het netwerkmodel is gebaseerd.</p>
+<p>De ontwerpkeuzes sluiten aan bij de <a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/">Uitgangspunt</a> uit het informatiemodel van het iWlz-netwerkmodel en bij de randvoorwaarden die in het voorgaande artikel zijn beschreven. Waar mogelijk zijn de onderlinge relaties tussen ontwerpkeuzes, uitgangspunten en randvoorwaarden expliciet toegelicht.</p>
+<p>Hieronder zijn per ontwerpkeuze de belangrijkste kenmerken beschreven. Ook is aangegeven hoe deze binnen het iWlz-netwerkmodel concreet worden uitgewerkt in de vorm van bijbehorende keuzes en invullingen.</p>
+<h3 id="2-ontwerpkeuzes">2. Ontwerpkeuzes<a class="headerlink" href="#2-ontwerpkeuzes" title="Permanent link">¶</a></h3>
+<h4 id="o01-clienten-hebben-een-sterke-informatiepositie-momenteel-buiten-scope">O01 Cliënten hebben een sterke informatiepositie (momenteel buiten scope)<a class="headerlink" href="#o01-clienten-hebben-een-sterke-informatiepositie-momenteel-buiten-scope" title="Permanent link">¶</a></h4>
+<p><code>BRON: DIZRA</code></p>
+<p>In het iWlz-netwerk wordt de informatiepositie van de cliënt verbeterd. Doordat zij inzicht krijgen in de gegevens die over hen zijn vastgelegd in het netwerk. Ook kunnen zij gegevens delen waar zij zelf eigenaar van zijn. Zoals: contactgegevens, of gegevens over contactpersonen.</p>
+<blockquote>
+<p>✅
+Concreet betekent dit:</p>
+<ul>
+<li>Er wordt een MedMij-gegevensdienst ten behoeve van het verzamelen van iWlz gegevens gepubliceerd.</li>
+<li>Dienstverlener Aanbieder (DVA) zoals gedefinieerd in het MedMij-afsprakenstelsel sluiten aan op de diensten van een Bronhouder in het iWlz-netwerk.</li>
+<li>Cliënten die iWlz gegevens willen verzamelen of delen dienen te beschikken over een persoonlijke gezondheidsomgeving (PGO) zoals gedefinieerd in het MedMij-afsprakenstelsel.</li>
+<li>DVA’s en PGO’s van partijen die willen deelnemen aan het iWlz-netwerk dienen de onder punt 1 genoemde gegevensdienst te ondersteunen.</li>
+</ul>
+<p><strong>Relevante uitgangspunten informatiemodel iWlz</strong></p>
+<p><a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up019/">UP019: De (zorg voor de) cliënt staat centraal.</a></p>
+<p><a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up023/">UP023: Informatie wordt eenmalig bij de cliënt uitgevraagd.</a></p>
+</blockquote>
+<h4 id="o02-gemeenschappelijke-taal-en-gemeenschappelijke-terminologie">O02 Gemeenschappelijke taal en gemeenschappelijke terminologie<a class="headerlink" href="#o02-gemeenschappelijke-taal-en-gemeenschappelijke-terminologie" title="Permanent link">¶</a></h4>
+<p><code>BRON: DIZRA</code></p>
+<p>Deelnemers aan het iWlz-netwerk maken onderling gebruik van een gemeenschappelijke taal en gemeenschappelijke terminologie. Deze worden vastgelegd in het afsprakenstelsel.</p>
+<blockquote>
+<p>✅
+<strong>Concrete invulling</strong></p>
+<ul>
+<li>Informatie-niveau: In het afsprakenstelsel is een generieke regelset opgenomen. Deze regelset beschrijft op informatieniveau de regels waaraan alle uit te wisselen gegevens dienen te voldoen. Zie hoofdstuk <a href="../informatie/">Informatie</a>.</li>
+<li>Informatie-niveau: Per register is een register-specifieke gegevensset in het afsprakenstelsel opgenomen. Deze beschrijft op informatie-niveau welke gegevens door het register worden aangeboden. Zie hoofdstuk <a href="../uitwisselprofiel/">Uitwisselprofielen</a> .</li>
+<li>Data-niveau: In het afsprakenstelsel worden per dienst de specificaties van de technische koppelvlakken beschreven. Zie hoofdstuk <a href="../applicatie/">Applicatie</a>.</li>
+<li>Data-niveau: Per register zijn in het afsprakenstelsel specificaties opgenomen die de structuur van de uit te wisselen data beschrijven. Zie hoofdstuk <a href="../uitwisselprofiel/">Uitwisselprofielen</a>.</li>
+</ul>
+<p><strong>Relevante uitgangspunten informatiemodel iWlz</strong></p>
+<p><a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up017/">UP017: De informatieuitwisseling in de Wlz is gebaseerd op gestandaardiseerd berichtenverkeer en/of bronregisters.</a></p>
+</blockquote>
+<h4 id="o03-data-blijft-bij-de-bron">O03 Data blijft bij de bron<a class="headerlink" href="#o03-data-blijft-bij-de-bron" title="Permanent link">¶</a></h4>
+<p><code>BRON: DIZRA</code></p>
+<p>De data blijft bij de bron, onder de verantwoordelijkheid van de bronhouder, voor een veilig en vertrouwd informatiestelsel waarin het voor cliënten en deelnemers transparant is welke bronhouders welke gezondheidsgegevens registreren en wie het raadpleegt.</p>
+<blockquote>
+<p>✅
+<strong>Concrete invulling</strong></p>
+<p>In het iWlz-netwerkmodel worden data zoals bijvoorbeeld over indicaties, bemiddelingen en zorgtoewijzing door middel van registers door bronhouders toegankelijk gemaakt aan afnemers. Afnemers kunnen wanneer zij daar behoefte aan hebben van bronhouders data afnemen waarvoor zij zijn geautoriseerd. Hierdoor hebben zij altijd toegang tot de meest actuele data omdat invulling wordt gegeven aan ontwerpkeuze ‘Data blijft bij de bron’.</p>
+<p><strong>Relevante uitgangspunten informatiemodel iWlz</strong></p>
+<p><a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up017/">UP017</a>, <a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up035/">UP035</a>, <a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up036/">UP036</a></p>
+</blockquote>
+<h4 id="o04-gelijk-speelveld-voor-alle-leveranciers">O04 Gelijk speelveld voor alle leveranciers<a class="headerlink" href="#o04-gelijk-speelveld-voor-alle-leveranciers" title="Permanent link">¶</a></h4>
+<p><code>BRON: DIZRA</code></p>
+<p>Een duurzaam informatiestelsel vereist afspraken over het gebruik van standaarden, niet over het gebruik van een product of dienst. Op deze manier ontstaat een gelijk speelveld voor alle leveranciers en kan iedere organisatie haar eigen leveranciers voor het implementeren van de standaarden kiezen.</p>
+<blockquote>
+<p>✅
+<strong>Concrete invulling</strong></p>
+<p>Om ervoor te zorgen dat de werking van het iWlz-netwerkmodel onafhankelijk is van een product of dienst worden voor alle functionele en technische kenmerken van het iWlz-netwerkmodel afspraken gemaakt over het gebruik van standaarden. Deze afspraken worden vastgelegd in het afsprakenstelsel iWlz-netwerkmodel.</p>
+<p><strong>Relevante uitgangspunten informatiemodel iWlz</strong></p>
+<p><a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up017/">UP017</a></p>
+</blockquote>
+<h4 id="o05-groeimodel">O05 Groeimodel<a class="headerlink" href="#o05-groeimodel" title="Permanent link">¶</a></h4>
+<p><code>BRON: DIZRA</code></p>
+<p>Een informatiestelsel is duurzaam wanneer het relevant is en blijft. Om dit te bereiken is het nodig om de complexiteit van meerdere standaarden te omarmen en verandering en innovatie door middel van een groeimodel een plek te geven.</p>
+<blockquote>
+<p>✅
+<strong>Concrete invulling</strong></p>
+<p>Verandering en innovatie komen in het iWlz-netwerkmodel voornamelijk terug in het groeimodel en in de afspraken over de ontwikkeling en het beheer.</p>
+<p><strong>Groeimodel</strong></p>
+<p>Het iWlz-netwerkmodel kent een groeimodel. Enerzijds zal het aantal registers in het iWlz-netwerk incrementeel groeien. Anderzijds zal er een periode zijn waarin het estafettemodel en het netwerkmodel naast elkaar bestaan en waarin het estafettemodel stapsgewijs zal worden afgebouwd. De kenmerken van dit groeimodel zijn opgenomen in de iStandaarden.</p>
+<p><strong>Ontwikkeling en beheer</strong></p>
+<p>Afspraken over de wijze waarop de (door)ontwikkeling en het beheer van het afsprakenstelsel iWlz-netwerkmodel dienen te worden geïmplementeerd zijn expliciet onderdeel van het afsprakenstelsel iWlz-netwerkmodel. Deze afspraken zijn opgenomen in de vorm van besturingsrollen. De definitie van deze rollen en de toekenning ervan aan deelnemers is beschreven in <a href="./rollen_deelnemers">Rollen en deelnemers</a>. Dit sluit aan bij randvoorwaarde R11: De geldende NEN- en/of ISO normen.</p>
+</blockquote>
+<h4 id="o06-enkelvoudig-registreren-meervoudig-gebruiken">O06 Enkelvoudig registreren, meervoudig gebruiken<a class="headerlink" href="#o06-enkelvoudig-registreren-meervoudig-gebruiken" title="Permanent link">¶</a></h4>
+<p><code>BRON: DIZRA</code></p>
+<p>Data wordt enkelvoudig geregistreerd bij de bron en vervolgens beschikbaar gesteld voor meervoudig gebruik in verschillende toepassingen. Hiervoor hanteert het informatiestelsel de FAIR-data principes.</p>
+<blockquote>
+<p>✅
+<strong>Concrete invulling</strong></p>
+<p>In de in het afsprakenstelsel opgenomen architectuur wordt expliciet beschreven op welke wijze in het iWlz-netwerkmodel invulling wordt gegeven aan de verschillende FAIR-principes.</p>
+<p><strong>Relevante uitgangspunten informatiemodel iWlz</strong></p>
+<p><a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up017/">UP017</a>, <a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up035/">UP035</a>, <a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up036/">UP036</a></p>
+</blockquote>
+<h4 id="o07-data-is-machineleesbaar">O07 Data is machineleesbaar<a class="headerlink" href="#o07-data-is-machineleesbaar" title="Permanent link">¶</a></h4>
+<p><code>BRON: DIZRA</code></p>
+<p>In een duurzaam informatiestelsel is data machineleesbaar. Machines begrijpen de data zonder daarbij de leesbaarheid van deze data voor mensen uit het oog te verliezen. Dit opent de mogelijkheden van data-analyse en data-science.</p>
+<blockquote>
+<p>✅
+<strong>Concrete invulling</strong></p>
+<p>De data die binnen het iWlz-netwerk wordt uitgewisseld, dient machineleesbaar te zijn. Dit wordt bereikt door in het afsprakenstelsel te beschrijven op welke wijze invulling wordt gegeven aan de FAIR-principes (zie ook ontwerpkeuze O06).</p>
+<p><strong>Relevante uitgangspunten informatiemodel iWlz</strong></p>
+<p><a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up017/">UP017</a></p>
+</blockquote>
+<h4 id="o08-federatief-samenwerken-aan-afspraken-voor-data-en-voor-services">O08 Federatief samenwerken aan afspraken voor data en voor services<a class="headerlink" href="#o08-federatief-samenwerken-aan-afspraken-voor-data-en-voor-services" title="Permanent link">¶</a></h4>
+<p><code>BRON: DIZRA</code></p>
+<p>In een duurzaam informatiestelsel wordt door (vertegenwoordigers van) de verschillende deelnemers federatief samengewerkt aan afspraken voor data en voor services. Alle deelnemers implementeren deze afspraken en zijn aanspreekbaar op het nakomen van de afspraken en de kwaliteit van de implementatie.</p>
+<blockquote>
+<p>✅
+<strong>Concrete invulling</strong></p>
+<p>In het afsprakenstelsel wordt beschreven op welke wijze de verschillende deelnemers aan het iWlz-netwerk samenwerken aan het beheer en de ontwikkeling van afspraken (zie ook randvoorwaarde R11). In het afsprakenstelsel worden functionele eisen, technische specificaties en andere afspraken dusdanig expliciet beschreven dat deze implementeerbaar zijn voor de verschillende deelnemers.</p>
+<p><strong>Relevante uitgangspunten informatiemodel iWlz</strong></p>
+<p><a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up017/">UP017</a>, <a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up035/">UP035</a>, <a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up036/">UP036</a></p>
+</blockquote>
+<h4 id="o09-open-internationale-standaarden">O09 Open internationale standaarden<a class="headerlink" href="#o09-open-internationale-standaarden" title="Permanent link">¶</a></h4>
+<p><code>BRON: DIZRA</code></p>
+<p>Semantische en technische interoperabiliteit wordt in een duurzaam informatiestelsel gerealiseerd door te kiezen voor open internationale standaarden en heldere afspraken te maken over de wijze waarop deze worden ingezet. Iedere deelnemer aan het stelsel moet voldoen aan de standaarden en nadere specificaties die zijn afgesproken.</p>
+<blockquote>
+<p>✅
+<strong>Concrete invulling</strong></p>
+<p>Het afsprakenstelsel beschrijft welke open internationale standaarden worden toegepast en specificeert de wijze waarop dit wordt gedaan. Het afsprakenstelsel beschrijft bijvoorbeeld niet alleen dat de open internationale standaarden TLS (zie <a href="../it-infrastructuur/netwerk">Netwerk</a>) en OAuth (zie <a href="../applicatie/nid_netwerkstelsel">nID netwerkstelsel</a>) dienen te worden gebruikt maar maakt ook expliciete specificaties over de te gebruiken versies en certificaten, de eisen aan de inhoud en ondertekening van certificaten en de eisen aan de inhoud en de interpretatie van access tokens.</p>
+<p><strong>Relevante uitgangspunten informatiemodel iWlz</strong></p>
+<p><a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up017/">UP017</a></p>
+</blockquote>
+<h4 id="o10-iwlz-netwerkmodel-maakt-waar-mogelijk-gebruik-van-generieke-functies">O10 iWlz-netwerkmodel maakt waar mogelijk gebruik van generieke functies<a class="headerlink" href="#o10-iwlz-netwerkmodel-maakt-waar-mogelijk-gebruik-van-generieke-functies" title="Permanent link">¶</a></h4>
+<p>Voor de overgang naar het iWlz-netwerkmodel zijn de generieke functies een cruciale bouwsteen. Deze functies vormen de basis voor veilige, betrouwbare en gestandaardiseerde gegevensuitwisseling binnen de zorg. Daarom werkt het iWlz-Actieprogramma nauw samen met het Ministerie van Volksgezondheid, Welzijn en Sport (VWS) om zo goed mogelijk aan te sluiten op de landelijke ontwikkeling van deze generieke functies.
+De generieke functies worden gefaseerd ontwikkeld. De huidige versie richt zich op Plateau 1 van de Nationale Visie en Strategie (NVS). In Plateau 2 worden de functies verder uitgebreid en geschikt gemaakt voor bredere gegevensuitwisselingen, waaronder die in het kader van het Actieprogramma iWlz.</p>
+<p>Zodra de generieke functies beschikbaar zijn, zal het iWlz-netwerkmodel hier zo snel mogelijk op aansluiten. Het Actieprogramma neemt actief deel aan de overleggen over deze ontwikkeling en volgt de voortgang nauwgezet.</p>
+<p>Daarnaast wordt binnen het programma aandacht besteed aan het harmoniseren van de inhoud en vorm van afsprakenstelsels. Dit gebeurt in samenhang met de andere stelsels die in het kader van Twiin als Landelijk Vertrouwensstelsel (LVS) samenwerken. Op deze manier wordt geborgd dat het iWlz-netwerkmodel aansluit bij landelijke standaarden en ontwikkelingen, en toekomstbestendig blijft binnen het bredere zorginformatielandschap.</p>
+<blockquote>
+<p>✅
+<strong>Concrete invulling</strong></p>
+<p>Zodra generieke functies beschikbaar komen zullen deze zo snel mogelijk worden ingebouwd in het iWlz-netwerkmodel. Zolang dit nog niet het geval is zullen er alternatieven worden gebruikt, die zoveel mogelijk in lijn zijn met de manier waarop de generieke functies worden uitgewerkt. In de onderstaande tabel zijn de generieke functies afgezet tegen de huidige uitwerking in het iWlz netwerkmodel.</p>
+<p><strong>Relevante uitgangspunten informatiemodel iWlz</strong></p>
+<p><a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up006/">UP006</a>, <a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up017/">UP017</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Generieke functie</strong></th>
+<th><strong>Huidige uitwerking iWlz netwerkmodel</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wie logt er in?</td>
+<td>identificatie</td>
+<td>VECOZO certificaat</td>
+</tr>
+<tr>
+<td>Ben je wie je zeg dat je bent?</td>
+<td>authenticatie</td>
+<td>VECOZO certificaat</td>
+</tr>
+<tr>
+<td>Is de patiënt akkoord met het delen van medische gegevens?</td>
+<td>toestemming</td>
+<td>n.v.t.</td>
+</tr>
+<tr>
+<td>Welke gegevens mag jij inzien?</td>
+<td>autorisatie</td>
+<td>Externalized Authorization Management (EAM) i.c.m. Attribute/Policy bases access control</td>
+</tr>
+<tr>
+<td>Waar staan de gezochte gegevens?</td>
+<td>lokalisatie</td>
+<td>n.v.t.</td>
+</tr>
+<tr>
+<td>Wat is het digitale adres waar de gegevens staan en waar ze heen moeten?</td>
+<td>adressering</td>
+<td>Tijdelijk adresboek, gebaseerd op het ZORG-AB schema</td>
+</tr>
+</tbody>
+</table>
+<h4 id="o11-vertrouwen-door-gebruik-van-cryptografie">O11 Vertrouwen door gebruik van cryptografie<a class="headerlink" href="#o11-vertrouwen-door-gebruik-van-cryptografie" title="Permanent link">¶</a></h4>
+<p><code>BRON: CONCRETISERING ARCHITECTUUR</code></p>
+<p>In de zorg worden gegevens in de basis uitgewisseld tussen een bronhouder en een afnemer. Het realiseren van de juiste mate van vertrouwen tussen de bronhouder en de afnemer is daarbij essentieel. Alleen wanneer sprake is van de juiste mate van vertrouwen, kunnen gegevens op een veilige en verantwoorde manier en conform wet- en regelgeving worden uitgewisseld. Ter illustratie: Vanuit de bronhouder bekeken zijn o.a. de volgende vragen relevant om te kunnen bepalen of sprake is van de juiste mate van vertrouwen:</p>
+<ul>
+<li>Wat is de identiteit van de organisatie die gegevens wil afnemen?</li>
+<li>Treedt het afnemende systeem op als verwerker van de organisatie die gegevens wil afnemen?</li>
+<li>Is er sprake van een grondslag op basis waarvan de organisatie die gegevens wil afnemen de gevraagde gegevens mag verwerken?</li>
+</ul>
+<p>Om de juiste mate van vertrouwen tussen de bronhouder en de afnemer te realiseren zijn op dit soort vragen antwoorden met een voldoende mate van zekerheid nodig.</p>
+<p>Het realiseren van vertrouwen vindt plaats met een combinatie van <em>technologie</em> en <em>organisatorische afspraken</em>. De balans tussen deze twee kan per gegevensuitwisseling verschillen. Omwille van schaalbaarheid, betaalbaarheid, beveiliging en privacy is het prettig als vertrouwen voor het leeuwendeel kan worden gerealiseerd op basis van <em>technologie</em> en zo min mogelijk afhankelijk is van <em>organisatorische afspraken</em>.</p>
+<p>Voor het realiseren van vertrouwen op basis van technologie wordt cryptografie toegepast. Het toepassen van cryptografie vereist een public key infrastructure (PKI). Traditioneel is een PKI geïmplementeerd met certificaten van een certificaatautoriteit (CA), bijvoorbeeld PKIoverheid of VECOZO. Een alternatief is een decentrale public key infrastructure (DPKI). Hierin zijn de publieke sleutels gepubliceerd in een andere voorziening waarmee het noodzakelijke vertrouwen kan worden geborgd.</p>
+<blockquote>
+<p>✅
+<strong>Concrete invulling</strong></p>
+<p>Voor het realiseren van vertrouwen op basis van de toepassing van cryptografie zijn afspraken nodig over de invulling van rollen (o.a. vertrouwensleverancier, stelselbeheerder) en verantwoordelijkheden (o.a. registratie van publieke sleutels, publiceren vertrouwenslijst). Voor het iWlz-netwerk worden deze afspraken vastgelegd in het afsprakenstelsel iWlz-netwerkmodel.</p>
+<p>Binnen het iWlz-netwerkmodel worden afspraken opgenomen over de technische realisatie van een public key infrastructure op basis van de open internationale standaard <a href="https://www.w3.org/TR/did-core/">Decentralized Identifiers</a>. We gebruiken voor indicatieregister en voor het bemiddelingsregister nog het PKI certificaat van VECOZO en geen DID, het wachten is op uitsluitsel vanuit de generieke functies.</p>
+<p><strong>Relevante uitgangspunten informatiemodel iWlz</strong></p>
+<p><a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up017/">UP017</a></p>
+</blockquote>
+<h4 id="o12-veilige-gegevensuitwisseling-door-afspraken-en-derdenverklaringen">O12 Veilige gegevensuitwisseling door afspraken en derdenverklaringen<a class="headerlink" href="#o12-veilige-gegevensuitwisseling-door-afspraken-en-derdenverklaringen" title="Permanent link">¶</a></h4>
+<p><code>BRON: DIZRA</code></p>
+<p>De uitwisseling van gegevens tussen deelnemers moet veilig zijn. Dat wordt gerealiseerd door enerzijds afspraken over standaarden voor bijvoorbeeld de versleuteling van het verkeer en anderzijds door afspraken over de softwareleveranciers die voldoen aan die afspraken. Een derdenverklaring van een auditor dat een softwareleverancier voldoet aan de vereiste afspraken in het kader van veilige gegevensuitwisseling kan dit vertrouwen geven.</p>
+<blockquote>
+<p>✅
+<strong>Concrete invulling</strong></p>
+<p>De rol auditor is belast met het toetsen van deelnemers op veilige gegevensuitwisseling en het opstellen van derdenverklaringen. Momenteel is de rol auditor nog niet ingevuld voor het iWlz-netwerk, ook is de praktische invulling van deze rol nog niet afgestemd. In het artikel <a href="./rollen_deelnemers">Rollen en deelnemers</a> zal deze rol op een later moment worden ingevuld.</p>
+<p><strong>Relevante uitgangspunten informatiemodel iWlz</strong></p>
+<p><a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up017/">UP017</a></p>
+</blockquote>
+<h4 id="o13-de-betrouwbaarheid-van-verklaringen-wordt-verzekerd-door-afspraken">O13 De betrouwbaarheid van verklaringen wordt verzekerd door afspraken<a class="headerlink" href="#o13-de-betrouwbaarheid-van-verklaringen-wordt-verzekerd-door-afspraken" title="Permanent link">¶</a></h4>
+<p><code>BRON: DIZRA</code></p>
+<p>Gegevens over deelnemers aan het iWlz-netwerkmodel moeten betrouwbaar zijn om te kunnen worden hergebruikt. Daarom zijn afspraken nodig om de betrouwbaarheid van verklaringen over gegevens over deelnemers te kunnen garanderen. Een zogenaamde ‘verzekeraar van betrouwbaarheid’ maakt inzichtelijk welke verklaringen uitgegeven mogen worden door welke organisaties of personen door een registratie van ‘bevoegde uitgevers van verklaringen’ te publiceren. Elektronische handtekeningen op basis van cryptografie borgen dat de herkomst van een verklaring naar een bevoegde uitgever van verklaringen getraceerd kan worden en daarmee dat de verklaring verifieerbaar betrouwbaar is.</p>
+<blockquote>
+<p>✅
+<strong>Concrete invulling</strong></p>
+<p>In het afsprakenstelsel iWlz-netwerkmodel wordt vastgelegd hoe de rollen ‘verzekeraar van betrouwbaarheid' en 'bevoegde uitgever van verklaringen’ en de hiermee gepaard gaande verantwoordelijkheden worden ingevuld in het iWlz-netwerk.</p>
+<p>Binnen het Afsprakenstelsel iWlz-netwerkmodel zijn afspraken opgenomen over de technische realisatie van cryptografisch verifieerbare verklaringen. Deze verklaringen worden momenteel uitgegeven door VECOZO en gekoppeld aan het authenticatiemiddel VECOZO systeemcertificaat.</p>
+<p>Naar verwachting zal op termijn zal worden doorontwikkeld op basis van de open internationale standaard <a href="https://www.w3.org/TR/vc-data-model/">Verifiable Credentials</a>.</p>
+<p><strong>Relevante uitgangspunten informatiemodel iWlz</strong></p>
+<p><a href="https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up017/">UP017</a></p>
+</blockquote>
+<hr>
 
 
 
