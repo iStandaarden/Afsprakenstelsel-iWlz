@@ -1,6 +1,6 @@
 # Applicatiecomponenten
 
-!!! info "Versie: *17-12-2025* | Status: *Definitief*"
+
 
 ## 1. Inleiding
 

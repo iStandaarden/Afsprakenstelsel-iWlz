@@ -1,3 +1,5 @@
+# Testen
+
 ## 1. Inleiding
 
 Om een betrouwbare werking van het iWlz-netwerkmodel te waarborgen, worden in verschillende fasen tests uitgevoerd. Daarbij wordt onderscheid gemaakt tussen de landelijke ketentest bij introductie van nieuwe registers, de verantwoordelijkheid voor testen bij aansluiting op een bestaand register, en het lopende onderzoek naar ondersteunende testtooling.

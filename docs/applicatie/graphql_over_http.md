@@ -1,6 +1,5 @@
 # Graphql over http
 
-
 ## 1. Inleiding
 
 De uitwisseling van gegevens binnen het iWlz netwerk is gebaseerd op [GraphQL](https://graphql.org/). GraphQL is een querytaal voor API's en een runtime-applicatie. Daarmee kunnen datastructuren worden beschreven en kunnen query’s worden uitgevoerd om deze data te raadplegen.
