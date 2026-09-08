@@ -1,6 +1,5 @@
 # Proces
 
-!!! info "Versie: *17-12-2025* | Status: *Definitief*"
 
 **Inleiding**  
 In dit hoofdstuk wordt ingegaan op de volgende aspecten:
