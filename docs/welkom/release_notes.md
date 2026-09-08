@@ -3,28 +3,35 @@
 
 ## Huidig geldende versie  (current)
 
-| Versie | Datum ingang | Status | Datum status|
-| :-- | :-- | :-- | :-- |
-| [Versie: 1.0.0](https://istandaarden.github.io/Afsprakenstelsel-iWlz/) | *17-12-2025* | *Definitief*  |  *17-12-2025* |
+| Versie | Datum ingang | Status | Datum status| Release Indicatieregister | Release Bemiddelingsregister | Release Leveringregister | 
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| [Versie: 1.0.1](https://istandaarden.github.io/Afsprakenstelsel-iWlz/) | *17-12-2025* | *Definitief*  |  *17-12-2025* | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
 
 ## In Ontwikkeling (future)
 
-| Versie | Datum ingang | Status | Datum status |
-| :-- | :-- | :-- | :-- |
-| [Versie 1.x]() | n.t.b. | Concept | 01-09-2026 |
+| Versie | Datum ingang | Status | Datum status| Release Indicatieregister | Release Bemiddelingsregister | Release Leveringregister | 
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| [Versie 1.x](#) | n.t.b. | Concept | 01-09-2026 |
 
 
 
 ## Archief 
-| Versie | Datum ingang | Status | Datum status |
-| :-- | :-- | :-- | :-- |
-| - | | | 
+| Versie | Datum ingang | Status | Datum status| Release Indicatieregister | Release Bemiddelingsregister | Release Leveringregister | 
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| Versie: 1.0.0 | *17-12-2025* | *Definitief*  |  *17-12-2025* | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
 
 
-## 5. Release notes
+## Release notes
 
-### Release notes 17-12-2025
+### Versie 1.0.1
 
+
+| Laag | Status | Wijzigingen t.o.v. release 1.0.0 |
+| :-- | :-- | :-- |
+| alle | Definitief | Migratie versie Atlasian Confluence naar GitHub pages | 
+
+
+### Versie 1.0.0 
 | Laag | Status | Wijzigingen t.o.v. release 09-04-2025 |
 | :-- | :-- | :-- |
 | Inleiding | Definitief | Achtergrond & toelichting: tekst geactualiseerd toegevoegd paragraaf Samenhang met relevante ontwikkelingen.Governance: toegevoegd paragraaf Samenhang afsprakenstelsel en Twiin LVS.Begrippenlijst: geactualiseerd. |
@@ -35,7 +42,7 @@
 | IT-infrastructuur | Definitief | Identificatie & authenticatie: geactualiseerd op basis artikelen Architectuur, Rollen en deelnemers en nID netwerkstelsel.Netwerk: nieuw artikel.Logging: nieuw artikel op basis van RFC0022a - Tracelogging - TraceID en SpanID. |
 | Uitwisselprofielen | Definitief | Uitwisselprofiel Indicatie: qua structuur in lijn gebracht met Uitwisselprofiel Bemiddeling.Uitwisselprofiel Bemiddeling: nieuw artikel. |
 
-### Release notes 09-04-2025
+### Versie 09-04-2025
 
 | Laag | Status | Wijzigingen t.o.v. release 17-01-2025 |
 | :-- | :-- | :-- |
@@ -43,7 +50,7 @@
 | Applicatie | Definitief | Notificeren: Verwijzingen geactualiseerd naar het informatiemodel. |
 | Uitwisselprofielen | Definitief | Uitwisselprofiel Indicatie: Verwijzingen geactualiseerd (van informatiemodel naar GitHub). |
 
-### Release notes 17-01-2025
+### Versie 17-01-2025
 
 | Laag | Status | Wijzigingen t.o.v. release 25-05-2023 |
 | :-- | :-- | :-- |
