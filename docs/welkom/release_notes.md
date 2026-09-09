@@ -3,20 +3,20 @@
 
 ## Huidig geldende versie  (current)
 
-| Versie | Datum ingang | Status | Release Indicatieregister | Release Bemiddelingsregister | Release Leveringregister | 
+| Versie | Datum ingang | Status | Voor Release Indicatieregister | Voor Release Bemiddelingsregister | Voor Release Leveringregister | 
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | [Versie: 1.0.0](#versie-100---17-12-2025) | *17-12-2025* | *Definitief* | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
 
 ## In Ontwikkeling (future)
 
-| Versie | Datum ingang | Status | Release Indicatieregister | Release Bemiddelingsregister | Release Leveringregister | 
+| Versie | Datum ingang | Status | Voor Release Indicatieregister | Voor Release Bemiddelingsregister | Voor Release Leveringregister | 
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| [Versie 1.x](#) | n.t.b. | Concept | n.t.b. |
+| [#](#) | n.t.b. | n.t.b. |  |  | |
 
 
 
 ## Archief 
-| Versie | Datum ingang | Status | Release Indicatieregister | Release Bemiddelingsregister | Release Leveringregister | 
+| Versie | Datum ingang | Status | Voor Release Indicatieregister | Voor Release Bemiddelingsregister | Voor Release Leveringregister |  
 | :-- | :-- | :-- | :-- | :-- | :-- | 
 | Versie: 1.0.0 | *17-12-2025* | **Definitief** | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
 
