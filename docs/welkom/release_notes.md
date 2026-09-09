@@ -5,7 +5,7 @@
 
 | Versie | Datum ingang | Status | Voor Release Indicatieregister | Voor Release Bemiddelingsregister | Voor Release Leveringregister | 
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| [Versie: 1.0.0](#versie-100---17-12-2025) | *17-12-2025* | *Definitief* | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
+| [Versie: 1.0.0](#versie-100---17-12-2025) | *17-12-2025* | Definitief | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
 
 ## In Ontwikkeling (future)
 
@@ -18,7 +18,7 @@
 ## Archief 
 | Versie | Datum ingang | Status | Voor Release Indicatieregister | Voor Release Bemiddelingsregister | Voor Release Leveringregister |  
 | :-- | :-- | :-- | :-- | :-- | :-- | 
-| Versie: 1.0.0 | *17-12-2025* | **Definitief** | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
+| Versie: 1.0.0 | *17-12-2025* | Definitief | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
 
 ---
 
@@ -28,8 +28,13 @@
 
 | Laag | Status | Wijzigingen t.o.v. release 1.0.0 |
 | :-- | :-- | :-- |
-| alle | Definitief | Migratie versie Atlasian Confluence naar GitHub pages | 
+| alle | Definitief | Migratie versie Atlassian Confluence naar GitHub pages | 
 
+
+!!! info
+    De onderstaande publicaties hebben plaatsgevonden in Confluence. Vanaf versie 1.0.1 is de publicatie naar GitHub pages gemigreerd zodat het beheer van het Afsprakenstelsel beter in lijn ligt met de wijzigingen die voortvloeien uit de wijzingsverzoeken. 
+
+    De laatst gepubliceerde versie van 17-12-2025 is gemarkeerd als Versie 1.0.0 en is de basis geweest voor de eerste publicatie in GitHub pages.
 
 ### Versie 1.0.0 - *17-12-2025*
 | Laag | Status | Wijzigingen t.o.v. release 09-04-2025 |

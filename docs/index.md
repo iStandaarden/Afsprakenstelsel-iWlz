@@ -1,7 +1,7 @@
 # Afsprakenstelsel iWlz-netwerkmodel 
 
 
-!!! info "Versie: *17-12-2025* | Status: *Definitief*"
+!!! info "Versie: *17-12-2025* | Status: *Definitief* | [Release notes](./welkom/release_notes#versie-100---17-12-2025)"
 
 
 ??? note "Toelichting" 
