@@ -108,25 +108,25 @@ Een deelnemer is een partij die een rol heeft in het iWlz-netwerkmodel. Het iWlz
 | Column 1 | Column 2 | Column 3 | Column 4 |
 | --- | --- | --- | --- |
 | **Deelnemer** | **Besturingsrol** | **Organisatorische rol** | **Systeemrol** |
-| **Centraal Administratie Kantoor (CAK)** | Stelseleindgebruiker | Administrateur (Secundaire deelnemer) | Afnemer |
-| **CIBG** |  | Basisregistratie-houder | LedenadministratieBevoegde uitgever van verklaringen |
-| **Centrum voor Indicatiestelling Zorg (CIZ)** | Stelseleindgebruiker | Indicatiesteller (Secundaire deelnemer) | BronhouderAfnemer |
-| **Cliënt** | Stelseleindgebruiker | Cliënt | BronhouderGegevensregisseur/ Gezondheidsregisseur |
-| **ICT-dienstverlener** | Stelselgebruiker |  |  |
-| **Kamer van Koophandel** |  | Basisregistratie-houder | LedenadministratieBevoegde uitgever van verklaringen |
-| **Ministerie van VWS** | Stelselfinancier |  |  |
-| **Referentiegroep iWlz** | Stelselexpert |  |  |
-| **Stichting MedMij** | Stelsel Technisch beheerder |  |  |
-| **Stichting Nuts** | Stelsel Technisch beheerder |  |  |
-| **Stuurgroep iWlz** | Stelselautorisator |  |  |
-| **VECOZO** | StelselgebruikerStelsel Technisch beheerder |  | VertrouwensleverancierGegevensgidsBevoegde uitgever van verklaringenOperationeel netwerkbeheerder |
-| **Vektis** |  |  | LedenadministratieBevoegde uitgever van verklaringen |
-| **Vertrouwensdienstverlener (TSP) PKIoverheid** |  |  | Vertrouwensleverancier |
-| **VZVZ (dienst ZORG-AB)** |  |  | Gegevensgids |
-| **Zorgaanbieder** | Stelseleindgebruiker | Zorgorganisatie | AfnemerBronhouder |
-| **Zorginstituut Nederland** | StelselhouderStelsel Functioneel BeheerderStelsel Technisch beheerderStelseldistributeurStelselexpertStelseleindgebruiker | Basisregistratie-houder | AfnemerStelselbeheerderVerzekeraar betrouwbaarheid |
-| **Zorgkantoor** | Stelseleindgebruiker | Bemiddelaar (Secundaire deelnemer) | AfnemerBronhouder |
-| **Zorgverlener** |  | Zorgverlener |  |
-| **n.t.b.** | Auditor |  |  |
+| **Centraal Administratie Kantoor (CAK)** | <ul><li>Stelseleindgebruiker</li></ul> | <ul><li>Administrateur (Secundaire deelnemer)</li></ul> | <ul><li>Afnemer</li></ul> |
+| **CIBG** |  | <ul><li>Basisregistratie-houder</li></ul> | <ul><li>Ledenadministratie</li><li>Bevoegde uitgever van verklaringen</li></ul> |
+| **Centrum voor Indicatiestelling Zorg (CIZ)** | <ul><li>Stelseleindgebruiker</li></ul> | <ul><li>Indicatiesteller (Secundaire deelnemer)</li></ul> | <ul><li>Bronhouder</li><li>Afnemer</li></ul> |
+| **Cliënt** | <ul><li>Stelseleindgebruiker</li></ul> | <ul><li>Cliënt</li></ul> | <ul><li>Bronhouder</li><li>Gegevensregisseur/ Gezondheidsregisseur</li></ul> |
+| **ICT-dienstverlener** | <ul><li>Stelselgebruiker</li></ul> |  |  |
+| **Kamer van Koophandel** |  | <ul><li>Basisregistratie-houder</li></ul> | <ul><li>Ledenadministratie</li><li>Bevoegde uitgever van verklaringen</li></ul> |
+| **Ministerie van VWS** | <ul><li>Stelselfinancier</li></ul> |  |  |
+| **Referentiegroep iWlz** | <ul><li>Stelselexpert</li></ul> |  |  |
+| **Stichting MedMij** | <ul><li>Stelsel Technisch beheerder</li></ul> |  |  |
+| **Stichting Nuts** | <ul><li>Stelsel Technisch beheerder</li></ul> |  |  |
+| **Stuurgroep iWlz** | <ul><li>Stelselautorisator</li></ul> |  |  |
+| **VECOZO** | <ul><li>Stelselgebruiker</li><li>Stelsel Technisch beheerder</li></ul> |  | <ul><li>Vertrouwensleverancier</li><li>Gegevensgids</li><li>Bevoegde uitgever van verklaringen</li><li>Operationeel netwerkbeheerder</li></ul> |
+| **Vektis** |  |  | <ul><li>Ledenadministratie</li><li>Bevoegde uitgever van verklaringen</li></ul> |
+| **Vertrouwensdienstverlener (TSP) PKIoverheid** |  |  | <ul><li>Vertrouwensleverancier</li></ul> |
+| **VZVZ (dienst ZORG-AB)** |  |  | <ul><li>Gegevensgids</li></ul> |
+| **Zorgaanbieder** | <ul><li>Stelseleindgebruiker</li></ul> | <ul><li>Zorgorganisatie</li></ul> | <ul><li>Afnemer</li><li>Bronhouder</li></ul> |
+| **Zorginstituut Nederland** | <ul><li>Stelselhouder</li><li>Stelsel Functioneel Beheerder</li><li>Stelsel Technisch beheerder</li><li>Stelseldistributeur</li><li>Stelselexpert</li><li>Stelseleindgebruiker</li></ul> | <ul><li>Basisregistratie-houder</li></ul> | <ul><li>Afnemer</li><li>Stelselbeheerder</li><li>Verzekeraar betrouwbaarheid</li></ul> |
+| **Zorgkantoor** | <ul><li>Stelseleindgebruiker</li></ul> | <ul><li>Bemiddelaar (Secundaire deelnemer)</li></ul> | <ul><li>Afnemer</li><li>Bronhouder</li></ul> |
+| **Zorgverlener** |  | <ul><li>Zorgverlener</li></ul> |  |
+| **n.t.b.** | <ul><li>Auditor</li></ul> |  |  |
 
 ---
