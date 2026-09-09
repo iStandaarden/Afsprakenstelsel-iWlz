@@ -88,6 +88,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1-inleiding" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1140,6 +1145,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wijzigingsverzoeken
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1156,6 +1179,84 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-inleiding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Inleiding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-bevinding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Bevinding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-wijzigingsverzoek-rfc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Wijzigingsverzoek (RFC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Wijzigingsverzoek (RFC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-rfc-proces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 RFC-proces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-rfc-overlegstructuur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 RFC-Overlegstructuur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2174,6 +2275,75 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-inleiding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Inleiding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-bevinding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Bevinding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-wijzigingsverzoek-rfc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Wijzigingsverzoek (RFC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Wijzigingsverzoek (RFC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-rfc-proces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 RFC-proces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-rfc-overlegstructuur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 RFC-Overlegstructuur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2200,7 +2370,112 @@
 
   <h1>Wijzigingsverzoeken</h1>
 
-
+<h2 id="1-inleiding">1. Inleiding<a class="headerlink" href="#1-inleiding" title="Permanent link">¶</a></h2>
+<p>Voor de doorontwikkeling van het iWlz-netwerkmodel is een proces ingericht waarmee <strong>bevindingen</strong> en <strong>wijzigingsverzoeken (RFC’s)</strong> kunnen worden ingediend en beheerd.</p>
+<ul>
+<li>Een <strong>bevinding</strong> betreft een signaal of constatering, bijvoorbeeld een fout, onduidelijkheid of verbetering die wenselijk is.</li>
+<li>Een <strong>wijzigingsverzoek (RFC)</strong> is een voorstel om het afsprakenstelsel of het netwerkmodel inhoudelijk aan te passen of uit te breiden.</li>
+</ul>
+<p>In de volgende hoofdstukken wordt het onderscheid verder toegelicht en is beschreven hoe bevindingen en wijzigingsverzoeken worden behandeld.</p>
+<h2 id="2-bevinding">2. Bevinding<a class="headerlink" href="#2-bevinding" title="Permanent link">¶</a></h2>
+<p>Een <strong>bevinding</strong> is een vaststelling van een situatie in het informatiemodel (in ontwikkeling of lopend) of in een implementatie die niet juist is en direct correctie behoeft om misverstanden te voorkomen.</p>
+<p>Bevindingen zijn in GitHub herkenbaar aan een label <em>Bevinding</em> en een uniek nummer dat altijd begint met de letter <strong>B</strong> (afgeleid van het issue-nummer). Een bevinding is direct van toepassing en leidend boven de gepubliceerde beschrijving in het informatiemodel of de huidige implementatie.</p>
+<p>Bevindingen worden gekoppeld aan de release waarop ze van toepassing zijn en bij eerste gelegenheid gecorrigeerd.</p>
+<h2 id="3-wijzigingsverzoek-rfc">3. Wijzigingsverzoek (RFC)<a class="headerlink" href="#3-wijzigingsverzoek-rfc" title="Permanent link">¶</a></h2>
+<p>Een <strong>wijzigingsverzoek</strong> (RFC) is een gedocumenteerd voorstel voor een wijziging dat wordt beoordeeld en, na goedkeuring, gepland en geïmplementeerd.</p>
+<p>Daarbij wordt onderscheid gemaakt tussen functionele en technische wijzigingsverzoeken.</p>
+<ul>
+<li><strong>Functionele wijzigingsverzoeken</strong> hebben betrekking op wijzigingen in bestaande onderdelen van het afsprakenstelsel of informatiemodel. Deze worden ook wel aangeduid als <em>Request for Change</em>.
+Deze worden beheerd via:
+🔗 <a href="https://github.com/iStandaarden/iWlz_RequestForChange">iWlz_RequestForChange (GitHub)</a></li>
+<li><strong>Technische wijzigingsverzoeken</strong> hebben betrekking op de ontwikkeling van nieuwe onderdelen die nog moeten worden geïmplementeerd. Deze worden ook wel aangeduid als <em>Request for Comment</em>.
+Deze worden beheerd via:
+🔗 <a href="https://github.com/iStandaarden/iWlz-RequestForComment">iWlz-RequestForComment (GitHub)</a></li>
+</ul>
+<p>Beide processen zijn openbaar en bieden ketenpartijen de mogelijkheid om input te leveren, bij te dragen aan kwaliteitsverbetering en wijzigingen te volgen via GitHub.</p>
+<p>Wijzigingsverzoeken zijn herkenbaar in GitHub aan een label <em>Verbetering</em> en een uniek nummer (jaar + issue-nummer). Een wijzigingsverzoek is pas van kracht nadat de inhoud is goedgekeurd en gepubliceerd, waarna het kan worden geïmplementeerd.</p>
+<p>Wijzigingsverzoeken worden gekoppeld aan de release waarvoor ze gelden.</p>
+<h3 id="31-rfc-proces">3.1 RFC-proces<a class="headerlink" href="#31-rfc-proces" title="Permanent link">¶</a></h3>
+<p>Het RFC-proces beschrijft de stappen die een wijzigingsverzoek doorloopt vanaf indiening tot implementatie of afwijzing.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/wijzigingsverzoeken-Een-schematische-weergave-van-het-RFC-proces.png" data-desc-position="bottom"><img alt="Een schematische weergave van het RFC-proces" src="../../img/wijzigingsverzoeken-Een-schematische-weergave-van-het-RFC-proces.png"></a>
+Figuur 1. Schematische weergave RFC-proces</p>
+<h4 id="311-labels-en-stadia">3.1.1 Labels en stadia:<a class="headerlink" href="#311-labels-en-stadia" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Label</strong></th>
+<th style="text-align: left;"><strong>Toelichting</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Backlog</strong></td>
+<td style="text-align: left;">Verzameling van wijzigingsverzoeken voor toekomstige releases. Nieuwe verzoeken komen hier binnen.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Kandidaat</strong></td>
+<td style="text-align: left;">Relevante verzoeken worden voorgedragen voor opname in een volgende release.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Uitwerken</strong></td>
+<td style="text-align: left;">Het verzoek wordt verder uitgewerkt en geanalyseerd.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Bespreken</strong></td>
+<td style="text-align: left;">Het verzoek staat geagendeerd voor overleg. Inhoud is tijdelijk ‘bevroren’ totdat de review is afgerond.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gereed</strong></td>
+<td style="text-align: left;">De inhoud is akkoord en een oplossingsrichting is gekozen.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vervallen</strong></td>
+<td style="text-align: left;">Het verzoek is niet langer relevant en wordt afgesloten.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gepubliceerd</strong></td>
+<td style="text-align: left;">Het verzoek is verwerkt in het informatiemodel of een andere specificatie.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Geïmplementeerd</strong></td>
+<td style="text-align: left;">Het verzoek is daadwerkelijk in productie genomen.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-rfc-overlegstructuur">3.2 RFC-Overlegstructuur<a class="headerlink" href="#32-rfc-overlegstructuur" title="Permanent link">¶</a></h3>
+<p>Wijzigingsverzoeken worden besproken in de reguliere overlegstructuur. Afhankelijk van de fase van de versie en het type onderwerp vindt behandeling plaats in één van de onderstaande overleggroepen</p>
+<h4 id="321-overzicht-overlegstructuur">3.2.1 Overzicht overlegstructuur<a class="headerlink" href="#321-overzicht-overlegstructuur" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Fase van versie</strong></th>
+<th style="text-align: left;"><strong>Type onderwerp</strong></th>
+<th style="text-align: left;"><strong>Overleggroep</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">In ontwikkeling</td>
+<td style="text-align: left;">Functioneel/technisch</td>
+<td style="text-align: left;">Werkgroep Bezorg</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gereleased</td>
+<td style="text-align: left;">Functioneel/technisch</td>
+<td style="text-align: left;">Referentiegroep</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ongeacht fase</td>
+<td style="text-align: left;">Technisch</td>
+<td style="text-align: left;">Technisch Afstemmingsoverleg (TEG)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ongeacht fase</td>
+<td style="text-align: left;">Besluitvorming release</td>
+<td style="text-align: left;">Stuurgroep</td>
+</tr>
+</tbody>
+</table>
 
 
 
