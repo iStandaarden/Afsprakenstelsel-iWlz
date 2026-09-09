@@ -3,22 +3,22 @@
 
 ## Huidig geldende versie  (current)
 
-| Versie | Datum ingang | Status | Datum status| Release Indicatieregister | Release Bemiddelingsregister | Release Leveringregister | 
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| [Versie: 1.0.1](https://istandaarden.github.io/Afsprakenstelsel-iWlz/) | *17-12-2025* | *Definitief*  |  *17-12-2025* | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
+| Versie | Datum ingang | Status | Release Indicatieregister | Release Bemiddelingsregister | Release Leveringregister | 
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| [Versie: 1.0.1](https://istandaarden.github.io/Afsprakenstelsel-iWlz/) | *17-12-2025* | *Definitief* </br> *(17-12-2025)* | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
 
 ## In Ontwikkeling (future)
 
-| Versie | Datum ingang | Status | Datum status| Release Indicatieregister | Release Bemiddelingsregister | Release Leveringregister | 
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| [Versie 1.x](#) | n.t.b. | Concept | 01-09-2026 |
+| Versie | Datum ingang | Status | Release Indicatieregister | Release Bemiddelingsregister | Release Leveringregister | 
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| [Versie 1.x](#) | n.t.b. | Concept | n.t.b. |
 
 
 
 ## Archief 
-| Versie | Datum ingang | Status | Datum status| Release Indicatieregister | Release Bemiddelingsregister | Release Leveringregister | 
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Versie: 1.0.0 | *17-12-2025* | *Definitief*  |  *17-12-2025* | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
+| Versie | Datum ingang | Status | Release Indicatieregister | Release Bemiddelingsregister | Release Leveringregister | 
+| :-- | :-- | :-- | :-- | :-- | :-- | 
+| Versie: 1.0.0 | *17-12-2025* | **Definitief** </br> *(17-12-2025)*  | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
 
 
 ## Release notes
