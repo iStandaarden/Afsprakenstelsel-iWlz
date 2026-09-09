@@ -5,7 +5,7 @@
 
 | Versie | Datum ingang | Status | Release Indicatieregister | Release Bemiddelingsregister | Release Leveringregister | 
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| [Versie: 1.0.1](https://istandaarden.github.io/Afsprakenstelsel-iWlz/) | *17-12-2025* | *Definitief* </br> *(17-12-2025)* | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
+| [Versie: 1.0.0](#versie-100---17-12-2025) | *17-12-2025* | *Definitief* | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
 
 ## In Ontwikkeling (future)
 
@@ -18,20 +18,20 @@
 ## Archief 
 | Versie | Datum ingang | Status | Release Indicatieregister | Release Bemiddelingsregister | Release Leveringregister | 
 | :-- | :-- | :-- | :-- | :-- | :-- | 
-| Versie: 1.0.0 | *17-12-2025* | **Definitief** </br> *(17-12-2025)*  | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
+| Versie: 1.0.0 | *17-12-2025* | **Definitief** | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
 
+---
 
 ## Release notes
 
-### Versie 1.0.1
-
+### Versie 1.0.1 - *dd-mm-jjjj*
 
 | Laag | Status | Wijzigingen t.o.v. release 1.0.0 |
 | :-- | :-- | :-- |
 | alle | Definitief | Migratie versie Atlasian Confluence naar GitHub pages | 
 
 
-### Versie 1.0.0 
+### Versie 1.0.0 - *17-12-2025*
 | Laag | Status | Wijzigingen t.o.v. release 09-04-2025 |
 | :-- | :-- | :-- |
 | Inleiding | Definitief | Achtergrond & toelichting: tekst geactualiseerd toegevoegd paragraaf Samenhang met relevante ontwikkelingen.Governance: toegevoegd paragraaf Samenhang afsprakenstelsel en Twiin LVS.Begrippenlijst: geactualiseerd. |
