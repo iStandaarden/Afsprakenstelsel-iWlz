@@ -139,6 +139,7 @@ nav:
       - Randvoorwaarden: organisatiebeleid/randvoorwaarden.md
       - Ontwerpkeuzes: organisatiebeleid/ontwerpkeuzes.md
       - Architectuur: organisatiebeleid/architectuur.md
+      - Rollen_deelnemers: organisatiebeleid/Rollen_deelnemers.md
       - Serviceafspraken:
           - organisatiebeleid/serviceafspraken/index.md
           - Operationeel netwerkbeheer: organisatiebeleid/serviceafspraken/operationeel_netwerkbeheer.md
