@@ -64,10 +64,10 @@ plugins:
   - with-pdf:
       enabled_if_env: ENABLED_PDF_EXPORT
       cover_title: Afsprakenstelsel iWlz
-      cover_subtitle: pdf van Afsprakenstelsel iWlz https://istandaarden.github.io/Afsprakenstelsel-iWlz/
+      cover_subtitle: pdf van Afsprakenstelsel iWlz https://istandaarden.github.io/Afsprakenstelsel-iWlz/ - !ENV [MIKE_DOCS_VERSION, "onbekende versie"]
       cover_logo: docs/assets/ZinBanner.png
       copyright: "iStandaarden.nl"
-      output_path: ../pdf/afsprakenstelsel-iWlz.pdf
+      output_path: pdf/afsprakenstelsel-iWlz.pdf
       toc_title: Inhoudsopgave
       toc_level: 2
       # heading_shift: true
@@ -89,7 +89,7 @@ extra_javascript:
   - assets/javascripts/mermaid-zoom.js
 
 extra:
-  pdf_url: pdf/afsprakenstelsel-iWlz.pdf
+  pdf_url: ../pdf/afsprakenstelsel-iWlz.pdf
   # --- mike-versioning ---
   # 'provider: mike' activeert de versie-dropdown in de header van Material.
   # 'default: current' zorgt dat bezoekers die op de root-url landen (.../Afsprakenstelsel-iWlz/)
