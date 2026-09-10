@@ -71,21 +71,22 @@ De inhoud van de rollen en de specifieke invulling ervan in het kader van het iW
 
 Deze paragraaf beschrijft de systeemrollen die relevant zijn voor het iWlz-netwerkmodel. De systeemrollen zijn rollen die nodig zijn om het netwerk technisch te laten werken. Iedere deelnemer aan het iWlz-netwerkmodel vervult één of meerdere systeemrollen. Het type register bepaalt "wat" voor data en services een deelnemer aanbiedt en/of afneemt. Het "hoe" wordt bepaald door de systeemrol van een deelnemer. Deelnemers aan het iWlz-netwerkmodel hebben conform [DIZRA](https://dizra.gitbook.io/dizra/perspectieven/organizational) een of meer van de volgende systeemrollen. De systeemrollen die zijn in het iWlz-netwerkmodel gegroepeerd in de volgende bouwstenen:
 
-- Primaire systeemrollen
-  - Bronhouder
-  - Afnemer
-  - Gegevensregisseur / Gezondheidsregisseur
-- Vertrouwen systeemrollen
-  - Vertrouwensleverancier
-  - Ledenadministratie
-  - Bevoegde uitgever van verklaringen
-- Vindbaarheid systeemrollen
-  - Gegevensgids
-- Beheer systeemrollen
-  - Stelselbeheerder
-  - Operationeel netwerkbeheerder (in DIZRA: “Operationeel ketenbeheerder”)
-  - Verzekeraar betrouwbaarheid
-
+<ul>
+<li>Primaire systeemrollen
+<ul>
+<li> Bronhouder</li>
+<li> Afnemer</li>
+<li> Gegevensregisseur / Gezondheidsregisseur </li></ul>
+<li> Vertrouwen systeemrollen </li>
+<ul><li> Vertrouwensleverancier </li>
+<li> Ledenadministratie </li>
+<li> Bevoegde uitgever van verklaringen </li></ul>
+<li> Vindbaarheid systeemrollen </li>
+<ul><li> Gegevensgids </li></ul>
+<li> Beheer systeemrollen </li>
+<ul><li> Stelselbeheerder </li>
+<li> Operationeel netwerkbeheerder (in DIZRA: “Operationeel ketenbeheerder”) </li>
+<li> Verzekeraar betrouwbaarheid </li></ul>
 De inhoud van de systeemrollen en de specifieke invulling ervan in het kader van het iWlz netwerkmodel worden hieronder toegelicht.
 
 | **Bouwsteen** | **Rol** | **Toelichting** | **Invulling binnen iWlz-netwerkmodel** |

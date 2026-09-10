@@ -17,7 +17,7 @@ Met de uitvoering van deze functies wordt de cliënt op basis van de situatie en
 
 In het iWlz-netwerkmodel gaan de partijen gegevens in het proces anders uitwisselen. In plaats van het versturen van berichten, wisselen deelnemers aan het iWlz-netwerkmodel gegevens uit door middel van het beschikbaar stellen van bronnen met de originele gegevens. Het is de bedoeling dat hiermee straks ook de informatiepositie van de cliënt verbetert. Gegevens uit bron kunnen dan aan de cliënt via een PGO beschikbaar worden gemaakt, zodat de client de gegevens in het netwerk kan raadplegen. Er ontstaan in latere fases ook nog andere toepassingsmogelijkheden van de gegevens. Onderstaand figuur geeft een geabstraheerde weergave van het proces iWlz en de verschillende betrokken partijen.
 
-![proces iWlz en betrokken partijen.png](../img/architectuur%20-%20proces-iWlz-en-betrokken-partijen.png)
+![proces iWlz en betrokken partijen.png](../img/architectuur-proces-iWlz-en-betrokken-partijen.png)
 figuur 2. Een weergave van het iWlz proces en de betrokken partijen.
 
 Het op een veilige en betrouwbare manier beschikbaar stellen van bronnen stelt eisen aan de architectuur van het netwerkmodel. Deze worden geborgd in de bouwstenen die basis vormen van de architectuur. In de volgende paragraaf worden de bouwstenen toegelicht.
@@ -35,7 +35,7 @@ Iedere bouwsteen bestaat uit een aantal met elkaar samenhangende systeemrollen. 
 
 Overzicht bouwstenen en systeemrollen.png openen
 
-![overzicht bouwstenen en systeemrollen.png](../img/architectuur%20-%20overzicht-bouwstenen-en-systeemrollen.png)
+![overzicht bouwstenen en systeemrollen.png](../img/architectuur-overzicht-bouwstenen-en-systeemrollen.png)
 figuur 3. Overzicht bouwstenen en systeemrollen
 
 
@@ -54,7 +54,7 @@ Bovenstaande interacties en de bouwstenen die daar voor nodig zijn worden in hoo
 In het onderstaande figuur wordt getoond welke registers deel uitmaken van het iWlz-netwerkmodel. Van het indicatieregister en het eigen bijdrageregister is er elk maar één bronhouder die de gegevens van het register vastlegt. Dit is anders bij de andere registers. Bij die registers zijn er telkens meerdere bronhouders die soortgelijke gegevens beheren en beschikbaar stellen. Dus conceptueel gezien zijn deze registers opgebouwd uit losse bronnen met soortgelijke gegevens die gedeeld worden door meerdere bronhouders die een soortgelijke taak in het ketenproces hebben.
 
 
-![register en primaire systeemrollen.png](../img/architectuur%20-%20register-en-primaire-systeemrollen.png)
+![register en primaire systeemrollen.png](../img/architectuur-Invulling-primaire-systeemrollen.png)
 figuur 4. Register en primaire systeemrollen
 
 Iedere bronhouder biedt zijn brongegevens in beginsel aan meerdere afnemers aan. Iedere deelnemer aan het iWlz-netwerkmodel kan tegelijkertijd bronhouder van het ene register en afnemer van een ander register zijn. Wanneer meerdere bronhouders dezelfde soort gegevens delen ontstaat er logisch gezien één integraal register met de gegevens van die soort. We spreken zo van één bemiddelingsregister en één zorgleveringsregister. Binnen zo’n register zijn de gegevens van de verschillende bronhouders logische gescheiden. Zo spreken we van één bemiddelingsregister dat bestaat uit de verzameling van logische gescheiden bemiddelingsregisters per concessiehouder.
