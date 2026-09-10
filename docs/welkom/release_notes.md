@@ -32,7 +32,7 @@
 
 
 !!! info
-    De onderstaande publicaties hebben plaatsgevonden in Confluence. Vanaf versie 1.0.1 is de publicatie naar GitHub pages gemigreerd zodat het beheer van het Afsprakenstelsel beter in lijn ligt met de wijzigingen die voortvloeien uit de wijzingsverzoeken. 
+    De onderstaande publicaties hebben plaatsgevonden in Confluence. Vanaf versie 1.0.1 is de publicatie naar GitHub pages gemigreerd zodat het beheer van het Afsprakenstelsel beter in lijn ligt met de wijzigingen die voortvloeien uit de wijzigingsverzoeken. 
 
     De laatst gepubliceerde versie van 17-12-2025 is gemarkeerd als Versie 1.0.0 en is de basis geweest voor de eerste publicatie in GitHub pages.
 
