@@ -49,6 +49,10 @@ jobs:
         run: echo "ENABLED_PDF_EXPORT=1" >> $GITHUB_ENV
 
       # --- Staging publicatie ---
+      - name: Set version for PDF cover (staging)
+        if: startsWith(github.ref, 'refs/heads/staging')
+        run: echo "MIKE_DOCS_VERSION=${{ github.ref_name }}" >> $GITHUB_ENV
+
       - name: Build site
         if: startsWith(github.ref, 'refs/heads/staging')
         run: mkdocs build --site-dir site
