@@ -67,7 +67,7 @@ plugins:
       cover_subtitle: pdf van Afsprakenstelsel iWlz https://istandaarden.github.io/Afsprakenstelsel-iWlz/
       cover_logo: docs/assets/ZinBanner.png
       copyright: "iStandaarden.nl"
-      output_path: pdf/afsprakenstelsel-iWlz.pdf
+      output_path: ../pdf/afsprakenstelsel-iWlz.pdf
       toc_title: Inhoudsopgave
       toc_level: 2
       # heading_shift: true
