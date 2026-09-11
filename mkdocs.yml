@@ -39,13 +39,13 @@ theme:
       accent: deep purple
   features:
     - navigation.top
-    - header.autohide
+    # - header.autohide
     # - navigation.sections
     - navigation.instant
     - navigation.tracking
     - navigation.footer
     - navigation.tabs
-    - navigation.tabs.sticky
+    # - navigation.tabs.sticky
     - navigation.expand
     - navigation.indexes
     - navigation.path
