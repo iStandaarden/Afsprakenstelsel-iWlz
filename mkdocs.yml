@@ -39,6 +39,7 @@ theme:
       accent: deep purple
   features:
     - navigation.top
+    - header.autohide
     # - navigation.sections
     - navigation.instant
     - navigation.tracking
