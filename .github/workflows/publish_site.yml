@@ -59,7 +59,7 @@ jobs:
       # --- Staging publicatie ---
       - name: Set version label for PDF cover (staging)
         if: startsWith(github.ref, 'refs/heads/staging')
-        run: echo "PDF_VERSION_LABEL=Staging build: ${{ github.ref_name }}" >> $GITHUB_ENV
+        run: 'echo "PDF_VERSION_LABEL=Staging build: ${{ github.ref_name }}" >> $GITHUB_ENV'
 
       - name: Build site
         if: startsWith(github.ref, 'refs/heads/staging')
