@@ -5,7 +5,7 @@
 
 | Versie | Datum ingang | Status | Voor Release Indicatieregister | Voor Release Bemiddelingsregister | Voor Release Leveringregister | 
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| [Versie: 1.0.0](#versie-100---17-12-2025) | *17-12-2025* | Definitief | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
+| [Versie: 1.0.0](./#versie-100-17-12-2025) | *17-12-2025* | Definitief | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
 
 ## In Ontwikkeling (future)
 
