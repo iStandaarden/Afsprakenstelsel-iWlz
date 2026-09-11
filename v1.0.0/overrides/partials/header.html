@@ -8,9 +8,10 @@
   {% set class = class ~ " md-header--shadow" %}
 {% endif %}
 <header class="{{ class }}" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+    <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+      <img src="{{ 'assets/zinbanner.png' | url }}" alt="" class="md-header__center-image">
     <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
-      {% include "partials/logo.html" %}
+          {% include "partials/logo.html" %}
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       {% set icon = config.theme.icon.menu or "material/menu" %}
@@ -56,7 +57,7 @@
       {% endif %}
     {% endif %}
     {% if config.extra.pdf_url %}
-      <a href="{{ config.extra.pdf_url }}" title="Download Afsprakenstelsel iWlz in PDF" class="md-header__button md-icon" target="_blank" rel="noopener">
+      <a href="{{ base_url }}/{{ config.extra.pdf_url }}" title="Download Afsprakenstelsel iWlz in PDF" class="md-header__button md-icon" target="_blank" rel="noopener">
         {% include ".icons/material/file-pdf-box.svg" %}
       </a>
     {% endif %}
