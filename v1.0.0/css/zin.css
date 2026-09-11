@@ -10,6 +10,19 @@
   height: auto;
 }
 
+.md-header__banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem 0;
+  background-color: #fff; /* pas aan naar wens */
+}
+
+.md-header__banner-image {
+  max-height: 4.2rem; /* pas naar smaak aan */
+  width: auto;
+}
+
 .md-header__inner {
   position: relative; /* nodig als referentiepunt voor de absolute afbeelding */
 }
