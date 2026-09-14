@@ -21,9 +21,9 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     ---
 
-    Dit artikel hoe de governance is georganiseerd en hoe dit afsprakenstelsel samenhangt met Twinn als LVS
+    Hoe de governance is georganiseerd en hoe dit afsprakenstelsel samenhangt met Twinn als LVS
 
-    [:octicons-arrow-right-24: lees verder](./achtergrond_toelichting)
+    [:octicons-arrow-right-24: lees verder](./)
 
 -   :material-alphabetical:{ .lg .middle } __Begrippenlijst__
 

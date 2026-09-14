@@ -17,13 +17,13 @@ De governance van de publicaties Afsprakenstelsel iWlz-netwerkmodel, Releasebele
 
 
 ![Relatie tussen Convenant Afsprakenstelsel Releasebeleid en iStandaarden-v2.png](../img/governance-RelatietussenConvenantAfsprakenstelselReleasebeleideniStandaarden-v2.png)  
-figuur 1. Relatie tussen Convenant, Afsprakenstelsel, Releasebeleid en iStandaarden
+Figuur 1 - Relatie tussen Convenant, Afsprakenstelsel, Releasebeleid en iStandaarden
 
 Het Afsprakenstelsel iWlz-netwerkmodel is opgebouwd aan de hand van het vijf-lagen model van Nictiz. In het onderstaande figuur is weergegeven hoe het Releasebeleid en de iStandaarden zich tot deze lagen verhouden.
 
 ![Relatie-Afsprakenstelsel-Informatiemodel-Releasebeleid](../img/governance-relatie-5lagenen-afsprakenstelsel.png)
 
-figuur 2: Relatie vijf-lagen model Afsprakenstelsel, Releasebeleid en iStandaarden
+Figuur 2 - Relatie vijf-lagen model Afsprakenstelsel, Releasebeleid en iStandaarden
 
 ## 2. Samenhang afsprakenstelsel en Twiin als LVS
 

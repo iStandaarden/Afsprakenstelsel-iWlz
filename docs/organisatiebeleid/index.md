@@ -1,9 +1,9 @@
 # Organisatiebeleid
 
-!!! info "Versie: *17-12-2025* | Status: *Definitief*"
-
 **Inleiding**  
-In dit hoofdstuk wordt ingegaan op de volgende aspecten:
+In dit hoofdstuk wordt beschreven hoe de randvoorwaarden en ontwerpkeuzes die bij het opstellen van het Afsprakenstelsel iWlz-netwerkmodel zijn gehanteerd en geeft inzicht in de hieruit voortvloeiende architectuur. Daarnaast bevat dit hoofdstuk informatie over de rollen van deelnemers aan het iWlz-netwerkmodel en beschrijft het de afspraken over de ontwikkeling en het beheer van het iWlz-netwerkmodel in de vorm van serviceafspraken.
+
+Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
 
 <div class="grid cards" markdown>
@@ -12,7 +12,7 @@ In dit hoofdstuk wordt ingegaan op de volgende aspecten:
 
     ---
 
-    ...
+    Meer over de randvoorwaarden  en de wijze waarop deze worden ingevuld in het afsprakenstelsel iWlz-netwerkmodel.
 
     [:octicons-arrow-right-24: lees verder](#)
 
@@ -20,7 +20,7 @@ In dit hoofdstuk wordt ingegaan op de volgende aspecten:
 
     ---
 
-    ...
+    Meer over de ontwerpkeuzes die worden toegepast en de architectuurprincipes vormen waarop het iWlz-netwerkmodel is gebaseerd. 
 
     [:octicons-arrow-right-24: lees verder](#)
 
@@ -28,7 +28,7 @@ In dit hoofdstuk wordt ingegaan op de volgende aspecten:
 
     ---
 
-    ...
+    Beschrijft op hoofdlijnen de doelarchitectuur die wordt gehanteerd voor de relealisatie van het iWlz-netwerkmodel.
 
     [:octicons-arrow-right-24: lees verder](#)
 
@@ -36,7 +36,7 @@ In dit hoofdstuk wordt ingegaan op de volgende aspecten:
 
     ---
 
-    ...
+    Meer over de rollen en verantwoordelijkheden die nodig zijn voor het iWlz-netwerkmodel.
 
     [:octicons-arrow-right-24: lees verder](#)
 
@@ -44,7 +44,7 @@ In dit hoofdstuk wordt ingegaan op de volgende aspecten:
 
     ---
 
-    ...
+    Beschrijving van het niveau van dienstverlening binnen het iWlz-netwerkmodel en daarbij per doelgroep vastgelegde specifieke afspraken.
 
     [:octicons-arrow-right-24: lees verder](#)
 
@@ -52,7 +52,7 @@ In dit hoofdstuk wordt ingegaan op de volgende aspecten:
 
     ---
 
-    ...
+    Meer over hoe het releasebeleid binnen het iWlz-netwerkmodel wordt toegepast. 
 
     [:octicons-arrow-right-24: lees verder](#)
 
@@ -60,7 +60,7 @@ In dit hoofdstuk wordt ingegaan op de volgende aspecten:
 
     ---
 
-    ...
+    Hoe bevindingen en wijzigingsverzoeken worden behandeld en wat het onderscheid hierin is. 
 
     [:octicons-arrow-right-24: lees verder](#)
 </div>
