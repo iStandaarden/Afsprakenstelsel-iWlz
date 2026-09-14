@@ -2252,10 +2252,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#84-dienst-raadplegen" class="md-nav__link">
+  <a href="#83-dienst-raadplegen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.4 Dienst raadplegen
+        8.3 Dienst raadplegen
       
     </span>
   </a>
@@ -2263,10 +2263,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#85-dienst-notificeren" class="md-nav__link">
+  <a href="#84-dienst-notificeren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.5 Dienst notificeren
+        8.4 Dienst notificeren
       
     </span>
   </a>
@@ -2279,10 +2279,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-it-infrastructuur" class="md-nav__link">
+  <a href="#9-it-infrastructuur-endpoints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9. IT-infrastructuur
+        9. IT-infrastructuur - Endpoints
       
     </span>
   </a>
@@ -2499,10 +2499,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#84-dienst-raadplegen" class="md-nav__link">
+  <a href="#83-dienst-raadplegen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.4 Dienst raadplegen
+        8.3 Dienst raadplegen
       
     </span>
   </a>
@@ -2510,10 +2510,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#85-dienst-notificeren" class="md-nav__link">
+  <a href="#84-dienst-notificeren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.5 Dienst notificeren
+        8.4 Dienst notificeren
       
     </span>
   </a>
@@ -2526,10 +2526,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-it-infrastructuur" class="md-nav__link">
+  <a href="#9-it-infrastructuur-endpoints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9. IT-infrastructuur
+        9. IT-infrastructuur - Endpoints
       
     </span>
   </a>
@@ -2668,7 +2668,7 @@ Het gaat hier nauwelijks om specifieke context</p>
 <ul>
 <li>Abonneren, </li>
 <li>Autoriseren, </li>
-<li>Notificeren en </li>
+<li>Notificeren en melden</li>
 <li>raadplegen gebruikt. </li>
 </ul>
 <p>De <strong>bronhouder</strong> van het Indicatieregister is indicatiesteller CIZ. </p>
@@ -2693,7 +2693,7 @@ Het gaat hier nauwelijks om specifieke context</p>
 <p>Voor het mogen versturen van meldingen <strong>aan</strong> het indicatieorgaan moet de volgende scope worden meegegeven:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>organisaties/indicatieorgaan/meldingen/melding:create
 </span></code></pre></div>
-<h3 id="84-dienst-raadplegen">8.4 Dienst raadplegen<a class="headerlink" href="#84-dienst-raadplegen" title="Permanent link">¶</a></h3>
+<h3 id="83-dienst-raadplegen">8.3 Dienst raadplegen<a class="headerlink" href="#83-dienst-raadplegen" title="Permanent link">¶</a></h3>
 <p>In het netwerkmodel vind informatiedeling plaats via GraphQL.</p>
 <p>De volgende onderdelen voor het raadplegen van het Indicatieregister zijn beschikbaar in de <a href="https://github.com/iStandaarden/iWlz-indicatie">GitHub omgeving van het Indicatieregister</a>:</p>
 <p><strong>Koppelvlakspecificatie</strong></p>
@@ -2713,13 +2713,13 @@ Het gaat hier nauwelijks om specifieke context</p>
 <h4 id="access-policy-uitwisselprofiel-indicatie">Access Policy uitwisselprofiel Indicatie<a class="headerlink" href="#access-policy-uitwisselprofiel-indicatie" title="Permanent link">¶</a></h4>
 <p>De vertaling van autorisatieregel en autorisatiematrix naar machine-leesbare code is een policy. De PDP doet op basis van deze policy of een raadpleging is toegestaan.</p>
 <p>Momenteel zijn de policies nog niet publiekelijk beschikbaar.</p>
-<h3 id="85-dienst-notificeren">8.5 Dienst notificeren<a class="headerlink" href="#85-dienst-notificeren" title="Permanent link">¶</a></h3>
+<h3 id="84-dienst-notificeren">8.4 Dienst notificeren<a class="headerlink" href="#84-dienst-notificeren" title="Permanent link">¶</a></h3>
 <p>De bronhouder is verantwoordelijk voor tijdige notificatie en correcte aflevering daarvan. Wanneer er aanleiding is voor het versturen van een notificatie, verstuurt het CIZ de notificatie die hoort bij die aanleiding en controleert of de notificatie is ontvangen.</p>
 <p><strong>Overzicht notificaties</strong></p>
 <p>Een overzicht van de notificaties die het CIZ moet versturen en de aanleiding daarvoor is beschikbaar in Github: <a href="https://github.com/iStandaarden/iWlz-indicatie?tab=readme-ov-file#notificaties">GitHub - iStandaarden/iWlz-indicatie: Koppelvlak specificatie Indicatieregister</a></p>
 <h4 id="controle">Controle<a class="headerlink" href="#controle" title="Permanent link">¶</a></h4>
 <p>Het CIZ verifieert door middel van de ontvangst van een HTTP 200 OK response zonder inhoudelijke verwijzing naar ‘errors’ dat een notificatie succesvol is afgeleverd. Is dit niet het geval dan onderzoekt CIZ de oorzaak, zo nodig herstelt en verzend de notificatie opnieuw.</p>
-<h2 id="9-it-infrastructuur">9. IT-infrastructuur<a class="headerlink" href="#9-it-infrastructuur" title="Permanent link">¶</a></h2>
+<h2 id="9-it-infrastructuur-endpoints">9. IT-infrastructuur - Endpoints<a class="headerlink" href="#9-it-infrastructuur-endpoints" title="Permanent link">¶</a></h2>
 <p><strong>Endpoint</strong></p>
 <p>Het Endpoint van het Indicatieregister is beschikbaar in het tijdelijke iWlz-Adresboek. Er zijn twee omgevingen beschikbaar. Per omgeving zijn ook de endpoints voor autorisatie en PEP beschreven.</p>
 <p>De gegevensdienstID’s zijn</p>

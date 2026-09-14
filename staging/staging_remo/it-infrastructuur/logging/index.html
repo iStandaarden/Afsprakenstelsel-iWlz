@@ -2475,9 +2475,6 @@
 
 
 <h1 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">¶</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Versie: <em>17-12-2025</em> | Status: <em>Definitief</em></p>
-</div>
 <h2 id="1-inleiding">1. Inleiding<a class="headerlink" href="#1-inleiding" title="Permanent link">¶</a></h2>
 <p>Binnen het iWlz-netwerkmodel is gestandaardiseerde tracelogging verplicht. Het doel hiervan is om transacties en gebeurtenissen in de keten end-to-end te kunnen volgen en analyseren. Hiermee kan sneller worden vastgesteld waar een fout optreedt, hoe een verzoek zich door het netwerk beweegt en welke partijen betrokken zijn.</p>
 <h2 id="2-traceid-en-spanid">2. TraceId en SpanId<a class="headerlink" href="#2-traceid-en-spanid" title="Permanent link">¶</a></h2>
@@ -2531,7 +2528,10 @@
 <h3 id="36-voorbeeldimplementatie-van-tracelogging-niet-normatief">3.6 Voorbeeldimplementatie van tracelogging (niet-normatief)<a class="headerlink" href="#36-voorbeeldimplementatie-van-tracelogging-niet-normatief" title="Permanent link">¶</a></h3>
 <p>Onderstaande flow toont een mogelijke implementatie van traceerbaarheid binnen een ketenverzoek. De flow omvat zowel het aanvragen van autorisatie als het uitvoeren van een gegevensopvraag (GraphQL) en laat zien hoe <code>TraceId</code> en <code>SpanId</code> zich door de verschillende onderdelen van het netwerkmodel verspreiden.
 Dit voorbeeld is afkomstig uit een specifieke context en dient ter illustratie van de werking; de exacte inrichting kan verschillen per ketenpartner of toepassing</p>
-<pre class="mermaid-zoom"><code>
+<p></p><pre class="mermaid-zoom"><code>---
+config:
+  theme: forest
+---
 
 sequenceDiagram
     box "Deelnemer"
@@ -2588,6 +2588,7 @@ sequenceDiagram
     nIDResourceServer--&gt;&gt;Client: 200 Response (GraphQL)
     deactivate nIDResourceServer
     deactivate Client</code></pre>
+Figuur 1 - Sequentiediagram Logging<p></p>
 
 
 
