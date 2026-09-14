@@ -8,22 +8,28 @@ De basis voor dit uitwisselprofiel wordt gevormd door de artikelen uit dit afspr
 
 ## 2. Doel en rationale
 
-- Doel
+**Doel**  
+
   - Het doel van het bemiddelingsregister is dat deelnemers in het iWlz-netwerk op basis van relevantie en grondslag op het juiste moment op de juiste plek de juiste gegevens met betrekking tot de bemiddeling (toewijzing) kunnen raadplegen.
-- Wat is de rationale van dit uitwisselprofiel?
+
+**Rationale**  
+
   - Inzage in de juiste bemiddelingsgegevens is randvoorwaardelijk voor bovengenoemd doel.
 
 ## 3. Organisatiebeleid
 
-- Voor welke deelnemers is dit uitwisselprofiel van toepassing?
+**Voor welke deelnemers is dit uitwisselprofiel van toepassing?**  
+
   - Het uitwisselprofiel Bemiddeling is van toepassing op deelnemers met de organisatorische rol: Zorgverlener, Indicatiesteller (CIZ) en Bemiddelaar (Zorgkantoor).
-- Welke afspraken gelden bij twijfels/vragen over de kwaliteit van data?
-  1. Wanneer het een afwijking is op de afspraken van de iStandaard iWlz (overtreding gegevensregel) verloopt dit via de (fout)melding. Zie het artikel [Notificeren en Melden](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071204)Voorvertoning .
-  2. Gaat het om andere twijfels/vragen: dan contact opnemen met het verantwoordelijke zorgkantoor via telefoon of notitieverkeer.
+
+**Afspraken bij twijfels/vragen over de kwaliteit van data**  
+
+  - Wanneer het een afwijking is op de gegevensregels van de iStandaard iWlz (overtreding gegevensregel) verloopt de terugkoppeling aan de bronhouder via de (fout)melding. Zie het artikel [Notificeren en Melden > 4. meldingen](../../applicatie/diensten/notificeren-en-melden#4-meldingen).
+  - Gaat het om andere twijfels/vragen: dan contact opnemen met het verantwoordelijke zorgkantoor via telefoon of notitieverkeer.
 
 ## 4. Wet- en regelgeving
 
-In het artikel [Randvoorwaarden](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23069964) is aangegeven welke wet- en regelgeving voor het Bemiddelingsregister van toepassing is.
+In het artikel [Randvoorwaarden](../../organisatiebeleid/randvoorwaarden) is aangegeven welke wet- en regelgeving voor het Bemiddelingsregister van toepassing is.
 
 Specifiek voor het Bemiddelingsregister zijn de volgende grondslagen van toepassing:
 
@@ -34,69 +40,96 @@ Specifiek voor het Bemiddelingsregister zijn de volgende grondslagen van toepass
 
 Het Bemiddelingsregister ondersteunt twee processen.
 
-### 5.1 Proces toeleiden
+**Proces toeleiden**
 
-Het proces toeleiden en bewaken passende zorg is beschreven in het Artikel Proces. Zie [Procesmodel | 5. Zorgkantoor: Toeleiden, bewaken passende zorg](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23070659/Procesmodel#5.-Zorgkantoor%3A-Toeleiden%2C-bewaken-passende-zorg)Voorvertoning
+Het proces toeleiden en bewaken passende zorg is beschreven in het Artikel Proces. Zie [Procesmodel > 5. Zorgkantoor: Toeleiden, bewaken passende zorg](../../proces/procesmodel#5-zorgkantoor-toeleiden-bewaken-passende-zorg)
 
-### 5.2 Proces dossieroverdracht
+**5.2 Proces dossieroverdracht**
 
-Het proces dossieroverdracht is beschreven in het Artikel Proces. Zie [Procesmodel | 5.4 Dossieroverdracht](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23070659/Procesmodel#5.4-Dossieroverdracht)Voorvertoning
+Het proces dossieroverdracht is beschreven in het Artikel Proces. Zie [Procesmodel > 5.4 Dossieroverdracht](../../proces/procesmodel#6-zorgkantoor-dossieroverdracht)
 
 ## 6. Informatie
 
-- Peildata/peilperiode van gegevens:
+**Peildata/peilperiode van gegevens**
+
   - Zowel actuele als historische bemiddelingsgegevens kunnen worden geraadpleegd mits geautoriseerd voor de periode.
-- In- en exclusiecriteria voor de informatievragen:
+
+**In- en exclusiecriteria voor de informatievragen:**  
+
   - Organisaties met een rol zorgkantoor mogen de gegevens afnemen.
   - Organisaties met de rol Zorgorganisatie (zorgaanbieder) mogen de gegevens afnemen.
   - Organisaties met de rol indicatiesteller mogen de gegevens afnemen.
-- Eisen aan de actualiteit, betrouwbaarheid en volledigheid van de data:
+
+**Eisen aan de actualiteit, betrouwbaarheid en volledigheid van de data:**  
+
   - De zorgkantoren dragen zorg voor registratie van nieuwe en gewijzigde Bemiddelingen en Overdrachten.
-- Aggregatieniveau:
+
+**Aggregatieniveau:**  
+
   - Bemiddelingsgegevens worden enkel niet-geaggregeerd aangeboden en uitgewisseld.
-- Contextinformatie die wordt meegegeven vanuit bestaande kwalitatieve bronnen:
+
+**Contextinformatie die wordt meegegeven vanuit bestaande kwalitatieve bronnen:**  
+
   - Geen
-- Welke criteria gelden voor het bepalen van het subject van de uitwisseling.
+  
+**Welke criteria gelden voor het bepalen van het subject van de uitwisseling?**
+
   - De gegevensuitwisseling met betrekking tot de toeleiding van zorg vindt plaats per bemiddelingspecificatie op basis van een uniek identificatienummer van de bemiddelingspecificatie. Gegevens hebben betrekking op een cliënt. Er is geen sprake van geanonimiseerde gegevens.
   - De gegevensuitwisseling met betrekking tot dossieroverdracht vindt plaats per overdracht op basis van een uniek identificatienummer van de overdracht. Gegevens hebben betrekking op de dossieroverdracht van een client. Er is geen sprake van geanonimiseerde gegevens.
 
-## 7 Informatiemodel Bemiddelingsregister
+## 7 Informatiemodel
 
 Het Informatiemodel brengt de samenhang in processen, regels en registerspecificaties in kaart. Deze elementen zijn onlosmakelijk met elkaar verbonden: ze versterken óf beperken elkaar.
 
-Het [Informatiemodel](https://informatiemodel.istandaarden.nl/) van het Bemiddelingsregister gaat specifiek in op het proces rondom en de inrichting van het Bemiddelingsregister . Het bevat de volgende onderdelen:
+Het [Informatiemodel iStandaarden](https://informatiemodel.istandaarden.nl/) bevat het informatiemodel van het **Bemiddelingsregister** dat specifiek ingaat op het proces rondom en de inrichting van het Bemiddelingsregister. Het bevat de volgende onderdelen:
 
-### 7.1 Proces
+!!! question 
+    Onderstaande verplaatsen naar het artikel Informatie > Informatiemodel. 
+    Het gaat hier nauwelijks om specifieke context
+
+**Proces**
 
 - de procesbeschrijvingen van het proces Toeleiden en proces Dossieroverdracht waarvoor het zorgkantoor verantwoordelijk is.
 
-### 7.2 Register
+**Register**
 
 - beschrijving en opbouw van het register.
-  - _Klasse diagram_ - onderlinge relatie klassen en inhoud van de klassen.
+  - _Klasse diagram_ - onderlinge relatie klassen.
   - _Definities_: Betekenis en aanvullende documentatie van de verschillende klassen en elementen.
 
-### 7.3 Regels
+**Regel**
 
 - met betrekking tot het proces en het register.
-  - _**Uitgangspunten**:_ geldend voor de gehele iStandaard iWlz.
+  - _**Uitgangspunten**:_ geldend voor de gehele iWlz standaard.
   - _**Bedrijfsregels**:_ (ook wel operationele bedrijfsregel genoemd) is een regel die in algemene zin beschrijft wat de afspraken zijn in de keten, hoe er gehandeld dient te worden en op welke wijze informatie geïnterpreteerd moet worden.
   - _**Invulinstructies**:_ verduidelijkt de bedoelde invulling van een gegeven in een register voor specifieke situaties.
   - _**Gegevensregel**_: een technisch te controleren beperking of verplichting t.a.v. de invulling van gegevens in een register.
   - _**Autorisatieregel**_: beschrijft per rol onder welke voorwaarde(n) en voor welke periode toegang tot gegevens geldt.
   - _**Autorisatiematrix**_: beschrijft per autorisatieregel de toegang op attribuutniveau. N.b. de Autorisatiematrix is beschikbaar bij de koppelvlakspecificatie.
 
-### 7.4 Gegevens
+**Gegevens**
 
 - basis van de informatievoorziening
   - _Datatypen (logische)_: betekenis van het datatype, primaire datatype, restricties (maximale lengte etc.) en eventueel gekoppelde codelijst.
   - _Codelijsten_: beschrijving van een codelijst en waarden
 
+
 ## 8. Applicatie
 
 Dit hoofdstuk beschrijft de specifieke invulling van de applicatie laag voor het Bemiddelingsregister.
 
-### 8.1 Applicatiecomponenten
+### 8.1 [Applicatiecomponenten](../../applicatie/applicatiecomponenten)
+
+In het netwerkmodel voor het indicatieregister worden de **diensten**:
+
+  - Abonneren, 
+  - Autoriseren, 
+  - Notificeren en Melden
+  - Raadplegen gebruikt. 
+
+**Bronhouder:** Zorgkantoor  
+**Afnemer:** Zorgaanbieder, CIZ  
+**Operationeel netwerkbeheerder:** VECOZO  
 
 ### 8.2 nID netwerkstelsel - scopes
 
@@ -176,9 +209,9 @@ Een overzicht van de notificaties die het zorgkantoor moet versturen en de aanle
 
 Het zorgkantoor verifieert door middel van de ontvangst van een HTTP 200 OK response zonder inhoudelijke verwijzing naar ‘errors’ dat een notificatie succesvol is afgeleverd. Is dit niet het geval dan onderzoekt het zorgkantoor de oorzaak, zo nodig herstelt en verzend de notificatie opnieuw.
 
-## 9. IT-infrastructuur
+## 9. IT-infrastructuur - Endpoints
 
-### 9.1 Endpoints
+**Endpoint**
 
 De Endpoints van de Bemiddelingsregisters zijn beschikbaar in het tijdelijke iWlz-Adresboek. Er zijn twee omgevingen beschikbaar. Per omgeving zijn ook de endpoints voor autorisatie en PEP beschreven.
 

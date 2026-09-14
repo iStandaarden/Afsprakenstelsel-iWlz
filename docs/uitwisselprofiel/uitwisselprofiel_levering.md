@@ -1,4 +1,4 @@
-# Uitwisselprofiel Leveringregister
+# Uitwisselprofiel Levering
 
 
 !!! note

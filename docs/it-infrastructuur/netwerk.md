@@ -1,7 +1,5 @@
 # Netwerk
 
-!!! info "Versie: *17-12-2025* | Status: *Definitief*"
-
 ## 1. Inleiding
 
 Alle communicatie binnen het iWlz-netwerkmodel vindt plaats via internet, er wordt dus geen gebruik gemaakt van private netwerken. Gezien de gevoelige aard van de gegevens zijn alle deelnemers aan het iWlz netwerk verplicht gebruik te maken van DNSSEC.
@@ -16,8 +14,7 @@ Zie ook: [DNSSEC | Forum Standaardisatie](https://www.forumstandaardisatie.nl/op
 
 ## 3. Transportbeveiliging (TLS)
 
-Alle communicatie tussen verschillende deelnemers aan het iWlz-netwerkmodel over het netwerk is gebaseerd op het artikel [Identificatie & authenticatie](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071502).
+Alle communicatie tussen verschillende deelnemers aan het iWlz-netwerkmodel over het netwerk is gebaseerd op het artikel [Identificatie & authenticatie](../../it-infrastructuur/identificatie_authenticatie).
 
 Alle over het internet verlopende communicatie tussen één deelnemer aan het iWlz-netwerkmodel en de operationeel ketenbeheerder moet minimaal beveiligd zijn met tweezijdig TLS 1.2 of TLS 1.3 op basis van een PKI VECOZO certificaat.
 
----
