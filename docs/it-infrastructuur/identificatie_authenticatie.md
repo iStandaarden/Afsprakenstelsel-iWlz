@@ -1,7 +1,5 @@
 # Identificatie & authenticatie
 
-!!! info "Versie: *17-12-2025* | Status: *Definitief*"
-
 
 !!! abstract "Samenvatting"
 
@@ -47,4 +45,3 @@ Elk access token uitgegeven door de autorisatieserver van het iWlz-netwerkmodel 
 
 De publieke sleutel van het sleutelpaar waarmee het access token is ondertekend is **NIET** publiek beschikbaar. De enige verifier van het access token is het autorisatiecomponent van het iWlz-netwerkmodel die verzoeken aan de resource server van de bronhouder verifieert.
 
----

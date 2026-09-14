@@ -122,10 +122,14 @@ Dit hoofdstuk beschrijft de specifieke invulling van de applicatie laag voor het
 
 In het netwerkmodel voor het indicatieregister worden de **diensten**:
 
-- Abonneren, 
-- Autoriseren, 
-- Notificeren en Melden
-- Raadplegen gebruikt. 
+  - Abonneren, 
+  - Autoriseren, 
+  - Notificeren en Melden
+  - Raadplegen gebruikt. 
+
+**Bronhouder:** Zorgkantoor  
+**Afnemer:** Zorgaanbieder, CIZ  
+**Operationeel netwerkbeheerder:** VECOZO  
 
 ### 8.2 nID netwerkstelsel - scopes
 
@@ -205,9 +209,9 @@ Een overzicht van de notificaties die het zorgkantoor moet versturen en de aanle
 
 Het zorgkantoor verifieert door middel van de ontvangst van een HTTP 200 OK response zonder inhoudelijke verwijzing naar ‘errors’ dat een notificatie succesvol is afgeleverd. Is dit niet het geval dan onderzoekt het zorgkantoor de oorzaak, zo nodig herstelt en verzend de notificatie opnieuw.
 
-## 9. IT-infrastructuur
+## 9. IT-infrastructuur - Endpoints
 
-### 9.1 Endpoints
+**Endpoint**
 
 De Endpoints van de Bemiddelingsregisters zijn beschikbaar in het tijdelijke iWlz-Adresboek. Er zijn twee omgevingen beschikbaar. Per omgeving zijn ook de endpoints voor autorisatie en PEP beschreven.
 

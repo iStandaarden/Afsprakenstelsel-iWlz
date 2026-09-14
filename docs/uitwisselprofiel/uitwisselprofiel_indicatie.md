@@ -122,7 +122,7 @@ In het netwerkmodel voor het indicatieregister worden de **diensten**:
 
 - Abonneren, 
 - Autoriseren, 
-- Notificeren en 
+- Notificeren en melden
 - raadplegen gebruikt. 
 
 De **bronhouder** van het Indicatieregister is indicatiesteller CIZ. 
@@ -167,7 +167,7 @@ Voor het mogen versturen van meldingen **aan** het indicatieorgaan moet de volge
 organisaties/indicatieorgaan/meldingen/melding:create
 ```
 
-### 8.4 Dienst raadplegen
+### 8.3 Dienst raadplegen
 
 In het netwerkmodel vind informatiedeling plaats via GraphQL.
 
@@ -207,7 +207,7 @@ De vertaling van autorisatieregel en autorisatiematrix naar machine-leesbare cod
 
 Momenteel zijn de policies nog niet publiekelijk beschikbaar.
 
-### 8.5 Dienst notificeren
+### 8.4 Dienst notificeren
 
 De bronhouder is verantwoordelijk voor tijdige notificatie en correcte aflevering daarvan. Wanneer er aanleiding is voor het versturen van een notificatie, verstuurt het CIZ de notificatie die hoort bij die aanleiding en controleert of de notificatie is ontvangen.
 
@@ -219,7 +219,7 @@ Een overzicht van de notificaties die het CIZ moet versturen en de aanleiding da
 
 Het CIZ verifieert door middel van de ontvangst van een HTTP 200 OK response zonder inhoudelijke verwijzing naar ‘errors’ dat een notificatie succesvol is afgeleverd. Is dit niet het geval dan onderzoekt CIZ de oorzaak, zo nodig herstelt en verzend de notificatie opnieuw.
 
-## 9. IT-infrastructuur
+## 9. IT-infrastructuur - Endpoints
 
 **Endpoint**
 

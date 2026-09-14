@@ -1,6 +1,5 @@
 # Logging
 
-!!! info "Versie: *17-12-2025* | Status: *Definitief*"
 
 ## 1. Inleiding
 
@@ -80,7 +79,10 @@ Onderstaande flow toont een mogelijke implementatie van traceerbaarheid binnen e
 Dit voorbeeld is afkomstig uit een specifieke context en dient ter illustratie van de werking; de exacte inrichting kan verschillen per ketenpartner of toepassing
 
 ```mermaid
-
+---
+config:
+  theme: forest
+---
 
 sequenceDiagram
     box "Deelnemer"
@@ -138,3 +140,4 @@ sequenceDiagram
     deactivate nIDResourceServer
     deactivate Client
 ```
+Figuur 1 - Sequentiediagram Logging

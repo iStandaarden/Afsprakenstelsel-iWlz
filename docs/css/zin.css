@@ -16,6 +16,13 @@
     overflow: auto;
 }
 
+.md-banner__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px;
+}
+
 .md-header__banner {
   display: flex;
   justify-content: center;

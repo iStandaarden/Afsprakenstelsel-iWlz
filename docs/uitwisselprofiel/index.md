@@ -28,7 +28,7 @@ De uitwisselprofielen bevatten specifieke afspraken per register. In ieder uitwi
 
     Specifieke afspraken en technische specificaties voor aansluiting op het Leveringregister.
 
-    [:octicons-arrow-right-24: lees verder](./uitwisselprofiel_leveringregister.md)
+    [:octicons-arrow-right-24: lees verder](./uitwisselprofiel_levering.md)
 
 </div>
 

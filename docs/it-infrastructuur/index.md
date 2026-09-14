@@ -1,6 +1,6 @@
 # IT-Infrastuctuur
 
-!!! info "Versie: *17-12-2025* | Status: *Definitief*"
+
 
 **Inleiding**  
 In dit hoofdstuk zijn de technische afspraken vastgelegd die noodzakelijk zijn om het iWlz-netwerkmodel betrouwbaar en veilig te laten functioneren.
