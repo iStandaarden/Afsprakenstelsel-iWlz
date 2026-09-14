@@ -1,6 +1,5 @@
 # Uitwisselprofielen
 
-
 **Inleiding**  
 De uitwisselprofielen bevatten specifieke afspraken per register. In ieder uitwisselprofiel worden de afspraken opgenomen over de gegevensuitwisselingen ten behoeve van één specifiek register. Het betreft de volgende uitwisselprofielen:
 

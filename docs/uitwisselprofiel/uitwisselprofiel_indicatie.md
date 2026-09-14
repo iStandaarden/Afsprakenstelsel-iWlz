@@ -9,26 +9,28 @@ De basis voor dit uitwisselprofiel wordt gevormd door de artikelen uit dit afspr
 ## 2. Doel en rationale
 
 **Doel**  
+
   - Het doel van het indicatieregister is dat deelnemers in het iWlz-netwerk op basis van relevantie en grondslag op het juiste moment op de juiste plek de juiste indicatiegegevens kunnen raadplegen.
   - De indicatiegegevens zijn het resultaat van het processtap _beoordelen en afgeven indicatiebesluit_ en input voor de processtap _Toeleiden, bewaken passende zorg._
 
-**Rationale**  
+**Rationale** 
+
   - Inzage in de juiste indicatiegegevens is randvoorwaardelijk voor bovengenoemd doel.
 
 ## 3. Organisatiebeleid
 
-**Voor welke deelnemers is dit uitwisselprofiel van toepassing?**
+**Op welke deelnemers is dit uitwisselprofiel van toepassing?**
 
 - het uitwisselprofiel Indicatie is van toepassing op deelnemers met de organisatorische rol Indicatiesteller (CIZ), Bemiddelaar (Zorgkantoor) en Zorgorganisatie (Zorgaanbieder).
 
-**Afspraken bij twijfels/vragen over de kwaliteit van data?**
+**Afspraken bij twijfels/vragen over de kwaliteit van data**
 
-- Wanneer het een afwijking is op de gegevensregels van de iStandaard iWlz (overtreding gegevensregel) verloopt de terugkoppeling aan de bronhouder via de (fout)melding. Zie het artikel [Notificeren en Melden - 4. meldingen](../../applicatie/diensten/notificeren-en-melden#4-meldingen).
-- Gaat het om andere twijfels/vragen: dan contact opnemen met bronhouder Indicatiesteller CIZ via telefoon of notitieverkeer.
+  - Wanneer het een afwijking is op de gegevensregels van de iStandaard iWlz (overtreding gegevensregel) verloopt de terugkoppeling aan de bronhouder via de (fout)melding. Zie het artikel [Notificeren en Melden > 4. meldingen](../../applicatie/diensten/notificeren-en-melden#4-meldingen).
+  - Gaat het om andere twijfels/vragen: dan contact opnemen met bronhouder Indicatiesteller CIZ via telefoon of notitieverkeer.
 
 ## 4. Wet- en regelgeving
 
-In het artikel [Randvoorwaarden](../../organisatiebeleid/randvoorwaarden)Voorvertoning is aangegeven welke wet- en regelgeving voor het Indicatieregister van toepassing is.
+In het artikel [Randvoorwaarden](../../organisatiebeleid/randvoorwaarden) is aangegeven welke wet- en regelgeving voor het Indicatieregister van toepassing is.
 
 Specifiek voor het Indicatieregister zijn de volgende grondslagen van toepassing:
 
@@ -41,7 +43,7 @@ Het Indicatieregister ondersteund één proces.
 
 **Proces Beoordelen**
 
-Het proces beoordelen en afgeven indicatiebesluit is beschreven in het Artikel Proces. Zie [Procesmodel | CIZ: Beoordelen en afgeven indicatiebesluit](../../proces/procesmodel)
+Het proces beoordelen en afgeven indicatiebesluit is beschreven in het Artikel Proces. Zie [Procesmodel > 4. CIZ: Beoordelen en afgeven indicatiebesluit](../../proces/procesmodel#4-ciz-beoordelen-en-afgeven-indicatiebesluit)
 
 ## 6. Informatie
 
@@ -77,7 +79,7 @@ Het proces beoordelen en afgeven indicatiebesluit is beschreven in het Artikel P
 
 Het Informatiemodel brengt de samenhang in processen, regels en registerspecificaties in kaart. Deze elementen zijn onlosmakelijk met elkaar verbonden: ze versterken óf beperken elkaar.
 
-Het [Informatiemodel](https://informatiemodel.istandaarden.nl/) van het indicatieregister gaat specifiek in op het proces rondom en de inrichting van het [Indicatieregister](https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/). Het bevat de volgende onderdelen:
+Het [Informatiemodel iStandaarden](https://informatiemodel.istandaarden.nl/) bevat het informatiemodel van het **Indicatieregister** dat specifiek ingaat op het proces rondom en de inrichting van het Indicatieregister. Het bevat de volgende onderdelen:
 
 !!! question 
     Onderstaande verplaatsen naar het artikel Informatie > Informatiemodel. 
@@ -114,7 +116,7 @@ Het [Informatiemodel](https://informatiemodel.istandaarden.nl/) van het indicati
 
 Dit hoofdstuk beschrijft de specifieke invulling van de applicatie laag voor het Indicatieregister.
 
-### 8.1 [Applicatiecomponenten](../applicatie/applicatiecomponenten)
+### 8.1 [Applicatiecomponenten](../../applicatie/applicatiecomponenten)
 
 In het netwerkmodel voor het indicatieregister worden de **diensten**:
 
