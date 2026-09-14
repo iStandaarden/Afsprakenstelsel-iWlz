@@ -55,9 +55,10 @@ Het Afsprakenstelsel iWlz-netwerkmodel is primair opgesteld voor de volgende doe
 
 Het iWlz-netwerkmodel wordt incrementeel geïmplementeerd aan de hand van het Afsprakenstelsel iWlz-netwerkmodel. Het eerste deel dat is geïmplementeerd is het Indicatieregister. Vanaf 16-01-2025 is Indicatieregister 2 van toepassing. Voor deze tussenstap is het Afsprakenstelsel iWlz-netwerkmodel bijgewerkt in januari 2025 vanwege een aantal elementaire aanpassingen in de werking van de basisinfrastructuur.
 
-Het Bemiddelingsregister wordt toegevoegd per april 2026. Met de december 2025 release wordt hierop voorgesorteerd. Hiervoor zijn alle artikelen doorgenomen en waar nodig bijgewerkt. Hierbij zijn de volgende vastgestelde RFC’s verwerkt: [RFC0018 - Melden van fouten in gegevens volgens iStandaard iWlz](https://github.com/iStandaarden/iWlz-RequestForComment/blob/main/RFC/RFC0018%20-%20Melden%20van%20fouten%20in%20gegevens%20volgens%20iStandaard%20iWlz.md "https://github.com/iStandaarden/iWlz-RequestForComment/blob/main/RFC/RFC0018%20-%20Melden%20van%20fouten%20in%20gegevens%20volgens%20iStandaard%20iWlz.md"), [RFC0022a - Tracelogging - TraceID en SpanID](https://github.com/iStandaarden/iWlz-RequestForComment/blob/main/RFC/RFC0022a%20-%20Tracelogging%20-%20TraceID%20en%20SpanID.md "https://github.com/iStandaarden/iWlz-RequestForComment/blob/main/RFC/RFC0022a%20-%20Tracelogging%20-%20TraceID%20en%20SpanID.md") en [RFC0040 - GraphQL gebruik HTTP-statuscodes](https://github.com/iStandaarden/iWlz-RequestForComment/blob/main/RFC/RFC0040%20-%20GraphQL%20http-statuscodes.md "https://github.com/iStandaarden/iWlz-RequestForComment/blob/main/RFC/RFC0040%20-%20GraphQL%20http-statuscodes.md"). Deze zijn respectievelijk verwerkt in de artikelen: [Notificeren en Melden](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071204)Voorvertoning , [Logging](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/690651198)Voorvertoning en [GraphQL over HTTP](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/690552899)Voorvertoning . Daarnaast is het [Uitwisselprofiel Bemiddeling](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/690618376)Voorvertoning toegevoegd.
+Het Bemiddelingsregister wordt toegevoegd per april 2026. Met de december 2025 release wordt hierop voorgesorteerd. Hiervoor zijn alle artikelen doorgenomen en waar nodig bijgewerkt. Hierbij zijn de volgende vastgestelde Request for Comments verwerkt: [RFC0018 - Melden van fouten in gegevens volgens iStandaard iWlz](https://github.com/iStandaarden/iWlz_RequestForChange/blob/main/RequestforComments/RFC0018%20-%20Melden%20van%20fouten%20in%20gegevens%20volgens%20iStandaard%20iWlz.md), [RFC0022a - Tracelogging - TraceID en SpanID](https://github.com/iStandaarden/iWlz_RequestForChange/blob/main/RequestforComments/RFC0022a%20-%20Tracelogging%20-%20TraceID%20en%20SpanID.md) en [RFC0040 - GraphQL gebruik HTTP-statuscodes](https://github.com/iStandaarden/iWlz_RequestForChange/blob/main/RequestforComments/RFC0040%20-%20GraphQL%20http-statuscodes.md). Deze zijn respectievelijk verwerkt in de artikelen: [Notificeren en Melden](./applicatie/diensten/notificeren-en-melden), [Logging](./it-infrastructuur/logging
+) en [GraphQL over HTTP](./applicatie/graphql_over_http) . Daarnaast is het [Uitwisselprofiel Bemiddeling](./uitwisselprofiel/uitwisselprofiel_bemiddeling) toegevoegd.
 
-In de [release notes](https://wlz.atlassian.net/wiki/spaces/IWLZAS/overview#5.-Release-notes "https://wlz.atlassian.net/wiki/spaces/IWLZAS/overview#5.-Release-notes") is per artikel aangegeven wat deze wijzigingen zijn. Hierin is ook aangegeven welke artikelen zijn komen te vervallen.
+In de [release notes](./welkom/release_notes.md) is per artikel aangegeven wat deze wijzigingen zijn. Hierin is ook aangegeven welke artikelen zijn komen te vervallen.
 
 ## 4. Navigatietips
 
@@ -70,8 +71,6 @@ In de [release notes](https://wlz.atlassian.net/wiki/spaces/IWLZAS/overview#5.-R
 * **Links openen**  
   Wanneer je een link in een nieuw tabblad wilt openen, houd dan de CTRL-toets (Windows) of Command-toets (macOS) ingedrukt terwijl je op de link klikt.
   
-
-
 
 ## 5. Colofon
 
