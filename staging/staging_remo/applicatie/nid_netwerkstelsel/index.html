@@ -2872,7 +2872,11 @@
 </li>
 </ul>
 <p>De bovenstaande onderdelen en netwerkservices van het nID netwerkstelsel worden in onderstaande paragrafen toegelicht. Hieronder volgt eerst een totaaloverzicht om de relaties tussen de verschillende onderdelen weer te geven.</p>
-<pre class="mermaid-zoom"><code>
+<pre class="mermaid-zoom"><code>---
+config:
+  theme: forest
+---
+
 flowchart TD
 
     AuthServer["Autorisatieserver"]
@@ -2906,9 +2910,8 @@ flowchart TD
 
     PAP --&gt;|Beleidsregels beheren| PRP
 </code></pre>
-<blockquote>
-<p><em>Afbeelding: Algeheel overzicht relaties</em></p>
-</blockquote>
+<figcaption>Figuur 1 - Overzicht onderdelen nID netwerkstelsel</figcaption>
+
 <h2 id="2-deelnemers">2. Deelnemers<a class="headerlink" href="#2-deelnemers" title="Permanent link">¶</a></h2>
 <p>Om als deelnemer deel te nemen aan het nID netwerkstelsel, is het belangrijk te begrijpen dat toegang en gegevensuitwisseling binnen het stelsel streng worden gereguleerd. Dit waarborgt de beveiliging en naleving van beleidsregels, terwijl het tegelijkertijd een flexibele en efficiënte samenwerking tussen verschillende partijen mogelijk maakt.</p>
 <p>Elke deelnemer speelt een rol binnen het federatieve stelsel en moet aan specifieke vereisten voldoen om toegang te krijgen tot registers en andere middelen. Deze vereisten zijn ontworpen om:</p>
@@ -2921,15 +2924,19 @@ flowchart TD
 <h3 id="21-uitgangspunten-om-deel-te-kunnen-nemen-aan-het-nid-netwerkstelsel">2.1. Uitgangspunten om deel te kunnen nemen aan het nID netwerkstelsel<a class="headerlink" href="#21-uitgangspunten-om-deel-te-kunnen-nemen-aan-het-nid-netwerkstelsel" title="Permanent link">¶</a></h3>
 <p>Hieronder zijn de uitgangspunten om deel te kunnen nemen aan het nID netwerkstelsel verwoord.</p>
 <ul>
-<li>Elke deelnemer in het iWlz-netwerkmodel heeft een attest van deelname nodig. Momenteel wordt dit via VECOZO verzorgd tijdens de <a href="https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071441">onboarding</a>.</li>
+<li>Elke deelnemer in het iWlz-netwerkmodel heeft een attest van deelname nodig. Momenteel wordt dit via VECOZO verzorgd tijdens de <a href="../diensten/toetreden/">Toetreding</a>.</li>
 <li>Elke deelnemer heeft een authenticatiemiddel van een vertrouwde uitgever. Waar momenteel een VECOZO systeemcertificaat wordt gebruikt, kan t.z.t. ook PKIOverheid worden vertrouwd of het gebruik van DiD en Verifiable Credentials mogelijk zijn.</li>
-<li>Elke deelnemer moet zijn endpoints registreren in het Adresboek, dit geldt voor de endpoints van de autorisatieserver, PEP en de resourceserver. Op dit moment is het Adresboek nog niet gerealiseerd, endpoints worden nu in een aparte lijst bijgehouden. <a href="https://github.com/iStandaarden/iWlz-adresboek-public">Link tijdelijk Adresboek</a>.</li>
+<li>Elke deelnemer moet zijn endpoints registreren in het Adresboek, dit geldt voor de endpoints van de autorisatieserver, PEP en de resourceserver. Op dit moment is het Adresboek nog niet gerealiseerd, endpoints worden nu in een aparte lijst bijgehouden. <a href="https://github.com/iStandaarden/iWlz-adresboek-public">Tijdelijk Adresboek</a>.</li>
 </ul>
 <h2 id="3-autoriseren">3. Autoriseren<a class="headerlink" href="#3-autoriseren" title="Permanent link">¶</a></h2>
 <p>Voor het uitvoeren van alle activiteiten in het iWlz-netwerkmodel zijn autorisaties noodzakelijk. Voorbeelden van activiteiten zijn: lezen, schrijven, aanpassen en verwijderen van data uit registers. Daarnaast zijn er ook autorisaties nodig voor het mogen versturen van notificaties en meldingen. Deze autorisaties kunnen worden aangevraagd bij de autorisatieserver. Voor het aanvragen van een autorisatie heeft een deelnemer een authenticatiemiddel nodig van een vertrouwde uitgever.</p>
 <h3 id="31-schematische-weergave-aanvragen-van-autorisatie">3.1. Schematische weergave aanvragen van autorisatie<a class="headerlink" href="#31-schematische-weergave-aanvragen-van-autorisatie" title="Permanent link">¶</a></h3>
 <p>In het onderstaande schema wordt de basis uitgelegd voor het aanvragen van autorisatie en hoe vervolgens een raadpleging (GraphQL request) verloopt.</p>
-<pre class="mermaid-zoom"><code>sequenceDiagram
+<pre class="mermaid-zoom"><code>---
+config:
+  theme: forest
+---
+sequenceDiagram
     autonumber
     actor Client as Deelnemer (Client)
     participant AuthzServer as Autorisatieserver
@@ -3238,7 +3245,11 @@ Indien de autorisatieserver de scope van de aanvraag goedkeurt, zal de “scope�
 </ol>
 <h3 id="42-procesflow-interactie-met-een-datatoegangspunt">4.2. Procesflow interactie met een datatoegangspunt<a class="headerlink" href="#42-procesflow-interactie-met-een-datatoegangspunt" title="Permanent link">¶</a></h3>
 <p>Hier is een diagram dat de interactie met een datatoegangspunt schematisch weergeeft:</p>
-<pre class="mermaid-zoom"><code>sequenceDiagram
+<pre class="mermaid-zoom"><code>---
+config:
+  theme: forest
+---
+sequenceDiagram
     autonumber
     box lightgrey Deelnemer
     actor Client
@@ -3300,7 +3311,11 @@ Indien de autorisatieserver de scope van de aanvraag goedkeurt, zal de “scope�
 <p>Het huidige endpoint dat wordt aangesproken is de resource-server. Hier wordt een reeks validatiestappen doorlopen om de veiligheid, integriteit en naleving van beleidsregels te waarborgen voordat een verzoek wordt afgehandeld. Deze validatiestappen zijn nodig om ervoor te zorgen dat alleen geautoriseerde verzoeken toegang krijgen tot de gevraagde gegevens.</p>
 <h3 id="52-procesflow-interactie-met-de-pep">5.2 Procesflow interactie met de PEP<a class="headerlink" href="#52-procesflow-interactie-met-de-pep" title="Permanent link">¶</a></h3>
 <p>Hier is een diagram dat de interactie met een PEP schematisch weergeeft:</p>
-<pre class="mermaid-zoom"><code>sequenceDiagram
+<pre class="mermaid-zoom"><code>---
+config:
+  theme: forest
+---
+sequenceDiagram
     autonumber
     box lightgrey Deelnemer
     participant Client
@@ -3449,7 +3464,11 @@ Indien de autorisatieserver de scope van de aanvraag goedkeurt, zal de “scope�
 <h2 id="6-policy-decision-point-pdp">6. Policy Decision Point (PDP)<a class="headerlink" href="#6-policy-decision-point-pdp" title="Permanent link">¶</a></h2>
 <p>Het Policy Decision Point (PDP) speelt een centrale rol in de toegangscontrole. Het PDP is verantwoordelijk voor het nemen van toegangsbeslissingen op basis van beleidsregels (policies) en analyseert toegangsverzoeken die worden ingediend met een GraphQL-query.</p>
 <p>Hieronder een diagram dat de interactie tussen het PDP en andere componenten schetst:</p>
-<pre class="mermaid-zoom"><code>sequenceDiagram
+<pre class="mermaid-zoom"><code>---
+config:
+  theme: forest
+---
+sequenceDiagram
     autonumber
     box lightgrey nID
     participant PEP as Policy Enforcement Point&lt;br/&gt;(PEP)
@@ -3504,7 +3523,11 @@ Indien de autorisatieserver de scope van de aanvraag goedkeurt, zal de “scope�
 <p>Het Policy Retrieval Point (PRP) speelt een cruciale rol in het beheer en de levering van beleidsregels (policies) binnen het nID-netwerkstelsel. Als centrale opslagplaats zorgt het PRP ervoor dat beleidsregels consistent worden opgeslagen, beheerd en toegankelijk zijn voor andere onderdelen, zoals het Policy Decision Point (PDP). Deze centrale aanpak waarborgt dat alle toegangsbeslissingen gebaseerd zijn op dezelfde regels, waardoor consistentie in toegangscontrole wordt gegarandeerd.</p>
 <p>Daarnaast biedt het PRP transparantie door gebruik te maken van een versiebeheersysteem, zoals GitHub, waarmee alle wijzigingen in beleidsregels inzichtelijk en traceerbaar zijn. Dit maakt het eenvoudig om beleidsregels te beheren, bij te werken en wijzigingen consistent door te voeren in het hele netwerk, wat de beheerbaarheid aanzienlijk vergroot.</p>
 <p>Procesflow PRP</p>
-<pre class="mermaid-zoom"><code>sequenceDiagram
+<pre class="mermaid-zoom"><code>---
+config:
+  theme: forest
+---
+sequenceDiagram
     autonumber
     actor Client as Deelnemer (Client)
     box lightgrey nID
@@ -3583,7 +3606,11 @@ Indien de autorisatieserver de scope van de aanvraag goedkeurt, zal de “scope�
 <h2 id="8-policy-administration-point-pap">8. Policy Administration Point (PAP)<a class="headerlink" href="#8-policy-administration-point-pap" title="Permanent link">¶</a></h2>
 <p>Het Policy Administration Point (PAP) is verantwoordelijk voor het beheren en onderhouden van beleidsregels (policies) binnen het nID-netwerk. Het PAP biedt een interface voor het creëren, aanpassen, en verwijderen van beleidsregels, en zorgt ervoor dat deze regels consistent beschikbaar zijn voor andere componenten zoals het Policy Retrieval Point (PRP) en het Policy Decision Point (PDP). Een GitHub repository in de VECOZO-organisatie dient momenteel als PAP voor de policies van nID-netwerkstelsel.</p>
 <p>Het proces van het PAP bestaat uit een reeks stappen die zorgen voor een gestructureerd beheer en veilige implementatie van beleidsregels. Hieronder wordt de procesflow beschreven.</p>
-<p></p><pre class="mermaid-zoom"><code>sequenceDiagram
+<p></p><pre class="mermaid-zoom"><code>---
+config:
+  theme: forest
+---
+sequenceDiagram
     autonumber
     actor Admin as Beheerder
     participant PAP as Policy Administration Point&lt;br/&gt;(PAP)
@@ -3654,7 +3681,11 @@ Procesflow van het PAP<p></p>
 <p>Het PIP kan worden gekoppeld aan externe systemen, zoals registers of databases, om real-time informatie op te halen.</p>
 <p>Met deze combinatie van flexibiliteit, real-time capaciteiten en schaalbaarheid vormt het PIP een onmisbare schakel in het toegangscontroleproces.</p>
 <p>Procesflow PIP</p>
-<pre class="mermaid-zoom"><code>sequenceDiagram
+<pre class="mermaid-zoom"><code>---
+config:
+  theme: forest
+---
+sequenceDiagram
     autonumber
     box lightgrey nID
     participant PEP as Policy Enforcement Point&lt;br/&gt;(PEP)
@@ -3730,7 +3761,10 @@ Procesflow van het PAP<p></p>
 <p><strong>NB 2: Inhoud Error Responses</strong></p>
 <p>Het overzicht geeft de mogelijke HTTP Error responses vanuit voornamelijk de PEP. Dezelfde fouten kunnen ook voorkomen bij de Resource-server. Een onderscheid in afzender moet mogelijk zijn. In een volgende update zal er afzenderinformatie in de message-body moeten worden toegevoegd.</p>
 </blockquote>
-<pre class="mermaid-zoom"><code>
+<pre class="mermaid-zoom"><code>---
+config:
+  theme: forest
+---
 sequenceDiagram
     Box lightgrey Deelnemer 
     participant Client as Client
@@ -3768,7 +3802,11 @@ sequenceDiagram
     ResourceServer--&gt;&gt;PEP: [007] 200 Response (GraphQL)
     PEP--&gt;&gt;Client: [008] 200 Response (GraphQL)</code></pre>
 <h3 id="101-foutmeldingen-aanvraag-van-autorisatie">10.1 Foutmeldingen Aanvraag van Autorisatie<a class="headerlink" href="#101-foutmeldingen-aanvraag-van-autorisatie" title="Permanent link">¶</a></h3>
-<pre class="mermaid-zoom"><code>sequenceDiagram
+<pre class="mermaid-zoom"><code>---
+config:
+  theme: forest
+---
+sequenceDiagram
     Box lightgrey Deelnemer 
     participant Client as Client
     end
@@ -3853,7 +3891,10 @@ Een onjuist endpoint van de autorisatieserver is gebruikt. Controleer of het cor
 Een onverwachte fout is opgetreden op de autorisatieserver. Probeer het later opnieuw of volg het incidentbeheerproces indien nodig.</li>
 </ul>
 <h3 id="102-foutmeldingen-pep-endpoint-bij-graphql-request">10.2 Foutmeldingen PEP endpoint bij GraphQL request<a class="headerlink" href="#102-foutmeldingen-pep-endpoint-bij-graphql-request" title="Permanent link">¶</a></h3>
-<pre class="mermaid-zoom"><code>
+<pre class="mermaid-zoom"><code>---
+config:
+  theme: forest
+---
 sequenceDiagram
     Box lightgrey Deelnemer 
     participant Client as Client
@@ -3970,7 +4011,6 @@ De server kreeg een ongeldige reactie van een upstream-server. Controleer de ser
 <li><strong>Details</strong>:
 De server reageerde niet binnen de verwachte tijd. Controleer de serververbindingen of probeer het later opnieuw.</li>
 </ul>
-<hr>
 
 
 

@@ -2507,14 +2507,14 @@
 <h3 id="12-scope-artikel-graphql-over-http">1.2 Scope artikel: GraphQL over HTTP<a class="headerlink" href="#12-scope-artikel-graphql-over-http" title="Permanent link">¶</a></h3>
 <p>Er zijn drie soorten GraphQL verkeer binnen het iWlz netwerk</p>
 <ol>
-<li>GraphQL request voor het <a href="https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071274"><em><strong>raadplegen</strong></em></a> van informatie bij een register.</li>
-<li>GraphQL request voor het <a href="https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071204/Notificeren+en+Melden#3.-Notificaties"><em><strong>notificeren</strong></em></a> van een deelnemer door een bronhouder.</li>
-<li>GraphQL request voor het <a href="https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071204/Notificeren+en+Melden#4.-Meldingen"><em><strong>(fout)melden</strong></em></a> door een deelnemer aan een bronhouder.</li>
+<li>GraphQL request voor het <a href="../diensten/raadplegen/"><em><strong>raadplegen</strong></em></a> van informatie bij een register.</li>
+<li>GraphQL request voor het <a href="../diensten/notificeren-en-melden/#3-notificaties"><em><strong>notificeren</strong></em></a> van een deelnemer door een bronhouder.</li>
+<li>GraphQL request voor het <a href="../diensten/notificeren-en-melden/#4-meldingen"><em><strong>(fout)melden</strong></em></a> door een deelnemer aan een bronhouder.</li>
 </ol>
-<p>Voor al het verkeer in het iWlz netwerk vormt het <a href="https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537">nID netwerkstelsel</a> de centrale voorziening voor het controleren van de toegang tot iWlz registers. Daarin komen vier validatiemomenten voor:</p>
-<pre class="mermaid-zoom"><code>---
+<p>Voor al het verkeer in het iWlz netwerk vormt het <a href="../nid_netwerkstelsel/">nID netwerkstelsel</a> de centrale voorziening voor het controleren van de toegang tot iWlz registers. Daarin komen vier validatiemomenten voor:</p>
+<p></p><pre class="mermaid-zoom"><code>---
 config:
-  theme: default
+  theme: forest
 ---
 sequenceDiagram
 autonumber
@@ -2566,6 +2566,7 @@ autonumber
     deactivate PEP
   deactivate Deelnemer
 </code></pre>
+Figuur 1 - Sequentiediagram GraphQL flow over de nID onderdelen<p></p>
 <table>
 <thead>
 <tr>
@@ -2733,10 +2734,10 @@ autonumber
 </span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="3-graphql-request">3. GraphQL request<a class="headerlink" href="#3-graphql-request" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>⚠️
-De <code>Content-Type</code> header van het <strong>GraphQL verzoek</strong> moet (vrijwel) altijd <code>application/json</code> zijn.</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>De <code>Content-Type</code> header van het <strong>GraphQL verzoek</strong> moet (vrijwel) altijd <code>application/json</code> zijn.</p>
+</div>
 <ul>
 <li>Een verzoek moet worden verstuurd als HTTP-Post en een server moet deze accepteren.</li>
 </ul>

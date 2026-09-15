@@ -2845,7 +2845,11 @@
 <h2 id="2-generieke-basis-notificeren-en-melden">2. Generieke basis Notificeren en Melden<a class="headerlink" href="#2-generieke-basis-notificeren-en-melden" title="Permanent link">¶</a></h2>
 <p>De basis voor een <strong>notificatie</strong> of een <strong>melding</strong> is gelijk. Alleen op inhoud zijn er verschillen om duidelijk te maken met welke soort bericht er sprake is.</p>
 <h3 id="21-notificeren-en-melden-wat-is-het-verschil">2.1 Notificeren en melden, wat is het verschil?<a class="headerlink" href="#21-notificeren-en-melden-wat-is-het-verschil" title="Permanent link">¶</a></h3>
-<pre class="mermaid-zoom"><code>sequenceDiagram
+<p></p><pre class="mermaid-zoom"><code>---
+  config:
+    theme: forest
+---
+sequenceDiagram
     autonumber
 
     box LightBlue bronhouder
@@ -2876,6 +2880,7 @@
         deactivate dbs
     end
 </code></pre>
+Figuur 1 - Verschil tussen Notificeren en Melden<p></p>
 <table>
 <thead>
 <tr>
@@ -2919,7 +2924,11 @@
 </ul>
 <p>Daarnaast moet de autorisatievoorziening voldoende informatie hebben om te kunnen bepalen dat de notificatie (type) door verzender mag worden verstuurd. Bijvoorbeeld: Notificatietype mag verzonden worden door verzender en stuurt naar juiste type ontvanger.</p>
 <p>De structuur voor een notificatie of melding is uit de volgende elementen opgebouwd:</p>
-<pre class="mermaid-zoom"><code>classDiagram
+<p></p><pre class="mermaid-zoom"><code>---
+    config:
+        theme: forest
+---
+classDiagram
 
 class notificatie_melding {
     +Datetime timestamp
@@ -2938,6 +2947,7 @@ class SubjectList {
 
 notificatie_melding "1" --&gt; "1..*" SubjectList : contains
 </code></pre>
+Figuur 2 - Klassediagram generieke inhoud  <p></p>
 <table>
 <thead>
 <tr>
@@ -3082,8 +3092,12 @@ notificatie_melding "1" --&gt; "1..*" SubjectList : contains
 <p>De responses van deze GraphQL-operaties bieden een gestandaardiseerde manier om de uitkomst van het verzoek te communiceren. Ze bevatten zowel statusinformatie als foutmeldingen, die essentieel zijn voor het begrijpen en diagnosticeren van het notificatieproces. Dit maakt het mogelijk om problemen in de keten snel te identificeren en te verhelpen.</p>
 <p>De response codes zijn gebaseerd op gestandaardiseerde HTTP-statuscodes, uitgebreid met specifieke foutberichten en contextuele informatie om de aard van de uitkomst of fout te verduidelijken. Zowel technische als functionele foutscenario's worden behandeld, zodat ontwikkelaars en beheerders een volledig inzicht krijgen in de verwerking van notificaties.</p>
 <p>Hieronder wordt een tabel weergegeven met de mogelijke response codes, foutberichten en oorzaken die kunnen optreden bij de uitvoering van de GraphQL-verzoeken <code>zendMelding</code> en <code>zendNotificatie</code>. Deze tabel dient als leidraad voor een correcte interpretatie van de responses en het oplossen van eventuele problemen.</p>
-<p>De hieronder beschreven foutcodes ontstaan bij het valideren van de ingezonden GraphQL in nID, onderdeel PDP (zie artikel <a href="../nid_netwerkstelsel">nID netwerkstelsel</a>).</p>
-<pre class="mermaid-zoom"><code>sequenceDiagram
+<p>De hieronder beschreven foutcodes ontstaan bij het valideren van de ingezonden GraphQL in nID, onderdeel PDP (zie artikel <a href="../../nid_netwerkstelsel/">nID netwerkstelsel</a>).</p>
+<p></p><pre class="mermaid-zoom"><code>---
+    config:
+        theme: forest
+---
+sequenceDiagram
     box Verzender
         participant Resource
     end
@@ -3140,6 +3154,7 @@ notificatie_melding "1" --&gt; "1..*" SubjectList : contains
 
     Resource-&gt;&gt;Resource: verwerk GraphQL 200 response
     deactivate Resource</code></pre>
+Figuur 3 - Sequentiediagram<p></p>
 <table>
 <thead>
 <tr>
@@ -3230,8 +3245,12 @@ notificatie_melding "1" --&gt; "1..*" SubjectList : contains
 </tbody>
 </table>
 <h3 id="35-sequentiediagram-notificeren">3.5 Sequentiediagram notificeren<a class="headerlink" href="#35-sequentiediagram-notificeren" title="Permanent link">¶</a></h3>
-<p>De flow beschrijft alleen het notificeren zelf. Voor het notificeren is autorisatie nodig. Het aanvragen van autorisatie en de daar bijhorende flow is beschreven in artikel <a href="../nid_netwerkstelsel">nID netwerkstelsel</a>.</p>
-<pre class="mermaid-zoom"><code>sequenceDiagram
+<p>De flow beschrijft alleen het notificeren zelf. Voor het notificeren is autorisatie nodig. Het aanvragen van autorisatie en de daar bijhorende flow is beschreven in artikel <a href="../../nid_netwerkstelsel/">nID netwerkstelsel</a>.</p>
+<p></p><pre class="mermaid-zoom"><code>---
+    config:
+        theme: forest
+---
+sequenceDiagram
     box bronhouder
         participant Resource
         participant Register as Register-data
@@ -3290,6 +3309,7 @@ notificatie_melding "1" --&gt; "1..*" SubjectList : contains
     Resource-&gt;&gt;Resource: [08] verwerk GraphQL 200 response
     deactivate Resource
 </code></pre>
+Figuur 4 - Sequentiediagram Notificeren<p></p>
 <table>
 <thead>
 <tr>
@@ -3566,8 +3586,12 @@ notificatie_melding "1" --&gt; "1..*" SubjectList : contains
 </tbody>
 </table>
 <h3 id="45-sequentiediagram-melden">4.5 Sequentiediagram melden<a class="headerlink" href="#45-sequentiediagram-melden" title="Permanent link">¶</a></h3>
-<p>De hier beschreven flow beschrijft alleen het melden. Voor het melden is autorisatie nodig. Het aanvragen van autorisatie en de bijbehorende flow is beschreven in artikel <a href="../nid_netwerkstelsel">nID netwerkstelsel</a>).</p>
-<pre class="mermaid-zoom"><code>sequenceDiagram
+<p>De hier beschreven flow beschrijft alleen het melden. Voor het melden is autorisatie nodig. Het aanvragen van autorisatie en de bijbehorende flow is beschreven in artikel <a href="../../nid_netwerkstelsel/">nID netwerkstelsel</a>).</p>
+<p></p><pre class="mermaid-zoom"><code>---
+    config:
+        theme: forest
+---
+sequenceDiagram
     box deelnemer
         participant Resource
     end
@@ -3621,6 +3645,7 @@ notificatie_melding "1" --&gt; "1..*" SubjectList : contains
 
     Resource-&gt;&gt;Resource: [08] verwerk GraphQL 200 response
     deactivate Resource</code></pre>
+Figuur 5 - Sequentiediagram Melden<p></p>
 <table>
 <thead>
 <tr>
