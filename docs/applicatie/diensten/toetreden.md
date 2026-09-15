@@ -1,3 +1,5 @@
+# Toetreden
+
 ## 1. Inleiding
 
 Dit artikel beschrijft de dienst toetreden, bestaande uit twee onderdelen:
@@ -62,4 +64,4 @@ Meer informatie is te vinden op de website van VECOZO:
 - [https://www.vecozo.nl/support/aanmelden-wijzigen/](https://www.vecozo.nl/support/aanmelden-wijzigen/) onderdeel Toestemmingsverklaringen
 - [https://www.vecozo.nl/support/aanmelden-wijzigen/toestemmingsverklaringen/hoe-stel-ik-een-toestemmingsverklaring-in/](https://www.vecozo.nl/support/aanmelden-wijzigen/toestemmingsverklaringen/hoe-stel-ik-een-toestemmingsverklaring-in/)
 
----
+

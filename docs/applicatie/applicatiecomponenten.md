@@ -1,7 +1,5 @@
 # Applicatiecomponenten
 
-
-
 ## 1. Inleiding
 
 In dit artikel worden de applicatiecomponenten in het iWlz-netwerkmodel beschreven. Hiermee wordt concreet gemaakt welke generieke afspraken voor de applicatiecomponenten in het iWlz-netwerkmodel van toepassing zijn.
@@ -49,7 +47,7 @@ De systeemrollen zijn gegroepeerd in de volgende bouwstenen:
  In het onderstaande figuur zijn de registers, bouwstenen en systeemrollen schematisch weergegeven.
 
 ![Overzicht bouwstenen en systeemrollen](../img/applicatiecomponenten-Overzicht_bouwstenen_en_systeemrollen.png)
-<figcaption>Afbeelding: Overzicht bouwstenen en systeemrollen</figcaption>
+<figcaption>Figuur 1 - Overzicht bouwstenen en systeemrollen</figcaption>
 
 De functionele uitwerking van deze bouwstenen en systeemrollen is opgenomen in het artikel *Architectuur*. Een gedetailleerde beschrijving van de systeemrollen is opgenomen in het artikel *Rollen en deelnemers*.
 
@@ -67,8 +65,7 @@ Op dit moment is:
 Een deel van de systeemrolleninformatiestelsel.
 
 ![Invulling bouwstenen en systeemrollen in implementatiestappen Indicatie- en bemiddelingsregister](../img/applicatiecomponenten-Invulling-bouwstenen-en-systeemrollen-in-implementatiestappen-Indicatie-en-bemiddelingsregister.png)
-> *Afbeelding: Invulling bouwstenen en systeemrollen in implementatiestappen Indicatie- en bemiddelingsregister*
-
+Figuur 2 - Invulling bouwstenen en systeemrollen in implementatiestappen Indicatie- en bemiddelingsregister
 
 ## 3. De applicatiecomponenten
 
@@ -77,7 +74,8 @@ Het technisch realiseren van de verantwoordelijkheden van een systeemrol vindt p
 Hieronder wordt weergegeven welke applicatiecomponenten nodig zijn. Toekomstige invullingen van functies zoals de Lokalisatievoorziening en het Adresboek worden wel genoemd maar niet nader uitgewerkt.
 
 ![Overzicht applicatiecomponenten](../img/applicatiecomponenten-Overzicht-applicatiecomponenten.png)
-> *Afbeelding: Overzicht applicatiecomponenten*
+
+Figuur 3 - Overzicht applicatiecomponenten
 
 ### 3.1 Applicatiecomponenten per systeemrol
 
@@ -116,7 +114,8 @@ nID handelt zowel aan de zijde van de afnemer als aan de zijde van de bronhouder
 Voor de realisatie van het Zorgleveringsregister wordt gewerkt aan interoperabiliteit tussen **NUTS** en **nID**.
 
 ![Overzicht applicatiecomponenten en nID-inrichting](../img/applicatiecomponenten-Overzicht-applicatiecomponenten-en-nID-inrichting.png)
-> *Afbeelding: Overzicht applicatiecomponenten en nID-inrichting*
+
+Figuur 4 - Overzicht applicatiecomponenten en nID-inrichting
 
 
 
@@ -157,7 +156,8 @@ Deelnemers kunnen voor de invulling van hun datastation gebruikmaken van één o
 De deelnemers wisselen via hun datastations gegevens met elkaar uit. De datastations communiceren veilig en betrouwbaar via internet.
 
 ![Samenwerking tussen iWlz-datastations](../img/applicatiecomponenten-Samenwerking-tussen-iWlz-datastations.png)
-> *Afbeelding: Samenwerking tussen iWlz-datastations*
+
+Figuur 5 - Samenwerking tussen iWlz-datastations
 
 Een dienst voor de invulling van een datastation wordt ook wel:
 
@@ -167,7 +167,8 @@ Een dienst voor de invulling van een datastation wordt ook wel:
 De koppeling tussen een iWlz-datastation en het bron- of doelsysteem valt buiten de standaardisatie van het afsprakenstelsel en kan tussen deelnemer en leverancier worden afgestemd.
 
 ![Verschillende dienstverleners voor iWlz-datastations](../img/applicatiecomponenten-Verschillende-dienstverleners-vooriWlz-datastations.png)
-> *Afbeelding: Verschillende dienstverleners voor iWlz-datastations*
+
+Figuur 6 - Verschillende dienstverleners voor iWlz-datastations
 
 ### 5.1 Huidige situatie
 
@@ -189,4 +190,5 @@ Bij de realisatie van het Zorgleveringsregister hebben zorgaanbieders de volledi
 De verwachte situatie gaat ervan uit dat een deel van de zorgaanbieders via **NUTS** en hun **ECD-leverancier** aansluit.
 
 ![Verwachte situatie met dienstverleners](../img/applicatiecomponenten-Verwachte-situatie-met-dienstverleners.png)
-> *Afbeelding: Verwachte situatie met dienstverleners*
+
+Figuur 7 - Verwachte situatie met dienstverleners

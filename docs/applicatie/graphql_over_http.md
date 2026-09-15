@@ -18,18 +18,18 @@ Dit artikel beschrijft de wijze waarop binnen het iWlz-netwerkmodel wordt gereag
 
 Er zijn drie soorten GraphQL verkeer binnen het iWlz netwerk
 
-1. GraphQL request voor het [_**raadplegen**_](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071274) van informatie bij een register.
-2. GraphQL request voor het [_**notificeren**_](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071204/Notificeren+en+Melden#3.-Notificaties) van een deelnemer door een bronhouder.
-3. GraphQL request voor het [_**(fout)melden**_](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071204/Notificeren+en+Melden#4.-Meldingen) door een deelnemer aan een bronhouder.
+1. GraphQL request voor het [_**raadplegen**_](../applicatie/diensten/raadplegen.md) van informatie bij een register.
+2. GraphQL request voor het [_**notificeren**_](../applicatie/diensten/notificeren-en-melden.md#3-notificaties) van een deelnemer door een bronhouder.
+3. GraphQL request voor het [_**(fout)melden**_](../applicatie/diensten/notificeren-en-melden.md#4-meldingen) door een deelnemer aan een bronhouder.
 
-Voor al het verkeer in het iWlz netwerk vormt het [nID netwerkstelsel](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537) de centrale voorziening voor het controleren van de toegang tot iWlz registers. Daarin komen vier validatiemomenten voor:
+Voor al het verkeer in het iWlz netwerk vormt het [nID netwerkstelsel](./nid_netwerkstelsel.md) de centrale voorziening voor het controleren van de toegang tot iWlz registers. Daarin komen vier validatiemomenten voor:
 
 
 
 ```mermaid
 ---
 config:
-  theme: default
+  theme: forest
 ---
 sequenceDiagram
 autonumber
@@ -82,6 +82,7 @@ autonumber
   deactivate Deelnemer
 
 ```
+Figuur 1 - Sequentiediagram GraphQL flow over de nID onderdelen
 
 | **Validatiemoment** | **Doel** | **GraphQL controle** | **GraphQL Verwerking** |
 | --- | --- | --- | --- |
@@ -259,8 +260,8 @@ Voorbeeld Body (non-normative):
 
 ## 3. GraphQL request
 
-> ⚠️
-> De `Content-Type` header van het **GraphQL verzoek** moet (vrijwel) altijd `application/json` zijn.
+!!! warning
+    De `Content-Type` header van het **GraphQL verzoek** moet (vrijwel) altijd `application/json` zijn.
 
 - Een verzoek moet worden verstuurd als HTTP-Post en een server moet deze accepteren.
 

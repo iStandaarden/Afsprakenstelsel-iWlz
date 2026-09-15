@@ -22,6 +22,10 @@ Het nID netwerkstelsel is opgebouwd uit de onderstaande onderdelen en netwerkser
 De bovenstaande onderdelen en netwerkservices van het nID netwerkstelsel worden in onderstaande paragrafen toegelicht. Hieronder volgt eerst een totaaloverzicht om de relaties tussen de verschillende onderdelen weer te geven.
 
 ```mermaid
+---
+config:
+  theme: forest
+---
 
 flowchart TD
     
@@ -57,8 +61,7 @@ flowchart TD
     PAP -->|Beleidsregels beheren| PRP
 
 ```
-> *Afbeelding: Algeheel overzicht relaties*
-
+<figcaption>Figuur 1 - Overzicht onderdelen nID netwerkstelsel</figcaption>
 
 
 ## 2. Deelnemers
@@ -77,9 +80,9 @@ Het naleven van deze vereisten is essentieel om een veilige, betrouwbare en comp
 
 Hieronder zijn de uitgangspunten om deel te kunnen nemen aan het nID netwerkstelsel verwoord.
 
-- Elke deelnemer in het iWlz-netwerkmodel heeft een attest van deelname nodig. Momenteel wordt dit via VECOZO verzorgd tijdens de [onboarding](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071441).
+- Elke deelnemer in het iWlz-netwerkmodel heeft een attest van deelname nodig. Momenteel wordt dit via VECOZO verzorgd tijdens de [Toetreding](../applicatie/diensten/toetreden.md).
 - Elke deelnemer heeft een authenticatiemiddel van een vertrouwde uitgever. Waar momenteel een VECOZO systeemcertificaat wordt gebruikt, kan t.z.t. ook PKIOverheid worden vertrouwd of het gebruik van DiD en Verifiable Credentials mogelijk zijn.
-- Elke deelnemer moet zijn endpoints registreren in het Adresboek, dit geldt voor de endpoints van de autorisatieserver, PEP en de resourceserver. Op dit moment is het Adresboek nog niet gerealiseerd, endpoints worden nu in een aparte lijst bijgehouden. [Link tijdelijk Adresboek](https://github.com/iStandaarden/iWlz-adresboek-public).
+- Elke deelnemer moet zijn endpoints registreren in het Adresboek, dit geldt voor de endpoints van de autorisatieserver, PEP en de resourceserver. Op dit moment is het Adresboek nog niet gerealiseerd, endpoints worden nu in een aparte lijst bijgehouden. [Tijdelijk Adresboek](https://github.com/iStandaarden/iWlz-adresboek-public).
 
 ## 3. Autoriseren
 
@@ -91,6 +94,10 @@ In het onderstaande schema wordt de basis uitgelegd voor het aanvragen van autor
 
 
 ```mermaid
+---
+config:
+  theme: forest
+---
 sequenceDiagram
     autonumber
     actor Client as Deelnemer (Client)
@@ -337,6 +344,10 @@ De datatoegangspunten hebben in het algemeen een aantal functies die hieronder w
 Hier is een diagram dat de interactie met een datatoegangspunt schematisch weergeeft:
 
 ```mermaid
+---
+config:
+  theme: forest
+---
 sequenceDiagram
     autonumber
     box lightgrey Deelnemer
@@ -385,6 +396,10 @@ Het huidige endpoint dat wordt aangesproken is de resource-server. Hier wordt ee
 Hier is een diagram dat de interactie met een PEP schematisch weergeeft:
 
 ```mermaid
+---
+config:
+  theme: forest
+---
 sequenceDiagram
     autonumber
     box lightgrey Deelnemer
@@ -486,6 +501,10 @@ Het Policy Decision Point (PDP) speelt een centrale rol in de toegangscontrole. 
 Hieronder een diagram dat de interactie tussen het PDP en andere componenten schetst:
 
 ```mermaid
+---
+config:
+  theme: forest
+---
 sequenceDiagram
     autonumber
     box lightgrey nID
@@ -521,6 +540,10 @@ Daarnaast biedt het PRP transparantie door gebruik te maken van een versiebeheer
 Procesflow PRP
 
 ```mermaid
+---
+config:
+  theme: forest
+---
 sequenceDiagram
     autonumber
     actor Client as Deelnemer (Client)
@@ -581,6 +604,10 @@ Het proces van het PAP bestaat uit een reeks stappen die zorgen voor een gestruc
 
 
 ```mermaid
+---
+config:
+  theme: forest
+---
 sequenceDiagram
     autonumber
     actor Admin as Beheerder
@@ -644,6 +671,10 @@ Met deze combinatie van flexibiliteit, real-time capaciteiten en schaalbaarheid 
 Procesflow PIP
 
 ```mermaid
+---
+config:
+  theme: forest
+---
 sequenceDiagram
     autonumber
     box lightgrey nID
@@ -695,7 +726,10 @@ Let op: foutmeldingen kunnen afhankelijk van de geïmplementeerde client anders 
 
 
 ```mermaid
-
+---
+config:
+  theme: forest
+---
 sequenceDiagram
     Box lightgrey Deelnemer 
     participant Client as Client
@@ -739,6 +773,10 @@ sequenceDiagram
 ### 10.1 Foutmeldingen Aanvraag van Autorisatie
 
 ```mermaid
+---
+config:
+  theme: forest
+---
 sequenceDiagram
     Box lightgrey Deelnemer 
     participant Client as Client
@@ -831,7 +869,10 @@ Een onverwachte fout is opgetreden op de autorisatieserver. Probeer het later op
 
 
 ```mermaid
-
+---
+config:
+  theme: forest
+---
 sequenceDiagram
     Box lightgrey Deelnemer 
     participant Client as Client
@@ -951,4 +992,3 @@ De server kreeg een ongeldige reactie van een upstream-server. Controleer de ser
 - **Details**:
 De server reageerde niet binnen de verwachte tijd. Controleer de serververbindingen of probeer het later opnieuw.
 
----

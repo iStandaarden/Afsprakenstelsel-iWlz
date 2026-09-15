@@ -14,6 +14,10 @@ Het gaat bij het raadplegen van een register om:
 
 
 ```mermaid
+---
+    config:
+        theme: forest
+---
 sequenceDiagram
 
 box Deelnemer
@@ -60,6 +64,8 @@ Client ->> PEP: **[2] - GraphQL Request**\nAuthenticatiemiddel + JWT Access-Toke
     deactivate Client
 ```
 
+Figuur 1 - Sequentiediagram Raadplegen 
+
 Dit artikel gaat over wat er nodig is voor de succesvolle validatie van een raadpleging door de **PDP.**
 
 ## 2. Policy’s en PDP
@@ -76,7 +82,7 @@ De samenhang tussen de policy en de ingediende GraphQL-query luistert zeer nauw 
 
 De GraphQL query-templates beschrijven het template hoe een raadpleger vanuit zijn rol informatie kan raadplegen die is toegestaan voor die raadpleger. Deze templates volgen altijd het GraphQL-schema maar moeten op bepaalde momenten aan vaste patronen voldoen vanwege de geldende autorisatie voor die raadpleger op dat moment. Gaat een raadpleger buiten dit patroon dan zal de query worden afgekeurd en krijgt de raadpleger geen inzicht in de data.
 
-Om een raadpleger te helpen bij het op de juiste wijze en volgorde van uitvoeren van de raadplegingen zijn er per register *Raadpleeg use-cases* opgesteld. Ga hiervoor naar de [Uitwisselprofielen](../../uitwisselprofiel/)Voorvertoning. De use-case bevat de koppeling met een of meer query-templates.
+Om een raadpleger te helpen bij het op de juiste wijze en volgorde van uitvoeren van de raadplegingen zijn er per register *Raadpleeg use-cases* opgesteld. Ga hiervoor naar de [Uitwisselprofielen](../../uitwisselprofiel/index.md). De use-case bevat de koppeling met een of meer query-templates.
 
 ### 3.1 Voorbeeld raadplegen Indicatieregister
 
@@ -139,6 +145,5 @@ query WlzIndicatie(
 
 ### 3.2 Response
 
-De response vanuit de *Resource-server* is beschreven in het artikel: [GraphQL over HTTP](../graphql_over_http)
+De response vanuit de *Resource-server* is beschreven in het artikel: [GraphQL over HTTP](../graphql_over_http.md)
 
-* * *
