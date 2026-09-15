@@ -1,3 +1,4 @@
+# Rollen en deelnemers
 
 ## **1. Inleiding**
 
@@ -5,7 +6,7 @@ Dit artikel geeft inzage in de rollen en verantwoordelijkheden die nodig zijn vo
 
 ## 2. Roltypen
 
-Aansluitend op DIZRA (R01, [Randvoorwaarden](./randvoorwaarden#r01-de-referentiearchitectuur-voor-een-duurzaam-informatiestelsel-voor-de-zorg-dizra)) worden in het Afsprakenstelsel iWlz-netwerkmodel drie verschillende roltypen onderscheiden. Deze roltypen zijn:
+Aansluitend op DIZRA (R01, [Randvoorwaarden](./randvoorwaarden.md#r01-de-referentiearchitectuur-voor-een-duurzaam-informatiestelsel-voor-de-zorg-dizra)) worden in het Afsprakenstelsel iWlz-netwerkmodel drie verschillende roltypen onderscheiden. Deze roltypen zijn:
 
 - [**Besturingsrollen:**](#3-besturingsrollen) de rollen en verantwoordelijkheden voor de besturing van het iWlz-netwerkmodel, hiermee wordt de governance geborgd.
 - [**Organisatorische rollen:**](#4-organisatorische-rollen) de rollen en verantwoordelijkheden voor het organiseren van de samenwerking in het iWlz-proces; hiermee wordt het proces geborgd.
