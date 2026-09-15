@@ -14,7 +14,7 @@ De serviceafspraken beschrijven het niveau van dienstverlening binnen het iWlz-n
 
     Dit artikel beschrijft de algemene serviceafspraken die gelden voor alle deelnemers. 
 
-    [:octicons-arrow-right-24: lees verder](./iwlz-netwerkmodel)
+    [:octicons-arrow-right-24: lees verder](./iwlz_netwerkmodel)
 
 -   :fontawesome-solid-file-signature:{ .lg .middle } __Serviceafspraken Operationeel Netwerkbeheerder__
 
