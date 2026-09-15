@@ -31,7 +31,7 @@ Het iWlz-netwerkmodel is ontwikkeld in lijn met de door het Informatieberaad vas
 > 8. federatief samenwerken
 > 9. open internationale standaarden
 >
-> Deze principes zijn als ontwerpkeuzes uitgewerkt in het artikel [Ontwerpkeuzes](././ontwerpkeuzes).
+> Deze principes zijn als ontwerpkeuzes uitgewerkt in het artikel [Ontwerpkeuzes](./ontwerpkeuzes).
 
 ##### R02 Wet elektronische gegevensuitwisseling in de zorg (Wegiz)
 
