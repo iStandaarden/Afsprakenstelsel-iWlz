@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-inleiding" class="md-skip">
+        <a href="#releasebeleid" class="md-skip">
           Ga naar inhoud
         </a>
       
@@ -1158,6 +1158,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -1199,6 +1201,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2388,6 +2392,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2554,8 +2560,7 @@
   
 
 
-  <h1>Releasebeleid</h1>
-
+<h1 id="releasebeleid">Releasebeleid<a class="headerlink" href="#releasebeleid" title="Permanent link">¶</a></h1>
 <h2 id="1-inleiding">1. Inleiding<a class="headerlink" href="#1-inleiding" title="Permanent link">¶</a></h2>
 <p>De iWlz is een informatiestandaard die onderdeel uitmaakt van de iStandaarden. Zorginstituut Nederland is de bij wet aangewezen beheerder van deze standaarden. De iStandaarden ondersteunen de uitvoering van de Wlz, Wmo en de Jeugdwet.</p>
 <p>Nieuwe releases van de iStandaarden doorlopen verschillende fasen van voorbereiding, uitwerking en invoering, waarbij in elke fase wordt samengewerkt met experts uit het veld. Hiervoor zijn een releasebeleid en een releaseproces opgesteld.</p>
@@ -2603,7 +2608,7 @@ Voorbeeld: op 16 januari 2025 is <code>Indicatieregister 2</code> geïmplementee
 </tr>
 </tbody>
 </table>
-<p>Hoe dit in de praktijk uitwerkt bij opeenvolgende registerreleases wordt toegelicht in <a href="./releasebeleid#25-praktijkvoorbeeld-registerreleases">Releasebeleid_Praktijkvoorbeeld: registerreleases</a>.</p>
+<p>Hoe dit in de praktijk uitwerkt bij opeenvolgende registerreleases wordt toegelicht in <a href="#25-praktijkvoorbeeld-registerreleases">2.5 Praktijkvoorbeeld: registerreleases</a>.</p>
 <h3 id="22-planning-netwerkmodel">2.2 Planning netwerkmodel<a class="headerlink" href="#22-planning-netwerkmodel" title="Permanent link">¶</a></h3>
 <p>Het reguliere releasebeleid volgt in de basis een jaarlijkse cyclus. Daarbij wordt de implementatie van een nieuwe iWlz-release meestal in productie genomen op 1 januari, en ook de publicatie van specificaties kent vaste momenten in het jaar.</p>
 <p>Voor het netwerkmodel geldt een andere werkwijze. Omdat releases zich niet meer toespitsen op de gehele keten maar op één register, kan een meer <em>agile</em> aanpak worden gevolgd. De registereigenaar (bronhouder) en afnemers van het register bepalen samen de inhoud van de release en de planning, inclusief de datum waarop de nieuwe registerversie in de keten leidend wordt.</p>
@@ -2623,7 +2628,7 @@ Voorbeeld: op 16 januari 2025 is <code>Indicatieregister 2</code> geïmplementee
 <p>Voor het netwerkmodel zijn er echter twee belangrijke afwijkingen:</p>
 <ul>
 <li><strong>Releasekalender</strong>: de planning wordt per register afgestemd met bronhouder en afnemers, in plaats van volgens de vaste jaarlijkse cyclus. Hierbij wordt ook bepaald wanneer partijen kunnen aansluiten.</li>
-<li><strong>Overlegvormen</strong>: naast de bestaande structuren worden aanvullende overleggen ingezet (zie <a href="./releasebeleid#23-aanvullende-overlegvormen-netwerkmodel">Releasebeleid_Aanvullende overlegvormen netwerkmodel</a>).</li>
+<li><strong>Overlegvormen</strong>: naast de bestaande structuren worden aanvullende overleggen ingezet (zie <a href="#23-aanvullende-overlegvormen-netwerkmodel">2.3 Aanvullende overlegvormen netwerkmodel</a>).</li>
 </ul>
 <p>De afwijkingen doen zich met name voor in de voorbereidings- en uitwerkingsfase van een release.</p>
 <h3 id="25-praktijkvoorbeeld-registerreleases">2.5 Praktijkvoorbeeld: registerreleases<a class="headerlink" href="#25-praktijkvoorbeeld-registerreleases" title="Permanent link">¶</a></h3>
@@ -2634,8 +2639,8 @@ Voorbeeld: op 16 januari 2025 is <code>Indicatieregister 2</code> geïmplementee
 </ul>
 <p>Zoals in paragraaf 2.2 al is toegelicht, kent het netwerkmodel registerreleases die altijd als <strong>major</strong> worden aangemerkt, terwijl onderdelen binnen een release (zoals koppelvlakken, codelijsten en regelrapporten) afzonderlijk worden geversioneerd.</p>
 <p>Het schema hieronder (zie figuur 1) toont hoe opeenvolgende releases (<em>Register Release 1, 2 en 3</em>) zich tot elkaar verhouden en hoe onderdelen hun versies krijgen.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/Releasebeleid%20-%20Voorbeel%20van%20registerreleases%20en%20versiebeheer.png" data-desc-position="bottom"><img alt="Voorbeel van registerreleases en versiebeheer" src="../img/Releasebeleid%20-%20Voorbeel%20van%20registerreleases%20en%20versiebeheer.png"></a>
-Figuur 1. Voorbeeld van opeenvolgende registerreleases en versiebeheer van onderdelen</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../img/releasebeleid-Voorbeel-van-registerreleases-en-versiebeheer.png" data-desc-position="bottom"><img alt="Voorbeeld van registerreleases en versiebeheer" src="../../img/releasebeleid-Voorbeel-van-registerreleases-en-versiebeheer.png"></a>
+Figuur 1 - Voorbeeld van opeenvolgende registerreleases en versiebeheer van onderdelen</p>
 <h4 id="251-toelichting-bij-het-schema"><strong>2.5.1 Toelichting bij het schema</strong><a class="headerlink" href="#251-toelichting-bij-het-schema" title="Permanent link">¶</a></h4>
 <ul>
 <li>De ontwikkeling start met <em>Register Release 1</em>. Onderdelen worden gebundeld en gepubliceerd als <em>“In Ontwikkeling”</em> versie van <em>Register Release 1</em>.</li>
