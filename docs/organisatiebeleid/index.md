@@ -14,7 +14,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Meer over de randvoorwaarden  en de wijze waarop deze worden ingevuld in het afsprakenstelsel iWlz-netwerkmodel.
 
-    [:octicons-arrow-right-24: lees verder](randvoorwaarden.md)
+    [:octicons-arrow-right-24: lees verder](./randvoorwaarden.md)
 
 -   :octicons-paintbrush-24:{ .lg .middle } __Ontwerpkeuzes__
 
@@ -22,7 +22,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Meer over de ontwerpkeuzes die worden toegepast en de architectuurprincipes vormen waarop het iWlz-netwerkmodel is gebaseerd. 
 
-    [:octicons-arrow-right-24: lees verder](ontwerpkeuzes.md)
+    [:octicons-arrow-right-24: lees verder](./ontwerpkeuzes.md)
 
 -   :material-layers-triple:{ .lg .middle } __Architectuur__
 
@@ -30,7 +30,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Beschrijft op hoofdlijnen de doelarchitectuur die wordt gehanteerd voor de relealisatie van het iWlz-netwerkmodel.
 
-    [:octicons-arrow-right-24: lees verder](architectuur.md)
+    [:octicons-arrow-right-24: lees verder](./architectuur.md)
 
 -   :fontawesome-solid-person-shelter:{ .lg .middle } __Rollen en deelnemers__
 
@@ -38,7 +38,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Meer over de rollen en verantwoordelijkheden die nodig zijn voor het iWlz-netwerkmodel.
 
-    [:octicons-arrow-right-24: lees verder](./serviceafspraken/index.md)
+    [:octicons-arrow-right-24: lees verder](./rollen_deelnemers.md)
 
 -   :material-book-cog-outline:{ .lg .middle } __Serviceafspraken__
 
@@ -46,7 +46,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Beschrijving van het niveau van dienstverlening binnen het iWlz-netwerkmodel en daarbij per doelgroep vastgelegde specifieke afspraken.
 
-    [:octicons-arrow-right-24: lees verder](#)
+    [:octicons-arrow-right-24: lees verder](./serviceafspraken/index.md)
 
 -   :simple-semanticrelease:{ .lg .middle } __Releasebeleid__
 
@@ -54,7 +54,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Meer over hoe het releasebeleid binnen het iWlz-netwerkmodel wordt toegepast. 
 
-    [:octicons-arrow-right-24: lees verder](releasebeleid.md)
+    [:octicons-arrow-right-24: lees verder](./releasebeleid.md)
 
 -   :simple-changedetection:{ .lg .middle } __Wijzigingsverzoeken__
 
@@ -62,6 +62,6 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Hoe bevindingen en wijzigingsverzoeken worden behandeld en wat het onderscheid hierin is. 
 
-    [:octicons-arrow-right-24: lees verder](wijzigingsverzoeken.md)
+    [:octicons-arrow-right-24: lees verder](./wijzigingsverzoeken.md)
 </div>
 
