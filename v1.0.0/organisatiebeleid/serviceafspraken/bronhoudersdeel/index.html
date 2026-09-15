@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-inleiding" class="md-skip">
+        <a href="#serviceafspraken-bronhoudersdeel" class="md-skip">
           Ga naar inhoud
         </a>
       
@@ -971,6 +971,8 @@
       
         
       
+        
+      
     
     
     
@@ -1030,6 +1032,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../iwlz_netwerkmodel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iWlz netwerkmodel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../operationeel_netwerkbeheer/" class="md-nav__link">
         
   
@@ -1063,6 +1093,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -1105,6 +1137,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2480,6 +2514,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2811,8 +2847,7 @@
   
 
 
-  <h1>Bronhoudersdeel</h1>
-
+<h1 id="serviceafspraken-bronhoudersdeel">Serviceafspraken Bronhoudersdeel<a class="headerlink" href="#serviceafspraken-bronhoudersdeel" title="Permanent link">¶</a></h1>
 <h2 id="1-inleiding">1. Inleiding<a class="headerlink" href="#1-inleiding" title="Permanent link">¶</a></h2>
 <p>In dit artikel zijn de serviceafspraken opgenomen die gelden voor <strong>bronhouders</strong> binnen het iWlz-netwerkmodel. Deze afspraken beschrijven de verantwoordelijkheden van bronhouders bij het aanbieden van gegevens via het netwerk en bij het gebruik van de bijbehorende diensten.</p>
 <p>De serviceafspraken in dit deel hebben betrekking op onder meer:</p>
@@ -2824,7 +2859,7 @@
 <li>het uitvoeren van capaciteits-, continuïteits- en configuratiebeheer;</li>
 <li>het uitvoeren van logging en monitoring binnen de eigen organisatie.</li>
 </ul>
-<p>Dit artikel gaat uitsluitend in op de rol van bronhouders. Afspraken over diensten van de <a href="./operationeel_netwerkbeheer">operationeel netwerkbeheerder</a> of verantwoordelijkheden van <a href="./afnemersdeel">afnemers</a> zijn opgenomen in de desbetreffende delen van het afsprakenstelsel. Daarnaast zijn de algemene afspraken over serviceafspraken van toepassing die zijn verwoord in het artikel <a href="./index">serviceafspraken</a>.</p>
+<p>Dit artikel gaat uitsluitend in op de rol van bronhouders. Afspraken over diensten van de <a href="../operationeel_netwerkbeheer/">operationeel netwerkbeheerder</a> of verantwoordelijkheden van <a href="../afnemersdeel/">afnemers</a> zijn opgenomen in de desbetreffende delen van het afsprakenstelsel. Daarnaast zijn de algemene afspraken over serviceafspraken van toepassing die zijn verwoord in het artikel <a href="../iwlz_netwerkmodel/">Serviceafspraken iWlz Netwerkmodel</a>.</p>
 <h2 id="2-algemene-serviceafspraken-bronhouders">2. Algemene serviceafspraken bronhouders<a class="headerlink" href="#2-algemene-serviceafspraken-bronhouders" title="Permanent link">¶</a></h2>
 <h3 id="21-beschikbaar-stellen-testomgeving-door-bronhouders">2.1 Beschikbaar stellen testomgeving door bronhouders<a class="headerlink" href="#21-beschikbaar-stellen-testomgeving-door-bronhouders" title="Permanent link">¶</a></h3>
 <p>Bronhouders stellen een testomgeving beschikbaar voor afnemers ten behoeve van aansluiting op het netwerk en bij wijzigingen in producten of diensten. Daarbij gelden de volgende voorwaarden:</p>
@@ -2835,10 +2870,10 @@
 <li>In de testomgeving is het gebruik van productiedata niet toegestaan. Om te kunnen testen stelt de bronhouder een representatieve testdataset beschikbaar. De stelselbeheerder Zorginstituut publiceert bij nieuwe releases een lijst met fictieve BSN’s voor testdoeleinden.</li>
 <li>Indien de testdataset niet voldoet voor de test die een afnemer wil uitvoeren, dan zal de bronhouder in overleg met de afnemer een specifieke testdata beschikbaar stellen. Dit stemmen de afnemer en bronhouder rechtstreeks met elkaar af. Een bronhouder kan dit verzoek weigeren.</li>
 </ul>
-<blockquote>
-<p>⚠️
-De definitieve specificaties van de testomgevingen en testdata worden bepaald na afronding van het onderzoek naar de testbehoefte van deelnemers.</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>De definitieve specificaties van de testomgevingen en testdata worden bepaald na afronding van het onderzoek naar de testbehoefte van deelnemers.</p>
+</div>
 <h3 id="22-databeschikbaarheid">2.2 Databeschikbaarheid<a class="headerlink" href="#22-databeschikbaarheid" title="Permanent link">¶</a></h3>
 <p>Onder <em>beschikbaarheidstermijn</em> verstaan we de periode waarin gegevens online beschikbaar zijn in het iWlz-netwerk. Deze termijn verschilt van juridische of interne bewaartermijnen (opslag/archief). De beschikbaarheidstermijn wordt per register vastgesteld op basis van functionele noodzaak, valt binnen de rechtmatig toegestane bewaartermijnen en eindigt zodra doel of grondslag vervalt. De termijn mag niet in strijd zijn met een vernietigingsplicht.</p>
 <p>Elke bronhouder is zelf verantwoordelijk voor het naleven van de voor hem geldende bewaartermijnen en beschikbaarheidsvereisten. Een afnemer kan niet verlangen dat bronhouders dezelfde termijnen hanteren, omdat dit zou leiden tot gezamenlijke verwerkingsverantwoordelijkheid, hetgeen niet past binnen de verantwoordelijkheidsverdeling van het iWlz-netwerkmodel.</p>
@@ -2901,7 +2936,8 @@ De definitieve specificaties van de testomgevingen en testdata worden bepaald na
 <li>Op verzoek ondersteunt de servicedesk de operationeel netwerkbeheerder bij het opsporen en oplossen van verstoringen die het bronsysteem raken.</li>
 </ul>
 <h3 id="32-logische-toegangsbeveiliging">3.2 Logische toegangsbeveiliging<a class="headerlink" href="#32-logische-toegangsbeveiliging" title="Permanent link">¶</a></h3>
-<p>Generieke afspraken over logische toegangsbeveiliging zijn opgenomen in <a href="./index#38-logische-toegangsbeveiliging">Serviceafspraken_logische toegangsbeveiliging</a>. Dit deel bevat geen aanvullende afspraken specifiek voor bronhouders.</p>
+<p>Generieke afspraken over logische toegangsbeveiliging zijn opgenomen in <a href="../iwlz_netwerkmodel/#28-logische-toegangsbeveiliging">Serviceafspraken iWlz Netwerkmodel &gt; 2.8 Logische toegangsbeveiliging</a>.  </p>
+<p>Dit deel bevat geen aanvullende afspraken specifiek voor bronhouders.</p>
 <h2 id="4-beheerprocessen-bronhouders">4. Beheerprocessen bronhouders<a class="headerlink" href="#4-beheerprocessen-bronhouders" title="Permanent link">¶</a></h2>
 <h3 id="41-incidentbeheer-bronhouders">4.1 Incidentbeheer bronhouders<a class="headerlink" href="#41-incidentbeheer-bronhouders" title="Permanent link">¶</a></h3>
 <p>Incidenten binnen het iWlz-netwerkmodel kunnen betrekking hebben op verschillende onderdelen:</p>
@@ -2919,7 +2955,7 @@ De definitieve specificaties van de testomgevingen en testdata worden bepaald na
 <p>Hierbij gelden de volgenden procesafspraken:</p>
 <ul>
 <li>Incidenten worden door gebruikers gemeld bij de eerstelijns ondersteuning van de eigen organisatie. Deze eerstelijns ondersteuning doet onderzoek naar het incident en stelt urgentie en impact vast en schakelt indien van toepassing met de servicedesk van andere deelnemers.</li>
-<li>Partijen zijn vrij het eigen incidentbeheerproces in te richten. Hierbij wordt voldaan aan de <a href="./index#35-minimale-openingstijden-servicedesks">minimale openingstijden</a> van de servicedesks die beschreven zijn in het artikel Serviceafspraken.
+<li>Partijen zijn vrij het eigen incidentbeheerproces in te richten. Hierbij wordt voldaan aan de <a href="../iwlz_netwerkmodel/#25-minimale-openingstijden-servicedesks">minimale openingstijden</a> van de servicedesks die beschreven zijn in het artikel Serviceafspraken.
   Incidentmeldingen die aangeleverd worden buiten de openstellingstijden worden zoveel mogelijk opgepakt.</li>
 <li>Een bronhouder maakt na het optreden van een calamiteit (een incident met veel impact) zo snel mogelijk inzichtelijk wat de gevolgen hiervan zijn voor de afnemers en komt met een oplostermijn voor de herstelactiviteiten om de dienstverlening te herstellen.</li>
 <li>Bij een calamiteit verloopt de communicatie primair via de operationeel netwerkbeheerder.
@@ -2967,7 +3003,7 @@ De definitieve specificaties van de testomgevingen en testdata worden bepaald na
 <td style="text-align: left;"><strong>Meetpunt:</strong> ingang bronsysteem/ netwerkpunt.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Onderhoud</strong> wordt uitgevoerd binnen het onderhoudsvenster (zie <a href="./index#37-onderhoudsvenster">Ondersvenster</a>). Aankondiging niet vereist indien binnen venster.</td>
+<td style="text-align: left;"><strong>Onderhoud</strong> wordt uitgevoerd binnen het onderhoudsvenster (zie <a href="../iwlz_netwerkmodel/#27-onderhoudsvenster">Serviceafspraken iWlz Netwerkmodel &gt; 2.7 Onderhoudsvenster</a>). Aankondiging niet vereist indien binnen venster.</td>
 <td style="text-align: left;">N.t.b.</td>
 <td style="text-align: left;">N.t.b.</td>
 <td style="text-align: left;"><strong>Overrun buiten onderhoudsvenster:</strong> Vereist melding aan Operationeel netwerkbeheerder en telt als downtime.</td>
@@ -2980,16 +3016,19 @@ De definitieve specificaties van de testomgevingen en testdata worden bepaald na
 </tr>
 </tbody>
 </table>
-<p>*De berekening van de Beschikbaarheid is gedefinieerd in <a href="./index#311-berekening-beschikbaarheid">Serviceafspraken_Berekening beschikbaarheid</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><sup>*</sup>De berekening van de Beschikbaarheid is gedefinieerd in <a href="../iwlz_netwerkmodel/#211-berekening-beschikbaarheid">Serviceafspraken iWlz Netwerkmodel &gt; 2.11 Berekening beschikbaarheid</a>.</p>
+</div>
 <h3 id="45-configuratiebeheer-bronhouders">4.5 Configuratiebeheer bronhouders<a class="headerlink" href="#45-configuratiebeheer-bronhouders" title="Permanent link">¶</a></h3>
-<p>Generieke afspraken over configuratiebeheer zijn opgenomen in <a href="./index#39-configuratiebeheer">Serviceafspraken_Configuratiebeheer</a>. Er zijn geen aanvullende afspraken specifiek voor bronhouders.</p>
+<p>Generieke afspraken over configuratiebeheer zijn opgenomen in <a href="../iwlz_netwerkmodel/#29-configuratiebeheer">Serviceafspraken iWlz Netwerkmodel &gt; 2.9 Configuratiebeheer</a>. Er zijn geen aanvullende afspraken specifiek voor bronhouders.</p>
 <h3 id="46-logging-monitoring-en-rapportage-bronhouders">4.6 Logging, monitoring en rapportage bronhouders<a class="headerlink" href="#46-logging-monitoring-en-rapportage-bronhouders" title="Permanent link">¶</a></h3>
-<p>Generieke afspraken over logging en monitoring zijn opgenomen in <a href="./index"><em>Serviceafspraken</em></a>. Dit deel bevat geen aanvullende afspraken specifiek voor bronhouders.</p>
+<p>Generieke afspraken over logging en monitoring zijn opgenomen in [<em>Serviceafspraken iWlz Netwerkmodel</em>](./iwlz_netwerkmodel.md. Dit deel bevat geen aanvullende afspraken specifiek voor bronhouders.</p>
 <h3 id="47-kwaliteitsbeheer">4.7 Kwaliteitsbeheer<a class="headerlink" href="#47-kwaliteitsbeheer" title="Permanent link">¶</a></h3>
 <p>De bronhouder is verantwoordelijk voor het bewaken van de kwaliteit van de data en de services die hij aanbiedt.
 De specifieke kwaliteitseisen waaraan de data (zoals uitwisselformaat en actualiteit) en de services (zoals interfaces en responstijden) moeten voldoen, zijn vastgelegd in de uitwisselprofielen van de registers.</p>
 <h3 id="48-escalatie-bij-productie-verstoringen">4.8 Escalatie bij productie verstoringen<a class="headerlink" href="#48-escalatie-bij-productie-verstoringen" title="Permanent link">¶</a></h3>
-<p>Escalatie bij productieverstorende incidenten, problemen of bij het niet naleven van de prestatieafspraken vindt plaats conform <a href="./index#33-geschillen-en-escalatie">Serviceafspraken_Geschillen en escalatie</a></p>
+<p>Escalatie bij productieverstorende incidenten, problemen of bij het niet naleven van de prestatieafspraken vindt plaats conform <a href="../iwlz_netwerkmodel/#23-geschillen-en-escalatie">Serviceafspraken iWlz Netwerkmodel &gt; 2.3 Geschillen en escalatie</a></p>
 <h2 id="5-boetes-en-beperkingen">5. Boetes en beperkingen<a class="headerlink" href="#5-boetes-en-beperkingen" title="Permanent link">¶</a></h2>
 <h3 id="51-boetes">5.1 Boetes<a class="headerlink" href="#51-boetes" title="Permanent link">¶</a></h3>
 <p>De SLA bevat geen boetebepalingen.</p>
