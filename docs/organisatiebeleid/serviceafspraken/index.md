@@ -14,7 +14,7 @@ De serviceafspraken beschrijven het niveau van dienstverlening binnen het iWlz-n
 
     Dit artikel beschrijft de algemene serviceafspraken die gelden voor alle deelnemers. 
 
-    [:octicons-arrow-right-24: lees verder](./iwlz_netwerkmodel)
+    [:octicons-arrow-right-24: lees verder](./iwlz_netwerkmodel.md)
 
 -   :fontawesome-solid-file-signature:{ .lg .middle } __Serviceafspraken Operationeel Netwerkbeheerder__
 
@@ -22,7 +22,7 @@ De serviceafspraken beschrijven het niveau van dienstverlening binnen het iWlz-n
 
     Dit artikel beschrijft de serviceafspraken die gelden voor de rol operationeel netwerkbeheer. De operationeel netwerkbeheerder beheert de operationele werking van het iWlz-netwerkmodel.
 
-    [:octicons-arrow-right-24: lees verder](./operationeel_netwerkbeheer)
+    [:octicons-arrow-right-24: lees verder](./operationeel_netwerkbeheer.md)
 
 -   :fontawesome-solid-file-signature:{ .lg .middle } __Serviceafspraken Bronhouder__
 
@@ -30,7 +30,7 @@ De serviceafspraken beschrijven het niveau van dienstverlening binnen het iWlz-n
 
     Dit artikel beschrijft de serviceafspraken die gelden voor de rol Bronhouder.
 
-    [:octicons-arrow-right-24: lees verder](./bronhoudersdeel)
+    [:octicons-arrow-right-24: lees verder](./bronhoudersdeel.md)
 
 -   :fontawesome-solid-file-signature:{ .lg .middle } __Serviceafspraken Afnemer__
 
@@ -38,6 +38,6 @@ De serviceafspraken beschrijven het niveau van dienstverlening binnen het iWlz-n
 
     Dit artikel beschrijft de serviceafspraken die gelden voor de rol Afnemer.
 
-    [:octicons-arrow-right-24: lees verder](./afnemersdeel)
+    [:octicons-arrow-right-24: lees verder](./afnemersdeel.md)
 
 </div>

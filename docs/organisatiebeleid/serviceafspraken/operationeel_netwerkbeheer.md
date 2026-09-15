@@ -1,4 +1,4 @@
-# Operationeel netwerkbeheerder
+# Serviceafspraken Operationeel netwerkbeheerder
 
 
 ## 1. Inleiding
@@ -8,7 +8,7 @@ Dit artikel beschrijft de serviceafspraken die gelden voor de rol operationeel n
 De Beschikbaarheid, Integriteit, Vertrouwelijkheid (BIV) classificaties in dit artikel hebben betrekking op de generieke functies: identificatie, authenticatie en autorisatie. Deze functies worden in opdracht van de zorgkantoren door VECOZO geleverd.
 
 !!! warning
-    Dit artikel is een informatieve weergave van de serviceafspraken zoals die gelden voor operationeel netwerkbeheer binnen het iWlz-netwerkmodel. De inhoud is afgeleid van formele SLA’s, maar vormt geen 1-op-1 afschrift van ondertekende overeenkomsten. De ondertekende overeenkomsten blijven leidend voor de organisaties (zie ook [Serviceafspraken > 1.2 Positie van de serviceafspraken](../iwlz_netwerkmodel#12-positie-van-de-serviceafspraken)).
+    Dit artikel is een informatieve weergave van de serviceafspraken zoals die gelden voor operationeel netwerkbeheer binnen het iWlz-netwerkmodel. De inhoud is afgeleid van formele SLA’s, maar vormt geen 1-op-1 afschrift van ondertekende overeenkomsten. De ondertekende overeenkomsten blijven leidend voor de organisaties (zie ook [Serviceafspraken > 1.2 Positie van de serviceafspraken](./iwlz_netwerkmodel.md#12-positie-van-de-serviceafspraken)).
 
 ## 2. Servicevenster en contactgegevens
 
@@ -28,7 +28,7 @@ Voor incidenten en vragen kan contact worden opgenomen met de Servicedesk Operat
 | :--- | :--- |
 | **Contactpunt** | Servicedesk Operationeel netwerkbeheer |
 | **E-mail** | [nID\_Algemeen@vecozo.nl](mailto:nID_Algemeen@vecozo.nl) |
-| **Inbreuk in verband met Persoonsgegevens Melding (Datalek)** | 013-46 41 204<br>Dit telefoonnummer is uitsluitend bereikbaar voor het melden van een vermoedelijke constatering van een vermoedelijke Inbreuk in verband met persoonsgegevens. Het gaat hier met name over (vermoedelijke) datalekken zoals in [Scenario 3: fout in logica van het netwerkmodel](../iwlz_netwerkmodel#24-datalekken) beschreven (zie [Serviceafspraken iWlz Netwerkmodel > 2.4 Datalekken - Scenario 3: fout in logica van het netwerkmodel](../iwlz_netwerkmodel#24-datalekken)).<br><br> <u>Binnen openingstijden van de servicedesk</u> wordt dit telefoonnummer doorgeschakeld naar een 3e/2e lijn support medewerker (dus buiten het bestaande keuzemenu van de Servicedesk om). De Melding wordt vervolgens doorgegeven aan de afdeling Informatiebeveiliging.<br><br><u>Buiten openingstijden van de servicedesk</u> wordt dit telefoonnummer doorgeschakeld naar de standby dienst. Deze collega neemt de melding aan en geeft deze vervolgens door aan het MT ter beoordeling/opvolging. |
+| **Inbreuk in verband met Persoonsgegevens Melding (Datalek)** | 013-46 41 204<br>Dit telefoonnummer is uitsluitend bereikbaar voor het melden van een vermoedelijke constatering van een vermoedelijke Inbreuk in verband met persoonsgegevens. Het gaat hier met name over (vermoedelijke) datalekken zoals in [Scenario 3: fout in logica van het netwerkmodel](./iwlz_netwerkmodel.md#24-datalekken) beschreven (zie [Serviceafspraken iWlz Netwerkmodel > 2.4 Datalekken - Scenario 3: fout in logica van het netwerkmodel](./iwlz_netwerkmodel.md#24-datalekken)).<br><br> <u>Binnen openingstijden van de servicedesk</u> wordt dit telefoonnummer doorgeschakeld naar een 3e/2e lijn support medewerker (dus buiten het bestaande keuzemenu van de Servicedesk om). De Melding wordt vervolgens doorgegeven aan de afdeling Informatiebeveiliging.<br><br><u>Buiten openingstijden van de servicedesk</u> wordt dit telefoonnummer doorgeschakeld naar de standby dienst. Deze collega neemt de melding aan en geeft deze vervolgens door aan het MT ter beoordeling/opvolging. |
 
 ## 3. Beschikbaarheid, Integriteit, Vertrouwelijkheid (BIV) generieke functies
 
@@ -47,10 +47,10 @@ Diensten en onderliggende infrastructuur worden 24/7 gemonitord.
 | **Minimaal te realiseren beschikbaarheid** ≥ 99,5 procent per kalendermaand, binnen het dienstverleningsvenster\*. | Monitoring | Maandelijkse servicerapportage | **Meetpunt:** centrale netwerkonderdelen en diensten uitgevoerd door de Operationeel netwerkbeheerder. |
 
 !!! note
-    <sup>*</sup>De berekening van de Beschikbaarheid is gedefinieerd in [Serviceafspraken iWlz Netwerkmodel > 2.11 Berekening beschikbaarheid](../iwlz_netwerkmodel#211-berekening-beschikbaarheid).
+    <sup>*</sup>De berekening van de Beschikbaarheid is gedefinieerd in [Serviceafspraken iWlz Netwerkmodel > 2.11 Berekening beschikbaarheid](./iwlz_netwerkmodel.md#211-berekening-beschikbaarheid).
 
 !!! warning "Uitzondering:" 
-    Gepland onderhoud tijdens het dienstverleningsvenster wordt niet meegenomen in de berekening van niet-beschikbare minuten, zie factor D in de formule [Serviceafspraken iWlz Netwerkmodel > 2.11 Berekening beschikbaarheid](../iwlz_netwerkmodel#211-berekening-beschikbaarheid).
+    Gepland onderhoud tijdens het dienstverleningsvenster wordt niet meegenomen in de berekening van niet-beschikbare minuten, zie factor D in de formule [Serviceafspraken iWlz Netwerkmodel > 2.11 Berekening beschikbaarheid](./iwlz_netwerkmodel.md#211-berekening-beschikbaarheid).
 
 
 ### 3.3 Integriteit
@@ -77,8 +77,8 @@ Voor alle diensten de operationeel netwerkbeheerder aanbiedt geldt het volgende:
 
 Het Onderhoudsvenster stelt VECOZO in staat op vooraf vastgestelde tijdsvensters regulier onderhoud uit te voeren. De dag waarop onderhoud is gepland volgens het standaard onderhoudsvenster kan bestaan uit 2 varianten:
 
-1. Binnen [dienstverleningsvenster](../iwlz_netwerkmodel#26-dienstverleningsvenster): Onderhoud vindt plaats zonder noemenswaardig effect op beschikbaarheid of prestatie van de Dienst of Infrastructuur.
-2. Buiten [dienstverleningsvenster](../iwlz_netwerkmodel#26-dienstverleningsvenster): Onderhoud vindt plaats met een mogelijk effect op beschikbaarheid of prestatie de Dienst of Infrastructuur.
+1. Binnen [dienstverleningsvenster](./iwlz_netwerkmodel.md#26-dienstverleningsvenster): Onderhoud vindt plaats zonder noemenswaardig effect op beschikbaarheid of prestatie van de Dienst of Infrastructuur.
+2. Buiten [dienstverleningsvenster](./iwlz_netwerkmodel.md#26-dienstverleningsvenster): Onderhoud vindt plaats met een mogelijk effect op beschikbaarheid of prestatie de Dienst of Infrastructuur.
 
 VECOZO plant dit onderhoud in overleg met de Technische klankbordgroep. Onderhoud buiten het standaard onderhoudsvenster zal minimaal 3 werkdagen vooraf aangekondigd worden. In uitzonderingsgevallen, bijvoorbeeld naar aanleiding van (security) incidenten of bij een urgente wijziging is sprake van ongepland onderhoud. VECOZO stelt in zo’n geval betrokkenen op de hoogte. Als er voorzien wordt dat er door een wijziging een conflict kan ontstaan met ander gepland onderhoud in het onderhoudsvenster, dan zal VECOZO trachten de wijziging op een ander tijdstip uit te voeren.
 
@@ -160,7 +160,7 @@ Als leidende gedragsregel geldt:
 Indien een probleem niet opgelost kan worden in een lager genoemd echelon, zal de escalatie in een hogergenoemd echelon behandeld worden. Het escaleren kan via deze stappen (hierbij is het uitgangspunt dat de communicatie plaatsvindt op hetzelfde niveau):
 
 - Van medewerker naar teamleider, naar manager, naar directeur.
-- Bij overstijgende netwerkproblemen kan escalatie naar de Stelselbeheerder (Zorginstituut Nederland) plaatsvinden. Zie ook [Serviceafspraken iWlz Netwerkmodel > 2.3 Geschillen en escalatie](../iwlz_netwerkmodel#23-geschillen-en-escalatie).
+- Bij overstijgende netwerkproblemen kan escalatie naar de Stelselbeheerder (Zorginstituut Nederland) plaatsvinden. Zie ook [Serviceafspraken iWlz Netwerkmodel > 2.3 Geschillen en escalatie](./iwlz_netwerkmodel.md#23-geschillen-en-escalatie).
 
 Rapportage van beveiligingsincidenten met een directe impact op één van de Opdrachtgevers en Melding van (potentiële) Inbreuk in verband met Persoonsgegevens (Datalek) zijn uitgewerkt in een afzonderlijke escalatieprocedure binnen de verwerkersovereenkomst die VECOZO afsluit met de verwerkingsverantwoordelijke. Hiervoor gelden andere doorlooptijden en dit valt buiten dit Afsprakenstelsel.
 

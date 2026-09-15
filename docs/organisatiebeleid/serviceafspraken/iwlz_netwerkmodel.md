@@ -9,7 +9,7 @@ De serviceafspraken zijn opgesteld om afspraken vast te leggen over de dienstver
 
 ### 1.2 Positie van de serviceafspraken
 
-De basis voor de iWlz-netwerkmodel serviceafspraken wordt gevormd door wet- en regelgeving, te weten de _Wet langdurige zorg_ (op grond van artikel 9.1.2 lid 7 a t/m d) en de nadere uitwerking in het [_Besluit langdurige zorg_](https://wetten.overheid.nl/BWBR0035948/2022-01-01) en de [_Regeling langdurige zorg_](https://wetten.overheid.nl/BWBR0036014/2022-07-01/). Deze juridische basis is uitgebreider beschreven in de artikelen [Randvoorwaarden](../../randvoorwaarden) [Randvoorwaarden](../randvoorwaarden.md) en [Ontwerpkeuzes](../../ontwerpkeuzes) en wordt hier kort samengevat om de context en relevante verwijzingen direct zichtbaar te maken.
+De basis voor de iWlz-netwerkmodel serviceafspraken wordt gevormd door wet- en regelgeving, te weten de _Wet langdurige zorg_ (op grond van artikel 9.1.2 lid 7 a t/m d) en de nadere uitwerking in het [_Besluit langdurige zorg_](https://wetten.overheid.nl/BWBR0035948/2022-01-01) en de [_Regeling langdurige zorg_](https://wetten.overheid.nl/BWBR0036014/2022-07-01/). Deze juridische basis is uitgebreider beschreven in de artikelen [Randvoorwaarden](../randvoorwaarden.md) en [Ontwerpkeuzes](../ontwerpkeuzes.md) en wordt hier kort samengevat om de context en relevante verwijzingen direct zichtbaar te maken.
 
 Hierop voortbouwend geldt een overeenkomst tussen de deelnemers aan het iWlz-netwerkmodel, te weten het [_Convenant samenwerking ketenpartijen iWlz_](https://www.istandaarden.nl/services/file/get?key=XDh_Z1NWnWd9qjLfPpL2hxn303Z8I9xxXNKt18Q9uD0sh6lhBP-vPYFziYY-RWLnRW0h9snDSPCtfpFca6BXK1GzBtss_kaDr4sKaztAVgRvYLnXLvNLhS4icuQnRww5yNFThzVdveXrgjpwUCshoYd-ZHbA0Q7KrGdMxo4) en de [_Aanvullende Afspraken_](https://www.istandaarden.nl/algemeen/governance), waarin partijen zich commiteren aan het Afsprakenstelsel iWlz-netwerkmodel.
 
@@ -157,7 +157,7 @@ Bronhouders, afnemers en operationeel netwerkbeheerder hebben allen servicedesks
 
 ### 2.6 Dienstverleningsvenster
 
-Tijdens het dienstverleningsvenster is het iWlz-netwerk operationeel conform de minimaal te realiseren Beschikbaarheid (zie [Serviceafspraken Operationeel netwerkbeheer > 3.2 Beschikbaarheid](../operationeel_netwerkbeheer#32-beschikbaarheid) en [Serviceafspraken Bronhoudersdeel > 4.4 Continuïteitsbeheer bronhouder](../bronhoudersdeel#44-continuiteitsbeheer-bronhouders)).
+Tijdens het dienstverleningsvenster is het iWlz-netwerk operationeel conform de minimaal te realiseren Beschikbaarheid (zie [Serviceafspraken Operationeel netwerkbeheer > 3.2 Beschikbaarheid](./operationeel_netwerkbeheer.md#32-beschikbaarheid) en [Serviceafspraken Bronhoudersdeel > 4.4 Continuïteitsbeheer bronhouder](./bronhoudersdeel.md#44-continuiteitsbeheer-bronhouders)).
 
 | **Dagen** | **Dienstverleningsvenster** | **Bijzonderheden** |
 | --- | --- | --- |
@@ -198,7 +198,7 @@ Deze informatieverstrekking vindt plaats binnen de grenzen van wet- en regelgevi
 
 ### 2.11 Berekening beschikbaarheid
 
-Beschikbaarheid is de periode dat een dienst volledig beschikbaar is binnen het iWlz-netwerk en geldt voor Operationeel netwerkbeheerder en Bronhouders. De beschikbaarheidspercentages zijn gespecificeerd in de onderliggende paragrafen [Serviceafspraken Operationeel netwerkbeheer > 3.2 Beschikbaarheid](../operationeel_netwerkbeheer#32-beschikbaarheid) en [Serviceafspraken Bronhoudersdeel > 4.4 Continuïteitsbeheer bronhouder](../bronhoudersdeel#44-continuiteitsbeheer-bronhouders).
+Beschikbaarheid is de periode dat een dienst volledig beschikbaar is binnen het iWlz-netwerk en geldt voor Operationeel netwerkbeheerder en Bronhouders. De beschikbaarheidspercentages zijn gespecificeerd in de onderliggende paragrafen [Serviceafspraken Operationeel netwerkbeheer > 3.2 Beschikbaarheid](./operationeel_netwerkbeheer.md#32-beschikbaarheid) en [Serviceafspraken Bronhoudersdeel > 4.4 Continuïteitsbeheer bronhouder](./bronhoudersdeel.md#44-continuiteitsbeheer-bronhouders).
 
 De Beschikbaarheid wordt als volgt berekend:
 
@@ -223,7 +223,7 @@ Met het oog op het bevorderen van de betrouwbaarheid, transparantie en lerend ve
 
 ### 3.2 Uitgangspunt
 
-Monitoring is een ondersteunend instrument voor de betrokken [deelnemers](../../rollen_deelnemers). De gegevens uit monitoring worden nadrukkelijk niet gebruikt voor toezicht op individuele organisaties, maar dienen om samenwerking, verbetering en interoperabiliteit binnen het iWlz-Netwerk te versterken.
+Monitoring is een ondersteunend instrument voor de betrokken [deelnemers](../rollen_deelnemers.md). De gegevens uit monitoring worden nadrukkelijk niet gebruikt voor toezicht op individuele organisaties, maar dienen om samenwerking, verbetering en interoperabiliteit binnen het iWlz-Netwerk te versterken.
 
 Bij de uitwerking van de monitoring blijven proportionaliteit, nut voor betrokken partijen en bescherming van persoonsgegevens leidende uitgangspunten.
 
