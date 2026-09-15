@@ -1,4 +1,4 @@
-# Versies
+# Release notes
 
 
 ## Huidig geldende versie  (current)
