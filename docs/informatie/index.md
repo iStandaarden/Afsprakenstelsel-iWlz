@@ -1,7 +1,5 @@
 # Informatie
 
-!!! info "Versie: *17-12-2025* | Status: *Definitief*"
-
 **Inleiding**  
 In dit hoofdstuk worden de afspraken toegelicht die gelden voor de gegevens die in het iWlz- netwerkmodel wordt uitgewisseld. De afspraken worden toegelicht aan hand van het volgende onderwerp:
 
