@@ -15,15 +15,15 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Meer over de Aanleiding, de Outcomedoelen, samenhang met andere ontwikkelingen en domeinen, de rol van de iStandaard iWlz en de gang van estafette- naar netwerkmodel
 
-    [:octicons-arrow-right-24: lees verder](./achtergrond_toelichting)
+    [:octicons-arrow-right-24: lees verder](./achtergrond_toelichting.md)
 
 -   :material-gavel:{ .lg .middle } __Governance__
 
     ---
 
-    Dit artikel hoe de governance is georganiseerd en hoe dit afsprakenstelsel samenhangt met Twinn als LVS
+    Hoe de governance is georganiseerd en hoe dit afsprakenstelsel samenhangt met Twinn als LVS
 
-    [:octicons-arrow-right-24: lees verder](./achtergrond_toelichting)
+    [:octicons-arrow-right-24: lees verder](./governance.md)
 
 -   :material-alphabetical:{ .lg .middle } __Begrippenlijst__
 
@@ -31,7 +31,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Meer over de betekenis van de verschillende begrippen in dit afsprakenstelsel
 
-    [:octicons-arrow-right-24: lees verder](./begrippenlijst)
+    [:octicons-arrow-right-24: lees verder](./begrippenlijst.md)
 
 </div>
 

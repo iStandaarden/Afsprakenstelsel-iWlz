@@ -1,7 +1,7 @@
 
 ## **1. Inleiding**
 
-Dit artikel beschrijft op hoofdlijnen de doelarchitectuur die wordt gehanteerd voor de realisatie van het iWlz-netwerkmodel. Allereerst wordt stilgestaan bij het primaire zorgadministratieve proces in de iWlz. Vervolgens wordt uitgelegd uit welke bouwstenen het iWlz-netwerkmodel is opgebouwd. Daarna wordt de inhoud van iedere bouwsteen toegelicht en wordt aangegeven welke deelnemers hierbij betrokken zijn. Vervolgens wordt stapsgewijs toegelicht hoe [gegevensuitwisseling](./architectuur) in het iWlz-netwerkmodel plaatsvindt.
+Dit artikel beschrijft op hoofdlijnen de doelarchitectuur die wordt gehanteerd voor de realisatie van het iWlz-netwerkmodel. Allereerst wordt stilgestaan bij het primaire zorgadministratieve proces in de iWlz. Vervolgens wordt uitgelegd uit welke bouwstenen het iWlz-netwerkmodel is opgebouwd. Daarna wordt de inhoud van iedere bouwsteen toegelicht en wordt aangegeven welke deelnemers hierbij betrokken zijn. Vervolgens wordt stapsgewijs toegelicht hoe [gegevensuitwisseling](../architectuur) in het iWlz-netwerkmodel plaatsvindt.
 
 De gedetailleerde uitwerking van de doelarchitectuur is terug te vinden in overige artikelen van het Afsprakenstelsel iWlz-netwerkmodel. De artikelen op de onderliggende lagen Informatie, Applicatie en IT-infrastructuur sluiten aan op de actuele en in ontwikkeling zijnde implementatiestappen van het iWlz-netwerkmodel. Vanuit dit artikel wordt naar deze artikelen verwezen indien van toepassing.
 
@@ -10,7 +10,7 @@ De gedetailleerde uitwerking van de doelarchitectuur is terug te vinden in overi
 iWlz staat voor de informatievoorziening van de Wlz. De Wlz kent per cliënt een proces waarin de client zich oriënteert, een legitimatie verkrijgt en vervolgens wordt bemiddeld naar één of meerdere zorgaanbieders waar de cliënt een zorgtraject start. Dit proces start in enkele stappen het langdurige zorgtraject van de cliënt. Het proces heeft zowel het karakter van een zorgproces als het gaat om het beoordelen van de situatie en de wensen van de cliënt en het vinden van de juiste aanbieder, als van een administratief proces dat is gericht op de legitieme levering en financiering van langdurige zorg. Daarom noemen we dit proces _het primaire zorgadministratieve proces van de langdurige zorg_. In dit proces worden verschillende functies onderscheiden, zoals het oriënteren, indiceren, bemiddelen en leveren van zorg. Onderstaand figuur geeft een geabstraheerde weergave van het proces.
 
 ![primaire zorgadministratieve proces.png](../img/architectuur-primaire-zorgadministratieve-proces.png)
-figuur 1. Primaire zorgadministratieve proces van de langdurige zorg
+Figuur 1 - Primaire zorgadministratieve proces van de langdurige zorg
 
 
 Met de uitvoering van deze functies wordt de cliënt op basis van de situatie en de wensen van de cliënt naar een zorgtraject geleid en start tevens de administratieve afhandeling. De functies zijn verdeeld over verschillende partijen.
@@ -18,7 +18,7 @@ Met de uitvoering van deze functies wordt de cliënt op basis van de situatie en
 In het iWlz-netwerkmodel gaan de partijen gegevens in het proces anders uitwisselen. In plaats van het versturen van berichten, wisselen deelnemers aan het iWlz-netwerkmodel gegevens uit door middel van het beschikbaar stellen van bronnen met de originele gegevens. Het is de bedoeling dat hiermee straks ook de informatiepositie van de cliënt verbetert. Gegevens uit bron kunnen dan aan de cliënt via een PGO beschikbaar worden gemaakt, zodat de client de gegevens in het netwerk kan raadplegen. Er ontstaan in latere fases ook nog andere toepassingsmogelijkheden van de gegevens. Onderstaand figuur geeft een geabstraheerde weergave van het proces iWlz en de verschillende betrokken partijen.
 
 ![proces iWlz en betrokken partijen.png](../img/architectuur-proces-iWlz-en-betrokken-partijen.png)
-figuur 2. Een weergave van het iWlz proces en de betrokken partijen.
+Figuur 2 - Een weergave van het iWlz proces en de betrokken partijen.
 
 Het op een veilige en betrouwbare manier beschikbaar stellen van bronnen stelt eisen aan de architectuur van het netwerkmodel. Deze worden geborgd in de bouwstenen die basis vormen van de architectuur. In de volgende paragraaf worden de bouwstenen toegelicht.
 
@@ -26,17 +26,15 @@ Het op een veilige en betrouwbare manier beschikbaar stellen van bronnen stelt e
 
 Dit artikel licht op functioneel niveau de architectuur van het iWlz-netwerkmodel toe. Dit gebeurt door de benodigde bouwstenen en hun onderlinge relaties te beschrijven. De bouwstenen zijn:
 
-- [Registers met hun bronhouders en afnemers](./architectuur#4-registers-met-hun-bronhouders-en-afnemers)
-- [Vertrouwen tussen deelnemers aan het iWlz-netwerkmodel](./architectuur#42-vertrouwen-tussen-deelnemers-aan-het-iwlz-netwerkmodel)
-- [Vindbaarheid van deelnemers aan het iWlz-netwerkmodel](./architectuur#5-vindbaarheid-van-cliënten-en-deelnemers-in-het-iwlz-netwerk)
-- [Beheer van het iWlz-netwerkmodel](./architectuur#6-ondersteunende-rollen-van-het-iwlz-netwerkmodel)
+- [Registers met hun bronhouders en afnemers](../architectuur#4-registers-met-hun-bronhouders-en-afnemers)
+- [Vertrouwen tussen deelnemers aan het iWlz-netwerkmodel](../architectuur#42-vertrouwen-tussen-deelnemers-aan-het-iwlz-netwerkmodel)
+- [Vindbaarheid van deelnemers aan het iWlz-netwerkmodel](../architectuur#5-vindbaarheid-van-cliënten-en-deelnemers-in-het-iwlz-netwerk)
+- [Beheer van het iWlz-netwerkmodel](../architectuur#6-ondersteunende-rollen-van-het-iwlz-netwerkmodel)
 
 Iedere bouwsteen bestaat uit een aantal met elkaar samenhangende systeemrollen. Onderstaande figuur geeft de bouwstenen en rollen in het iWlz-netwerkmodel weer.
 
-Overzicht bouwstenen en systeemrollen.png openen
-
 ![overzicht bouwstenen en systeemrollen.png](../img/architectuur-overzicht-bouwstenen-en-systeemrollen.png)
-figuur 3. Overzicht bouwstenen en systeemrollen
+Figuur 3 - Overzicht bouwstenen en systeemrollen
 
 
 ## 4. Registers met hun bronhouders en afnemers
@@ -55,7 +53,7 @@ In het onderstaande figuur wordt getoond welke registers deel uitmaken van het i
 
 
 ![register en primaire systeemrollen.png](../img/architectuur-Invulling-primaire-systeemrollen.png)
-figuur 4. Register en primaire systeemrollen
+Figuur 4 - Register en primaire systeemrollen
 
 Iedere bronhouder biedt zijn brongegevens in beginsel aan meerdere afnemers aan. Iedere deelnemer aan het iWlz-netwerkmodel kan tegelijkertijd bronhouder van het ene register en afnemer van een ander register zijn. Wanneer meerdere bronhouders dezelfde soort gegevens delen ontstaat er logisch gezien één integraal register met de gegevens van die soort. We spreken zo van één bemiddelingsregister en één zorgleveringsregister. Binnen zo’n register zijn de gegevens van de verschillende bronhouders logische gescheiden. Zo spreken we van één bemiddelingsregister dat bestaat uit de verzameling van logische gescheiden bemiddelingsregisters per concessiehouder.
 
@@ -63,10 +61,8 @@ Iedere bronhouder biedt zijn brongegevens in beginsel aan meerdere afnemers aan.
 
 In onderstaande figuur wordt per register toegelicht door welke deelnemers de rollen bronhouder en afnemer worden ingevuld in het iWlz-netwerkmodel.
 
-Invulling primaire systeemrollen.png openen
-
 ![Invulling primaire systeemrollen.png](../img/architectuur-Invulling-primaire-systeemrollen.png)
-figuur 5. Invulling primaire systeemrollen per register
+Figuur 5 - Invulling primaire systeemrollen per register <br>
 \*alleen voor cliëntcontactgegevens
 
 Het cliëntregister is een bijzonder geval. Cliëntgegevens worden bij alle deelnemers beheerd en beschikbaar gesteld vanuit hun register. Later doet de cliënt via een PGO volwaardig mee. De uitwisseling blijft dan niet beperkt tot het delen van de cliëntgegevens aan andere deelnemers. De cliënt kan in zijn PGO ook gegevens uit de andere registers in zijn PGO verzamelen.
@@ -83,8 +79,8 @@ Om gegevens binnen het iWlz-netwerkmodel veilig uit te wisselen, moeten bronhoud
 
 Om dit benodigde vertrouwen te creëren dient invulling te worden gegeven aan het [Trust-over-IP model](https://trustoverip.org/toip-model/) en is een aantal rollen nodig. Dit zijn de zogenaamde vertrouwensrollen: _vertrouwensleverancier_, _ledenadministratie_ en _bevoegde uitgever_. Deze rollen worden hieronder toegelicht.
 
-![vertrouwen systeemrollen.png](../img/architectuur-vertrouwen-systeemrollen.png)
-figuur 6. Vertrouwen systeemrollen
+![vertrouwen systeemrollen.png](../img/architectuur-vertrouwen-systeemrollen.png)<br>
+Figuur 6 - Vertrouwen systeemrollen
 
 
 ### 4.3 Vertrouwensleverancier
@@ -111,10 +107,8 @@ In de toekomst zullen ook andere deelnemers zoals bv de genoemde ledenadministra
 
 In onderstaande figuur wordt toegelicht door welke deelnemers de rollen ledenadministratie, vertrouwensleverancier en bevoegde uitgever worden ingevuld in het iWlz-netwerkmodel.
 
-Invulling vertrouwen systeemrollen.png openen
-
-![Invulling vertrouwen systeemrollen.png](../img/architectuur-Invulling-vertrouwen-systeemrollen.png)
-figuur 7. Invulling vertrouwen systeemrollen
+![Invulling vertrouwen systeemrollen.png](../img/architectuur-Invulling-vertrouwen-systeemrollen.png)<br>
+Figuur 7 - Invulling vertrouwen systeemrollen
 
 
 ## 5. Vindbaarheid van cliënten en deelnemers in het iWlz-netwerk
@@ -125,8 +119,8 @@ In een lokalisatievoorziening staat welke bronhouders welk type gegevens van wel
 
 In een adresboek staat via welke (technische) adressen van de bronhouders deze gegevens af te nemen zijn. Dit is een aspect van de juiste adressering. Op deze manier is het mogelijk dat een afnemer een gegevensverzoek op het juiste adres van de bronhouder kan doen.
 
-![vindbaarheid systeemrollen.png](../img/architectuur-vindbaarheid-systeemrollen.png)
-figuur 8. Vindbaarheid systeemrollen
+![vindbaarheid systeemrollen.png](../img/architectuur-vindbaarheid-systeemrollen.png)<br>
+Figuur 8 - Vindbaarheid systeemrollen
 
 Voor het vinden van de juiste adresgegevens van een deelnemer is een [tijdelijk adresboek](https://github.com/iStandaarden/iWlz-adresboek-public) beschikbaar. Hiermee wordt voorzien in de adresseringsvoorzieningen die nodig zijn en waarin de de beschikbare brongegevens (registers) en gegevensdiensten van de deelnemers te controleren zijn. Naar de toekomst toe is het de bedoeling gebruik te maken van Zorg-AB.
 
@@ -139,7 +133,7 @@ In de voorgaande paragrafen is toegelicht welke rollen en voorzieningen in het i
 In deze paragraaf worden de rollen toegelicht die zijn gericht op ondersteunende rollen van het iWlz-netwerkmodel. Deze rollen zijn (in lijn met Dizra): _stelselbeheerder, verzekeraar betrouwbaarheid_ en _operationeel netwerkbeheerder_.
 
 ![beheer systeemrollen,png](../img/architectuur-beheer-systeemrollen.png)
-figuur 9. Beheer systeemrollen
+Figuur 9 - Beheer systeemrollen
 
 ### 6.1 Stelselbeheerder
 
@@ -157,8 +151,8 @@ De Dizra-rol Stelselbeheer, die dus de facto bij het Zorginstituut en de Stuurgr
 
 Onderstaande figuur geeft dit schematisch weer. In de figuur is ook te zien dat op basis van informatie uit de _ledenadministraties_ per deelnemer duidelijk wordt van welk _register_ deze deelnemer bronhouder is. Een voorbeeld hiervan is dat een deelnemer, die op basis van een van de ledenadministraties de rol Zorgaanbieder heeft, bronhouder is van een Zorgleveringregister. Daarnaast is te zien dat de _verzekeraar betrouwbaarheid_ de rol _bevoegde uitgever_ aan deelnemers toekent.
 
-![toekennen rollen binnen het iWlz-netwerkmodel.png](../img/architectuur-toekennen-rollen-binnen-het-iWlz-netwerkmodel.png)
-figuur 10. Toekennen rollen binnen het iWlz-netwerkmodel
+![toekennen rollen binnen het iWlz-netwerkmodel.png](../img/architectuur-toekennen-rollen-binnen-het-iWlz-netwerkmodel.png)<br>
+Figuur 10 - Toekennen rollen binnen het iWlz-netwerkmodel
 
 ### 6.2 Verzekeraar betrouwbaarheid
 
@@ -170,14 +164,14 @@ Er is voorshands één bevoegde uitgever. Dat is het VECOZO via het VECOZO certi
 
 De operationeel netwerkbeheerder (in DIZRA: “Operationeel ketenbeheerder“) heeft als taak het dagelijks beschikbaar stellen van het netwerk volgens de afspraken. De operationeel netwerkbeheerder monitort de gegevensuitwisseling in het iWlz-netwerkmodel, zorgt voor het herstel als het netwerk niet goed blijkt te functioneren, is belast met het uitvoeren van afgesproken handelingen zoals het leveren van rapportages, afschriften en voorlichting, en biedt een gemeenschappelijke helpdesk voor de deelnemers van het iWlz-netwerkmodel aan.
 
-De nadere invulling van de operationeel netwerkbeheerder is terug te vinden in de [Serviceafspraken](./serviceafspraken). Binnen het iWlz-netwerkmodel is sprake van één operationeel netwerkbeheerder (VECOZO).
+De nadere invulling van de operationeel netwerkbeheerder is terug te vinden in de [Serviceafspraken](../serviceafspraken/index). Binnen het iWlz-netwerkmodel is sprake van één operationeel netwerkbeheerder (VECOZO).
 
 ### 6.4 Invulling
 
 In onderstaande figuur wordt toegelicht door welke deelnemers de rollen stelselbeheerder, operationeel netwerkbeheerder en verzekeraar betrouwbaarheid worden ingevuld in het iWlz-netwerkmodel.
 
-![beheer systeemrollen.png](../img/architectuur-beheer-systeemrollen.png)
-figuur 11. Invulling beheer systeemrollen
+![beheer systeemrollen.png](../img/architectuur-beheer-systeemrollen.png)<br>
+Figuur 11 - Invulling beheer systeemrollen
 
 ## 7. Bouwstenen in relatie tot het iWlz proces
 
@@ -185,12 +179,12 @@ Zoals eerder toegelicht worden in het proces van de iWlz verschillende functies 
 
 Iedere deelnemer heeft voor het uitvoeren van zijn functie in het administratieve proces gegevens van andere deelnemers nodig. Deze gegevens kan een deelnemer raadplegen in de registers van de andere deelnemers, mits hij daarvoor een geldig toegangsbewijs heeft en er een grondslag voor raadpleging van de gegevens van de cliënt is.
 
-> N.B.: De grondslagen voor de uitwisseling van gegevens in het administratief proces iWlz zijn beschreven in de artikelen [Randvoorwaarden](./randvoorwaarden) en [Ontwerpkeuzes](./ontwerpkeuzes).
+> N.B.: De grondslagen voor de uitwisseling van gegevens in het administratief proces iWlz zijn beschreven in de artikelen [Randvoorwaarden](../randvoorwaarden) en [Ontwerpkeuzes](../ontwerpkeuzes).
 
 In de voorgaande paragrafen is beschreven welke bouwstenen en systeemrollen nodig zijn voor het veilig en betrouwbaar raadplegen van registers in het kader van het administratief proces iWlz. Onderstaand figuur geeft voor het iWlz-netwerkmodel een overzicht van de bouwstenen, systeemrollen en de invulling daarvan door deelnemers.
 
-![Overzicht bouwstenen systeemrollen en deelnemers.png](../img/architectuur-Overzicht-bouwstenen-systeemrollen-en-deelnemers.png)
-figuur 12. Overzicht bouwstenen, systeemrollen en deelnemers
+![Overzicht bouwstenen systeemrollen en deelnemers.png](../img/architectuur-Overzicht-bouwstenen-systeemrollen-en-deelnemers.png)<br>
+Figuur 12 - Overzicht bouwstenen, systeemrollen en deelnemers<br>
 \*alleen voor cliëntcontactgegevens
 
 In de volgende paragraaf wordt het iWlz-netwerkmodel stapsgewijs uitgelegd aan de hand van één gegevensuitwisseling: het raadplegen van een register.
@@ -199,7 +193,7 @@ In de volgende paragraaf wordt het iWlz-netwerkmodel stapsgewijs uitgelegd aan d
 
 In deze paragraaf wordt stapsgewijs toegelicht hoe gegevensuitwisseling in het iWlz-netwerkmodel plaatsvindt. Hierbij spelen de bouwstenen een hoofdrol. Als voorbeeld wordt het raadplegen van gegevens door een afnemer bij een bronhouder uitgewerkt. Het doel van deze paragraaf is om de basisprincipes uit te leggen. Naast het raadplegen van gegevens zijn in het afsprakenstelsel ook andere diensten (zoals abonneren, notificeren en melden) uitgewerkt.
 
-Op de [Applicatie](../applicatie)-laag van het afsprakenstelsel iWlz-netwerkmodel wordt hier uitputtend op ingegaan.
+Op de [Applicatie](../../applicatie/index)-laag van het afsprakenstelsel iWlz-netwerkmodel wordt hier uitputtend op ingegaan.
 
 > 📝
 > **Precondities**
@@ -209,8 +203,8 @@ Op de [Applicatie](../applicatie)-laag van het afsprakenstelsel iWlz-netwerkmode
 > - Afnemer (deelnemer A) en bronhouder (deelnemer B) zijn beide geregistreerd in een ledenadministratie. Deze _ledenadministratie_ heeft verklaringen over de kenmerken van deelnemer A en deelnemer B uitgegeven.
 > - De te raadplegen gegevens zijn door de bronhouder en gegevensgids vindbaar gemaakt.
 
-![Transactie tussen afnemer en bronhouder.png](../img/architectuur-transactie-tussen-afnemer-en-bronhouder.png)
-figuur 13. Transactie tussen afnemer en bronhouder
+![Transactie tussen afnemer en bronhouder.png](../img/architectuur-transactie-tussen-afnemer-en-bronhouder.png)<br>
+Figuur 13 - Transactie tussen afnemer en bronhouder
 
 Hieronder worden de stappen waaruit het proces van raadplegen is opgebouwd functioneel toegelicht.
 
@@ -244,11 +238,11 @@ In dit voorbeeld worden de rollen op de volgende manier ingevuld:
 - Operationeel netwerkbeheerder: VECOZO
 - Stelselbeheerder: Zorginstituut
 
-![Voorbeeld transactie - raadplegen Indicatieregister](../img/architectuur-Voorbeeld-transactie-raadplegen-Indicatieregister.png)
-figuur 14. Voorbeeld transactie - raadplegen Indicatieregister
+![Voorbeeld transactie - raadplegen Indicatieregister](../img/architectuur-Voorbeeld-transactie-raadplegen-Indicatieregister.png)<br>
+Figuur 14 - Voorbeeld transactie - raadplegen Indicatieregister
 
 ## 10. Besturing
 
-De inrichting van de ontwikkeling en het beheer van het iWlz-netwerkmodel is ook onderdeel van het afsprakenstelsel iWlz-netwerkmodel. De hiervoor benodigde rollen zijn op basis van [NEN 7522:2021 nl](https://www.nen.nl/nen-7522-2021-nl-283706) uitgewerkt in het artikel [Rollen en deelnemers](./rollen_deelnemers)Voorvertoning.
+De inrichting van de ontwikkeling en het beheer van het iWlz-netwerkmodel is ook onderdeel van het afsprakenstelsel iWlz-netwerkmodel. De hiervoor benodigde rollen zijn op basis van [NEN 7522:2021 nl](https://www.nen.nl/nen-7522-2021-nl-283706) uitgewerkt in het artikel [Rollen en deelnemers](../rollen_deelnemers)Voorvertoning.
 
----
+

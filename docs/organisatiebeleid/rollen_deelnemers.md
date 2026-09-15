@@ -5,7 +5,7 @@ Dit artikel geeft inzage in de rollen en verantwoordelijkheden die nodig zijn vo
 
 ## 2. Roltypen
 
-Aansluitend op DIZRA (R01, [Randvoorwaarden](./randvoorwaarden)) worden in het Afsprakenstelsel iWlz-netwerkmodel drie verschillende roltypen onderscheiden. Deze roltypen zijn:
+Aansluitend op DIZRA (R01, [Randvoorwaarden](./randvoorwaarden#r01-de-referentiearchitectuur-voor-een-duurzaam-informatiestelsel-voor-de-zorg-dizra)) worden in het Afsprakenstelsel iWlz-netwerkmodel drie verschillende roltypen onderscheiden. Deze roltypen zijn:
 
 - [**Besturingsrollen:**](#3-besturingsrollen) de rollen en verantwoordelijkheden voor de besturing van het iWlz-netwerkmodel, hiermee wordt de governance geborgd.
 - [**Organisatorische rollen:**](#4-organisatorische-rollen) de rollen en verantwoordelijkheden voor het organiseren van de samenwerking in het iWlz-proces; hiermee wordt het proces geborgd.
@@ -87,10 +87,10 @@ Deze paragraaf beschrijft de systeemrollen die relevant zijn voor het iWlz-netwe
 <ul><li> Stelselbeheerder </li>
 <li> Operationeel netwerkbeheerder (in DIZRA: “Operationeel ketenbeheerder”) </li>
 <li> Verzekeraar betrouwbaarheid </li></ul>
-De inhoud van de systeemrollen en de specifieke invulling ervan in het kader van het iWlz netwerkmodel worden hieronder toegelicht.
+De inhoud van de systeemrollen en de specifieke invulling ervan in het kader van het iWlz netwerkmodel worden hieronder toegelicht. <br>
 
 | **Bouwsteen** | **Rol** | **Toelichting** | **Invulling binnen iWlz-netwerkmodel** |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | Primaire systeemrollen | Bronhouder | Een bronhouder is een rol van een deelnemer die data en services in het iWlz-netwerkmodel aanbiedt.\*Cliënten die zorg afnemen in het kader van de Wlz bieden in het iWlz-netwerkmodel data aan voor het Cliëntregister. Binnen DIZRA hebben cliënten niet de rol van bronhouder, zij bieden data aan vanuit hun rol als gegevensregisseur (via hun PGO). | <ul><li>CIZ</li><li>Zorgkantoren</li><li>Zorgaanbieders</li><li>Cliënten\*</li></ul> |
 | | Afnemer | Een afnemer is een rol van een deelnemer die data en services afneemt van een bronhouder.\*Cliënten die zorg afnemen in het kader van de Wlz nemen in het iWlz-netwerkmodel data en services af. Binnen DIZRA hebben cliënten niet de rol van afnemer, zij nemen data en services af vanuit hun rol als gegevensregisseur en gezondheidsregisseur (via hun PGO). | <ul><li>Zorgkantoren</li><li>Zorgaanbieders</li><li>Cliënten\*</li><li>CAK</li><li>CIZ</li></ul> | 
 |  | Gegevensregisseur/ Gezondheidsregisseur | De gegevensregisseur is een rol van een cliënt die zorg afneemt in het kader van de Wlz. De gegevensregisseur voert via een PGO regie over de gegevens over zijn/haar gezondheid. Binnen DIZRA hebben cliënten de rollen gegevensregisseur en gezondheidsregisseur. Binnen het iWlz-netwerkmodel wordt aan cliënten de systeemrol bronhouder toegekend als bron van het cliëntregister. | <ul><li>Cliënten</li></ul> |  

@@ -37,10 +37,10 @@ Deelnemers aan het iWlz-netwerk maken onderling gebruik van een gemeenschappelij
 > ✅
 > **Concrete invulling**
 >
-> - Informatie-niveau: In het afsprakenstelsel is een generieke regelset opgenomen. Deze regelset beschrijft op informatieniveau de regels waaraan alle uit te wisselen gegevens dienen te voldoen. Zie hoofdstuk [Informatie](../informatie/).
-> - Informatie-niveau: Per register is een register-specifieke gegevensset in het afsprakenstelsel opgenomen. Deze beschrijft op informatie-niveau welke gegevens door het register worden aangeboden. Zie hoofdstuk [Uitwisselprofielen](../uitwisselprofiel/) .
-> - Data-niveau: In het afsprakenstelsel worden per dienst de specificaties van de technische koppelvlakken beschreven. Zie hoofdstuk [Applicatie](../applicatie/).
-> - Data-niveau: Per register zijn in het afsprakenstelsel specificaties opgenomen die de structuur van de uit te wisselen data beschrijven. Zie hoofdstuk [Uitwisselprofielen](../uitwisselprofiel/).
+> - Informatie-niveau: In het afsprakenstelsel is een generieke regelset opgenomen. Deze regelset beschrijft op informatieniveau de regels waaraan alle uit te wisselen gegevens dienen te voldoen. Zie hoofdstuk [Informatie](../../informatie/index).
+> - Informatie-niveau: Per register is een register-specifieke gegevensset in het afsprakenstelsel opgenomen. Deze beschrijft op informatie-niveau welke gegevens door het register worden aangeboden. Zie hoofdstuk [Uitwisselprofielen](../../uitwisselprofiel/index) .
+> - Data-niveau: In het afsprakenstelsel worden per dienst de specificaties van de technische koppelvlakken beschreven. Zie hoofdstuk [Applicatie](../../applicatie/index).
+> - Data-niveau: Per register zijn in het afsprakenstelsel specificaties opgenomen die de structuur van de uit te wisselen data beschrijven. Zie hoofdstuk [Uitwisselprofielen](../../uitwisselprofiel/index.md).
 >
 > **Relevante uitgangspunten informatiemodel iWlz**
 >
@@ -93,7 +93,7 @@ Een informatiestelsel is duurzaam wanneer het relevant is en blijft. Om dit te b
 >
 > **Ontwikkeling en beheer**
 >
-> Afspraken over de wijze waarop de (door)ontwikkeling en het beheer van het afsprakenstelsel iWlz-netwerkmodel dienen te worden geïmplementeerd zijn expliciet onderdeel van het afsprakenstelsel iWlz-netwerkmodel. Deze afspraken zijn opgenomen in de vorm van besturingsrollen. De definitie van deze rollen en de toekenning ervan aan deelnemers is beschreven in [Rollen en deelnemers](./rollen_deelnemers). Dit sluit aan bij randvoorwaarde R11: De geldende NEN- en/of ISO normen.
+> Afspraken over de wijze waarop de (door)ontwikkeling en het beheer van het afsprakenstelsel iWlz-netwerkmodel dienen te worden geïmplementeerd zijn expliciet onderdeel van het afsprakenstelsel iWlz-netwerkmodel. Deze afspraken zijn opgenomen in de vorm van besturingsrollen. De definitie van deze rollen en de toekenning ervan aan deelnemers is beschreven in [Rollen en deelnemers](../rollen_deelnemers). Dit sluit aan bij randvoorwaarde R11: De geldende NEN- en/of ISO normen.
 
 #### O06 Enkelvoudig registreren, meervoudig gebruiken
 
@@ -149,7 +149,7 @@ Semantische en technische interoperabiliteit wordt in een duurzaam informatieste
 > ✅
 > **Concrete invulling**
 >
-> Het afsprakenstelsel beschrijft welke open internationale standaarden worden toegepast en specificeert de wijze waarop dit wordt gedaan. Het afsprakenstelsel beschrijft bijvoorbeeld niet alleen dat de open internationale standaarden TLS (zie [Netwerk](../it-infrastructuur/netwerk)) en OAuth (zie [nID netwerkstelsel](../applicatie/nid_netwerkstelsel)) dienen te worden gebruikt maar maakt ook expliciete specificaties over de te gebruiken versies en certificaten, de eisen aan de inhoud en ondertekening van certificaten en de eisen aan de inhoud en de interpretatie van access tokens.
+> Het afsprakenstelsel beschrijft welke open internationale standaarden worden toegepast en specificeert de wijze waarop dit wordt gedaan. Het afsprakenstelsel beschrijft bijvoorbeeld niet alleen dat de open internationale standaarden TLS (zie [Netwerk](../../it-infrastructuur/netwerk)) en OAuth (zie [nID netwerkstelsel](../../applicatie/nid_netwerkstelsel)) dienen te worden gebruikt maar maakt ook expliciete specificaties over de te gebruiken versies en certificaten, de eisen aan de inhoud en ondertekening van certificaten en de eisen aan de inhoud en de interpretatie van access tokens.
 >
 > **Relevante uitgangspunten informatiemodel iWlz**
 >
@@ -218,7 +218,7 @@ De uitwisseling van gegevens tussen deelnemers moet veilig zijn. Dat wordt gerea
 > ✅
 > **Concrete invulling**
 >
-> De rol auditor is belast met het toetsen van deelnemers op veilige gegevensuitwisseling en het opstellen van derdenverklaringen. Momenteel is de rol auditor nog niet ingevuld voor het iWlz-netwerk, ook is de praktische invulling van deze rol nog niet afgestemd. In het artikel [Rollen en deelnemers](./rollen_deelnemers) zal deze rol op een later moment worden ingevuld.
+> De rol auditor is belast met het toetsen van deelnemers op veilige gegevensuitwisseling en het opstellen van derdenverklaringen. Momenteel is de rol auditor nog niet ingevuld voor het iWlz-netwerk, ook is de praktische invulling van deze rol nog niet afgestemd. In het artikel [Rollen en deelnemers](../rollen_deelnemers) zal deze rol op een later moment worden ingevuld.
 >
 > **Relevante uitgangspunten informatiemodel iWlz**
 >
@@ -243,4 +243,4 @@ Gegevens over deelnemers aan het iWlz-netwerkmodel moeten betrouwbaar zijn om te
 >
 > [UP017](https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/netwerk/indicatieregister-2/regels/uitgangspunt/up017/)
 
----
+

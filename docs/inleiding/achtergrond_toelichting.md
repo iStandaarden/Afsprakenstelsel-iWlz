@@ -6,7 +6,7 @@ Om dit te bewerkstelligen is het Actieprogramma iWlz opgericht. Het doel van het
 
 In 2017 werd samen met veel ketenpartners een simulatieomgeving gebouwd. Vervolgens kwam het Actieprogramma iWlz tot de conclusie dat een netwerkmodel het best aansluit bij de outcomedoelen die door het Informatieberaad Zorg zijn geformuleerd. Deze conclusie is bevestigd door het Architectuurboard van het Informatieberaad Zorg wat positief heeft [geadviseerd](https://www.informatieberaadzorg.nl/publicaties/vergaderstukken/2021/04/19/oplegnotitie-bestuurlijke-samenvatting-doelarchitectuur) om dit netwerkperspectief als leidend paradigma over te nemen. En sluit hiermee aan op de actuele zorgbrede afspraken over infrastructuur en interoperabiliteit.
 
-In de jaren daarna heeft VWS de Nationale Visie en Strategie (NVS) uitgewerkt. Het Actieprogramma iWlz sluit daar bij aan, door zich onder andere te conformeren aan de [generieke functies](./achtergrond_toelichting#32-generieke-functies), zodra die gereed zijn voor gebruik in het kader van plateau 2 van deze visie. Ook sluit het programma aan bij de ontwikkelingen van het landelijk vertrouwensstelsel (Twiin-LVS) zoals hieronder verder toegelicht.
+In de jaren daarna heeft VWS de Nationale Visie en Strategie (NVS) uitgewerkt. Het Actieprogramma iWlz sluit daar bij aan, door zich onder andere te conformeren aan de [generieke functies](./achtergrond_toelichting.md#32-generieke-functies), zodra die gereed zijn voor gebruik in het kader van plateau 2 van deze visie. Ook sluit het programma aan bij de ontwikkelingen van het landelijk vertrouwensstelsel (Twiin-LVS) zoals hieronder verder toegelicht.
 
 Zorginstituut Nederland voert het Actieprogramma iWlz uit vanuit haar wettelijke taak en wordt hierbij gefaciliteerd door het ministerie van VWS. Zorginstituut Nederland is opdrachtgever.
 
@@ -41,7 +41,7 @@ Plateau 1 richt zich op interoperabiliteit. In plateau 2 wordt er gesproken over
 
 
 ![NVS-Plateauplanning.png](../img/achtergrond&toelichting-NVS-Plateauplanning.png)
-figuur 1. NVS plateauplanning
+Figuur 1 - NVS plateauplanning
 
 
 De NVS spreekt over grote veranderingen die nodig zijn, om de uitdagingen in de zorg aan te kunnen. De inzet op preventie is daar een voorbeeld van. De focus verschuift van zorg bieden naar gezond blijven; het voorkomen van het belasten van de zorg door het bieden van preventie en de focus op gezond blijven. Dit noemen we de beweging van zorg naar gezondheid om te voorkomen dat er een zorgvraag ontstaat (blz. 9, NVS).
@@ -63,7 +63,7 @@ Om de juiste (gezondheids)gegevens op het juiste moment op de juiste plek te kri
 Het programma Implementatie generieke functies van VWS werkt daarom samen met het zorg- en ICT-veld aan zes generieke functies. Dat zijn sets van afspraken, standaarden en voorzieningen om vast te stellen:
 
 ![Generieke-Functies.png](../img/achtergrond&toelichting-Generieke-Functies.png)
-figuur 2. Generieke functies
+Figuur 2 - Generieke functies
 
 | **Item** | **Generieke functie** |
 | :--- | :--- |
@@ -208,7 +208,7 @@ In het estafettemodel worden de processen van indiceren, bemiddelen, zorg levere
 Uitwisselen van berichten is gebaseerd op de iStandaarden voor de gegevens en de manier van verzenden en ontvangen.
 
 ![Overzicht-berichtenverkeer-huidige-iStandaarden-iWlz.png](../img/achtergrond&toelichting-Overzicht-berichtenverkeer-huidige-iStandaarden-iWlz.png)
-figuur 3. Schematische weergave berichtenverkeer iWlz volgens de iStandaarden
+Figuur 3 - Schematische weergave berichtenverkeer iWlz volgens de iStandaarden<br>
 N.B. De berichten AW319 en AW320 zijn niet in scope van het iWlz-netwerkmodel.
 
 ## 7. Van estafette- naar netwerkmodel
@@ -220,7 +220,7 @@ In het netwerkmodel worden de processen van indiceren, bemiddelen, zorg leveren 
 Op deze manier wordt gegevensuitwisseling tussen partijen efficiënter en krijgt de cliënt meer mogelijkheden gegevens in te zien en te delen. In [dit filmpje](https://www.istandaarden.nl/algemeen/video-hoe-werkt-het-netwerkmodel) en in onderstaande figuur wordt dit gevisualiseerd. Een voice-over bij de figuur is [hier](https://infoizo.nl/netwerkperspectief) beschikbaar.
 
 ![Samenhang-in-de-doorontwikkeling.png](../img/achtergrond&toelichting-Samenhang-in-de-doorontwikkeling.png)
-figuur 4. Samenhang in de doorontwikkeling van estafettemodel naar netwerkmodel
+Figuur 4 - Samenhang in de doorontwikkeling van estafettemodel naar netwerkmodel
 
 
 > ℹ️
