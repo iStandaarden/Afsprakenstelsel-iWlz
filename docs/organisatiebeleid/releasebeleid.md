@@ -1,3 +1,5 @@
+# Releasebeleid
+
 ## 1. Inleiding
 
 De iWlz is een informatiestandaard die onderdeel uitmaakt van de iStandaarden. Zorginstituut Nederland is de bij wet aangewezen beheerder van deze standaarden. De iStandaarden ondersteunen de uitvoering van de Wlz, Wmo en de Jeugdwet.
@@ -40,7 +42,7 @@ Onderdelen die binnen een release vallen, zoals producten van het informatiemode
 | **Register** | Altijd **major** | _Indicatieregister 2_ | Release = naam register + volgnummer |
 | **Onderdelen** (bijv. codelijsten, koppelvlakken, regelrapport) | Major / Minor / Patch | v1.0 → v1.1 → v1.1.1 | Worden afzonderlijk geversioneerd, maar vallen altijd binnen een registerrelease |
 
-Hoe dit in de praktijk uitwerkt bij opeenvolgende registerreleases wordt toegelicht in [Releasebeleid_Praktijkvoorbeeld: registerreleases](./releasebeleid#25-praktijkvoorbeeld-registerreleases).
+Hoe dit in de praktijk uitwerkt bij opeenvolgende registerreleases wordt toegelicht in [2.5 Praktijkvoorbeeld: registerreleases](#25-praktijkvoorbeeld-registerreleases).
 
 ### 2.2 Planning netwerkmodel
 
@@ -70,7 +72,7 @@ Het reguliere releaseproces is beschreven in het document _Releaseproces iStanda
 Voor het netwerkmodel zijn er echter twee belangrijke afwijkingen:
 
 - **Releasekalender**: de planning wordt per register afgestemd met bronhouder en afnemers, in plaats van volgens de vaste jaarlijkse cyclus. Hierbij wordt ook bepaald wanneer partijen kunnen aansluiten.
-- **Overlegvormen**: naast de bestaande structuren worden aanvullende overleggen ingezet (zie [Releasebeleid_Aanvullende overlegvormen netwerkmodel](./releasebeleid#23-aanvullende-overlegvormen-netwerkmodel)).
+- **Overlegvormen**: naast de bestaande structuren worden aanvullende overleggen ingezet (zie [2.3 Aanvullende overlegvormen netwerkmodel](#23-aanvullende-overlegvormen-netwerkmodel)).
 
 De afwijkingen doen zich met name voor in de voorbereidings- en uitwerkingsfase van een release.
 
@@ -85,8 +87,8 @@ Zoals in paragraaf 2.2 al is toegelicht, kent het netwerkmodel registerreleases 
 
 Het schema hieronder (zie figuur 1) toont hoe opeenvolgende releases (_Register Release 1, 2 en 3_) zich tot elkaar verhouden en hoe onderdelen hun versies krijgen.
 
-![Voorbeel van registerreleases en versiebeheer](../img/Releasebeleid%20-%20Voorbeel%20van%20registerreleases%20en%20versiebeheer.png)
-Figuur 1. Voorbeeld van opeenvolgende registerreleases en versiebeheer van onderdelen
+![Voorbeeld van registerreleases en versiebeheer](../img/releasebeleid-Voorbeel-van-registerreleases-en-versiebeheer.png)
+Figuur 1 - Voorbeeld van opeenvolgende registerreleases en versiebeheer van onderdelen
 
 
 #### **2.5.1 Toelichting bij het schema**

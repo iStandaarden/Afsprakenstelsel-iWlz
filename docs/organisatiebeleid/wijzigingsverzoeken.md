@@ -1,3 +1,5 @@
+# Wijzigingsverzoeken
+
 ## 1. Inleiding
 
 Voor de doorontwikkeling van het iWlz-netwerkmodel is een proces ingericht waarmee **bevindingen** en **wijzigingsverzoeken (RFC’s)** kunnen worden ingediend en beheerd.
@@ -39,7 +41,7 @@ Wijzigingsverzoeken worden gekoppeld aan de release waarvoor ze gelden.
 Het RFC-proces beschrijft de stappen die een wijzigingsverzoek doorloopt vanaf indiening tot implementatie of afwijzing.
 
 ![Een schematische weergave van het RFC-proces](../img/wijzigingsverzoeken-Een-schematische-weergave-van-het-RFC-proces.png)
-Figuur 1. Schematische weergave RFC-proces
+Figuur 1 - Schematische weergave RFC-proces
 
 #### 3.1.1 Labels en stadia:
 
