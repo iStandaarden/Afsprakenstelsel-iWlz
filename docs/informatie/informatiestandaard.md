@@ -1,7 +1,5 @@
 # Informatiestandaard
 
-!!! info "Versie: *17-12-2025* | Status: *Definitief*"
-
 ## 1. iStandaard iWlz
 
 Om binnen de kaders van de Wlz op een gestandaardiseerde manier gegevens uit te kunnen wisselen is iWlz ontwikkeld. iWlz is één van de iStandaarden, de informatiestandaarden voor de zorg en ondersteuning.
@@ -34,5 +32,3 @@ Onderstaand overzicht toont de relevante GitHub-repositories voor iWlz:
 | [iWlz-Xsd](https://github.com/iStandaarden/iWlz-Xsd)                               | XSD’s voor de iWlz-standaard                               |
 
 Het releasebeleid van het afsprakenstelsel iWlz netwerkmodel is te vinden in het [[|artikel Releasebeleid]].
-
-* * *

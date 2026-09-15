@@ -19,6 +19,10 @@ De basis voor een **notificatie** of een **melding** is gelijk. Alleen op inhoud
 ### 2.1 Notificeren en melden, wat is het verschil?
 
 ```mermaid
+---
+  config:
+    theme: forest
+---
 sequenceDiagram
     autonumber
 
@@ -51,6 +55,7 @@ sequenceDiagram
     end
 
 ```
+Figuur 1 - Verschil tussen Notificeren en Melden
 
 |  | Van | Naar | Omschrijving |
 | :-- | :-- | :-- | :-- |
@@ -82,6 +87,10 @@ Daarnaast moet de autorisatievoorziening voldoende informatie hebben om te kunne
 De structuur voor een notificatie of melding is uit de volgende elementen opgebouwd:
 
 ```mermaid
+---
+    config:
+        theme: forest
+---
 classDiagram
 
 class notificatie_melding {
@@ -102,7 +111,7 @@ class SubjectList {
 notificatie_melding "1" --> "1..*" SubjectList : contains
 
 ```
-
+Figuur 2 - Klassediagram generieke inhoud  
 
 | Element | Algemene beschrijving | V/O* | Type | Specifiek voor notificatie | Specifiek voor melding |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -152,10 +161,14 @@ De response codes zijn gebaseerd op gestandaardiseerde HTTP-statuscodes, uitgebr
 
 Hieronder wordt een tabel weergegeven met de mogelijke response codes, foutberichten en oorzaken die kunnen optreden bij de uitvoering van de GraphQL-verzoeken `zendMelding` en `zendNotificatie`. Deze tabel dient als leidraad voor een correcte interpretatie van de responses en het oplossen van eventuele problemen.
 
-De hieronder beschreven foutcodes ontstaan bij het valideren van de ingezonden GraphQL in nID, onderdeel PDP (zie artikel [nID netwerkstelsel](../nid_netwerkstelsel)).
+De hieronder beschreven foutcodes ontstaan bij het valideren van de ingezonden GraphQL in nID, onderdeel PDP (zie artikel [nID netwerkstelsel](../nid_netwerkstelsel.md)).
 
 
 ```mermaid
+---
+    config:
+        theme: forest
+---
 sequenceDiagram
     box Verzender
         participant Resource
@@ -214,6 +227,8 @@ sequenceDiagram
     Resource->>Resource: verwerk GraphQL 200 response
     deactivate Resource
 ```
+Figuur 3 - Sequentiediagram
+
 
 | Response | Oorzaak |
 | :-- | :-- |
@@ -263,9 +278,13 @@ Binnen het iWlz-netwerkmodel zijn er specifieke scopes gedefinieerd voor de dien
 
 ### 3.5 Sequentiediagram notificeren
 
-De flow beschrijft alleen het notificeren zelf. Voor het notificeren is autorisatie nodig. Het aanvragen van autorisatie en de daar bijhorende flow is beschreven in artikel [nID netwerkstelsel](../nid_netwerkstelsel).
+De flow beschrijft alleen het notificeren zelf. Voor het notificeren is autorisatie nodig. Het aanvragen van autorisatie en de daar bijhorende flow is beschreven in artikel [nID netwerkstelsel](../nid_netwerkstelsel.md).
 
 ```mermaid
+---
+    config:
+        theme: forest
+---
 sequenceDiagram
     box bronhouder
         participant Resource
@@ -326,6 +345,8 @@ sequenceDiagram
     deactivate Resource
 
 ```
+Figuur 4 - Sequentiediagram Notificeren
+
 
 | # | Beschrijving | Toelichting |
 | :-- | :-- | :-- |
@@ -502,11 +523,15 @@ Binnen het iWlz-netwerkmodel zijn er specifieke scopes gedefinieerd voor de dien
 
 ### 4.5 Sequentiediagram melden
 
-De hier beschreven flow beschrijft alleen het melden. Voor het melden is autorisatie nodig. Het aanvragen van autorisatie en de bijbehorende flow is beschreven in artikel [nID netwerkstelsel](../nid_netwerkstelsel)).
+De hier beschreven flow beschrijft alleen het melden. Voor het melden is autorisatie nodig. Het aanvragen van autorisatie en de bijbehorende flow is beschreven in artikel [nID netwerkstelsel](../nid_netwerkstelsel.md)).
 
 
 
 ```mermaid
+---
+    config:
+        theme: forest
+---
 sequenceDiagram
     box deelnemer
         participant Resource
@@ -562,6 +587,7 @@ sequenceDiagram
     Resource->>Resource: [08] verwerk GraphQL 200 response
     deactivate Resource
 ```
+Figuur 5 - Sequentiediagram Melden
 
 | # | Beschrijving | Toelichting |
 | :-- | :-- | :-- |

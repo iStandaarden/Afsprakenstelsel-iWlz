@@ -1,3 +1,5 @@
+# Serviceafspraken Bronhoudersdeel
+
 
 ## 1. Inleiding
 
@@ -12,7 +14,7 @@ De serviceafspraken in dit deel hebben betrekking op onder meer:
 - het uitvoeren van capaciteits-, continuïteits- en configuratiebeheer;
 - het uitvoeren van logging en monitoring binnen de eigen organisatie.
 
-Dit artikel gaat uitsluitend in op de rol van bronhouders. Afspraken over diensten van de [operationeel netwerkbeheerder](./operationeel_netwerkbeheer) of verantwoordelijkheden van [afnemers](./afnemersdeel) zijn opgenomen in de desbetreffende delen van het afsprakenstelsel. Daarnaast zijn de algemene afspraken over serviceafspraken van toepassing die zijn verwoord in het artikel [serviceafspraken](./index).
+Dit artikel gaat uitsluitend in op de rol van bronhouders. Afspraken over diensten van de [operationeel netwerkbeheerder](./operationeel_netwerkbeheer.md) of verantwoordelijkheden van [afnemers](./afnemersdeel.md) zijn opgenomen in de desbetreffende delen van het afsprakenstelsel. Daarnaast zijn de algemene afspraken over serviceafspraken van toepassing die zijn verwoord in het artikel [Serviceafspraken iWlz Netwerkmodel](./iwlz_netwerkmodel.md).
 
 ## 2. Algemene serviceafspraken bronhouders
 
@@ -26,8 +28,8 @@ Bronhouders stellen een testomgeving beschikbaar voor afnemers ten behoeve van a
 - In de testomgeving is het gebruik van productiedata niet toegestaan. Om te kunnen testen stelt de bronhouder een representatieve testdataset beschikbaar. De stelselbeheerder Zorginstituut publiceert bij nieuwe releases een lijst met fictieve BSN’s voor testdoeleinden.
 - Indien de testdataset niet voldoet voor de test die een afnemer wil uitvoeren, dan zal de bronhouder in overleg met de afnemer een specifieke testdata beschikbaar stellen. Dit stemmen de afnemer en bronhouder rechtstreeks met elkaar af. Een bronhouder kan dit verzoek weigeren.
 
-> ⚠️
-> De definitieve specificaties van de testomgevingen en testdata worden bepaald na afronding van het onderzoek naar de testbehoefte van deelnemers.
+!!! warning
+    De definitieve specificaties van de testomgevingen en testdata worden bepaald na afronding van het onderzoek naar de testbehoefte van deelnemers.
 
 ### 2.2 Databeschikbaarheid
 
@@ -66,7 +68,9 @@ Servicedesk bronhouder – afspraken:
 
 ### 3.2 Logische toegangsbeveiliging
 
-Generieke afspraken over logische toegangsbeveiliging zijn opgenomen in [Serviceafspraken_logische toegangsbeveiliging](./index#38-logische-toegangsbeveiliging). Dit deel bevat geen aanvullende afspraken specifiek voor bronhouders.
+Generieke afspraken over logische toegangsbeveiliging zijn opgenomen in [Serviceafspraken iWlz Netwerkmodel > 2.8 Logische toegangsbeveiliging](./iwlz_netwerkmodel.md#28-logische-toegangsbeveiliging).  
+
+Dit deel bevat geen aanvullende afspraken specifiek voor bronhouders.
 
 ## 4. Beheerprocessen bronhouders
 
@@ -87,7 +91,7 @@ Bronhouders zijn verantwoordelijk voor de inrichting van het eigen incidentbehee
 Hierbij gelden de volgenden procesafspraken:
 
 - Incidenten worden door gebruikers gemeld bij de eerstelijns ondersteuning van de eigen organisatie. Deze eerstelijns ondersteuning doet onderzoek naar het incident en stelt urgentie en impact vast en schakelt indien van toepassing met de servicedesk van andere deelnemers.
-- Partijen zijn vrij het eigen incidentbeheerproces in te richten. Hierbij wordt voldaan aan de [minimale openingstijden](./index#35-minimale-openingstijden-servicedesks) van de servicedesks die beschreven zijn in het artikel Serviceafspraken.
+- Partijen zijn vrij het eigen incidentbeheerproces in te richten. Hierbij wordt voldaan aan de [minimale openingstijden](./iwlz_netwerkmodel.md#25-minimale-openingstijden-servicedesks) van de servicedesks die beschreven zijn in het artikel Serviceafspraken.
   Incidentmeldingen die aangeleverd worden buiten de openstellingstijden worden zoveel mogelijk opgepakt.
 - Een bronhouder maakt na het optreden van een calamiteit (een incident met veel impact) zo snel mogelijk inzichtelijk wat de gevolgen hiervan zijn voor de afnemers en komt met een oplostermijn voor de herstelactiviteiten om de dienstverlening te herstellen.
 - Bij een calamiteit verloopt de communicatie primair via de operationeel netwerkbeheerder.
@@ -114,18 +118,19 @@ Bronhouders zijn zelf verantwoordelijk voor de beschikbaarheid en continuïteit 
 | **Prestatienorm/KPI** | **Meetmethode** | **Rapportage** | **Bijzonderheden** |
 | :--- | :--- | :--- | :--- |
 | **Beschikbaarheid** ≥ 99,5 procent per kalendermaand, binnen het dienstverleningsvenster\*. | N.t.b. | N.t.b. | **Meetpunt:** ingang bronsysteem/ netwerkpunt. |
-| **Onderhoud** wordt uitgevoerd binnen het onderhoudsvenster (zie [Ondersvenster](./index#37-onderhoudsvenster)). Aankondiging niet vereist indien binnen venster. | N.t.b. | N.t.b. | **Overrun buiten onderhoudsvenster:** Vereist melding aan Operationeel netwerkbeheerder en telt als downtime. |
+| **Onderhoud** wordt uitgevoerd binnen het onderhoudsvenster (zie [Serviceafspraken iWlz Netwerkmodel > 2.7 Onderhoudsvenster](./iwlz_netwerkmodel.md#27-onderhoudsvenster)). Aankondiging niet vereist indien binnen venster. | N.t.b. | N.t.b. | **Overrun buiten onderhoudsvenster:** Vereist melding aan Operationeel netwerkbeheerder en telt als downtime. |
 | **Verstoringen** met ketenimpact worden door de bronhouder direct gemeld bij de operationeel netwerkbeheerder | N.t.b. | N.t.b. | **Netwerkbrede communicatie:** verloopt via de operationeel netwerkbeheerder. <br><br>**Onderbrekingen binnen een onderhoudsvenster:** worden niet als verstoring aangemerkt |
 
-\*De berekening van de Beschikbaarheid is gedefinieerd in [Serviceafspraken_Berekening beschikbaarheid](./index#311-berekening-beschikbaarheid).
+!!! note
+    <sup>*</sup>De berekening van de Beschikbaarheid is gedefinieerd in [Serviceafspraken iWlz Netwerkmodel > 2.11 Berekening beschikbaarheid](./iwlz_netwerkmodel.md#211-berekening-beschikbaarheid).
 
 ### 4.5 Configuratiebeheer bronhouders
 
-Generieke afspraken over configuratiebeheer zijn opgenomen in [Serviceafspraken_Configuratiebeheer](./index#39-configuratiebeheer). Er zijn geen aanvullende afspraken specifiek voor bronhouders.
+Generieke afspraken over configuratiebeheer zijn opgenomen in [Serviceafspraken iWlz Netwerkmodel > 2.9 Configuratiebeheer](./iwlz_netwerkmodel.md#29-configuratiebeheer). Er zijn geen aanvullende afspraken specifiek voor bronhouders.
 
 ### 4.6 Logging, monitoring en rapportage bronhouders
 
-Generieke afspraken over logging en monitoring zijn opgenomen in [_Serviceafspraken_](./index). Dit deel bevat geen aanvullende afspraken specifiek voor bronhouders.
+Generieke afspraken over logging en monitoring zijn opgenomen in [_Serviceafspraken iWlz Netwerkmodel_](./iwlz_netwerkmodel.md. Dit deel bevat geen aanvullende afspraken specifiek voor bronhouders.
 
 ### 4.7 Kwaliteitsbeheer
 
@@ -134,7 +139,7 @@ De specifieke kwaliteitseisen waaraan de data (zoals uitwisselformaat en actuali
 
 ### 4.8 Escalatie bij productie verstoringen
 
-Escalatie bij productieverstorende incidenten, problemen of bij het niet naleven van de prestatieafspraken vindt plaats conform [Serviceafspraken_Geschillen en escalatie](./index#33-geschillen-en-escalatie)
+Escalatie bij productieverstorende incidenten, problemen of bij het niet naleven van de prestatieafspraken vindt plaats conform [Serviceafspraken iWlz Netwerkmodel > 2.3 Geschillen en escalatie](./iwlz_netwerkmodel.md#23-geschillen-en-escalatie)
 
 ## 5. Boetes en beperkingen
 

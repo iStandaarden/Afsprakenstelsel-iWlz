@@ -9,7 +9,7 @@ De serviceafspraken zijn opgesteld om afspraken vast te leggen over de dienstver
 
 ### 1.2 Positie van de serviceafspraken
 
-De basis voor de iWlz-netwerkmodel serviceafspraken wordt gevormd door wet- en regelgeving, te weten de _Wet langdurige zorg_ (op grond van artikel 9.1.2 lid 7 a t/m d) en de nadere uitwerking in het [_Besluit langdurige zorg_](https://wetten.overheid.nl/BWBR0035948/2022-01-01) en de [_Regeling langdurige zorg_](https://wetten.overheid.nl/BWBR0036014/2022-07-01/). Deze juridische basis is uitgebreider beschreven in de artikelen [Randvoorwaarden](../randvoorwaarden) en [Ontwerpkeuzes](../ontwerpkeuzes) en wordt hier kort samengevat om de context en relevante verwijzingen direct zichtbaar te maken.
+De basis voor de iWlz-netwerkmodel serviceafspraken wordt gevormd door wet- en regelgeving, te weten de _Wet langdurige zorg_ (op grond van artikel 9.1.2 lid 7 a t/m d) en de nadere uitwerking in het [_Besluit langdurige zorg_](https://wetten.overheid.nl/BWBR0035948/2022-01-01) en de [_Regeling langdurige zorg_](https://wetten.overheid.nl/BWBR0036014/2022-07-01/). Deze juridische basis is uitgebreider beschreven in de artikelen [Randvoorwaarden](../randvoorwaarden.md) en [Ontwerpkeuzes](../ontwerpkeuzes.md) en wordt hier kort samengevat om de context en relevante verwijzingen direct zichtbaar te maken.
 
 Hierop voortbouwend geldt een overeenkomst tussen de deelnemers aan het iWlz-netwerkmodel, te weten het [_Convenant samenwerking ketenpartijen iWlz_](https://www.istandaarden.nl/services/file/get?key=XDh_Z1NWnWd9qjLfPpL2hxn303Z8I9xxXNKt18Q9uD0sh6lhBP-vPYFziYY-RWLnRW0h9snDSPCtfpFca6BXK1GzBtss_kaDr4sKaztAVgRvYLnXLvNLhS4icuQnRww5yNFThzVdveXrgjpwUCshoYd-ZHbA0Q7KrGdMxo4) en de [_Aanvullende Afspraken_](https://www.istandaarden.nl/algemeen/governance), waarin partijen zich commiteren aan het Afsprakenstelsel iWlz-netwerkmodel.
 
@@ -29,13 +29,14 @@ Figuur 1 - Juridische positie iWlz-netwerkmodel serviceafspraken
 !!! info
     De serviceafspraken beschrijven de overkoepelende structuur en afspraken. Details en werkinstructies zijn vastgelegd in onderlinge contracten en procedures tussen partijen.
 
-N.B. Als in documentatie aangaande iWlz-netwerkmodel serviceafspraken onverhoopt tegenstrijdigheden voorkomen dan geldt de hiërarchisch hoger gelegen documentatie.
+!!! warning
+    N.B. Als in documentatie aangaande iWlz-netwerkmodel serviceafspraken onverhoopt tegenstrijdigheden voorkomen dan geldt de hiërarchisch hoger gelegen documentatie.
 
 ### 1.3 Overlegorganen
 
 Binnen het iWlz-netwerkmodel bestaan meerdere overlegorganen die verantwoordelijk zijn voor besluitvorming, afstemming en doorontwikkeling. De onderstaande tabel geeft de overlegvormen weer zoals deze zijn genoemd in het [Convenant](https://www.istandaarden.nl/algemeen/governance) en die zijn ingericht ten behoeve van het Actieprogramma.
 
-| Column 1 | Column 2 |
+| | |
 | --- | --- |
 | **Soort overleg** | **Stuurgroep iWlz** |
 | Aard | Strategisch/tactisch (besluitvormend) |
@@ -43,30 +44,35 @@ Binnen het iWlz-netwerkmodel bestaan meerdere overlegorganen die verantwoordelij
 | Frequentie | Maandelijks |
 | Doel | <ul><li>Signaleert en bespreekt onderwerpen die relevant zijn voor het iWlz-netwerkmodel.</li><li>Formuleert een gemeenschappelijke visie op de jaarlijkse iWlz-releases.</li><li>Neemt besluiten over de inhoud van de releases.</li><li>Neemt besluiten over het plan van aanpak van projecten die betrekking hebben op de iWlz.</li><li>Bewaakt de voortgang van projecten.</li><li>Bespreekt en beoordeelt projectevaluaties.</li><li>Bespreekt geëscaleerde incidenten vanuit deelnemers (bijvoorbeeld bij nalatigheid).</li><li>Bespreekt periodiek rapportages over monitoring op strategisch niveau.</li></ul> |
 | Voorzitterschap | Zorginstituut Nederland |
+| | |
 | **Soort overleg** | **Functionele Klankbordgroep iWlz (Klankbordgroep iWlz)** |
 | Aard | Operationeel |
 | Deelnemers | Inhoudsdeskundigen van alle iWlz-ketenpartijen: het CIZ, de zorgkantoren, de zorgaanbieders, het CAK én Zorginstituut Nederland. Zij participeren in de Klankbordgroep spreken namens de eigen organisatie en niet namens de branche waarvan hun organisatie deel uit maakt. |
 | Frequentie | Twee keer per jaar |
 | Doel | <ul><li>Dient als klankbord voor het Zorginstituut Nederland bij verbeteringen en de correctie toepassing van de standaarden in de actuele informatie-uitwisseling.</li><li>Adviseert het Zorginstituut Nederland over mogelijke oplossingsrichtingen en de technische uitvoering.</li><li>Doet voorstellen voor de inhoud van de iWlz-releases.</li></ul> |
 | Voorzitterschap | Zorginstituut Nederland |
+| | |
 | **Soort overleg** | **Technische Klankbordgroep iWlz (Technisch afstemmingsoverleg)** |
 | Aard | Operationeel |
 | Deelnemers | Softwareleveranciers/IT-dienstverleners van deelnemers aan het iWlz-netwerkmodel |
 | Frequentie | Tweewekelijks |
 | Doel | <ul><li>Performance netwerkmodel beoordelen (bewaken van het niveau van ICT-dienstverlening).</li><li>Knelpunten en wijzigingen in de dienstverlening signaleren.</li><li>Denkt mee over voorstellen voor technische verbeteringen.</li><li>Dient als klankbord voor het Zorginstituut Nederland bij verbeteringen en de correctie toepassing van de standaarden die de technische implementatie bij partijen raken.</li></ul>|
 | Voorzitterschap | Zorginstituut Nederland |
+| | |
 | **Soort overleg** | **Referentiegroep iWlz** |
 | Aard | Operationeel/tactisch |
 | Deelnemers | Inhoudsdeskundigen van alle ketenpartijen: het CIZ, ZN, zorgkantoren, de brancheorganisaties van het zorgaanbod, zorgaanbieders, het CAK, de SVB, Zorginstituut Nederland én het Ministerie van VWS. Daarnaast zijn ook de softwareleveranciers betrokken. Alle deelnemers aan de Referentiegroep spreken namens de eigen organisatie en niet als belangenbehartiger namens de branche waarvan hun organisatie deel uit maakt. |
 | Frequentie | De Referentiegroep komt met name bijeen voorafgaand aan de formulering van de concept specificaties van een release. De frequentie en timing is per releasecyclus verschillend. |
 | Doel | <ul><li>Bespreekt met materiedeskundigen van stakeholders de impact van gewenste beleids- en proceswijzigingen voor de informatie-uitwisseling.</li><li>Adviseert Zorginstituut Nederland met informatie voor de opstelling van de functionele specificaties voor de volgende release.</li><li>Wordt indien noodzakelijk uitgebreid met technische deskundigheid om ook input te leveren voor de technische specificaties.</li></ul> |
 | Voorzitterschap | Zorginstituut Nederland |
+| | |
 | **Soort overleg** | **Koplopersoverleg** |
 | Aard | Tactisch |
 | Deelnemers | Ketenpartijen die als eerste aansluiten op een register (early adopters). |
 | Frequentie | Wekelijks |
 | Doel | <ul><li>Bepaalt de omvang van de impact voor de organisatie.</li><li>Doet voorstellen voor de technische inhoud van de iWlz-releases.</li><li>Informeert elkaar over de voortgang van lopende werkzaamheden en implementaties.</li><li>Signaleert tijdig knelpunten en afhankelijkheden die de release kunnen beïnvloeden.</li><li>Draagt bij aan de afstemming tussen functionele en technische keuzes, zodat releases uitvoerbaar en haalbaar zijn voor alle betrokken partijen.</li></ul> |
 | Voorzitterschap | Zorginstituut Nederland |
+| | |
 | **Soort overleg** | **Werkgroep Bezorg** |
 | Aard | Operationeel |
 | Deelnemers | Inhoudsdeskundigen van alle ketenpartijen: het CIZ, ZN, zorgkantoren, de brancheorganisaties van het zorgaanbod, zorgaanbieders, het CAK en Zorginstituut Nederland. Daarnaast zijn ook de softwareleveranciers betrokken. Alle deelnemers aan de werkgroep bezorg spreken namens de eigen organisatie en niet als belangenbehartiger namens de branche waarvan hun organisatie deel uit maakt |
@@ -133,7 +139,7 @@ Indien een datalek gevolgen kan hebben voor andere partijen binnen het iWlz-netw
 - Communicatie vindt plaats via de Functionaris Gegevensbescherming (FG) van de partij die het datalek heeft ontdekt per e-mail.
 - Bij incidenten met hoge impact vindt daarnaast ook telefonisch contact plaats.
 - Partijen ondersteunen elkaar, waar nodig en redelijk, bij het doen van meldingen en stemmen af over de inhoud daarvan.
-- Elke partij levert bij toelating tot het netwerk een vast FG-adres aan (bij voorkeur geen persoongebonden e-mailadres maar een functioneel adres, zoals [_fg@organisatie.nl_]. Deze adressen worden centraal beheerd en opgenomen in het adresboek (voorlopig het tijdelijk adresboek). Deelnemers dienen te borgen dat dit gegeven altijd actueel is.
+- Elke partij levert bij toelating tot het netwerk een vast FG-adres aan (bij voorkeur geen persoongebonden e-mailadres maar een functioneel adres, zoals bijvoorbeeld [_fg@organisatie.nl_]. Deze adressen worden centraal beheerd en opgenomen in het adresboek (voorlopig het tijdelijk adresboek). Deelnemers dienen te borgen dat dit gegeven altijd actueel is.
 
 **Toelichting**  
 De wettelijke meldplicht (melding bij de Autoriteit Persoonsgegevens en/of betrokkenen binnen 72 uur, conform AVG art. 33) blijft altijd de verantwoordelijkheid van elke afzonderlijke partij en is vastgelegd in **Randvoorwaarde R05 AVG**.
@@ -151,7 +157,7 @@ Bronhouders, afnemers en operationeel netwerkbeheerder hebben allen servicedesks
 
 ### 2.6 Dienstverleningsvenster
 
-Tijdens het dienstverleningsvenster is het iWlz-netwerk operationeel conform de minimaal te realiseren Beschikbaarheid (zie [Operationeel netwerkbeheer_Beschikbaarheid](./operationeel_netwerkbeheer#32-beschikbaarheid) en [Bronhoudersdeel_Continuïteitsbeheer bronhouder](./bronhoudersdeel#44-continuïteitsbeheer_bronhouders)).
+Tijdens het dienstverleningsvenster is het iWlz-netwerk operationeel conform de minimaal te realiseren Beschikbaarheid (zie [Serviceafspraken Operationeel netwerkbeheer > 3.2 Beschikbaarheid](./operationeel_netwerkbeheer.md#32-beschikbaarheid) en [Serviceafspraken Bronhoudersdeel > 4.4 Continuïteitsbeheer bronhouder](./bronhoudersdeel.md#44-continuiteitsbeheer-bronhouders)).
 
 | **Dagen** | **Dienstverleningsvenster** | **Bijzonderheden** |
 | --- | --- | --- |
@@ -192,18 +198,18 @@ Deze informatieverstrekking vindt plaats binnen de grenzen van wet- en regelgevi
 
 ### 2.11 Berekening beschikbaarheid
 
-Beschikbaarheid is de periode dat een dienst volledig beschikbaar is binnen het iWlz-netwerk en geldt voor Operationeel netwerkbeheerder en Bronhouders. De beschikbaarheidspercentages zijn gespecificeerd in de onderliggende paragrafen [Operationeel netwerkbeheer_Beschikbaarheid](./operationeel_netwerkbeheer#32-beschikbaarheid) en [Bronhoudersdeel_Continuïteitsbeheer bronhouder](./bronhoudersdeel#44-continuïteitsbeheer_bronhouders).
+Beschikbaarheid is de periode dat een dienst volledig beschikbaar is binnen het iWlz-netwerk en geldt voor Operationeel netwerkbeheerder en Bronhouders. De beschikbaarheidspercentages zijn gespecificeerd in de onderliggende paragrafen [Serviceafspraken Operationeel netwerkbeheer > 3.2 Beschikbaarheid](./operationeel_netwerkbeheer.md#32-beschikbaarheid) en [Serviceafspraken Bronhoudersdeel > 4.4 Continuïteitsbeheer bronhouder](./bronhoudersdeel.md#44-continuiteitsbeheer-bronhouders).
 
 De Beschikbaarheid wordt als volgt berekend:
 
-`Beschikbaarheid = ((B – D) / B) x 100%`
+!!! example "Beschikbaarheid = ((B – D) / B) x 100%"
 
-> ℹ️
-> Waarbij;
-> B = totaal aantal minuten binnen het dienstverleningsvenster per maand waarin diensten beschikbaar moet zijn.
-> D = _aantal niet-beschikbare minuten_ van een dienst binnen het dienstverleningsvenster per maand.
->
-> Onder _aantal niet-beschikbare minuten_ wordt verstaan: het aantal minuten dat de dienst gedurende één minuut aansluitend niet-beschikbaar is ondanks meerdere (minimaal 3) connectiepogingen of gedeeltelijk of uitzonderlijk vertraagd beschikbaar is. In dat geval is er sprake van een incident.
+!!! info "Waarbij:"
+
+    B = totaal aantal minuten binnen het dienstverleningsvenster per maand waarin diensten beschikbaar moet zijn.  
+    D = totaal aantal *niet-beschikbare* minuten van een dienst binnen het dienstverleningsvenster per maand.
+
+    Onder _aantal niet-beschikbare minuten_ wordt verstaan: het aantal minuten dat de dienst gedurende één minuut aansluitend niet-beschikbaar is ondanks meerdere (minimaal 3) connectiepogingen of gedeeltelijk of uitzonderlijk vertraagd beschikbaar is. In dat geval is er sprake van een incident.
 
 ## 3. Monitoring in het iWlz Netwerkmodel
 
@@ -217,7 +223,7 @@ Met het oog op het bevorderen van de betrouwbaarheid, transparantie en lerend ve
 
 ### 3.2 Uitgangspunt
 
-Monitoring is een ondersteunend instrument voor de betrokken [systeemrollen](../rollen_deelnemers#5-systeemrollen) en beheerrollen. De gegevens uit monitoring worden nadrukkelijk niet gebruikt voor toezicht op individuele organisaties, maar dienen om samenwerking, verbetering en interoperabiliteit binnen het iWlz-Netwerk te versterken.
+Monitoring is een ondersteunend instrument voor de betrokken [deelnemers](../rollen_deelnemers.md). De gegevens uit monitoring worden nadrukkelijk niet gebruikt voor toezicht op individuele organisaties, maar dienen om samenwerking, verbetering en interoperabiliteit binnen het iWlz-Netwerk te versterken.
 
 Bij de uitwerking van de monitoring blijven proportionaliteit, nut voor betrokken partijen en bescherming van persoonsgegevens leidende uitgangspunten.
 
@@ -237,5 +243,5 @@ Monitoring ondersteunt twee doelen. Onderstaand het bijbehorende product per doe
 
 | **Doel** | **Product** | **Wat laat het zien** | **Voorbeelden** |
 | --- | --- | --- | --- |
-| Operationeel sturen | Dashboards (realtime) | Beschikbaarheid, performance, foutmeldingen, systeem/netwerk | Uptime, latency, error rates, incidentfeed |
+| Operationeel sturen | Dashboards (realtime) | Beschikbaarheid, performance, foutmeldingen, systeem/netwerk | Uptime, latency, error rates, incident feed |
 | Beleid & beheer | Rapportages (periodiek) | Trends, volumes, stabiliteit, herkomst verstoringen | Maandrapport storingen, volume per ketenonderdeel, trendanalyse |

@@ -24,12 +24,12 @@ De basis voor dit uitwisselprofiel wordt gevormd door de artikelen uit dit afspr
 
 **Afspraken bij twijfels/vragen over de kwaliteit van data**  
 
-  - Wanneer het een afwijking is op de gegevensregels van de iStandaard iWlz (overtreding gegevensregel) verloopt de terugkoppeling aan de bronhouder via de (fout)melding. Zie het artikel [Notificeren en Melden > 4. meldingen](../../applicatie/diensten/notificeren-en-melden#4-meldingen).
+  - Wanneer het een afwijking is op de gegevensregels van de iStandaard iWlz (overtreding gegevensregel) verloopt de terugkoppeling aan de bronhouder via de (fout)melding. Zie het artikel [Notificeren en Melden > 4. meldingen](../applicatie/diensten/notificeren-en-melden.md#4-meldingen).
   - Gaat het om andere twijfels/vragen: dan contact opnemen met het verantwoordelijke zorgkantoor via telefoon of notitieverkeer.
 
 ## 4. Wet- en regelgeving
 
-In het artikel [Randvoorwaarden](../../organisatiebeleid/randvoorwaarden) is aangegeven welke wet- en regelgeving voor het Bemiddelingsregister van toepassing is.
+In het artikel [Randvoorwaarden](../organisatiebeleid/randvoorwaarden.md) is aangegeven welke wet- en regelgeving voor het Bemiddelingsregister van toepassing is.
 
 Specifiek voor het Bemiddelingsregister zijn de volgende grondslagen van toepassing:
 
@@ -42,11 +42,11 @@ Het Bemiddelingsregister ondersteunt twee processen.
 
 **Proces toeleiden**
 
-Het proces toeleiden en bewaken passende zorg is beschreven in het Artikel Proces. Zie [Procesmodel > 5. Zorgkantoor: Toeleiden, bewaken passende zorg](../../proces/procesmodel#5-zorgkantoor-toeleiden-bewaken-passende-zorg)
+Het proces toeleiden en bewaken passende zorg is beschreven in het Artikel Proces. Zie [Procesmodel > 5. Zorgkantoor: Toeleiden, bewaken passende zorg](../proces/procesmodel.md#5-zorgkantoor-toeleiden-bewaken-passende-zorg)
 
 **5.2 Proces dossieroverdracht**
 
-Het proces dossieroverdracht is beschreven in het Artikel Proces. Zie [Procesmodel > 5.4 Dossieroverdracht](../../proces/procesmodel#6-zorgkantoor-dossieroverdracht)
+Het proces dossieroverdracht is beschreven in het Artikel Proces. Zie [Procesmodel > 5.4 Dossieroverdracht](../proces/procesmodel.md#6-zorgkantoor-dossieroverdracht)
 
 ## 6. Informatie
 
@@ -118,7 +118,7 @@ Het [Informatiemodel iStandaarden](https://informatiemodel.istandaarden.nl/) bev
 
 Dit hoofdstuk beschrijft de specifieke invulling van de applicatie laag voor het Bemiddelingsregister.
 
-### 8.1 [Applicatiecomponenten](../../applicatie/applicatiecomponenten)
+### 8.1 [Applicatiecomponenten](../applicatie/applicatiecomponenten.md)
 
 In het netwerkmodel voor het indicatieregister worden de **diensten**:
 

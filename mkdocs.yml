@@ -143,6 +143,7 @@ nav:
       - Rollen en deelnemers: organisatiebeleid/rollen_deelnemers.md
       - Serviceafspraken:
           - organisatiebeleid/serviceafspraken/index.md
+          - iWlz netwerkmodel: organisatiebeleid/serviceafspraken/iwlz_netwerkmodel.md
           - Operationeel netwerkbeheer: organisatiebeleid/serviceafspraken/operationeel_netwerkbeheer.md
           - Bronhoudersdeel: organisatiebeleid/serviceafspraken/bronhoudersdeel.md
           - Afnemersdeel: organisatiebeleid/serviceafspraken/afnemersdeel.md

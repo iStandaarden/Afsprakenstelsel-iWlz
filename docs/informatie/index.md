@@ -13,6 +13,6 @@ In dit hoofdstuk worden de afspraken toegelicht die gelden voor de gegevens die 
 
     In dit artikel wordt toegelicht hoe de gegevens die binnen de Wlz worden uitgewisseld zijn gestandaardiseerd en waar de specificaties hiervan te vinden zijn.
 
-    [:octicons-arrow-right-24: lees verder](#)
+    [:octicons-arrow-right-24: lees verder](./informatiestandaard.md)
 
 </div>

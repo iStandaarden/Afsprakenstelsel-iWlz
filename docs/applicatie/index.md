@@ -14,7 +14,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     De applicatiecomponenten die nodig zijn voor de invulling van het iWlz-netwerkmodel
 
-    [:octicons-arrow-right-24: lees verder](applicatiecomponenten.md)
+    [:octicons-arrow-right-24: lees verder](./applicatiecomponenten.md)
 
 -   :material-cloud-key:{ .lg .middle } __nID netwerkstelsel__
 
@@ -22,7 +22,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Dit artikel beschrijft het nID netwerkstelsel en haar netwerkservices zoals autoriseren
 
-    [:octicons-arrow-right-24: lees verder](#)
+    [:octicons-arrow-right-24: lees verder](./nid_netwerkstelsel.md)
 
 -   :material-graphql:{ .lg .middle } __GraphQL over HTTP__
 
@@ -30,7 +30,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Beschrijving van de manier waarop binnen het iWlz-netwerkmodel GraphQL-verzoeken via GraphQL over HTTP worden afgehandeld.
 
-    [:octicons-arrow-right-24: lees verder](#)
+    [:octicons-arrow-right-24: lees verder](./graphql_over_http.md)
 
 -   :material-cog-sync-outline:{ .lg .middel } __Diensten__
 
@@ -58,7 +58,7 @@ Achtereenvolgens wordt ingegaan op de volgende aspecten:
 
     Beschrijving van de hybride situatie waarin nog niet alle deelnemers over zijn naar het iWlz-netwerk en de tijdelijke voorziening Silvester die dit ondersteunt.
 
-    [:octicons-arrow-right-24: lees verder](#)
+    [:octicons-arrow-right-24: lees verder](./silvester.md)
 
 
 

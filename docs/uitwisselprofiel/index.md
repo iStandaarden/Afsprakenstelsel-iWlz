@@ -12,7 +12,7 @@ De uitwisselprofielen bevatten specifieke afspraken per register. In ieder uitwi
 
     Specifieke afspraken en technische specificaties voor aansluiting op het Indicatieregister.
 
-    [:octicons-arrow-right-24: lees verder](./uitwisselprofiel_indicatie)
+    [:octicons-arrow-right-24: lees verder](./uitwisselprofiel_indicatie.md)
 
 -   :octicons-git-compare-24:{ .lg .middle } __Uitwisselprofiel Bemiddeling__
 
@@ -20,7 +20,7 @@ De uitwisselprofielen bevatten specifieke afspraken per register. In ieder uitwi
 
     Specifieke afspraken en technische specificaties voor aansluiting op het Bemiddelingsregister.
 
-    [:octicons-arrow-right-24: lees verder](./uitwisselprofiel_bemiddeling)
+    [:octicons-arrow-right-24: lees verder](./uitwisselprofiel_bemiddeling.md)
 
 -   :octicons-git-compare-24:{ .lg .middle } __Uitwisselprofiel Levering__
 

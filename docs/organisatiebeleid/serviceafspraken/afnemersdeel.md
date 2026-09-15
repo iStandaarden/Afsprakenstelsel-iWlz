@@ -1,3 +1,4 @@
+# Serviceafspraken Afnemersdeel
 
 ## 1. Inleiding
 
@@ -12,7 +13,7 @@ De serviceafspraken in dit deel hebben betrekking op onder meer:
 - het uitvoeren van capaciteits- en continuïteitsbeheer;
 - het uitvoeren van logging en monitoring binnen de eigen organisatie.
 
-Dit artikel gaat uitsluitend in op de rol van afnemers. Afspraken over diensten van de [operationeel netwerkbeheerder](./operationeel_netwerkbeheer) of beheer door [bronhouders](./bronhoudersdeel) zijn opgenomen in de desbetreffende delen van het afsprakenstelsel. Daarnaast zijn de algemene afspraken over serviceafspraken van toepassing die zijn verwoord in het artikel [serviceafspraken](./index).
+Dit artikel gaat uitsluitend in op de rol van afnemers. Afspraken over diensten van de [operationeel netwerkbeheerder](./operationeel_netwerkbeheer.md) of beheer door [bronhouders](./bronhoudersdeel.md) zijn opgenomen in de desbetreffende delen van het afsprakenstelsel. Daarnaast zijn de algemene afspraken over serviceafspraken van toepassing die zijn verwoord in het artikel [Serviceafspraken iWlz Netwerkmodel](./iwlz_netwerkmodel.md).
 
 ## 2. Algemene serviceafspraken afnemers
 
@@ -25,8 +26,8 @@ Afnemers maken bij aansluiting en wijzigingen gebruik van de door de bronhouder/
 - Indien de test-set niet voldoet voor de test die een afnemer wil uitvoeren, dan kan de afnemer een verzoek bij de bronhouder indienen voor het aanpassen van de test-set. Een bronhouder kan dit verzoek weigeren.
 - Bij omvangrijke of belastende tests die de beschikbaarheid of performance van het iWlz-netwerk, het register of de centrale (test)infrastructuur merkbaar kunnen beïnvloeden, zoals loadtesten (een vorm van performancetesten), stemt de afnemer dit vooraf af met de operationeel netwerkbeheerder. De operationeel netwerkbeheerder beoordeelt welke bronhouder(s) door de test geraakt kunnen worden en stemt dit met hen af. De test wordt vervolgens in overleg gepland.
 
-> ⚠️
-> De definitieve specificaties van de testomgevingen en testdata worden bepaald na afronding van het onderzoek naar de testbehoefte van deelnemers.
+!!! warning
+      De definitieve specificaties van de testomgevingen en testdata worden bepaald na afronding van het onderzoek naar de testbehoefte van deelnemers.
 
 ## 3. Dienstverlening afnemers
 
@@ -41,7 +42,7 @@ Afnemers organiseren zelf de eerstelijns ondersteuning van hun gebruikers. Daarb
 
 ### 3.2 Logische toegangsbeveiliging
 
-Generieke afspraken over logische toegangsbeveiliging zijn opgenomen in [Serviceafspraken_Logische toegangsbeveiliging](./index#38-logische-toegangsbeveiliging). Dit deel bevat geen aanvullende afspraken specifiek voor afnemers.
+Generieke afspraken over logische toegangsbeveiliging zijn opgenomen in [Serviceafspraken iWlz Netwerkmodel > 2.8 Logische toegangsbeveiliging](./iwlz_netwerkmodel.md#28-logische-toegangsbeveiliging). Dit deel bevat geen aanvullende afspraken specifiek voor afnemers.
 
 ## 4. Beheerprocessen afnemers
 
@@ -69,7 +70,7 @@ De servicedesk operationeel netwerkbeheerder bepaalt in samenwerking met de betr
 
 Afnemers maken inschattingen van verwacht gebruik bij substantiële veranderingen in het gebruik van producten en diensten die onder de scope van de iWlz netwerkserviceafspraken vallen. Deze inschattingen worden tijdig gemeld bij de centrale servicedesk, zodat leveranciers maatregelen kunnen nemen om performance en beschikbaarheid te borgen.
 
-Escalatie bij productieverstorende incidenten of bij het niet naleven van deze prestatieafspraken vindt plaats conform [Serviceafspraken_Geschillen en escalatie](./index#33-geschillen-en-escalatie)
+Escalatie bij productieverstorende incidenten of bij het niet naleven van deze prestatieafspraken vindt plaats conform [Serviceafspraken iWlz Netwerkmodel > 2.3 Geschillen en escalatie](./iwlz_netwerkmodel.md#23-geschillen-en-escalatie)
 
 | **Prestatienorm** | **Meetmethode** | **Bijzonderheden** |
 | :--- | :--- | :--- |
@@ -81,10 +82,10 @@ Afnemers zijn zelf verantwoordelijk voor de beschikbaarheid van de eigen infrast
 
 ### 4.4 Configuratiebeheer afnemers
 
-Generieke afspraken over configuratiebeheer zijn opgenomen in [Serviceafspraken_Configuratiebeheer](./index#39-configuratiebeheer). Er zijn geen aanvullende afspraken specifiek voor afnemers.
+Generieke afspraken over configuratiebeheer zijn opgenomen in [Serviceafspraken iWlz Netwerkmodel > 2.9 Configuratiebeheer](./iwlz_netwerkmodel.md#29-configuratiebeheer). Er zijn geen aanvullende afspraken specifiek voor afnemers.
 
 ### 4.5 Logging, monitoring en rapportage afnemers
 
-Generieke afspraken over logging en monitoring zijn opgenomen in [Serviceafspraken](./index). Dit deel bevat geen aanvullende afspraken specifiek voor afnemers.
+Generieke afspraken over logging en monitoring zijn opgenomen in [Serviceafspraken iWlz Netwerkmodel](./iwlz_netwerkmodel.md). Dit deel bevat geen aanvullende afspraken specifiek voor afnemers.
 
 
