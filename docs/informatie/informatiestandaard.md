@@ -34,5 +34,3 @@ Onderstaand overzicht toont de relevante GitHub-repositories voor iWlz:
 | [iWlz-Xsd](https://github.com/iStandaarden/iWlz-Xsd)                               | XSD’s voor de iWlz-standaard                               |
 
 Het releasebeleid van het afsprakenstelsel iWlz netwerkmodel is te vinden in het [[|artikel Releasebeleid]].
-
-* * *
