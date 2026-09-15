@@ -31,7 +31,7 @@ Het iWlz-netwerkmodel is ontwikkeld in lijn met de door het Informatieberaad vas
 > 8. federatief samenwerken
 > 9. open internationale standaarden
 >
-> Deze principes zijn als ontwerpkeuzes uitgewerkt in het artikel [Ontwerpkeuzes](../ontwerpkeuzes).
+> Deze principes zijn als ontwerpkeuzes uitgewerkt in het artikel [Ontwerpkeuzes](./ontwerpkeuzes.md).
 
 ##### R02 Wet elektronische gegevensuitwisseling in de zorg (Wegiz)
 
@@ -43,7 +43,7 @@ Ook op Europees niveau wordt gewerkt aan regelgeving op het gebied van elektroni
 
 > ✅
 > **Concrete invulling**
-> In het afsprakenstelsel iWlz-netwerkmodel is ingericht conform de Wegiz en relevante AMvB’s door waar mogelijk gebruik te maken van bestaande (informatie)standaarden en NEN-normen. De gebruikte informatiestandaarden worden toegelicht in de laag [Proces](../../proces/index).
+> In het afsprakenstelsel iWlz-netwerkmodel is ingericht conform de Wegiz en relevante AMvB’s door waar mogelijk gebruik te maken van bestaande (informatie)standaarden en NEN-normen. De gebruikte informatiestandaarden worden toegelicht in de laag [Proces](../proces/index.md).
 
 ##### R03 Wet langdurige zorg (Wlz)
 
@@ -54,7 +54,7 @@ Een belangrijk kader voor de vernieuwing van de informatievoorziening is de wet 
 > ✅
 > **Concrete invulling**
 >
-> De wet doet over de exacte vorm van informatievoorziening geen uitspraken. Van alle in de wet opgenomen partijen wordt in het afsprakenstelsel toegelicht welke rol of rollen zij uitvoeren in het iWlz-netwerkmodel (zie [Rollen en deelnemers](../rollen_deelnemers)). Van alle in de wet opgenomen taken die relevant zijn in het kader van gegevensuitwisseling in het netwerk wordt in het afsprakenstelsel toegelicht op welke wijze deze kunnen worden ingevuld door middel van het iWlz-netwerkmodel. Het Afsprakenstelsel iWlz-netwerkmodel richt zich in eerste instantie op de Wet langdurige zorg. Indien mogelijk wordt alvast rekening gehouden met de Wet maatschappelijke ondersteuning 2015 (Wmo 2015) en de Jeugdwet (Jw) in verband met toekomstige scope uitbreiding.
+> De wet doet over de exacte vorm van informatievoorziening geen uitspraken. Van alle in de wet opgenomen partijen wordt in het afsprakenstelsel toegelicht welke rol of rollen zij uitvoeren in het iWlz-netwerkmodel (zie [Rollen en deelnemers](./rollen_deelnemers.md)). Van alle in de wet opgenomen taken die relevant zijn in het kader van gegevensuitwisseling in het netwerk wordt in het afsprakenstelsel toegelicht op welke wijze deze kunnen worden ingevuld door middel van het iWlz-netwerkmodel. Het Afsprakenstelsel iWlz-netwerkmodel richt zich in eerste instantie op de Wet langdurige zorg. Indien mogelijk wordt alvast rekening gehouden met de Wet maatschappelijke ondersteuning 2015 (Wmo 2015) en de Jeugdwet (Jw) in verband met toekomstige scope uitbreiding.
 >
 > **Relevante uitgangspunten informatiemodel iWlz**
 >
@@ -135,7 +135,7 @@ De belangrijkste verzoeken die in het kader van de AVG kunnen worden gedaan zijn
 > 2. Dat het systeem als verwerker optreedt voor de afnemer
 > 3. Dat de afnemer beschikt over bepaalde eigenschappen/kwalificaties (bijv. onboarding iWlz-netwerk)
 >
-> In het iWlz-netwerkmodel wordt dit mogelijk gemaakt door het gebruik van cryptografische bewijzen ('attesten'). Elk van de bovengenoemde controles kan met behulp van een cryptografische handtekening uitgevoerd worden. Een oplossing die voor deze controles gebruik zou maken van een actieve trusted third party voor deze controles zou niet voldoen aan DIZRA ([randvoorwaarde R01](../randvoorwaarden#r01-de-referentiearchitectuur-voor-een-duurzaam-informatiestelsel-voor-de-zorg-dizra), [ontwerpkeuze O04](../ontwerpkeuzes#o04-gelijk-speelveld-voor-alle-leveranciers)) en minder goed invulling geven aan de begrippen informatiebeveiliging en dataminimalisatie (gerelateerd aan de AVG).
+> In het iWlz-netwerkmodel wordt dit mogelijk gemaakt door het gebruik van cryptografische bewijzen ('attesten'). Elk van de bovengenoemde controles kan met behulp van een cryptografische handtekening uitgevoerd worden. Een oplossing die voor deze controles gebruik zou maken van een actieve trusted third party voor deze controles zou niet voldoen aan DIZRA ([randvoorwaarde R01](./randvoorwaarden.md#r01-de-referentiearchitectuur-voor-een-duurzaam-informatiestelsel-voor-de-zorg-dizra), [ontwerpkeuze O04](./ontwerpkeuzes.md#o04-gelijk-speelveld-voor-alle-leveranciers)) en minder goed invulling geven aan de begrippen informatiebeveiliging en dataminimalisatie (gerelateerd aan de AVG).
 >
 > Indien hier aanleiding voor is kan een bronhouder de aansluiting met een afnemer tijdelijk stopzetten.
 >
