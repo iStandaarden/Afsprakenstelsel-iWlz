@@ -1,7 +1,7 @@
 
 ## **1. Inleiding**
 
-Dit artikel beschrijft op hoofdlijnen de doelarchitectuur die wordt gehanteerd voor de realisatie van het iWlz-netwerkmodel. Allereerst wordt stilgestaan bij het primaire zorgadministratieve proces in de iWlz. Vervolgens wordt uitgelegd uit welke bouwstenen het iWlz-netwerkmodel is opgebouwd. Daarna wordt de inhoud van iedere bouwsteen toegelicht en wordt aangegeven welke deelnemers hierbij betrokken zijn. Vervolgens wordt stapsgewijs toegelicht hoe [gegevensuitwisseling](../architectuur) in het iWlz-netwerkmodel plaatsvindt.
+Dit artikel beschrijft op hoofdlijnen de doelarchitectuur die wordt gehanteerd voor de realisatie van het iWlz-netwerkmodel. Allereerst wordt stilgestaan bij het primaire zorgadministratieve proces in de iWlz. Vervolgens wordt uitgelegd uit welke bouwstenen het iWlz-netwerkmodel is opgebouwd. Daarna wordt de inhoud van iedere bouwsteen toegelicht en wordt aangegeven welke deelnemers hierbij betrokken zijn. Vervolgens wordt stapsgewijs toegelicht hoe [gegevensuitwisseling](./architectuur.md) in het iWlz-netwerkmodel plaatsvindt.
 
 De gedetailleerde uitwerking van de doelarchitectuur is terug te vinden in overige artikelen van het Afsprakenstelsel iWlz-netwerkmodel. De artikelen op de onderliggende lagen Informatie, Applicatie en IT-infrastructuur sluiten aan op de actuele en in ontwikkeling zijnde implementatiestappen van het iWlz-netwerkmodel. Vanuit dit artikel wordt naar deze artikelen verwezen indien van toepassing.
 
@@ -26,10 +26,10 @@ Het op een veilige en betrouwbare manier beschikbaar stellen van bronnen stelt e
 
 Dit artikel licht op functioneel niveau de architectuur van het iWlz-netwerkmodel toe. Dit gebeurt door de benodigde bouwstenen en hun onderlinge relaties te beschrijven. De bouwstenen zijn:
 
-- [Registers met hun bronhouders en afnemers](../architectuur#4-registers-met-hun-bronhouders-en-afnemers)
-- [Vertrouwen tussen deelnemers aan het iWlz-netwerkmodel](../architectuur#42-vertrouwen-tussen-deelnemers-aan-het-iwlz-netwerkmodel)
-- [Vindbaarheid van deelnemers aan het iWlz-netwerkmodel](../architectuur#5-vindbaarheid-van-cliënten-en-deelnemers-in-het-iwlz-netwerk)
-- [Beheer van het iWlz-netwerkmodel](../architectuur#6-ondersteunende-rollen-van-het-iwlz-netwerkmodel)
+- [Registers met hun bronhouders en afnemers](./architectuur.md#4-registers-met-hun-bronhouders-en-afnemers)
+- [Vertrouwen tussen deelnemers aan het iWlz-netwerkmodel](./architectuur.md#42-vertrouwen-tussen-deelnemers-aan-het-iwlz-netwerkmodel)
+- [Vindbaarheid van deelnemers aan het iWlz-netwerkmodel](./architectuur.md#5-vindbaarheid-van-cliënten-en-deelnemers-in-het-iwlz-netwerk)
+- [Beheer van het iWlz-netwerkmodel](./architectuur.md#6-ondersteunende-rollen-van-het-iwlz-netwerkmodel)
 
 Iedere bouwsteen bestaat uit een aantal met elkaar samenhangende systeemrollen. Onderstaande figuur geeft de bouwstenen en rollen in het iWlz-netwerkmodel weer.
 
@@ -164,7 +164,7 @@ Er is voorshands één bevoegde uitgever. Dat is het VECOZO via het VECOZO certi
 
 De operationeel netwerkbeheerder (in DIZRA: “Operationeel ketenbeheerder“) heeft als taak het dagelijks beschikbaar stellen van het netwerk volgens de afspraken. De operationeel netwerkbeheerder monitort de gegevensuitwisseling in het iWlz-netwerkmodel, zorgt voor het herstel als het netwerk niet goed blijkt te functioneren, is belast met het uitvoeren van afgesproken handelingen zoals het leveren van rapportages, afschriften en voorlichting, en biedt een gemeenschappelijke helpdesk voor de deelnemers van het iWlz-netwerkmodel aan.
 
-De nadere invulling van de operationeel netwerkbeheerder is terug te vinden in de [Serviceafspraken](../serviceafspraken/index). Binnen het iWlz-netwerkmodel is sprake van één operationeel netwerkbeheerder (VECOZO).
+De nadere invulling van de operationeel netwerkbeheerder is terug te vinden in de [Serviceafspraken](./serviceafspraken/index.md). Binnen het iWlz-netwerkmodel is sprake van één operationeel netwerkbeheerder (VECOZO).
 
 ### 6.4 Invulling
 
@@ -179,7 +179,7 @@ Zoals eerder toegelicht worden in het proces van de iWlz verschillende functies 
 
 Iedere deelnemer heeft voor het uitvoeren van zijn functie in het administratieve proces gegevens van andere deelnemers nodig. Deze gegevens kan een deelnemer raadplegen in de registers van de andere deelnemers, mits hij daarvoor een geldig toegangsbewijs heeft en er een grondslag voor raadpleging van de gegevens van de cliënt is.
 
-> N.B.: De grondslagen voor de uitwisseling van gegevens in het administratief proces iWlz zijn beschreven in de artikelen [Randvoorwaarden](../randvoorwaarden) en [Ontwerpkeuzes](../ontwerpkeuzes).
+> N.B.: De grondslagen voor de uitwisseling van gegevens in het administratief proces iWlz zijn beschreven in de artikelen [Randvoorwaarden](./randvoorwaarden.md) en [Ontwerpkeuzes](./ontwerpkeuzes.md).
 
 In de voorgaande paragrafen is beschreven welke bouwstenen en systeemrollen nodig zijn voor het veilig en betrouwbaar raadplegen van registers in het kader van het administratief proces iWlz. Onderstaand figuur geeft voor het iWlz-netwerkmodel een overzicht van de bouwstenen, systeemrollen en de invulling daarvan door deelnemers.
 
@@ -193,7 +193,7 @@ In de volgende paragraaf wordt het iWlz-netwerkmodel stapsgewijs uitgelegd aan d
 
 In deze paragraaf wordt stapsgewijs toegelicht hoe gegevensuitwisseling in het iWlz-netwerkmodel plaatsvindt. Hierbij spelen de bouwstenen een hoofdrol. Als voorbeeld wordt het raadplegen van gegevens door een afnemer bij een bronhouder uitgewerkt. Het doel van deze paragraaf is om de basisprincipes uit te leggen. Naast het raadplegen van gegevens zijn in het afsprakenstelsel ook andere diensten (zoals abonneren, notificeren en melden) uitgewerkt.
 
-Op de [Applicatie](../../applicatie/index)-laag van het afsprakenstelsel iWlz-netwerkmodel wordt hier uitputtend op ingegaan.
+Op de [Applicatie](../applicatie/index.md)-laag van het afsprakenstelsel iWlz-netwerkmodel wordt hier uitputtend op ingegaan.
 
 > 📝
 > **Precondities**
@@ -243,6 +243,6 @@ Figuur 14 - Voorbeeld transactie - raadplegen Indicatieregister
 
 ## 10. Besturing
 
-De inrichting van de ontwikkeling en het beheer van het iWlz-netwerkmodel is ook onderdeel van het afsprakenstelsel iWlz-netwerkmodel. De hiervoor benodigde rollen zijn op basis van [NEN 7522:2021 nl](https://www.nen.nl/nen-7522-2021-nl-283706) uitgewerkt in het artikel [Rollen en deelnemers](../rollen_deelnemers)Voorvertoning.
+De inrichting van de ontwikkeling en het beheer van het iWlz-netwerkmodel is ook onderdeel van het afsprakenstelsel iWlz-netwerkmodel. De hiervoor benodigde rollen zijn op basis van [NEN 7522:2021 nl](https://www.nen.nl/nen-7522-2021-nl-283706) uitgewerkt in het artikel [Rollen en deelnemers](./rollen_deelnemers.md).
 
 
