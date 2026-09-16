@@ -62,7 +62,7 @@ De inhoud van de rollen en de specifieke invulling ervan in het kader van het iW
 | --- | --- | --- |
 | Zorgorganisatie | Een zorgorganisatie is een bronhouder of afnemer van gegevens en services. We gebruiken hier de generieke term ‘zorgorganisatie’, binnen de context van het iWlz-netwerkmodel wordt de term ‘zorgaanbieder’ gebruikt. | Zorgaanbieders die zorg leveren in het kader van de Wet langdurige zorg |
 | Zorgverlener | Zorgverleners maken gebruik van het iWlz-netwerkmodel via de informatiesystemen van een van de deelnemende zorgaanbieders. | Zorgverleners die zorg leveren in het kader van de Wet langdurige zorg |
-| Registerhouder | Een registerhouder is een houder van een authentieke bron. Een authentieke bron is een registratie van gegevens die als de primaire bron van die informatie wordt beschouwd. In het iWlz netwerkmodel gebruikt VECOZO als vertrouwde uitgever deze registers in het toetredingsproces.Voorbeelden van authentieke bronnen zijn basisregisters (zoals Basisregister Personen en Handelsregister), sectorale registers (zoals Landelijk Register Zorgaanbieders (LRZa)) en beroepsregisters (zoals BIG-register). In het spraakgebruik over het netwerkmodel iWlz worden ook de termen ‘Indicatieregister’ en ‘Bemiddelingsregister’ gebruikt voor de bronnen van de Wlz. Formeel zijn dit geen registers maar gedeelde bronnen van de bronhouders CIZ en de zorgkantoren. | Registerhouders:<ul><li>KvK (Handelsregister)</li><li> VEKTIS (AGB-register en UZOVI-register)</li><li> Zorginstituut (iWlz AGB codelijst)</li></ul> Houders sectorale registers:<ul><li>CIBG (LRZa)</li></ul> |
+| Registerhouder | Een registerhouder is een houder van een authentieke bron. Een authentieke bron is een registratie van gegevens die als de primaire bron van die informatie wordt beschouwd. In het iWlz netwerkmodel gebruikt VECOZO als vertrouwde uitgever deze registers in het toetredingsproces.Voorbeelden van authentieke bronnen zijn basisregisters (zoals Basisregister Personen en Handelsregister), sectorale registers (zoals Landelijk Register Zorgaanbieders (LRZa)) en beroepsregisters (zoals BIG-register). In het spraakgebruik over het netwerkmodel iWlz worden ook de termen ‘Indicatieregister’ en ‘Bemiddelingsregister’ gebruikt voor de bronnen van de Wlz. Formeel zijn dit geen registers maar gedeelde bronnen van de bronhouders CIZ en de zorgkantoren. | Registerhouders:<li>KvK (Handelsregister)</li><li> VEKTIS (AGB-register en UZOVI-register)</li><li> Zorginstituut (iWlz AGB codelijst)</li></ul> Houders sectorale registers:<li>CIBG (LRZa)</li></ul> |
 | Cliënt | In het iWlz-netwerk wordt de informatiepositie van de cliënt verbeterd. Doordat zij inzicht krijgen in de gegevens die over hen zijn vastgelegd in het netwerk. Ook kunnen zij gegevens delen waar zij zelf eigenaar van zijn. Zoals: contactgegevens, of gegevens over contactpersonen. Deelname van de client in het netwerk is voorzien via een PGO. | Persoon die langdurige zorg afneemt of heeft aangevraagd |
 | Indicatiesteller | De indicatiesteller beoordeelt in hoeverre een cliënt recht heeft op zorg uit de Wet langdurige zorg en legt dit vast in een indicatiebesluit.De organisatorische rol ‘indicatiesteller’ valt onder de DIZRA-term 'secundaire deelnemer'. | CIZ |
 | Bemiddelaar | De bemiddelaar is verantwoordelijk voor het toeleiden van de cliënt naar één of meer zorgaanbieders, waarvan de cliënt de gewenste en benodigde zorg kan ontvangen. De organisatorische rol ‘bemiddelaar’ valt onder de DIZRA-term 'secundaire deelnemer'. | Zorgkantoren |
@@ -72,37 +72,38 @@ De inhoud van de rollen en de specifieke invulling ervan in het kader van het iW
 
 Deze paragraaf beschrijft de systeemrollen die relevant zijn voor het iWlz-netwerkmodel. De systeemrollen zijn rollen die nodig zijn om het netwerk technisch te laten werken. Iedere deelnemer aan het iWlz-netwerkmodel vervult één of meerdere systeemrollen. Het type register bepaalt "wat" voor data en services een deelnemer aanbiedt en/of afneemt. Het "hoe" wordt bepaald door de systeemrol van een deelnemer. Deelnemers aan het iWlz-netwerkmodel hebben conform [DIZRA](https://dizra.gitbook.io/dizra/perspectieven/organizational) een of meer van de volgende systeemrollen. De systeemrollen die zijn in het iWlz-netwerkmodel gegroepeerd in de volgende bouwstenen:
 
-<ul>
-<li>Primaire systeemrollen
-<ul>
-<li> Bronhouder</li>
-<li> Afnemer</li>
-<li> Gegevensregisseur / Gezondheidsregisseur </li></ul>
-<li> Vertrouwen systeemrollen </li>
-<ul><li> Vertrouwensleverancier </li>
-<li> Ledenadministratie </li>
-<li> Bevoegde uitgever van verklaringen </li></ul>
-<li> Vindbaarheid systeemrollen </li>
-<ul><li> Gegevensgids </li></ul>
-<li> Beheer systeemrollen </li>
-<ul><li> Stelselbeheerder </li>
-<li> Operationeel netwerkbeheerder (in DIZRA: “Operationeel ketenbeheerder”) </li>
-<li> Verzekeraar betrouwbaarheid </li></ul>
 
-De inhoud van de systeemrollen en de specifieke invulling ervan in het kader van het iWlz netwerkmodel worden hieronder toegelicht. <br>
+- Primaire systeemrollen
+  -  Bronhouder
+  -  Afnemer
+  -  Gegevensregisseur / Gezondheidsregisseur 
+-  Vertrouwen systeemrollen 
+   -  Vertrouwensleverancier 
+   -  Ledenadministratie 
+   -  Bevoegde uitgever van verklaringen 
+-  Vindbaarheid systeemrollen 
+   -  Gegevensgids 
+-  Beheer systeemrollen 
+   -  Stelselbeheerder 
+   -  Operationeel netwerkbeheerder (in DIZRA: “Operationeel ketenbeheerder”) 
+   -  Verzekeraar betrouwbaarheid 
+
+De inhoud van de systeemrollen en de specifieke invulling ervan in het kader van het iWlz netwerkmodel worden hieronder toegelicht. 
 
 | **Bouwsteen** | **Rol** | **Toelichting** | **Invulling binnen iWlz-netwerkmodel** | 
 | :--- | :--- | :--- | :--- | 
-| Primaire systeemrollen | Bronhouder | Een bronhouder is een rol van een deelnemer die data en services in het iWlz-netwerkmodel aanbiedt.\*Cliënten die zorg afnemen in het kader van de Wlz bieden in het iWlz-netwerkmodel data aan voor het Cliëntregister. Binnen DIZRA hebben cliënten niet de rol van bronhouder, zij bieden data aan vanuit hun rol als gegevensregisseur (via hun PGO). | <ul><li>CIZ</li><li>Zorgkantoren</li><li>Zorgaanbieders</li><li>Cliënten\*</li></ul> |
-| | Afnemer | Een afnemer is een rol van een deelnemer die data en services afneemt van een bronhouder.\*Cliënten die zorg afnemen in het kader van de Wlz nemen in het iWlz-netwerkmodel data en services af. Binnen DIZRA hebben cliënten niet de rol van afnemer, zij nemen data en services af vanuit hun rol als gegevensregisseur en gezondheidsregisseur (via hun PGO). | <ul><li>Zorgkantoren</li><li>Zorgaanbieders</li><li>Cliënten\*</li><li>CAK</li><li>CIZ</li></ul> | 
-|  | Gegevensregisseur/ Gezondheidsregisseur | De gegevensregisseur is een rol van een cliënt die zorg afneemt in het kader van de Wlz. De gegevensregisseur voert via een PGO regie over de gegevens over zijn/haar gezondheid. Binnen DIZRA hebben cliënten de rollen gegevensregisseur en gezondheidsregisseur. Binnen het iWlz-netwerkmodel wordt aan cliënten de systeemrol bronhouder toegekend als bron van het cliëntregister. | <ul><li>Cliënten</li></ul> |  
-| Vertrouwen systeemrollen | Vertrouwens-leverancier | Een PKI vertrouwensleverancier (Public Key Infrastructure) is een organisatie die digitale certificaten uitgeeft en beheert, en die door gebruikers en systemen wordt vertrouwd om de authenticiteit en integriteit van digitale communicatie te waarborgen. In eerste instantie is VECOZO de vertrouwensleverancier binnen de iWlz via het VECOZO systeemcertificaat. Dit is vooruitlopend op de landelijke ontwikkelingen in het gezondheidsinformatiestelsel en daarmee de interoperabiliteit met NUTS. | <ul><li>VECOZO</li></ul> | 
-|  | Ledenadministratie | Het iWlz-netwerkmodel maakt gebruik van bestaande zogenaamde ledenadministraties. Met ledenadministraties worden registers bedoeld zoals het AGB register en het Handelsregister. Op basis van deze basisregistraties kunnen deelnemers aan het iWlz-netwerkmodel worden herkend en op basis hiervan kunnen bepaalde rechten worden ontleend.VECOZO doet een KvK-toets bij toetreding. | <ul><li>KvK (Handelsregister)</li><li> VEKTIS (AGB-register en UZOVI-register)</li><li>iWlz AGB codelijst</li></ul> |  
-|  | Bevoegde uitgever van verklaringen | Een bevoegde uitgever is een rol van een deelnemer in het iWlz-netwerkmodel. Het is een erkenning dat de deelnemer bevoegd is voor het uitgeven van een verklaring. Deze verklaringen betreffen bijvoorbeeld een identiteitskenmerk (zoals de rol van een deelnemer in het iWlz-proces) of een toegangsbewijs. | <ul><li>Bevoegde uitgever</li><ul><li>VECOZO</li></ul><li>Ledenadministraties</li><ul><li>KvK (Handelsregister)</li><li>VEKTIS (AGB-register en UZOVI-register)</li></ul></li></ul> |  
-| Vindbaarheid systeemrollen | Gegevensgids | De rol gegevensgids is verantwoordelijk voor het beheren, actueel houden en beschikbaar stellen van een lokalisatievoorziening en een adresboek. In een lokalisatievoorziening staat welke bronhouders welk type gegevens van welke cliënten aanbieden en in een adresboek staat via welke (technische) adressen deze gegevens af te nemen zijn. | <ul><li>Zorginstituut Nederland (GitHub / tijdelijk adresboek)</li><li> VZVZ (dienst Zorgadresboek (ZORG-AB))</li></ul> |
-| Beheer systeemrollen | Stelselbeheerder | De stelselbeheerder is een rol binnen beheren van het iWlz-netwerkmodel. De systeemrol stelselbeheerder kent onder andere de volgende rollen toe:LedenadministratieVertrouwensleverancierGegevensgidsOperationeel netwerkbeheerderVerzekeraar betrouwbaarheidNB: De Stelselbeheerder is geen financier van het iWlz-netwerkmodel. Deze rol is voor de Stelselfinancier (zie Bestuursrollen). | <ul><li>Zorginstituut Nederland</li></ul> |
-|   | Operationeel netwerkbeheerder | De operationeel netwerkbeheerder beheert de operationele werking van het iWlz-netwerkmodel. En draagt zorg voor de servicedesk operationeel netwerkbeheer en monitort het iWlz-netwerk. | <ul><li>VECOZO</li></ul> | 
-|   | Verzekeraar betrouwbaarheid | Een verzekeraar betrouwbaarheid maakt inzichtelijk welke verklaringen mogen worden uitgegeven door welke deelnemers. Deelnemers die de verklaringen uitgeven worden bevoegde uitgevers genoemd. | <ul><li>Zorginstituut Nederland</li></ul> | 
+| Primaire systeemrollen | Bronhouder | Een bronhouder is een rol van een deelnemer die data en services in het iWlz-netwerkmodel aanbiedt. <br/><br/><sup>*</sup>Cliënten die zorg afnemen in het kader van de Wlz bieden in het iWlz-netwerkmodel data aan voor het Cliëntregister. Binnen DIZRA hebben cliënten niet de rol van bronhouder, zij bieden data aan vanuit hun rol als gegevensregisseur (via hun PGO).| <ul><li>CIZ</li><li>Zorgkantoren</li><li>Zorgaanbieders</li><li>Cliënten<sup>*</sup></li></ul> |
+| | Afnemer | Een afnemer is een rol van een deelnemer die data en services afneemt van een bronhouder.<br/><br/><sup>*</sup>Cliënten die zorg afnemen in het kader van de Wlz nemen in het iWlz-netwerkmodel data en services af. Binnen DIZRA hebben cliënten niet de rol van afnemer, zij nemen data en services af vanuit hun rol als gegevensregisseur en gezondheidsregisseur (via hun PGO). |<ul><li>Zorgkantoren</li><li>Zorgaanbieders</li><li>Cliënten<sup>*</sup></li><li>CAK</li><li>CIZ</li></ul> | 
+|  | Gegevensregisseur/ Gezondheidsregisseur | De gegevensregisseur is een rol van een cliënt die zorg afneemt in het kader van de Wlz. De gegevensregisseur voert via een PGO regie over de gegevens over zijn/haar gezondheid. Binnen DIZRA hebben cliënten de rollen gegevensregisseur en gezondheidsregisseur. Binnen het iWlz-netwerkmodel wordt aan cliënten de systeemrol bronhouder toegekend als bron van het cliëntregister. |<ul><li>Cliënten</li></ul> |  
+| Vertrouwen systeemrollen | Vertrouwens-leverancier | Een PKI vertrouwensleverancier (Public Key Infrastructure) is een organisatie die digitale certificaten uitgeeft en beheert, en die door gebruikers en systemen wordt vertrouwd om de authenticiteit en integriteit van digitale communicatie te waarborgen. In eerste instantie is VECOZO de vertrouwensleverancier binnen de iWlz via het VECOZO systeemcertificaat. Dit is vooruitlopend op de landelijke ontwikkelingen in het gezondheidsinformatiestelsel en daarmee de interoperabiliteit met NUTS. |<ul><li>VECOZO</li></ul> | 
+|  | Ledenadministratie | Het iWlz-netwerkmodel maakt gebruik van bestaande zogenaamde ledenadministraties. Met ledenadministraties worden registers bedoeld zoals het AGB register en het Handelsregister. Op basis van deze basisregistraties kunnen deelnemers aan het iWlz-netwerkmodel worden herkend en op basis hiervan kunnen bepaalde rechten worden ontleend.VECOZO doet een KvK-toets bij toetreding. |<ul><li>KvK (Handelsregister)</li><li> VEKTIS (AGB-register en UZOVI-register)</li><li>iWlz AGB codelijst</li></ul> |  
+|  | Bevoegde uitgever van verklaringen | Een bevoegde uitgever is een rol van een deelnemer in het iWlz-netwerkmodel. Het is een erkenning dat de deelnemer bevoegd is voor het uitgeven van een verklaring. Deze verklaringen betreffen bijvoorbeeld een identiteitskenmerk (zoals de rol van een deelnemer in het iWlz-proces) of een toegangsbewijs. |<ul><li>Bevoegde uitgever</li><li>VECOZO- Ledenadministraties</li><li>KvK (Handelsregister)</li><li>VEKTIS (AGB-register en UZOVI-register)</li></ul> |  
+| Vindbaarheid systeemrollen | Gegevensgids | De rol gegevensgids is verantwoordelijk voor het beheren, actueel houden en beschikbaar stellen van een lokalisatievoorziening en een adresboek. In een lokalisatievoorziening staat welke bronhouders welk type gegevens van welke cliënten aanbieden en in een adresboek staat via welke (technische) adressen deze gegevens af te nemen zijn. |<ul><li>Zorginstituut Nederland (GitHub / tijdelijk adresboek)</li><li> VZVZ (dienst Zorgadresboek (ZORG-AB))</li></ul> |
+| Beheer systeemrollen | Stelselbeheerder | De stelselbeheerder is een rol binnen beheren van het iWlz-netwerkmodel. De systeemrol stelselbeheerder kent onder andere de volgende rollen toe:LedenadministratieVertrouwensleverancierGegevensgidsOperationeel netwerkbeheerderVerzekeraar betrouwbaarheidNB: De Stelselbeheerder is geen financier van het iWlz-netwerkmodel. Deze rol is voor de Stelselfinancier (zie Bestuursrollen). |<ul><li>Zorginstituut Nederland</li></ul> |
+|   | Operationeel netwerkbeheerder | De operationeel netwerkbeheerder beheert de operationele werking van het iWlz-netwerkmodel. En draagt zorg voor de servicedesk operationeel netwerkbeheer en monitort het iWlz-netwerk. |<ul><li>VECOZO</li></ul> |
+|   | Verzekeraar betrouwbaarheid | Een verzekeraar betrouwbaarheid maakt inzichtelijk welke verklaringen mogen worden uitgegeven door welke deelnemers. Deelnemers die de verklaringen uitgeven worden bevoegde uitgevers genoemd. |<ul><li>Zorginstituut Nederland</li></ul> | 
+
+
 
 ## 6. Deelnemers
 
