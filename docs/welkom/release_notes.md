@@ -1,7 +1,7 @@
 # Release notes
 
 
-## Huidig geldende versie  (current)
+## Lopende versie (current)
 
 | Versie | Datum ingang | Status | Voor Release Indicatieregister | Voor Release Bemiddelingsregister | Voor Release Leveringregister | 
 | :-- | :-- | :-- | :-- | :-- | :-- |
