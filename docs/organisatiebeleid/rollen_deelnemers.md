@@ -20,15 +20,15 @@ De besturingsrollen beschrijven de verantwoordelijkheden bij de besturing van he
 
 We onderkennen de volgende besturingsrollen:
 
-- Stelselhouder
-- Stelselfinancier
-- Stelselautorisator
-- Stelsel Functioneel beheerder (in DIZRA: Stelselbeheerder)
-- Stelsel Technisch beheerder (in DIZRA: Technisch beheerder / Standaardisatieorganisatie)
-- Stelsel-distributeur (in DIZRA: Distributeur)
-- Stelsel-expert
-- Stelselgebruiker en Stelseleindgebruiker (DIZRA: Gebruiker)
-- Auditor
+  - Stelselhouder
+  - Stelselfinancier
+  - Stelselautorisator
+  - Stelsel Functioneel beheerder (in DIZRA: Stelselbeheerder)
+  - Stelsel Technisch beheerder (in DIZRA: Technisch beheerder / Standaardisatieorganisatie)
+  - Stelsel-distributeur (in DIZRA: Distributeur)
+  - Stelsel-expert
+  - Stelselgebruiker en Stelseleindgebruiker (DIZRA: Gebruiker)
+  - Auditor
 
 De inhoud van de besturingsrollen en de specifieke invulling ervan in het kader van het iWlz-netwerkmodel worden hieronder toegelicht. De besturingsrollen komen terug in de verschillende serviceafspraken die zijn opgenomen in het Afsprakenstelsel iWlz-netwerkmodel.
 
@@ -48,13 +48,13 @@ De inhoud van de besturingsrollen en de specifieke invulling ervan in het kader 
 
 Deze paragraaf beschrijft op organisatorisch niveau de rollen benodigd voor het uitvoeren van het iwlz-proces dat met het iWlz-netwerkmodel wordt ondersteund. We onderkennen de volgende organisatorische rollen:
 
-- Zorgorganisatie (zorgaanbieder)
-- Zorgverlener
-- Registerhouder
-- Cliënt
-- Indicatiesteller
-- Bemiddelaar
-- Administrateur
+  - Zorgorganisatie (zorgaanbieder)
+  - Zorgverlener
+  - Registerhouder
+  - Cliënt
+  - Indicatiesteller
+  - Bemiddelaar
+  - Administrateur
 
 De inhoud van de rollen en de specifieke invulling ervan in het kader van het iWlz-netwerkmodel worden hieronder toegelicht.
 
@@ -72,21 +72,21 @@ De inhoud van de rollen en de specifieke invulling ervan in het kader van het iW
 
 Deze paragraaf beschrijft de systeemrollen die relevant zijn voor het iWlz-netwerkmodel. De systeemrollen zijn rollen die nodig zijn om het netwerk technisch te laten werken. Iedere deelnemer aan het iWlz-netwerkmodel vervult één of meerdere systeemrollen. Het type register bepaalt "wat" voor data en services een deelnemer aanbiedt en/of afneemt. Het "hoe" wordt bepaald door de systeemrol van een deelnemer. Deelnemers aan het iWlz-netwerkmodel hebben conform [DIZRA](https://dizra.gitbook.io/dizra/perspectieven/organizational) een of meer van de volgende systeemrollen. De systeemrollen die zijn in het iWlz-netwerkmodel gegroepeerd in de volgende bouwstenen:
 
-
-- Primaire systeemrollen
-  -  Bronhouder
-  -  Afnemer
-  -  Gegevensregisseur / Gezondheidsregisseur 
--  Vertrouwen systeemrollen 
-   -  Vertrouwensleverancier 
-   -  Ledenadministratie 
-   -  Bevoegde uitgever van verklaringen 
--  Vindbaarheid systeemrollen 
-   -  Gegevensgids 
--  Beheer systeemrollen 
-   -  Stelselbeheerder 
-   -  Operationeel netwerkbeheerder (in DIZRA: “Operationeel ketenbeheerder”) 
-   -  Verzekeraar betrouwbaarheid 
+  - Primaire systeemrollen
+    -  Bronhouder
+    -  Afnemer
+    -  Gegevensregisseur / Gezondheidsregisseur 
+  
+  -  Vertrouwen systeemrollen 
+     -  Vertrouwensleverancier 
+     -  Ledenadministratie 
+     -  Bevoegde uitgever van verklaringen 
+  -  Vindbaarheid systeemrollen 
+     -  Gegevensgids 
+  -  Beheer systeemrollen 
+     -  Stelselbeheerder 
+     -  Operationeel netwerkbeheerder (in DIZRA: “Operationeel ketenbeheerder”) 
+     -  Verzekeraar betrouwbaarheid 
 
 De inhoud van de systeemrollen en de specifieke invulling ervan in het kader van het iWlz netwerkmodel worden hieronder toegelicht. 
 
