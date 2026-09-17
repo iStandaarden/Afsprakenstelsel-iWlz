@@ -15,19 +15,43 @@ Hiermee installeer je de onderdelen om lokaal een server te draaien zodat je op 
 
 Om te publiceren is dit dus niet noodzakelijk, wel handig.
 
+**Python installeren**
 1. Python: `brew install python` 
 2. Pango (voor pdf-generatie): `brew install pango`
-3. Add to `~/.zshrc` or `~/.bash_profile`: `export DYLD_LIBRARY_PATH="/opt/homebrew/lib:$DYLD_LIBRARY_PATH"` 
-4. Setup a Python virtual environment by typing `python -m venv venv`
-5. Type `source venv/bin/activate` to activate the virtual environment
-6. Install mkdocs material - `pip install mkdocs-material`
-7. Install plugin glightbox voor het kunnen vergroten van plaatjes in een pop-up: `pip install mkdocs-glightbox`
-8. Install plugin voor het genereren van een pdf: `pip install mkdocs-with-pdf` 
+3. Add to `~/.zshrc` or `~/.bash_profile`: `export DYLD_LIBRARY_PATH="/opt/homebrew/lib:$DYLD_LIBRARY_PATH"`
+
+**mkDocs installeren**
+1. Setup a Python virtual environment by typing 
+   ```
+   python -m venv venv
+   ```
+2. Type `source venv/bin/activate` to activate the virtual environment
+   ```
+   source venv/bin/activate
+   ```   
+3. Install mkdocs material
+   ```
+   pip install mkdocs-material
+   ```
+4. Install plugin glightbox voor het kunnen vergroten van plaatjes in een pop-up:
+   ```
+   pip install mkdocs-glightbox
+   ```
+5. Install plugin voor het genereren van een pdf:
+    ```
+   pip install mkdocs-with-pdf
+    ``` 
 
 ### Opstarten lokale server:
 
-1. Als de virtual environment nog niet is geactiveerd: `source .venv/bin/activate`
-2. Lokale server starten: `mkdocs serve`
+1. Als de virtual environment nog niet is geactiveerd:
+   ```
+   source venv/bin/activate
+   ```
+2. Lokale server starten:
+   ```
+   mkdocs serve
+   ```
 3. Lokale server is beschikbaar op http://localhost:8000/Afsprakenstelsel-iWlz
 
 ### Afsluiten lokale server:
