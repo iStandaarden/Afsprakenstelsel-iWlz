@@ -63,6 +63,13 @@ jobs:
 
           # Specific directory output
           echo "welkom=$(check_dir 'docs/welkom/')" >> "$GITHUB_OUTPUT"
+          echo "inleiding=$(check_dir 'docs/inleiding/')" >> "$GITHUB_OUTPUT"
+          echo "organisatiebeleid=$(check_dir 'docs/organisatiebeleid/')" >> "$GITHUB_OUTPUT"
+          echo "proces=$(check_dir 'docs/proces/')" >> "$GITHUB_OUTPUT"
+          echo "informatie=$(check_dir 'docs/informatie/')" >> "$GITHUB_OUTPUT"
+          echo "applicatie=$(check_dir 'docs/applicatie/')" >> "$GITHUB_OUTPUT"
+          echo "it_infrastructuur=$(check_dir 'docs/it-infrastructuur/')" >> "$GITHUB_OUTPUT"
+          echo "uitwisselprofiel=$(check_dir 'docs/uitwisselprofiel/')" >> "$GITHUB_OUTPUT"
           # Specific file output
           echo "achtergrond_toelichting=$(check_file 'inleiding/achtergrond_toelichting.md')" >> "$GITHUB_OUTPUT"
           echo "governance=$(check_file 'inleiding/governance.md')" >> "$GITHUB_OUTPUT" 
@@ -121,36 +128,41 @@ jobs:
           | Onderdeel | Wijziging |
           |-----------|-----------|
           | Welkom: | ${{ steps.changes.outputs.welkom }} |
-          | Inleiding:| |
+          | Inleiding:| ${{ steps.changes.outputs.inleiding }}|
           | Achtergrond en toelichting (in inleiding/achtergrond en toelichting): | ${{ steps.changes.outputs.achtergrond_toelichting }} |
           | Governance (in inleiding/governance): | ${{ steps.changes.outputs.governance }} |
           | Begrippenlijst (in inleiding/begrippenlijst): | ${{ steps.changes.outputs.begrippenlijst }} |
+          | Organisatiebeleid: | ${{ steps.changes.outputs.organisatiebeleid }} |
           | Randvoorwaarden (in organisatie/randvoorwaarden): | ${{ steps.changes.outputs.randvoorwaarden }} |
           | Ontwerpkeuzes (in organisatie/ontwerpkeuzes): | ${{ steps.changes.outputs.ontwerpkeuzes }} |
           | Architectuur (in organisatie/architectuur): | ${{ steps.changes.outputs.architectuur }} |
           | Rollen en deelnemers (in organisatie/rollen en deelnemers): | ${{ steps.changes.outputs.rollen_deelnemers }} |
-          | Serviceafspraken - iWlz netwerkmodel (in organisatie/serviceafspraken/iWlz netwerkmodel): | ${{ steps.changes.outputs.serviceafspraken_iWlz_netwerkmodel }} |
-          | Serviceafspraken - Operationeel netwerkbeheer (in organisatie/serviceafspraken/operationeel netwerkbeheer): | ${{ steps.changes.outputs.serviceafspraken_operationeel_netwerkbeheer }} |
-          | Serviceafspraken - Bronhoudersdeel (in organisatie/serviceafspraken/bronhoudersdeel): | ${{ steps.changes.outputs.serviceafspraken_bronhoudersdeel }} |
-          | Serviceafspraken - Afnemersdeel (in organisatie/serviceafspraken/afnemersdeel): | ${{ steps.changes.outputs.serviceafspraken_afnemersdeel }} |
+          | Serviceafspraken > iWlz netwerkmodel (in organisatie/serviceafspraken/iWlz netwerkmodel): | ${{ steps.changes.outputs.serviceafspraken_iWlz_netwerkmodel }} |
+          | Serviceafspraken > Operationeel netwerkbeheer (in organisatie/serviceafspraken/operationeel netwerkbeheer): | ${{ steps.changes.outputs.serviceafspraken_operationeel_netwerkbeheer }} |
+          | Serviceafspraken > Bronhoudersdeel (in organisatie/serviceafspraken/bronhoudersdeel): | ${{ steps.changes.outputs.serviceafspraken_bronhoudersdeel }} |
+          | Serviceafspraken > Afnemersdeel (in organisatie/serviceafspraken/afnemersdeel): | ${{ steps.changes.outputs.serviceafspraken_afnemersdeel }} |
           | Releasebeleid (in organisatie/releasebeleid): | ${{ steps.changes.outputs.releasebeleid }} |
           | Wijzigingsverzoeken (in organisatie/wijzigingsverzoeken): | ${{ steps.changes.outputs.wijzigingsverzoeken }} |
+          | Proces: | ${{ steps.changes.outputs.proces }} |
           | Netwerkfuncties (proces/netwerkfuncties): | ${{ steps.changes.outputs.netwerkfuncties }} |
           | Procesmodel (proces/procesmodel): | ${{ steps.changes.outputs.procesmodel }} |
+          | Informatie: | ${{ steps.changes.outputs.informatie }} |
           | Informatiestandaard (in informatie/informatiestandaard): | ${{ steps.changes.outputs.informatiestandaard }} |
+          | Applicatie: | ${{ steps.changes.outputs.applicatie }} |
           | Applicatiecomponenten (in applicatie/applicatiecomponenten): | ${{ steps.changes.outputs.applicatiecomponenten }} |
           | nID netwerkstelsel (in applicatie/nid netwerkstelsel): | ${{ steps.changes.outputs.nid_netwerkstelsel }} |
           | GraphQL over HTTP (in applicatie/graphql over http): | ${{ steps.changes.outputs.graphql_over_http }} |
           | Silvester - Tijdelijke voorziening overgangsfase (in applicatie/silvester): | ${{ steps.changes.outputs.silvester }} |
-          | Notificeren en Melden (in applicatie/diensten/notificeren en melden): | ${{ steps.changes.outputs.notificeren_en_melden }} |
-          | Raadplegen (in applicatie/diensten/raadplegen): | ${{ steps.changes.outputs.raadplegen }} |
-          | Toetreden (in applicatie/diensten/toetreden): | ${{ steps.changes.outputs.toetreden }} |
-          | Uittreden (in applicatie/diensten/uittreden): | ${{ steps.changes.outputs.uittreden }} |
-          | Testen (in applicatie/diensten/testen): | ${{ steps.changes.outputs.testen }} |
+          | Diensten > Notificeren en Melden (in applicatie/diensten/notificeren en melden): | ${{ steps.changes.outputs.notificeren_en_melden }} |
+          | Diensten > Raadplegen (in applicatie/diensten/raadplegen): | ${{ steps.changes.outputs.raadplegen }} |
+          | Diensten > Toetreden (in applicatie/diensten/toetreden): | ${{ steps.changes.outputs.toetreden }} |
+          | Diensten > Uittreden (in applicatie/diensten/uittreden): | ${{ steps.changes.outputs.uittreden }} |
+          | Diensten > Testen (in applicatie/diensten/testen): | ${{ steps.changes.outputs.testen }} |
+          | IT-Infrastructuur: | ${{ steps.changes.outputs.it_infrastructuur }} |
           | Identificatie & authenticatie (in it-infrastructuur/identificatie en authenticatie): | ${{ steps.changes.outputs.identificatie_authenticatie }} |
           | Netwerk (in it-infrastructuur/netwerk): | ${{ steps.changes.outputs.netwerk }} |
           | Logging (in it-infrastructuur/logging): | ${{ steps.changes.outputs.logging }} |
-          | Uitwisselprofiel (in uitwisselprofiel): | ${{ steps.changes.outputs.uitwisselprofiel_index }} |
+          | Uitwisselprofiel: | ${{ steps.changes.outputs.uitwisselprofiel_index }} |
           | Uitwisselprofiel Indicatie (in uitwisselprofiel/uitwisselprofiel Indicatie): | ${{ steps.changes.outputs.uitwisselprofiel_indicatie }} |
           | Uitwisselprofiel Bemiddeling (in uitwisselprofiel/uitwisselprofiel Bemiddeling): | ${{ steps.changes.outputs.uitwisselprofiel_bemiddeling }} |
           | Uitwisselprofiel Levering (in uitwisselprofiel/uitwisselprofiel Levering): | ${{ steps.changes.outputs.uitwisselprofiel_levering }} |
