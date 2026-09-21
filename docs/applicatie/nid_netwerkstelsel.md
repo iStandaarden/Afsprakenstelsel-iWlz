@@ -61,7 +61,7 @@ flowchart TD
     PAP -->|Beleidsregels beheren| PRP
 
 ```
-<figcaption>Figuur 1 - Overzicht onderdelen nID netwerkstelsel</figcaption>
+<figcaption>Figuur 1 - Overzicht onderdelen (nID) netwerkstelsel</figcaption>
 
 
 ## 2. Deelnemers
@@ -113,7 +113,7 @@ sequenceDiagram
     AuthzServer--xClient: Foutmeldingen<br/>(400/403/500)
     end
 ```
-
+Figuur 2 - Aanvragen Access-token
 
 | **#** | **Processtap** | **Beschrijving** |
 | --- | --- | --- |
@@ -350,21 +350,18 @@ config:
 ---
 sequenceDiagram
     autonumber
-    box lightgrey Deelnemer
     actor Client
-    end
     box lightgrey nID
     participant PEP
     end
-    box lightgrey Register
     participant AccessPoint as Data Accesspoint
-    end
 
     Client->>PEP: GraphQL-query<br/>+ access-token
     PEP->>AccessPoint: Doorsturen geautoriseerd verzoek
     AccessPoint-->>PEP: Gevraagde data
     PEP->>Client: Gevraagde data
 ```
+Figuur 3 - Interactie Client - PEP - Data accesspoint
 
 | **#** | **Processtap** | **Beschrijving** |
 | --- | --- | --- |
@@ -402,16 +399,12 @@ config:
 ---
 sequenceDiagram
     autonumber
-    box lightgrey Deelnemer
     participant Client
-    end
     box lightgrey nID
     participant PEP
     participant PDP
     end
-    box lightgrey Register
     participant resourceserver as Resource-Server
-    end
 
     Client->>PEP: GraphQL Request<br/>Authenticatiemiddel + JWT Access-Token + Query
     activate Client
@@ -435,7 +428,7 @@ sequenceDiagram
     deactivate PEP
     deactivate Client
 ```
-
+Figuur 4 - PEP als onderdeel in GraphQL Request flow
 
 | **#** | **Processtap** | **Beschrijving** |
 | --- | --- | --- |
@@ -520,6 +513,7 @@ sequenceDiagram
     PDP->>PEP: Besluit toestaan/weigeren
     PDP->>Log: Besluit vastleggen
 ```
+Figuur 5 - Rol van PDP in het netwerk
 
 In onderstaande stappen wordt uitgelegd hoe het Policy Decision Point PDP werkt.
 
@@ -560,6 +554,7 @@ sequenceDiagram
     PDP->>PEP: Besluit: toestaan of weigeren
     PEP->>Client: Resultaat terugsturen
 ```
+Figuur 6 - Interactie PDP en PRP
 
 | **#** | **Processtap** | **Beschrijving** |
 | --- | --- | --- |
@@ -612,8 +607,10 @@ sequenceDiagram
     autonumber
     actor Admin as Beheerder
     participant PAP as Policy Administration Point<br/>(PAP)
+    box lightgrey nID
     participant PRP as Policy Retrieval Point<br/>(PRP)
     participant PDP as Policy Decision Point<br/>(PDP)
+    end
 
     Admin->>PAP: Creëren of aanpassen van beleidsregels
     PAP->>PAP: Validatie van beleidsregels
@@ -621,7 +618,7 @@ sequenceDiagram
     PAP->>PRP: Publicatie van beleidsregels
     PAP->>PDP: Synchronisatie met beleidsregels
 ```
-Procesflow van het PAP
+Figuur 7 - Procesflow van het PAP
 
 | **#** | **Processtap** | **Beschrijving** |
 | --- | --- | --- |
@@ -683,9 +680,7 @@ sequenceDiagram
     participant PIP as Policy Information Point<br/>(PIP)
     end
 
-    box lightgrey register
     participant DataSource as Externe bron<br/>of interne database
-    end
 
     PEP->>PDP: Toegangsverzoek
     PDP->>PDP: Behoefte aan aanvullende informatie
@@ -695,6 +690,7 @@ sequenceDiagram
     PIP-->>PDP: Informatie terugkoppelen
     PDP-->>PEP: Besluit toestaan/weigeren
 ```
+<figcaption>Figuur 8 - Interactie met PIP</figcaption>
 
 | **#** | **Processtap** | **Beschrijving** |
 | --- | --- | --- |
@@ -732,18 +728,13 @@ config:
   theme: forest
 ---
 sequenceDiagram
-    Box lightgrey Deelnemer 
-    participant Client as Client
-    end
 
+    participant Client as Client
     Box lightgrey nID
     participant AuthzServer as Autorisatieserver
     participant PEP as PEP
-    end
-    
-    Box lightgrey Register
+    end    
     participant ResourceServer as Resource-Server
-    end
 
     Client->>AuthzServer: [001] Aanvragen van autorisatie<br/>"scope": "registers/resource:read"<br/>Authenticatiemiddel
 
@@ -768,7 +759,7 @@ sequenceDiagram
     ResourceServer-->>PEP: [007] 200 Response (GraphQL)
     PEP-->>Client: [008] 200 Response (GraphQL)
 ```
-
+Figuur 9 - Ontstaan foutsituaties
 
 
 ### 10.1 Foutmeldingen Aanvraag van Autorisatie
@@ -779,18 +770,15 @@ config:
   theme: forest
 ---
 sequenceDiagram
-    Box lightgrey Deelnemer 
+
     participant Client as Client
-    end
 
     Box lightgrey nID
     participant AuthzServer as Autorisatieserver
     participant PEP as PEP
     end
     
-    Box lightgrey Register
     participant ResourceServer as Resource-Server
-    end
 
     Client->>AuthzServer: [001] Aanvragen van autorisatie<br/>"scope": "registers/resource:read"<br/>Authenticatiemiddel
 
@@ -808,40 +796,64 @@ sequenceDiagram
 
     AuthzServer-->>Client: [004] 200 Response (Access-Token)
 ```
+Figuur 10 - Foutsituaties bij autorisatie aanvraag
 
 #### [01] 400 Audience Required
 
 - **HTTP Response:**
-  `HTTP/1.1 400 Bad Request "audience is required"`
-- **Details**:
-Controleer of alle headers op de juiste manier worden meegegeven zoals: ‘content-type’. Het netwerkmodel gebruikt de flow standaard (grant\_type) “client\_credentials”. Een _**audience**_ en _**scope**_parameter zijn vereist bij het aanvragen van een token. Voeg deze toe aan de request body.  
-
-  Bijvoorbeeld:  
-  ```json
-  { "grant_type": "client_credentials", "scope": "registers/wlzindicatieregister/indicaties:read", "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/graphql/v2/graphql" }
+  ```http
+  HTTP/1.1 400 Bad Request 
+  "audience is required"
   ```
+- **Details**:
+  Controleer of alle headers op de juiste manier worden meegegeven zoals: ‘content-type’. Het netwerkmodel gebruikt de flow standaard (grant\_type) “client\_credentials”. Een _**audience**_ en _**scope**_parameter zijn vereist bij het aanvragen van een token. Voeg deze toe aan de request body.  
+
+    Bijvoorbeeld:  
+    ```json
+    { 
+      "grant_type": "client_credentials", 
+      "scope": "registers/indicatieregister/indicaties:read", 
+      "audience": "https://register.indicaties.nl/iwlz/indicatieregister/graphql" 
+    }
+    ```
 
 #### [02] 401 Unauthorized
 
 - **HTTP Response:**
   ```http
-    HTTP/1.1 401 Unauthorized "authenticating with issuing authority"
+    HTTP/1.1 401 Unauthorized 
+    "authenticating with issuing authority"
   ``` 
 - **Details:**
 Er kan niet geacteerd worden namens een partij (subject), omdat hier geen rechten voor zijn geregistreerd. Indien subject en actor hetzelfde zijn, dan wordt deze foutmelding ook gegeven.
   - Controleer of acteren mogelijk moet zijn en neem contact op met VECOZO.
   - Verander de body zodat er als directe partij een aanvraag wordt gedaan.
     
-    Voorbeeld body als er geacteerd wordt namens een partij:  
-    `{ "grant_type": "client_credentials", "scope": "registers/wlzindicatieregister/indicaties:read", "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql", "access_token": { "sub": "uzovi:5000" } }`
+    Voorbeeld body als er geacteerd wordt namens een partij: 
+    ```json 
+    {
+      "grant_type": "client_credentials",
+      "scope": "registers/wlzindicatieregister/indicaties:read",
+      "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql",
+      "access_token": { "sub": "uzovi:5000" }
+    }
+    ```
   
     Voorbeeld body als aanvraag wordt gedaan als directe partij:  
-    `{ "grant_type": "client_credentials", "scope": "registers/wlzindicatieregister/indicaties:read", "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql" }`
+    ```json
+    {
+      "grant_type": "client_credentials",
+      "scope": "registers/wlzindicatieregister/indicaties:read",
+      "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql"
+    }
+    ```
 
 #### [03] 403 Not Allowed
 
 - **HTTP Response:**
-  `HTTP/1.1 403 Forbidden`
+  ```http
+  HTTP/1.1 403 Forbidden
+  ```
 - **Details**:
 Mogelijke oorzaken zijn:
   - Het IP-adres is niet geregistreerd bij het authenticatiemiddel.
@@ -851,14 +863,18 @@ Mogelijke oorzaken zijn:
 #### [04] 403 Invalid Client Certificate
 
 - **HTTP Response**:
-  `HTTP/1.1 403 Invalid Client Certificate`
+  ```http
+  HTTP/1.1 403 Invalid Client Certificate
+  ```
 - **Details**:
 Het certificaat ontbreekt, is ongeldig of verlopen (van toepassing bij gebruik van een VECOZO-systeemcertificaat). Zorg ervoor dat het authenticatiemiddel overeenkomt met de juiste omgeving. Zie deze VECOZO website [Uw certificaat installeren of vernieuwen | VECOZO](https://www.vecozo.nl/certificaten-installerenvernieuwen/) of neem contact op met VECOZO Functioneel Beheer.
 
 #### [05] 404 Not Found
 
 - **HTTP Response**:
-  `HTTP/1.1 404 Not Found`
+  ```http
+  HTTP/1.1 404 Not Found
+  ```
 - **Details**:
 Een onjuist endpoint van de autorisatieserver is gebruikt. Controleer of het correcte endpoint is geconfigureerd, zoals gespecificeerd in dit document onder de details van de autorisatieserver.
 
@@ -871,27 +887,20 @@ Een onverwachte fout is opgetreden op de autorisatieserver. Probeer het later op
 
 ### 10.2 Foutmeldingen PEP endpoint bij GraphQL request
 
-
-
 ```mermaid
 ---
 config:
   theme: forest
 ---
 sequenceDiagram
-    Box lightgrey Deelnemer 
     participant Client as Client
-    end
 
     Box lightgrey nID
     participant AuthzServer as Autorisatieserver
     participant PEP as PEP
     end
     
-    Box lightgrey Register
     participant ResourceServer as Resource-Server
-    end
-
 
     Client->>PEP: [001] GraphQL Request<br/>Authenticatiemiddel + Access-Token + query
     Note right of PEP: Inline filtering requests
@@ -914,40 +923,50 @@ sequenceDiagram
     ResourceServer-->>PEP: [003] 200 Response (GraphQL)
     PEP-->>Client: [004] 200 Response (GraphQL)
 ```
-
+Figuur 11 - Foutsituaties bij toegangscontrole
 
 #### [01] 400 Invalid Query Syntax
 
 - **HTTP Response**:
-  `HTTP/1.1 400 Bad Request`
+  ```http
+  HTTP/1.1 400 Bad Request
+  ```
 - **Details**:
 De query voldoet niet aan de vereiste syntax. Controleer de structuur van de query aan de hand van de specificaties.
 
 #### [02] 400 No Operation
 
 - **HTTP Response**:
-  `HTTP/1.1 400 Bad Request {"ErrorCode": "bad_request", "Error": "No operation found to evaluate"}`
+  ```http
+  HTTP/1.1 400 Bad Request {"ErrorCode": "bad_request", "Error": "No operation found to evaluate"}
+  ```
 - **Details**:
 Er ontbreekt een geldige operatie in de GraphQL-aanvraag. Controleer en pas de query aan om een bewerking te definiëren.
 
 #### [03] 400 Invalid Scope
 
 - **HTTP Response**:
-  `HTTP/1.1 400 Bad Request "Scope is not allowed"`
+  ```http
+  HTTP/1.1 400 Bad Request "Scope is not allowed"
+  ```
 - **Details**:
 De opgevraagde scope komt niet overeen met de toegestane scope. Controleer de scope-instellingen.
 
 #### [04] 401 Unauthorized
 
 - **HTTP Response:**
-  `HTTP/1.1 403 Unauthorized`
+  ```http
+  HTTP/1.1 403 Unauthorized
+  ```
 - **Details:**
 De toegang werd geweigerd, omdat er mogelijk een access token ontbrak. Controleer of het access token correct is aangevraagd en wordt meegegeven. Indien de fout zich blijft voordoen, kunt u het incidentbeheerproces volgen.
 
 #### [05] 401 Not Allowed
 
 - **HTTP Response**:
-  `HTTP/1.1 403 Not Allowed`
+  ```http
+  HTTP/1.1 403 Not Allowed
+  ```
 - **Details**:
 Mogelijke oorzaken zijn:
   - Het IP-adres is niet geregistreerd bij het authenticatiemiddel.
@@ -957,7 +976,9 @@ Mogelijke oorzaken zijn:
 #### [06] 403 Invalid Client Certificate
 
 - **HTTP Response**:
-  `HTTP/1.1 403 Invalid Client Certificate`
+  ```http
+  HTTP/1.1 403 Invalid Client Certificate
+  ```
 - **Details**:
 Het certificaat ontbreekt, is ongeldig of verlopen (van toepassing bij gebruik van een VECOZO-systeemcertificaat). Zorg ervoor dat het authenticatiemiddel overeenkomt met de juiste omgeving.
   Voor meer informatie ga naar: [Uw certificaat installeren of vernieuwen | VECOZO](https://www.vecozo.nl/certificaten-installerenvernieuwen/) of neem contact op met VECOZO Functioneel Beheer
@@ -965,35 +986,45 @@ Het certificaat ontbreekt, is ongeldig of verlopen (van toepassing bij gebruik v
 #### [07] 403 Policy: Access Denied
 
 - **HTTP Response:**
-  `HTTP/1.1 403 Forbidden`
+  ```http
+  HTTP/1.1 403 Forbidden
+  ```
 - **Details:**
 Toegang geweigerd op basis van een policy. De toegangsrechten van het gebruikte authenticatiemiddel voldoen niet aan de toegangsvereisten. Controleer de query en probeer opnieuw.
 
 #### [08] 403 Request Does Not Match Scopes
 
 - **HTTP Response:**
-  `HTTP/1.1 403 Forbidden`
+  ```http
+  HTTP/1.1 403 Forbidden
+  ```
 - **Details:**
 De aanvraag voldoet niet aan de vereiste scopes in het access token. Controleer de toegewezen scopes. Vraag een nieuwe access token aan indien de token voor een andere scope bestemd is.
 
 #### [09] 500 Internal Server Error
 
 - **HTTP Response**:
-  `HTTP/1.1 500 Internal Server Error`
+  ```http
+  HTTP/1.1 500 Internal Server Error
+  ```
 - **Details**:
 Er is een onverwachte fout opgetreden op de server. Probeer het later opnieuw of raadpleeg het incidentbeheerproces.
 
 #### [10] 502 Bad Gateway
 
 - **HTTP Response**:
-  `HTTP/1.1 502 Bad Gateway`
+  ```http
+  HTTP/1.1 502 Bad Gateway
+  ```
 - **Details**:
 De server kreeg een ongeldige reactie van een upstream-server. Controleer de serverinstellingen of probeer het later opnieuw.
 
 #### [11] 504 Gateway Timeout
 
 - **HTTP Response**:
-  `HTTP/1.1 504 Gateway Timeout`
+  ```http
+  HTTP/1.1 504 Gateway Timeout
+  ```
 - **Details**:
 De server reageerde niet binnen de verwachte tijd. Controleer de serververbindingen of probeer het later opnieuw.
 
