@@ -151,10 +151,9 @@ De SLA bevat geen boetebepalingen.
 
 De SLA en alle toepasselijke serviceniveaus zijn niet van toepassing op prestatie- of beschikbaarheidsproblemen:
 
-- Die het gevolg zijn van overmacht.
-- Die ontstaan door het gebruik van door de bronhouder ter beschikking gestelde voorzieningen nadat de bronhouder de betreffende deelnemer(s) heeft geadviseerd het gebruik daarvan te wijzigen binnen een redelijke, vooraf aangegeven termijn, en dit gebruik desondanks niet tijdig is aangepast.
--
-- Die het gevolg zijn van het handelen of nalaten van deelnemers of diens dienstverleners die:
+  - Die het gevolg zijn van overmacht.
+  - Die ontstaan door het gebruik van door de bronhouder ter beschikking gestelde voorzieningen nadat de bronhouder de betreffende deelnemer(s) heeft geadviseerd het gebruik daarvan te wijzigen binnen een redelijke, vooraf aangegeven termijn, en dit gebruik desondanks niet tijdig is aangepast.
+  - Die het gevolg zijn van het handelen of nalaten van deelnemers of diens dienstverleners die:
   - Zich niet houden aan de door de bronhouder vooraf gecommuniceerde vereiste configuraties en aan de door de bronhouder beschikbaar gestelde technische en functionele documentatie.
   - De door de bronhouder beschikbaar gestelde voorzieningen op een wijze gebruiken die niet overeenkomt met de bedoelde functies en functionaliteit (bijvoorbeeld pogingen om niet-ondersteunde bewerkingen uit te voeren).
 

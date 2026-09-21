@@ -134,7 +134,8 @@ Toegang tot deze autorisatieserver is beperkt tot alleen netwerkdeelnemers en al
 
 OAuth 2.0 ondersteunt verschillende "flow standaarden" (ook wel grants genoemd) om toegang te verlenen. Voor server-naar-server communicatie wordt meestal de “Client Credential Flow” toegepast. Deze “Client Credential flow” wordt ook gebruikt bij het aanvragen van toestemming tot autorisatie bij de autorisatieserver in het netwerk stelsel.
 
-> Voor meer informatie zie Logius [NL GOV Assurance profile for OAuth 2.0 v1.1.0](https://gitdocumentatie.logius.nl/publicatie/api/oauth/#use-case-client-credentials-flow).
+!!! info
+    Voor meer informatie zie Logius [NL GOV Assurance profile for OAuth 2.0 v1.1.0](https://gitdocumentatie.logius.nl/publicatie/api/oauth/#use-case-client-credentials-flow).
 
 #### 3.2.2. Scopes
 
@@ -187,11 +188,10 @@ Om toegang te krijgen tot een datatoegangspunt zoals een register, moet in het t
 
 De actor fungeert als vertegenwoordiger van de instantie en zorgt ervoor dat toegangsverzoeken correct en veilig worden geautoriseerd, zodat altijd duidelijk is namens welke partij de aanvraag wordt uitgevoerd.
 
-> Voor zowel een eigen aanvraag als een aanvraag namens een andere partij geldt:
->
-> - Een request header MOET het Content-Type: application/json bevatten om aan te geven dat de body in JSON formaat is.
-> - Een token request kan alleen worden aangevraagd met een VECOZO systeemcertificaat dit wordt dan gezien als een VECOZO identity.
-> - De maximale access-token-duration (exp) is 1 uur, ongeacht de scope.
+!!! quote "Voor zowel een eigen aanvraag als een aanvraag namens een andere partij geldt:"
+      - Een request header MOET het Content-Type: application/json bevatten om aan te geven dat de body in JSON formaat is.
+      - Een token request kan alleen worden aangevraagd met een VECOZO systeemcertificaat dit wordt dan gezien als een VECOZO identity.
+      - De maximale access-token-duration (exp) is 1 uur, ongeacht de scope.
 
 Hieronder worden voor zowel een eigen aanvraag als een aanvraag namens een andere partij voorbeelden gegeven van een access-token request.
 
@@ -714,15 +714,16 @@ In het onderstaande schema staan de mogelijke foutmeldingen die kunnen optreden 
 
 **Overzicht van HTTP Error Responses**
 
-Let op: foutmeldingen kunnen afhankelijk van de geïmplementeerde client anders worden weergegeven.
+!!! Warning
+    Let op: foutmeldingen kunnen afhankelijk van de geïmplementeerde client anders worden weergegeven.
 
-> **NB 1: GraphQL 200 OK**
->
-> Een GraphQL 200 OK response kan inhoudelijk nog steeds een fout-melding bevatten. De standaard beschrijft dat wanneer een GraphQL request door de server is ontvangen er altijd een 200 OK response volgt. Dit betekent niet automatisch dat de query volledig succesvol kon worden afgehandeld.
+    **NB 1: GraphQL 200 OK**
 
-> **NB 2: Inhoud Error Responses**
->
-> Het overzicht geeft de mogelijke HTTP Error responses vanuit voornamelijk de PEP. Dezelfde fouten kunnen ook voorkomen bij de Resource-server. Een onderscheid in afzender moet mogelijk zijn. In een volgende update zal er afzenderinformatie in de message-body moeten worden toegevoegd.
+    Een GraphQL 200 OK response kan inhoudelijk nog steeds een fout-melding bevatten. De standaard beschrijft dat wanneer een GraphQL request door de server is ontvangen er altijd een 200 OK response volgt. Dit betekent niet automatisch dat de query volledig succesvol kon worden afgehandeld.
+
+    **NB 2: Inhoud Error Responses**
+
+    Het overzicht geeft de mogelijke HTTP Error responses vanuit voornamelijk de PEP. Dezelfde fouten kunnen ook voorkomen bij de Resource-server. Een onderscheid in afzender moet mogelijk zijn. In een volgende update zal er afzenderinformatie in de message-body moeten worden toegevoegd.
 
 
 ```mermaid
@@ -816,12 +817,16 @@ sequenceDiagram
 Controleer of alle headers op de juiste manier worden meegegeven zoals: ‘content-type’. Het netwerkmodel gebruikt de flow standaard (grant\_type) “client\_credentials”. Een _**audience**_ en _**scope**_parameter zijn vereist bij het aanvragen van een token. Voeg deze toe aan de request body.  
 
   Bijvoorbeeld:  
-  `{ "grant_type": "client_credentials", "scope": "registers/wlzindicatieregister/indicaties:read", "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/graphql/v2/graphql" }`
+  ```json
+  { "grant_type": "client_credentials", "scope": "registers/wlzindicatieregister/indicaties:read", "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/graphql/v2/graphql" }
+  ```
 
 #### [02] 401 Unauthorized
 
 - **HTTP Response:**
-  `HTTP/1.1 401 Unauthorized "authenticating with issuing authority"`
+  ```http
+    HTTP/1.1 401 Unauthorized "authenticating with issuing authority"
+  ``` 
 - **Details:**
 Er kan niet geacteerd worden namens een partij (subject), omdat hier geen rechten voor zijn geregistreerd. Indien subject en actor hetzelfde zijn, dan wordt deze foutmelding ook gegeven.
   - Controleer of acteren mogelijk moet zijn en neem contact op met VECOZO.

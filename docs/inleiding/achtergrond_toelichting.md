@@ -14,22 +14,16 @@ Zorginstituut Nederland voert het Actieprogramma iWlz uit vanuit haar wettelijke
 
 De outcomedoelen van het Informatieberaad Zorg zijn vooral geïnspireerd op het voornemen van de overheid om de cliënt centraal te stellen en de administratieve lasten voor alle partijen te verminderen. Het netwerkmodel levert op 3 punten een belangrijke bijdrage aan deze doelen:
 
-> ✅
-> 1. **Patiënt centraal**
->
-> Het netwerkmodel geeft cliënten een sterkere informatiepositie, waardoor zij geïnformeerde keuzes kunnen maken over hun zorgproces. Cliënten krijgen bijvoorbeeld via hun persoonlijke gezondheidsomgeving inzicht in de status van hun zorgproces, de geleverde zorg en hun eigen bijdrage. Bovendien is de cliënt in dit model, samen met zijn netwerk, eigenaar van zijn eigen gegevens en houdt hij/zij daarop zelf de regie.
+!!! success "**1. Patient centraal**"
+    Het netwerkmodel geeft cliënten een sterkere informatiepositie, waardoor zij geïnformeerde keuzes kunnen maken over hun zorgproces. Cliënten krijgen bijvoorbeeld via hun persoonlijke gezondheidsomgeving inzicht in de status van hun zorgproces, de geleverde zorg en hun eigen bijdrage. Bovendien is de cliënt in dit model, samen met zijn netwerk, eigenaar van zijn eigen gegevens en houdt hij/zij daarop zelf de regie.
 
-> ✅
-> 2. **Gestandaardiseerde gegevensuitwisseling**
->
-> Bij de zorg voor een cliënt zijn vaak meerdere zorgverleners of zelfs verschillende zorgdomeinen betrokken. Om ervoor te zorgen dat gegevens soepel tussen deze partijen kunnen worden uitgewisseld, is het belangrijk dat de gebruikte standaarden goed op elkaar aansluiten.
->
-> Zodra duidelijk is welke informatie nodig is voor goede zorg en behandeling, kan deze via het netwerkmodel digitaal, gestandaardiseerd en veilig worden gedeeld. Als het nodig is, gebeurt dit met toestemming van de cliënt. De gegevens hoeven dan niet telkens opnieuw te worden aangeleverd en zijn altijd actueel beschikbaar. Dit verkleint de kans op fouten en dubbele registraties.
+!!! success "**2. Gestandaardiseerde gegevensuitwisseling**"
+    Bij de zorg voor een cliënt zijn vaak meerdere zorgverleners of zelfs verschillende zorgdomeinen betrokken. Om ervoor te zorgen dat gegevens soepel tussen deze partijen kunnen worden uitgewisseld, is het belangrijk dat de gebruikte standaarden goed op elkaar aansluiten.
 
-> ✅
-> 3. **Eenmalig vastleggen en hergebruik gegevens**
->
-> In het netwerkmodel zijn gegevens over indicaties, bemiddelde zorg en geleverde zorg beschikbaar bij de bron waar ze zijn geregistreerd (bronhouder). Alle partijen kunnen de bron raadplegen op het moment dat de gegevens nodig zijn. Zij kunnen dan de meest actuele gegevens raadplegen. Deze gegevens hoeven de ketenpartijen niet meer zelf op te slaan.
+    Zodra duidelijk is welke informatie nodig is voor goede zorg en behandeling, kan deze via het netwerkmodel digitaal, gestandaardiseerd en veilig worden gedeeld. Als het nodig is, gebeurt dit met toestemming van de cliënt. De gegevens hoeven dan niet telkens opnieuw te worden aangeleverd en zijn altijd actueel beschikbaar. Dit verkleint de kans op fouten en dubbele registraties.
+
+!!! success "**3. Eenmalig vastleggen en hergebruik gegevens**"
+    In het netwerkmodel zijn gegevens over indicaties, bemiddelde zorg en geleverde zorg beschikbaar bij de bron waar ze zijn geregistreerd (bronhouder). Alle partijen kunnen de bron raadplegen op het moment dat de gegevens nodig zijn. Zij kunnen dan de meest actuele gegevens raadplegen. Deze gegevens hoeven de ketenpartijen niet meer zelf op te slaan.
 
 ## 3. Samenhang met relevante ontwikkelingen
 
@@ -223,24 +217,24 @@ Op deze manier wordt gegevensuitwisseling tussen partijen efficiënter en krijgt
 Figuur 4 - Samenhang in de doorontwikkeling van estafettemodel naar netwerkmodel
 
 
-> ℹ️
-> **Samenwerkende partners**
->
-> In het Actieprogramma iWlz zijn de volgende partijen verenigd:
->
-> - ActiZ
-> - CAK
-> - CIZ
-> - De Nederlandse ggz
-> - NZa
-> - Valente
-> - VGN
-> - Zorginstituut Nederland
-> - Zorgkantoren
-> - Zorgthuisnl
-> - Zorgverzekeraars Nederland
->
-> OIZ en VECOZO maken formeel geen deel uit van het Actieprogramma iWlz. OIZ is betrokken vanuit haar rol als belangenbehartiger van leveranciers van ICT-oplossingen voor de zorg en levert vanuit die positie expertise en input bij de ontwikkeling en doorontwikkeling van het iWlz-netwerkmodel.
-> Daarnaast vervult VECOZO een aantal voor het iWlz-netwerkmodel essentiële rollen. VECOZO is onder meer verantwoordelijk voor voorzieningen op het gebied van vertrouwen, vindbaarheid, het beheer van het netwerk en treedt op als dienstverlener voor individuele deelnemers aan het netwerk.
+!!! info "**Samenwerkende partners**"
+
+    In het Actieprogramma iWlz zijn de volgende partijen verenigd:    
+    
+      - ActiZ
+      - CAK
+      - CIZ
+      - De Nederlandse ggz
+      - NZa
+      - Valente
+      - VGN
+      - Zorginstituut Nederland
+      - Zorgkantoren
+      - Zorgthuisnl
+      - Zorgverzekeraars Nederland    
+    
+    OIZ en VECOZO maken formeel geen deel uit van het Actieprogramma iWlz. OIZ is betrokken vanuit haar rol als belangenbehartiger van leveranciers van ICT-oplossingen voor de zorg en levert vanuit die positie expertise en input bij de ontwikkeling en doorontwikkeling van het iWlz-netwerkmodel.
+
+    Daarnaast vervult VECOZO een aantal voor het iWlz-netwerkmodel essentiële rollen. VECOZO is onder meer verantwoordelijk voor voorzieningen op het gebied van vertrouwen, vindbaarheid, het beheer van het netwerk en treedt op als dienstverlener voor individuele deelnemers aan het netwerk.
 
 
