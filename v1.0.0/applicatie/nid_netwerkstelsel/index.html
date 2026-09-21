@@ -2910,7 +2910,7 @@ flowchart TD
 
     PAP --&gt;|Beleidsregels beheren| PRP
 </code></pre>
-<figcaption>Figuur 1 - Overzicht onderdelen nID netwerkstelsel</figcaption>
+<figcaption>Figuur 1 - Overzicht onderdelen (nID) netwerkstelsel</figcaption>
 
 <h2 id="2-deelnemers">2. Deelnemers<a class="headerlink" href="#2-deelnemers" title="Permanent link">¶</a></h2>
 <p>Om als deelnemer deel te nemen aan het nID netwerkstelsel, is het belangrijk te begrijpen dat toegang en gegevensuitwisseling binnen het stelsel streng worden gereguleerd. Dit waarborgt de beveiliging en naleving van beleidsregels, terwijl het tegelijkertijd een flexibele en efficiënte samenwerking tussen verschillende partijen mogelijk maakt.</p>
@@ -2932,7 +2932,7 @@ flowchart TD
 <p>Voor het uitvoeren van alle activiteiten in het iWlz-netwerkmodel zijn autorisaties noodzakelijk. Voorbeelden van activiteiten zijn: lezen, schrijven, aanpassen en verwijderen van data uit registers. Daarnaast zijn er ook autorisaties nodig voor het mogen versturen van notificaties en meldingen. Deze autorisaties kunnen worden aangevraagd bij de autorisatieserver. Voor het aanvragen van een autorisatie heeft een deelnemer een authenticatiemiddel nodig van een vertrouwde uitgever.</p>
 <h3 id="31-schematische-weergave-aanvragen-van-autorisatie">3.1. Schematische weergave aanvragen van autorisatie<a class="headerlink" href="#31-schematische-weergave-aanvragen-van-autorisatie" title="Permanent link">¶</a></h3>
 <p>In het onderstaande schema wordt de basis uitgelegd voor het aanvragen van autorisatie en hoe vervolgens een raadpleging (GraphQL request) verloopt.</p>
-<pre class="mermaid-zoom"><code>---
+<p></p><pre class="mermaid-zoom"><code>---
 config:
   theme: forest
 ---
@@ -2950,6 +2950,7 @@ sequenceDiagram
     rect pink
     AuthzServer--xClient: Foutmeldingen&lt;br/&gt;(400/403/500)
     end</code></pre>
+Figuur 2 - Aanvragen Access-token<p></p>
 <table>
 <thead>
 <tr>
@@ -3246,26 +3247,23 @@ Indien de autorisatieserver de scope van de aanvraag goedkeurt, zal de “scope�
 </ol>
 <h3 id="42-procesflow-interactie-met-een-datatoegangspunt">4.2. Procesflow interactie met een datatoegangspunt<a class="headerlink" href="#42-procesflow-interactie-met-een-datatoegangspunt" title="Permanent link">¶</a></h3>
 <p>Hier is een diagram dat de interactie met een datatoegangspunt schematisch weergeeft:</p>
-<pre class="mermaid-zoom"><code>---
+<p></p><pre class="mermaid-zoom"><code>---
 config:
   theme: forest
 ---
 sequenceDiagram
     autonumber
-    box lightgrey Deelnemer
     actor Client
-    end
     box lightgrey nID
     participant PEP
     end
-    box lightgrey Register
     participant AccessPoint as Data Accesspoint
-    end
 
     Client-&gt;&gt;PEP: GraphQL-query&lt;br/&gt;+ access-token
     PEP-&gt;&gt;AccessPoint: Doorsturen geautoriseerd verzoek
     AccessPoint--&gt;&gt;PEP: Gevraagde data
     PEP-&gt;&gt;Client: Gevraagde data</code></pre>
+Figuur 3 - Interactie Client - PEP - Data accesspoint<p></p>
 <table>
 <thead>
 <tr>
@@ -3312,22 +3310,18 @@ sequenceDiagram
 <p>Het huidige endpoint dat wordt aangesproken is de resource-server. Hier wordt een reeks validatiestappen doorlopen om de veiligheid, integriteit en naleving van beleidsregels te waarborgen voordat een verzoek wordt afgehandeld. Deze validatiestappen zijn nodig om ervoor te zorgen dat alleen geautoriseerde verzoeken toegang krijgen tot de gevraagde gegevens.</p>
 <h3 id="52-procesflow-interactie-met-de-pep">5.2 Procesflow interactie met de PEP<a class="headerlink" href="#52-procesflow-interactie-met-de-pep" title="Permanent link">¶</a></h3>
 <p>Hier is een diagram dat de interactie met een PEP schematisch weergeeft:</p>
-<pre class="mermaid-zoom"><code>---
+<p></p><pre class="mermaid-zoom"><code>---
 config:
   theme: forest
 ---
 sequenceDiagram
     autonumber
-    box lightgrey Deelnemer
     participant Client
-    end
     box lightgrey nID
     participant PEP
     participant PDP
     end
-    box lightgrey Register
     participant resourceserver as Resource-Server
-    end
 
     Client-&gt;&gt;PEP: GraphQL Request&lt;br/&gt;Authenticatiemiddel + JWT Access-Token + Query
     activate Client
@@ -3350,6 +3344,7 @@ sequenceDiagram
     PEP--&gt;&gt;Client: 200 Response (GraphQL)
     deactivate PEP
     deactivate Client</code></pre>
+Figuur 4 - PEP als onderdeel in GraphQL Request flow<p></p>
 <table>
 <thead>
 <tr>
@@ -3465,7 +3460,7 @@ sequenceDiagram
 <h2 id="6-policy-decision-point-pdp">6. Policy Decision Point (PDP)<a class="headerlink" href="#6-policy-decision-point-pdp" title="Permanent link">¶</a></h2>
 <p>Het Policy Decision Point (PDP) speelt een centrale rol in de toegangscontrole. Het PDP is verantwoordelijk voor het nemen van toegangsbeslissingen op basis van beleidsregels (policies) en analyseert toegangsverzoeken die worden ingediend met een GraphQL-query.</p>
 <p>Hieronder een diagram dat de interactie tussen het PDP en andere componenten schetst:</p>
-<pre class="mermaid-zoom"><code>---
+<p></p><pre class="mermaid-zoom"><code>---
 config:
   theme: forest
 ---
@@ -3483,6 +3478,7 @@ sequenceDiagram
     PRP-&gt;&gt;PDP: Beleidsregels retourneren
     PDP-&gt;&gt;PEP: Besluit toestaan/weigeren
     PDP-&gt;&gt;Log: Besluit vastleggen</code></pre>
+Figuur 5 - Rol van PDP in het netwerk<p></p>
 <p>In onderstaande stappen wordt uitgelegd hoe het Policy Decision Point PDP werkt.</p>
 <table>
 <thead>
@@ -3524,7 +3520,7 @@ sequenceDiagram
 <p>Het Policy Retrieval Point (PRP) speelt een cruciale rol in het beheer en de levering van beleidsregels (policies) binnen het nID-netwerkstelsel. Als centrale opslagplaats zorgt het PRP ervoor dat beleidsregels consistent worden opgeslagen, beheerd en toegankelijk zijn voor andere onderdelen, zoals het Policy Decision Point (PDP). Deze centrale aanpak waarborgt dat alle toegangsbeslissingen gebaseerd zijn op dezelfde regels, waardoor consistentie in toegangscontrole wordt gegarandeerd.</p>
 <p>Daarnaast biedt het PRP transparantie door gebruik te maken van een versiebeheersysteem, zoals GitHub, waarmee alle wijzigingen in beleidsregels inzichtelijk en traceerbaar zijn. Dit maakt het eenvoudig om beleidsregels te beheren, bij te werken en wijzigingen consistent door te voeren in het hele netwerk, wat de beheerbaarheid aanzienlijk vergroot.</p>
 <p>Procesflow PRP</p>
-<pre class="mermaid-zoom"><code>---
+<p></p><pre class="mermaid-zoom"><code>---
 config:
   theme: forest
 ---
@@ -3543,6 +3539,7 @@ sequenceDiagram
     PRP-&gt;&gt;PDP: Beleidsregels retourneren
     PDP-&gt;&gt;PEP: Besluit: toestaan of weigeren
     PEP-&gt;&gt;Client: Resultaat terugsturen</code></pre>
+Figuur 6 - Interactie PDP en PRP<p></p>
 <table>
 <thead>
 <tr>
@@ -3615,15 +3612,17 @@ sequenceDiagram
     autonumber
     actor Admin as Beheerder
     participant PAP as Policy Administration Point&lt;br/&gt;(PAP)
+    box lightgrey nID
     participant PRP as Policy Retrieval Point&lt;br/&gt;(PRP)
     participant PDP as Policy Decision Point&lt;br/&gt;(PDP)
+    end
 
     Admin-&gt;&gt;PAP: Creëren of aanpassen van beleidsregels
     PAP-&gt;&gt;PAP: Validatie van beleidsregels
     PAP-&gt;&gt;PAP: Opslaan in versiebeheersysteem
     PAP-&gt;&gt;PRP: Publicatie van beleidsregels
     PAP-&gt;&gt;PDP: Synchronisatie met beleidsregels</code></pre>
-Procesflow van het PAP<p></p>
+Figuur 7 - Procesflow van het PAP<p></p>
 <table>
 <thead>
 <tr>
@@ -3694,9 +3693,7 @@ sequenceDiagram
     participant PIP as Policy Information Point&lt;br/&gt;(PIP)
     end
 
-    box lightgrey register
     participant DataSource as Externe bron&lt;br/&gt;of interne database
-    end
 
     PEP-&gt;&gt;PDP: Toegangsverzoek
     PDP-&gt;&gt;PDP: Behoefte aan aanvullende informatie
@@ -3705,6 +3702,8 @@ sequenceDiagram
     DataSource--&gt;&gt;PIP: Gegevens retourneren
     PIP--&gt;&gt;PDP: Informatie terugkoppelen
     PDP--&gt;&gt;PEP: Besluit toestaan/weigeren</code></pre>
+<figcaption>Figuur 8 - Interactie met PIP</figcaption>
+
 <table>
 <thead>
 <tr>
@@ -3763,23 +3762,18 @@ sequenceDiagram
 <p><strong>NB 2: Inhoud Error Responses</strong></p>
 <p>Het overzicht geeft de mogelijke HTTP Error responses vanuit voornamelijk de PEP. Dezelfde fouten kunnen ook voorkomen bij de Resource-server. Een onderscheid in afzender moet mogelijk zijn. In een volgende update zal er afzenderinformatie in de message-body moeten worden toegevoegd.</p>
 </div>
-<pre class="mermaid-zoom"><code>---
+<p></p><pre class="mermaid-zoom"><code>---
 config:
   theme: forest
 ---
 sequenceDiagram
-    Box lightgrey Deelnemer 
-    participant Client as Client
-    end
 
+    participant Client as Client
     Box lightgrey nID
     participant AuthzServer as Autorisatieserver
     participant PEP as PEP
-    end
-
-    Box lightgrey Register
+    end    
     participant ResourceServer as Resource-Server
-    end
 
     Client-&gt;&gt;AuthzServer: [001] Aanvragen van autorisatie&lt;br/&gt;"scope": "registers/resource:read"&lt;br/&gt;Authenticatiemiddel
 
@@ -3803,24 +3797,22 @@ sequenceDiagram
     PEP-&gt;&gt;ResourceServer: [006] GraphQL Request
     ResourceServer--&gt;&gt;PEP: [007] 200 Response (GraphQL)
     PEP--&gt;&gt;Client: [008] 200 Response (GraphQL)</code></pre>
+Figuur 9 - Ontstaan foutsituaties<p></p>
 <h3 id="101-foutmeldingen-aanvraag-van-autorisatie">10.1 Foutmeldingen Aanvraag van Autorisatie<a class="headerlink" href="#101-foutmeldingen-aanvraag-van-autorisatie" title="Permanent link">¶</a></h3>
-<pre class="mermaid-zoom"><code>---
+<p></p><pre class="mermaid-zoom"><code>---
 config:
   theme: forest
 ---
 sequenceDiagram
-    Box lightgrey Deelnemer 
+
     participant Client as Client
-    end
 
     Box lightgrey nID
     participant AuthzServer as Autorisatieserver
     participant PEP as PEP
     end
 
-    Box lightgrey Register
     participant ResourceServer as Resource-Server
-    end
 
     Client-&gt;&gt;AuthzServer: [001] Aanvragen van autorisatie&lt;br/&gt;"scope": "registers/resource:read"&lt;br/&gt;Authenticatiemiddel
 
@@ -3837,36 +3829,58 @@ sequenceDiagram
     AuthzServer-&gt;&gt;AuthzServer: [003] Run Rule-engine o.b.v. scope(s)
 
     AuthzServer--&gt;&gt;Client: [004] 200 Response (Access-Token)</code></pre>
+Figuur 10 - Foutsituaties bij autorisatie aanvraag<p></p>
 <h4 id="01-400-audience-required">[01] 400 Audience Required<a class="headerlink" href="#01-400-audience-required" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response:</strong>
-  <code>HTTP/1.1 400 Bad Request "audience is required"</code></li>
-<li><strong>Details</strong>:
-Controleer of alle headers op de juiste manier worden meegegeven zoals: ‘content-type’. Het netwerkmodel gebruikt de flow standaard (grant_type) “client_credentials”. Een <em><strong>audience</strong></em> en _<strong>scope</strong>_parameter zijn vereist bij het aanvragen van een token. Voeg deze toe aan de request body.  </li>
-</ul>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">400</span> <span class="ne">Bad Request </span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="err">"audience</span> <span class="l">is required"</span>
+</span></code></pre></div></li>
+<li>
+<p><strong>Details</strong>:
+  Controleer of alle headers op de juiste manier worden meegegeven zoals: ‘content-type’. Het netwerkmodel gebruikt de flow standaard (grant_type) “client_credentials”. Een <em><strong>audience</strong></em> en _<strong>scope</strong>_parameter zijn vereist bij het aanvragen van een token. Voeg deze toe aan de request body.  </p>
 <p>Bijvoorbeeld:<br>
-  </p><div class="language-json highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">"grant_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client_credentials"</span><span class="p">,</span><span class="w"> </span><span class="nt">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"registers/wlzindicatieregister/indicaties:read"</span><span class="p">,</span><span class="w"> </span><span class="nt">"audience"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://koppelpunt.ciz.nl/iwlz/indicatieregister/graphql/v2/graphql"</span><span class="w"> </span><span class="p">}</span>
+</p><div class="language-json highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">"grant_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client_credentials"</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="nt">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"registers/indicatieregister/indicaties:read"</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="nt">"audience"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://register.indicaties.nl/iwlz/indicatieregister/graphql"</span><span class="w"> </span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">}</span>
 </span></code></pre></div><p></p>
+</li>
+</ul>
 <h4 id="02-401-unauthorized">[02] 401 Unauthorized<a class="headerlink" href="#02-401-unauthorized" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response:</strong>
-  <div class="language-http highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="err">  </span><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">401</span> <span class="ne">Unauthorized "authenticating with issuing authority"</span>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="err">  </span><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">401</span> <span class="ne">Unauthorized </span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  <span class="l">"authenticating with issuing authority"</span>
 </span></code></pre></div></li>
 <li><strong>Details:</strong>
 Er kan niet geacteerd worden namens een partij (subject), omdat hier geen rechten voor zijn geregistreerd. Indien subject en actor hetzelfde zijn, dan wordt deze foutmelding ook gegeven.</li>
 <li>Controleer of acteren mogelijk moet zijn en neem contact op met VECOZO.</li>
 <li>
 <p>Verander de body zodat er als directe partij een aanvraag wordt gedaan.</p>
-<p>Voorbeeld body als er geacteerd wordt namens een partij:<br>
-<code>{ "grant_type": "client_credentials", "scope": "registers/wlzindicatieregister/indicaties:read", "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql", "access_token": { "sub": "uzovi:5000" } }</code></p>
+<p>Voorbeeld body als er geacteerd wordt namens een partij: 
+</p><div class="language-json highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nt">"grant_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client_credentials"</span><span class="p">,</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nt">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"registers/wlzindicatieregister/indicaties:read"</span><span class="p">,</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="nt">"audience"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql"</span><span class="p">,</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">  </span><span class="nt">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"sub"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uzovi:5000"</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">}</span>
+</span></code></pre></div><p></p>
 <p>Voorbeeld body als aanvraag wordt gedaan als directe partij:<br>
-<code>{ "grant_type": "client_credentials", "scope": "registers/wlzindicatieregister/indicaties:read", "audience": "https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql" }</code></p>
+</p><div class="language-json highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nt">"grant_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client_credentials"</span><span class="p">,</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nt">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"registers/wlzindicatieregister/indicaties:read"</span><span class="p">,</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="nt">"audience"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://koppelpunt.ciz.nl/iwlz/indicatieregister/v2/graphql"</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">}</span>
+</span></code></pre></div><p></p>
 </li>
 </ul>
 <h4 id="03-403-not-allowed">[03] 403 Not Allowed<a class="headerlink" href="#03-403-not-allowed" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response:</strong>
-  <code>HTTP/1.1 403 Forbidden</code></li>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">403</span> <span class="ne">Forbidden</span>
+</span></code></pre></div></li>
 <li><strong>Details</strong>:
 Mogelijke oorzaken zijn:</li>
 <li>Het IP-adres is niet geregistreerd bij het authenticatiemiddel.</li>
@@ -3876,14 +3890,16 @@ Mogelijke oorzaken zijn:</li>
 <h4 id="04-403-invalid-client-certificate">[04] 403 Invalid Client Certificate<a class="headerlink" href="#04-403-invalid-client-certificate" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response</strong>:
-  <code>HTTP/1.1 403 Invalid Client Certificate</code></li>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">403</span> <span class="ne">Invalid Client Certificate</span>
+</span></code></pre></div></li>
 <li><strong>Details</strong>:
 Het certificaat ontbreekt, is ongeldig of verlopen (van toepassing bij gebruik van een VECOZO-systeemcertificaat). Zorg ervoor dat het authenticatiemiddel overeenkomt met de juiste omgeving. Zie deze VECOZO website <a href="https://www.vecozo.nl/certificaten-installerenvernieuwen/">Uw certificaat installeren of vernieuwen | VECOZO</a> of neem contact op met VECOZO Functioneel Beheer.</li>
 </ul>
 <h4 id="05-404-not-found">[05] 404 Not Found<a class="headerlink" href="#05-404-not-found" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response</strong>:
-  <code>HTTP/1.1 404 Not Found</code></li>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">404</span> <span class="ne">Not Found</span>
+</span></code></pre></div></li>
 <li><strong>Details</strong>:
 Een onjuist endpoint van de autorisatieserver is gebruikt. Controleer of het correcte endpoint is geconfigureerd, zoals gespecificeerd in dit document onder de details van de autorisatieserver.</li>
 </ul>
@@ -3895,24 +3911,19 @@ Een onjuist endpoint van de autorisatieserver is gebruikt. Controleer of het cor
 Een onverwachte fout is opgetreden op de autorisatieserver. Probeer het later opnieuw of volg het incidentbeheerproces indien nodig.</li>
 </ul>
 <h3 id="102-foutmeldingen-pep-endpoint-bij-graphql-request">10.2 Foutmeldingen PEP endpoint bij GraphQL request<a class="headerlink" href="#102-foutmeldingen-pep-endpoint-bij-graphql-request" title="Permanent link">¶</a></h3>
-<pre class="mermaid-zoom"><code>---
+<p></p><pre class="mermaid-zoom"><code>---
 config:
   theme: forest
 ---
 sequenceDiagram
-    Box lightgrey Deelnemer 
     participant Client as Client
-    end
 
     Box lightgrey nID
     participant AuthzServer as Autorisatieserver
     participant PEP as PEP
     end
 
-    Box lightgrey Register
     participant ResourceServer as Resource-Server
-    end
-
 
     Client-&gt;&gt;PEP: [001] GraphQL Request&lt;br/&gt;Authenticatiemiddel + Access-Token + query
     Note right of PEP: Inline filtering requests
@@ -3934,38 +3945,44 @@ sequenceDiagram
     PEP-&gt;&gt;ResourceServer: [002] GraphQL Request
     ResourceServer--&gt;&gt;PEP: [003] 200 Response (GraphQL)
     PEP--&gt;&gt;Client: [004] 200 Response (GraphQL)</code></pre>
+Figuur 11 - Foutsituaties bij toegangscontrole<p></p>
 <h4 id="01-400-invalid-query-syntax">[01] 400 Invalid Query Syntax<a class="headerlink" href="#01-400-invalid-query-syntax" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response</strong>:
-  <code>HTTP/1.1 400 Bad Request</code></li>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">400</span> <span class="ne">Bad Request</span>
+</span></code></pre></div></li>
 <li><strong>Details</strong>:
 De query voldoet niet aan de vereiste syntax. Controleer de structuur van de query aan de hand van de specificaties.</li>
 </ul>
 <h4 id="02-400-no-operation">[02] 400 No Operation<a class="headerlink" href="#02-400-no-operation" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response</strong>:
-  <code>HTTP/1.1 400 Bad Request {"ErrorCode": "bad_request", "Error": "No operation found to evaluate"}</code></li>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">400</span> <span class="ne">Bad Request {"ErrorCode": "bad_request", "Error": "No operation found to evaluate"}</span>
+</span></code></pre></div></li>
 <li><strong>Details</strong>:
 Er ontbreekt een geldige operatie in de GraphQL-aanvraag. Controleer en pas de query aan om een bewerking te definiëren.</li>
 </ul>
 <h4 id="03-400-invalid-scope">[03] 400 Invalid Scope<a class="headerlink" href="#03-400-invalid-scope" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response</strong>:
-  <code>HTTP/1.1 400 Bad Request "Scope is not allowed"</code></li>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">400</span> <span class="ne">Bad Request "Scope is not allowed"</span>
+</span></code></pre></div></li>
 <li><strong>Details</strong>:
 De opgevraagde scope komt niet overeen met de toegestane scope. Controleer de scope-instellingen.</li>
 </ul>
 <h4 id="04-401-unauthorized">[04] 401 Unauthorized<a class="headerlink" href="#04-401-unauthorized" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response:</strong>
-  <code>HTTP/1.1 403 Unauthorized</code></li>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">403</span> <span class="ne">Unauthorized</span>
+</span></code></pre></div></li>
 <li><strong>Details:</strong>
 De toegang werd geweigerd, omdat er mogelijk een access token ontbrak. Controleer of het access token correct is aangevraagd en wordt meegegeven. Indien de fout zich blijft voordoen, kunt u het incidentbeheerproces volgen.</li>
 </ul>
 <h4 id="05-401-not-allowed">[05] 401 Not Allowed<a class="headerlink" href="#05-401-not-allowed" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response</strong>:
-  <code>HTTP/1.1 403 Not Allowed</code></li>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">403</span> <span class="ne">Not Allowed</span>
+</span></code></pre></div></li>
 <li><strong>Details</strong>:
 Mogelijke oorzaken zijn:</li>
 <li>Het IP-adres is niet geregistreerd bij het authenticatiemiddel.</li>
@@ -3975,7 +3992,8 @@ Mogelijke oorzaken zijn:</li>
 <h4 id="06-403-invalid-client-certificate">[06] 403 Invalid Client Certificate<a class="headerlink" href="#06-403-invalid-client-certificate" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response</strong>:
-  <code>HTTP/1.1 403 Invalid Client Certificate</code></li>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">403</span> <span class="ne">Invalid Client Certificate</span>
+</span></code></pre></div></li>
 <li><strong>Details</strong>:
 Het certificaat ontbreekt, is ongeldig of verlopen (van toepassing bij gebruik van een VECOZO-systeemcertificaat). Zorg ervoor dat het authenticatiemiddel overeenkomt met de juiste omgeving.
   Voor meer informatie ga naar: <a href="https://www.vecozo.nl/certificaten-installerenvernieuwen/">Uw certificaat installeren of vernieuwen | VECOZO</a> of neem contact op met VECOZO Functioneel Beheer</li>
@@ -3983,35 +4001,40 @@ Het certificaat ontbreekt, is ongeldig of verlopen (van toepassing bij gebruik v
 <h4 id="07-403-policy-access-denied">[07] 403 Policy: Access Denied<a class="headerlink" href="#07-403-policy-access-denied" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response:</strong>
-  <code>HTTP/1.1 403 Forbidden</code></li>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">403</span> <span class="ne">Forbidden</span>
+</span></code></pre></div></li>
 <li><strong>Details:</strong>
 Toegang geweigerd op basis van een policy. De toegangsrechten van het gebruikte authenticatiemiddel voldoen niet aan de toegangsvereisten. Controleer de query en probeer opnieuw.</li>
 </ul>
 <h4 id="08-403-request-does-not-match-scopes">[08] 403 Request Does Not Match Scopes<a class="headerlink" href="#08-403-request-does-not-match-scopes" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response:</strong>
-  <code>HTTP/1.1 403 Forbidden</code></li>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">403</span> <span class="ne">Forbidden</span>
+</span></code></pre></div></li>
 <li><strong>Details:</strong>
 De aanvraag voldoet niet aan de vereiste scopes in het access token. Controleer de toegewezen scopes. Vraag een nieuwe access token aan indien de token voor een andere scope bestemd is.</li>
 </ul>
 <h4 id="09-500-internal-server-error">[09] 500 Internal Server Error<a class="headerlink" href="#09-500-internal-server-error" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response</strong>:
-  <code>HTTP/1.1 500 Internal Server Error</code></li>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">500</span> <span class="ne">Internal Server Error</span>
+</span></code></pre></div></li>
 <li><strong>Details</strong>:
 Er is een onverwachte fout opgetreden op de server. Probeer het later opnieuw of raadpleeg het incidentbeheerproces.</li>
 </ul>
 <h4 id="10-502-bad-gateway">[10] 502 Bad Gateway<a class="headerlink" href="#10-502-bad-gateway" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response</strong>:
-  <code>HTTP/1.1 502 Bad Gateway</code></li>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">502</span> <span class="ne">Bad Gateway</span>
+</span></code></pre></div></li>
 <li><strong>Details</strong>:
 De server kreeg een ongeldige reactie van een upstream-server. Controleer de serverinstellingen of probeer het later opnieuw.</li>
 </ul>
 <h4 id="11-504-gateway-timeout">[11] 504 Gateway Timeout<a class="headerlink" href="#11-504-gateway-timeout" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>HTTP Response</strong>:
-  <code>HTTP/1.1 504 Gateway Timeout</code></li>
+  <div class="language-http highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">504</span> <span class="ne">Gateway Timeout</span>
+</span></code></pre></div></li>
 <li><strong>Details</strong>:
 De server reageerde niet binnen de verwachte tijd. Controleer de serververbindingen of probeer het later opnieuw.</li>
 </ul>
