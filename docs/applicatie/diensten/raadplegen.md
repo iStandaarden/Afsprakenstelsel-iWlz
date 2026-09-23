@@ -4,13 +4,13 @@
 
 Dit artikel beschrijft de dienst Raadplegen. Deze dienst wordt door bronhouders aangeboden aan (toekomstige) afnemers.
 
-De volledige validatie flow voor het raadplegen van een register is beschreven in het artikel [nID netwerkstelsel](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/229441537)Voorvertoning en verloopt in de basis op dezelfde wijze als [Notificeren en Melden](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23071204)Voorvertoning .
+De volledige validatie flow voor het raadplegen van een register is beschreven in het artikel [nID netwerkstelsel](../nid_netwerkstelsel.md)Voorvertoning en verloopt in de basis op dezelfde wijze als [Notificeren en Melden](./notificeren-en-melden.md)Voorvertoning .
 
 Het gaat bij het raadplegen van een register om:
 
 1. Valideren autorisatie verzoek door de autorisatieserver
 2. Valideren autorisatie door de PEP
-3. Valideren ingediende GraphQL-query door de [**PDP**](https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23069870 "https://wlz.atlassian.net/wiki/spaces/IWLZAS/pages/23069870")
+3. Valideren ingediende GraphQL-query door de [**PDP**](../nid_netwerkstelsel.md#6-policy-decision-point-pdp)
 
 
 ```mermaid

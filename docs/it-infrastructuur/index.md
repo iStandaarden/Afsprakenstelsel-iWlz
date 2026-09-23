@@ -40,4 +40,4 @@ Dit hoofdstuk bevat onder andere de volgende onderdelen:
 
 !!! info
     
-    Afspraken over beschikbaarheid, responstijden en ondersteuning zijn opgenomen in het hoofdstuk [**Organisatiebeleid > Serviceafspraken**](../organisatiebeleid/serviceafspraken/).
+    Afspraken over beschikbaarheid, responstijden en ondersteuning zijn opgenomen in het hoofdstuk [**Organisatiebeleid > Serviceafspraken**](../organisatiebeleid/serviceafspraken/index.md).

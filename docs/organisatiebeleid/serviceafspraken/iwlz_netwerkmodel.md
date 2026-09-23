@@ -235,7 +235,7 @@ De monitoring zal initieel vanuit de rol van de operationeel netwerkbeheerder wo
 
 ### 3.4 Inrichting
 
-Op basis van concrete informatiebehoeften van deelnemende partijen of netwerkbrede serviceafspraken worden RFC’s vastgesteld in het Technisch Afstemmingsoverleg (TAO), waarbij per RFC nut, proportionaliteit, dataminimalisatie, hergebruik van bestaande bronnen, retentie en verwachte beheerlast expliciet worden onderbouwd. Zo voorkomen we dat onnodige gegevens worden gemonitord of dat monitoring tot onnodige overhead leidt. Nieuwe RFC’s houden rekening met de reeds beschikbare traceId uit RFC022 en maken, waar mogelijk, gebruik van deze identificatie voor correlatie.
+Op basis van concrete informatiebehoeften van deelnemende partijen of netwerkbrede serviceafspraken worden RFC’s vastgesteld in het Technisch Afstemmingsoverleg (TAO), waarbij per RFC nut, proportionaliteit, dataminimalisatie, hergebruik van bestaande bronnen, retentie en verwachte beheerlast expliciet worden onderbouwd. Zo voorkomen we dat onnodige gegevens worden gemonitord of dat monitoring tot onnodige overhead leidt. Nieuwe RFC’s houden rekening met de reeds beschikbare traceId uit RFC0022 en maken, waar mogelijk, gebruik van deze identificatie voor correlatie.
 
 ### 3.5 Typen monitoring
 

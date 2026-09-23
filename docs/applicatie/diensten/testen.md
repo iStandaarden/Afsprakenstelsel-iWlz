@@ -21,7 +21,7 @@ Het draaiboek wordt gepubliceerd bij de ondersteunende documentatie van de betre
 
 ## 3. Testen bij aansluiten op een bestaand register
 
-Partijen die na de landelijke ketentest aansluiten op het netwerk zijn zelf verantwoordelijk voor het organiseren en uitvoeren van tests met de betrokken ketenpartijen. De inhoud en aanpak van deze tests stemmen zij onderling af. Beschikbaarheid en uptime zijn vastgelegd in [Serviceafspraken](../../organisatiebeleid/serviceafspraken/), met nadere uitwerking per onderdeel. Er is momenteel geen centrale coördinatie of vaste toetsingsmomenten voor individuele aansluitingen.
+Partijen die na de landelijke ketentest aansluiten op het netwerk zijn zelf verantwoordelijk voor het organiseren en uitvoeren van tests met de betrokken ketenpartijen. De inhoud en aanpak van deze tests stemmen zij onderling af. Beschikbaarheid en uptime zijn vastgelegd in [Serviceafspraken](../../organisatiebeleid/serviceafspraken/index.md), met nadere uitwerking per onderdeel. Er is momenteel geen centrale coördinatie of vaste toetsingsmomenten voor individuele aansluitingen.
 
 ## **4. Testhulpmiddelen**
 
