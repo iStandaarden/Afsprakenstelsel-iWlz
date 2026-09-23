@@ -78,7 +78,7 @@ jobs:
           echo "ontwerpkeuzes=$(check_file 'organisatiebeleid/ontwerpkeuzes.md')" >> "$GITHUB_OUTPUT"
           echo "architectuur=$(check_file 'organisatiebeleid/architectuur.md')" >> "$GITHUB_OUTPUT"
           echo "rollen_deelnemers=$(check_file 'organisatiebeleid/rollen_deelnemers.md')" >> "$GITHUB_OUTPUT"
-          echo "serviceafspraken_iWlz_netwerkmodel=$(check_file 'organisatiebeleid/serviceafspraken/iwlz_netwerkmodel.md')" >> "$GITHUB_OUTPUT"
+          echo "serviceafspraken_iWlz_netwerkmodel=$(check_file 'organisatiebeleid/serviceafspraken/overkoepelend.md')" >> "$GITHUB_OUTPUT"
           echo "serviceafspraken_operationeel_netwerkbeheer=$(check_file 'organisatiebeleid/serviceafspraken/operationeel_netwerkbeheer.md')" >> "$GITHUB_OUTPUT"
           echo "serviceafspraken_bronhoudersdeel=$(check_file 'organisatiebeleid/serviceafspraken/bronhoudersdeel.md')" >> "$GITHUB_OUTPUT"
           echo "serviceafspraken_afnemersdeel=$(check_file 'organisatiebeleid/serviceafspraken/afnemersdeel.md')" >> "$GITHUB_OUTPUT"

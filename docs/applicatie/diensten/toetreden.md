@@ -45,7 +45,7 @@ De aangevraagde certificaten worden geïnstalleerd.
 
 ### 3.3 Vastleggen IP adressen bij Systeemcertificaat in VECOZO portal
 
-De IP-adressen van de deelnemer moeten bij VECOZO worden geregistreerd als extra beveiligingsmaatregel. Een deelnemer kan uitsluitend vanaf geregistreerde adressen verbinding maken met het iWlz-netwerk. Meer informatie is beschikbaar via de website van [VECOZO | Hoe kan ik mijn IP-adres registreren?](https://www.vecozo.nl/support/Account/systeemcertificaat/hoe-kan-ik-mijn-ip-adres-registreren/) en het artikel [IT-Infrastructuur > Identificatie & authenticatie - 2.4 Controle op IP-adressen](../../it-infrastructuur/identificatie_authenticatie#24-controle-op-ip-adressen).
+De IP-adressen van de deelnemer moeten bij VECOZO worden geregistreerd als extra beveiligingsmaatregel. Een deelnemer kan uitsluitend vanaf geregistreerde adressen verbinding maken met het iWlz-netwerk. Meer informatie is beschikbaar via de website van [VECOZO | Hoe kan ik mijn IP-adres registreren?](https://www.vecozo.nl/support/Account/systeemcertificaat/hoe-kan-ik-mijn-ip-adres-registreren/) en het artikel [IT-Infrastructuur > Identificatie & authenticatie - 2.4 Controle op IP-adressen](../../it-infrastructuur/identificatie_authenticatie.md#24-controle-op-ip-adressen).
 
 ### 3.4 Aanmelden resource-server endpoints
 

@@ -26,10 +26,10 @@ Het op een veilige en betrouwbare manier beschikbaar stellen van bronnen stelt e
 
 Dit artikel licht op functioneel niveau de architectuur van het iWlz-netwerkmodel toe. Dit gebeurt door de benodigde bouwstenen en hun onderlinge relaties te beschrijven. De bouwstenen zijn:
 
-- [Registers met hun bronhouders en afnemers](./architectuur.md#4-registers-met-hun-bronhouders-en-afnemers)
-- [Vertrouwen tussen deelnemers aan het iWlz-netwerkmodel](./architectuur.md#42-vertrouwen-tussen-deelnemers-aan-het-iwlz-netwerkmodel)
-- [Vindbaarheid van deelnemers aan het iWlz-netwerkmodel](./architectuur.md#5-vindbaarheid-van-cliënten-en-deelnemers-in-het-iwlz-netwerk)
-- [Beheer van het iWlz-netwerkmodel](./architectuur.md#6-ondersteunende-rollen-van-het-iwlz-netwerkmodel)
+- [Registers met hun bronhouders en afnemers](#4-registers-met-hun-bronhouders-en-afnemers)
+- [Vertrouwen tussen deelnemers aan het iWlz-netwerkmodel](#42-vertrouwen-tussen-deelnemers-aan-het-iwlz-netwerkmodel)
+- [Vindbaarheid van deelnemers aan het iWlz-netwerkmodel](#6-ondersteunende-rollen-van-het-iwlz-netwerkmodel)
+- [Beheer van het iWlz-netwerkmodel](#6-ondersteunende-rollen-van-het-iwlz-netwerkmodel)
 
 Iedere bouwsteen bestaat uit een aantal met elkaar samenhangende systeemrollen. Onderstaande figuur geeft de bouwstenen en rollen in het iWlz-netwerkmodel weer.
 
