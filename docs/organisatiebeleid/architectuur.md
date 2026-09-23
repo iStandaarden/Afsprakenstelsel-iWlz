@@ -183,7 +183,8 @@ Iedere deelnemer heeft voor het uitvoeren van zijn functie in het administratiev
 
 In de voorgaande paragrafen is beschreven welke bouwstenen en systeemrollen nodig zijn voor het veilig en betrouwbaar raadplegen van registers in het kader van het administratief proces iWlz. Onderstaand figuur geeft voor het iWlz-netwerkmodel een overzicht van de bouwstenen, systeemrollen en de invulling daarvan door deelnemers.
 
-![Overzicht bouwstenen systeemrollen en deelnemers.png](../img/architectuur-Overzicht-bouwstenen-systeemrollen-en-deelnemers.png)<br>
+![Overzicht bouwstenen systeemrollen en deelenermers](../img/architectuur-overzicht-bouwstenen-systeemrollen-en-deelnemers.png)
+<br>
 Figuur 12 - Overzicht bouwstenen, systeemrollen en deelnemers<br>
 \*alleen voor cliëntcontactgegevens
 

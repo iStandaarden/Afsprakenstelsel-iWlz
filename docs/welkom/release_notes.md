@@ -1,30 +1,8 @@
 # Release notes
 
-
-## Lopende versie (current)
-
-| Versie | Datum ingang | Status | Voor Release Indicatieregister | Voor Release Bemiddelingsregister | Voor Release Leveringregister | 
-| :-- | :-- | :-- | :-- | :-- | :-- |
-| [Versie: 1.0.0](#versie-100-17-12-2025) | *17-12-2025* | Definitief | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
-
-## In Ontwikkeling (future)
-
-| Versie | Datum ingang | Status | Voor Release Indicatieregister | Voor Release Bemiddelingsregister | Voor Release Leveringregister | 
-| :-- | :-- | :-- | :-- | :-- | :-- |
-| [#](#) | n.t.b. | n.t.b. |  |  | |
-
-
-
-## Archief 
-| Versie | Datum ingang | Status | Voor Release Indicatieregister | Voor Release Bemiddelingsregister | Voor Release Leveringregister |  
-| :-- | :-- | :-- | :-- | :-- | :-- | 
-| Versie: 1.0.0 | *17-12-2025* | Definitief | Indicatieregister 2 </BR>Indicatieregister 3  | Bemiddelingsregister 1 </br> Bemiddeingsregister 1.1 | Leveringregister 1 |
-
----
-
 ## Release notes
 
-### Versie 1.0.1 - *dd-mm-jjjj*
+### Versie 1.0.1 - *23-09-2026*
 
 | Laag | Status | Wijzigingen t.o.v. release 1.0.0 |
 | :-- | :-- | :-- |
