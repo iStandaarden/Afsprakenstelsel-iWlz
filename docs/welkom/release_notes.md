@@ -2,8 +2,14 @@
 
 ## Release notes
 
+### Versie 1.0.3 - 24-09-2026
+| Laag | Status | Wijzigingen t.o.v. release 1.0.2 |
+| :-- | :-- | :-- |
+|  |  | pdf generatie gefixed | 
+
+
 ### Versie 1.0.2 - 23-09-2026
-| Laag | Status | Wijzigingen t.o.v. release 1.0.0 |
+| Laag | Status | Wijzigingen t.o.v. release 1.0.1 |
 | :-- | :-- | :-- |
 | Diverse | Definitief | Nieuw css t.b.v arcering links <br/> Diverse laatste verwijzingen naar *Atlassian* gecorrigeerd. | 
 | Serviceafspraken | Definitief | Inhoud algemene serviceafspraken van artikel iWlz netwerkmodel hernoemd naar Overkoepelend | 

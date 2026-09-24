@@ -1,7 +1,7 @@
 # Afsprakenstelsel iWlz-netwerkmodel 
 
 
-!!! info "Versie: *23-09-2026* | Status: *Definitief* | [Release notes](./welkom/release_notes.md#versie-102-23-09-2026)"
+!!! info "Versie: *24-09-2026* | Status: *Definitief* | [Release notes](./welkom/release_notes.md#versie-103-24-09-2026)"
 
 
 ??? note "Toelichting" 
@@ -48,8 +48,8 @@ Het Afsprakenstelsel iWlz-netwerkmodel is primair opgesteld voor de volgende doe
   * VECOZO
   * Leveranciers van netwerkcomponenten en bronsystemen (o.a. EPD leveranciers)
     
-
-> **N.B.:** Cliënten zijn deelnemers aan het iWlz-netwerkmodel maar het Afsprakenstelsel iWlz-netwerkmodel is niet primair voor deze doelgroep opgesteld.
+!!! note
+    **N.B.:** Cliënten zijn deelnemers aan het iWlz-netwerkmodel maar het Afsprakenstelsel iWlz-netwerkmodel is niet primair voor deze doelgroep opgesteld.
 
 ## 3. Status implementatie iWlz-netwerkmodel
 
@@ -71,7 +71,7 @@ In de [release notes](./welkom/release_notes.md) is per artikel aangegeven wat d
 
 | Titel | Afsprakenstelsel iWlz-netwerkmodel |
 | :-- | :-- |
-| Publicatiedatum | 17 december 2025 (grote publicatie: update vanwege toevoeging Bemiddelingsregister)4 april 2025 (technische publicatie: update vanwege aanpassen externe links)17 januari 2025 (beperkte publicatie: update vanwege een aantal elementaire aanpassingen in de werking van de basisinfrastructuur)25 mei 2023 (grote publicatie: oorspronkelijke publicatiedatum) |
+| Publicatiedatum | 23 september 2026 |
 | Auteurs | Het Afsprakenstelsel iWlz-netwerkmodel is opgesteld door het Actieprogramma iWlz in samenwerking met technisch en inhoudelijk experts, beleidsmedewerkers en juristen van betrokken partijen. |
-| Contact | Zorginstituut Nederland Postbus 320 1110 AH Diemen​ |
+| Contact | Zorginstituut Nederland Postbus 320 1110 AH Diemen |
 

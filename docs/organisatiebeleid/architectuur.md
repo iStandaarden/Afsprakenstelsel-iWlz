@@ -179,7 +179,8 @@ Zoals eerder toegelicht worden in het proces van de iWlz verschillende functies 
 
 Iedere deelnemer heeft voor het uitvoeren van zijn functie in het administratieve proces gegevens van andere deelnemers nodig. Deze gegevens kan een deelnemer raadplegen in de registers van de andere deelnemers, mits hij daarvoor een geldig toegangsbewijs heeft en er een grondslag voor raadpleging van de gegevens van de cliënt is.
 
-> N.B.: De grondslagen voor de uitwisseling van gegevens in het administratief proces iWlz zijn beschreven in de artikelen [Randvoorwaarden](./randvoorwaarden.md) en [Ontwerpkeuzes](./ontwerpkeuzes.md).
+!!! note
+    N.B.: De grondslagen voor de uitwisseling van gegevens in het administratief proces iWlz zijn beschreven in de artikelen [Randvoorwaarden](./randvoorwaarden.md) en [Ontwerpkeuzes](./ontwerpkeuzes.md).
 
 In de voorgaande paragrafen is beschreven welke bouwstenen en systeemrollen nodig zijn voor het veilig en betrouwbaar raadplegen van registers in het kader van het administratief proces iWlz. Onderstaand figuur geeft voor het iWlz-netwerkmodel een overzicht van de bouwstenen, systeemrollen en de invulling daarvan door deelnemers.
 
@@ -196,13 +197,11 @@ In deze paragraaf wordt stapsgewijs toegelicht hoe gegevensuitwisseling in het i
 
 Op de [Applicatie](../applicatie/index.md)-laag van het afsprakenstelsel iWlz-netwerkmodel wordt hier uitputtend op ingegaan.
 
-> 📝
-> **Precondities**
->
-> - Afnemer (deelnemer A) en bronhouder (deelnemer B) hebben beide het onboarding-proces doorlopen.
-> - Afnemer en bronhouder bezitten beide een sleutelpaar dat door een vertrouwensleverancier is uitgegeven. Hiermee kan de digitale identiteit van afnemer en bronhouder worden geverifieerd.
-> - Afnemer (deelnemer A) en bronhouder (deelnemer B) zijn beide geregistreerd in een ledenadministratie. Deze _ledenadministratie_ heeft verklaringen over de kenmerken van deelnemer A en deelnemer B uitgegeven.
-> - De te raadplegen gegevens zijn door de bronhouder en gegevensgids vindbaar gemaakt.
+!!! info "**Precondities**"  
+    - Afnemer (deelnemer A) en bronhouder (deelnemer B) hebben beide het onboarding-proces doorlopen.
+    - Afnemer en bronhouder bezitten beide een sleutelpaar dat door een vertrouwensleverancier is uitgegeven. Hiermee kan de digitale identiteit van afnemer en bronhouder worden geverifieerd.
+    - Afnemer (deelnemer A) en bronhouder (deelnemer B) zijn beide geregistreerd in een ledenadministratie. Deze _ledenadministratie_ heeft verklaringen over de kenmerken van deelnemer A en deelnemer B uitgegeven.
+    - De te raadplegen gegevens zijn door de bronhouder en gegevensgids vindbaar gemaakt.
 
 ![Transactie tussen afnemer en bronhouder.png](../img/architectuur-transactie-tussen-afnemer-en-bronhouder.png)<br>
 Figuur 13 - Transactie tussen afnemer en bronhouder
