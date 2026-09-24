@@ -611,11 +611,10 @@ Voor het gebruik van de foutmelding binnen het iWlz-netwerkmodel is afgesproken 
 Voor elk register zijn de regels te vinden in het [informatiemodel iStandaarden](https://informatiemodel.istandaarden.nl/ "https://informatiemodel.istandaarden.nl/"), onder het kopje Regels bij de betreffende registers.
 
 Elke Gegevensregel en Restrictie wordt voorafgegaan door een code. Bijvoorbeeld:
-
-> * *GGR0001*: BSN vullen met een nummer dat voldoet aan de 11-proef;
-> * *RS038*: vullen met UUID versie 4;
-> * *IRG0012*: DiagnoseSubcodelijst vullen conform opgegeven DiagnoseCodelijst.
->   
+  * *GGR0001*: BSN vullen met een nummer dat voldoet aan de 11-proef;
+  * *RS038*: vullen met UUID versie 4;
+  * *IRG0012*: DiagnoseSubcodelijst vullen conform opgegeven DiagnoseCodelijst.
+  
 
 Op basis van de voorbeelden betekent dit dat bij foutmelding het subject GGR0001, RS038 of IRG0012 bevat.
 

@@ -51,7 +51,7 @@ jobs:
             libcairo2 \
             shared-mime-info
 
-      - run: pip install mkdocs-material mkdocs-glightbox mkdocs-with-pdf mike
+      - run: pip install mkdocs-material mkdocs-glightbox mkdocs-to-pdf mike
 
       - name: Enable PDF export
         run: echo "ENABLED_PDF_EXPORT=1" >> $GITHUB_ENV

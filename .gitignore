@@ -405,3 +405,5 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 content/.DS_Store
+direct.pdf
+merged.html

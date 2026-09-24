@@ -1,4 +1,4 @@
-# Overkoepelende serviceafspraken <br/>iWlz-netwerkmodel
+# Serviceafspraken overkoepelend<br/>iWlz-netwerkmodel
 
 
 ## 1. Over de iWlz-netwerkmodel serviceafspraken
