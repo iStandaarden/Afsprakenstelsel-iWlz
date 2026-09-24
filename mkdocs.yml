@@ -91,7 +91,7 @@ extra_javascript:
   - assets/javascripts/mermaid-zoom.js
 
 extra:
-  pdf_url: pdf/afsprakenstelsel-iWlz.pdf
+  # pdf_url: pdf/afsprakenstelsel-iWlz.pdf
   # --- mike-versioning ---
   # 'provider: mike' activeert de versie-dropdown in de header van Material.
   # 'default: current' zorgt dat bezoekers die op de root-url landen (.../Afsprakenstelsel-iWlz/)
