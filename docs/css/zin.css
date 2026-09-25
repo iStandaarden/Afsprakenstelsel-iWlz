@@ -12,13 +12,16 @@ a:hover {
   text-decoration: underline;
 }
 
-a[href^="http"]:not([href*="istandaarden.github.io/Afsprakenstelsel-iWlz"])::before { 
-/*a[href^="http"]:not([href*="127.0.0.1:8000/Afsprakenstelsel-iWlz"])::before { */
+a[href^="http"]:not([href*="istandaarden.github.io/Afsprakenstelsel-iWlz" i], [href*="127.0.0.1:8000/Afsprakenstelsel-iWlz" i], [href*="github.com/istandaarden/Afsprakenstelsel-iWlz" i])::before {
   content: "\2197"; /* ↗ arrow */
   display: inline-block;
   margin-right: 0.2em;
   font-size: 0.8em;
   vertical-align: super;
+}
+
+a[href^="http"]:not([href*="istandaarden.github.io/Afsprakenstelsel-iWlz" i], [href*="127.0.0.1:8000/Afsprakenstelsel-iWlz" i], [href*="github.com/istandaarden/Afsprakenstelsel-iWlz" i]) {
+  text-decoration: underline;
 }
 
 .mermaid svg {
