@@ -39,7 +39,7 @@ Om te publiceren is dit dus niet noodzakelijk, wel handig.
    ```
 5. Install plugin voor het genereren van een pdf:
     ```
-   pip install mkdocs-with-pdf
+   pip install mkdocs-to-pdf
     ``` 
 
 ### Opstarten lokale server:
