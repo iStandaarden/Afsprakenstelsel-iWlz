@@ -1,7 +1,7 @@
 # Afsprakenstelsel iWlz-netwerkmodel 
 
 
-!!! info "Versie: *24-09-2026* | Status: *Definitief* | [Release notes](./welkom/release_notes.md#versie-103-24-09-2026)"
+!!! info "Versie: *06-10-2026* | Status: *Definitief* | [Release notes](./welkom/release_notes.md#versie-104---06-10-2026)"
 
 
 ??? note "Toelichting" 
