@@ -71,7 +71,7 @@ In de [release notes](./welkom/release_notes.md) is per artikel aangegeven wat d
 
 | Titel | Afsprakenstelsel iWlz-netwerkmodel |
 | :-- | :-- |
-| Publicatiedatum | 23 september 2026 |
+| Publicatiedatum | 06 oktober 2026 |
 | Auteurs | Het Afsprakenstelsel iWlz-netwerkmodel is opgesteld door het Actieprogramma iWlz in samenwerking met technisch en inhoudelijk experts, beleidsmedewerkers en juristen van betrokken partijen. |
 | Contact | Zorginstituut Nederland Postbus 320 1110 AH Diemen |
 
