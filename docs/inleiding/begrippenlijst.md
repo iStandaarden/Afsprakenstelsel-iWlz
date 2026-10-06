@@ -22,7 +22,7 @@ Om tot duidelijke afspraken voor de totstandkoming van het iwlz-netwerkmodel te 
 | Administratief proces iWlz | Het per cliënt verlopende proces gericht op de legitieme levering en financiering van langdurige zorg, met de functies aanvragen toegang Wlz, indiceren, toeleiden/bemiddelen, leveren van zorg en opleggen eigen bijdrage. | [Procesmodel](../proces/procesmodel.md) |
 | Adressering / Adresboek | Adressering is een generieke functie waarin adressen van endpoints worden bijgehouden en beschikbaar worden gesteld aan de deelnemers. | Aangezien er nog geen generieke Adresboek beschikbaar is, is ervoor gekozen om een tijdelijke Adresboek bij te houden in een beveiligde Github omgeving. Dit tijdelijk adresboek is gebaseerd op het ZORG-AB schema.[GitHub - iStandaarden/iWlz-adresboek-public: Tijdelijk alternatief voor ZorgAB aansluiting](https://github.com/iStandaarden/iWlz-adresboek) |
 | Afnemer | Systeemrol in het iWlz-netwerkmodel. | [Rollen en deelnemers > Systeemrollen](../organisatiebeleid/rollen_deelnemers.md#5-systeemrollen) |
-| Afsprakenstelsel iWlz-netwerkmodel | Samenhangend geheel van afspraken, procedures, regels, architectuur en technische specificaties dat deelnemers uniform informeert en de basis vormt voor samenwerking en gegevensuitwisseling binnen het iWlz-netwerkmodel. | [https://istandaarden.github.io/Afsprakenstelsel-iWlz](https://istandaarden.github.io/Afsprakenstelsel-iWlz/) |
+| Afsprakenstelsel iWlz-netwerkmodel | Samenhangend geheel van afspraken, procedures, regels, architectuur en technische specificaties dat deelnemers uniform informeert en de basis vormt voor samenwerking en gegevensuitwisseling binnen het iWlz-netwerkmodel. | [https://istandaarden.github.io/Afsprakenstelsel-iWlz](https://istandaarden.github.io/Afsprakenstelsel-iWlz/) - huidige versie |
 | AGB-code / AGB-register | Door Vektis beheerde identificatiecode en register van zorgaanbieders. In het iWlz-netwerkmodel is het AGB-register een van de ledenadministraties; VECOZO gebruikt het bij het toekennen van het attest van deelnemerschap. Deelnemers worden in het netwerk geïdentificeerd met het VECOZO-nummer uit het VECOZO-certificaat. | [Architectuur](../organisatiebeleid/architectuur.md) |
 | AMvB (Algemene maatregel van bestuur) | Besluit waarmee onder de Wegiz gegevensuitwisselingen worden aangewezen die verplicht elektronisch plaatsvinden; verwijst naar kwaliteitsstandaarden en NEN-normen. | [Randvoorwaarden](../organisatiebeleid/randvoorwaarden.md) |
 | Applicatiecomponent | Technische component (zoals bronsysteem, resource-server, wallet, autorisatieserver, trust agent) waarmee de verantwoordelijkheden van een systeemrol worden gerealiseerd. | [Applicatiecomponenten](../applicatie/applicatiecomponenten.md) |
@@ -92,7 +92,7 @@ Om tot duidelijke afspraken voor de totstandkoming van het iwlz-netwerkmodel te 
 | Continuïteitsbeheer | Beheerproces waarmee bij calamiteiten de dienstverlening conform de serviceafspraken hersteld kan worden; elke bronhouder is zelf verantwoordelijk voor de beschikbaarheid en continuïteit van de eigen infrastructuur. | [Bronhoudersdeel serviceafspraken](../organisatiebeleid/serviceafspraken/bronhoudersdeel.md) |
 | Convenant samenwerking ketenpartijen iWlz | Overeenkomst die de samenwerking tussen de ketenpartners garandeert en de governance van de benodigde afspraken regelt; samen met de Aanvullende Afspraken committeren partijen zich hiermee aan het Afsprakenstelsel iWlz-netwerkmodel. | [Governance](../inleiding/governance.md) |
 
-### D - E - F
+### D
 | **Begrip** | **Betekenis** | **Link** |
 | --- | --- | --- |
 | Databeschikbaarheid | Het principe dat data via koppelvlakken beschikbaar is voor (her)gebruik en niet alleen via patronen van uitwisseling, terwijl de data bij de bron blijft. Door de verbreding naar het sociaal domein gaat databeschikbaarheid later verder dan het Wlz-domein. | [Architectuur](../organisatiebeleid/architectuur.md) |
@@ -115,6 +115,10 @@ Om tot duidelijke afspraken voor de totstandkoming van het iwlz-netwerkmodel te 
 | Dossieroverdracht | Overdracht van de verantwoordelijkheid voor (de Wlz-indicatie van) een cliënt van het ene aan het andere zorgkantoor, als gevolg van verhuizing van de cliënt naar een andere zorgkantoorregio. | [Procesmodel](../proces/procesmodel.md) |
 | DPIA (Data Protection Impact Assessment) | Instrument onder de AVG waarmee organisaties gestructureerd de privacyrisico's van gegevensverwerking in kaart brengen en beoordelen; elke partij in het iWlz-netwerkmodel beoordeelt zelf of een DPIA vereist is. | [Randvoorwaarden](../organisatiebeleid/randvoorwaarden.md) |
 | DPKI (Decentrale Public Key Infrastructure) | Decentrale vorm van identiteitsbeheer, tegenover centraal beheer via PKI; beide vormen kunnen ook worden gecombineerd. Het afsprakenstelsel zet op dit moment in op centraal identiteitsbeheer via de door VECOZO beheerde PKI, omdat decentraal beheer nog niet voor alle deelnemers de voorkeur heeft. | [Identificatie authenticatie](../it-infrastructuur/identificatie_authenticatie.md) |
+
+### E
+| **Begrip** | **Betekenis** | **Link** |
+| --- | --- | --- |
 | EAM (Externalized Authorization Management) | Uitwerking van de generieke functie autorisatie in het iWlz-netwerkmodel waarbij autorisatie buiten de applicaties wordt geregeld, in combinatie met attribute/policy based access control. | [Ontwerpkeuzes](../organisatiebeleid/ontwerpkeuzes.md) |
 | Eerstelijns en tweedelijns ondersteuning | Gelaagd supportmodel: afnemers verzorgen eerstelijns ondersteuning voor hun eigen gebruikers; de servicedesk van de bronhouder levert tweedelijns ondersteuning aan servicedesks van afnemers. | [Bronhoudersdeel serviceafspraken](../organisatiebeleid/serviceafspraken/bronhoudersdeel.md) |
 | EHDS (European Health Data Space) | Europese verordening die eisen stelt aan ICT-systemen voor het uitwisselen van gezondheidsgegevens en de toegang en beschikbaarheid van elektronische gezondheidsgegevens voor burgers en zorgverleners regelt. | [Randvoorwaarden](../organisatiebeleid/randvoorwaarden.md) |
@@ -125,6 +129,10 @@ Om tot duidelijke afspraken voor de totstandkoming van het iwlz-netwerkmodel te 
 | EPD / ECD | Elektronisch patiëntendossier respectievelijk elektronisch cliëntendossier. EPD-leveranciers vallen als leveranciers van netwerkcomponenten en bronsystemen onder de ICT-dienstverleners van deelnemers, een doelgroep van het afsprakenstelsel. Naar verwachting sluit een deel van de zorgaanbieders via NUTS en hun ECD-leverancier aan. | [Applicatiecomponenten](../applicatie/applicatiecomponenten.md) |
 | Escalatieprocedure | Vastgelegde procedure voor het opschalen van geschillen en incidenten (productieverstorend incident, beveiligingsincident, datalek, afwijking van standaarden, niet naleven afsprakenstelsel) naar de juiste escalatiepartij, zo nodig tot aan de Stuurgroep iWlz. | [Serviceafspraken](../organisatiebeleid/serviceafspraken/index.md) |
 | Estafettemodel | Het estafettemodel is een manier van informatie-uitwisseling waarbij gegevens stap voor stap worden doorgegeven van partij naar partij, waarbij elke volgende partij voortbouwt op wat eerder is ontvangen, in plaats van gegevens direct uit een gedeelde bron op te halen; binnen iStandaarden is dit model van toepassing op het berichtenverkeer. | [Achtergrond en toelichting](../inleiding/achtergrond_toelichting.md) |
+
+### F
+| **Begrip** | **Betekenis** | **Link** |
+| --- | --- | --- |
 | FAIR-principes | Internationale principes (Findable, Accessible, Interoperable, Reusable) die het informatiestelsel hanteert om data enkelvoudig te registreren en meervoudig te gebruiken. | [Ontwerpkeuzes](../organisatiebeleid/ontwerpkeuzes.md) |
 | Foutmelding (iWlz-foutmelding) | Type melding voor het melden van overtreding van regels (gegevensregels en restricties) uit de iStandaard iWlz; direct te relateren aan data in een bron, met de foutcode van de overtreden regel als onderwerp. | [Notificeren en Melden](../applicatie/diensten/notificeren-en-melden.md) |
 | Functionaris Gegevensbescherming (FG) | Functionaris bij een deelnemer die bij (een vermoeden van) een datalek onderzoekt of sprake is van een meldingsplicht; elke partij levert bij toetreding een vast FG-contactadres aan voor het adresboek. | [Serviceafspraken](../organisatiebeleid/serviceafspraken/index.md) |
@@ -168,13 +176,17 @@ Om tot duidelijke afspraken voor de totstandkoming van het iwlz-netwerkmodel te 
 | ISO 27001 | Internationale norm voor informatiebeveiligingsmanagement waarvoor VECOZO als operationeel netwerkbeheerder is gecertificeerd. | [Operationeel netwerkbeheer serviceafspraken](../organisatiebeleid/serviceafspraken/operationeel_netwerkbeheer.md) |
 | iStandaarden | Benaming voor de informatiestandaarden die in beheer zijn bij Zorginstituut Nederland, namelijk iWlz, iWmo, iJw, iPgb en iEb. | [Randvoorwaarden](../organisatiebeleid/randvoorwaarden.md) |
 | iWlz (informatiestandaard) | De iStandaard voor de langdurige zorg waarmee cliënten in alle fasen van de Wlz-keten gevolgd kunnen worden: van indicatie via zorgtoewijzing en -levering tot eigen bijdrage en declaratie. | [Achtergrond en toelichting](../inleiding/achtergrond_toelichting.md) |
-| iWlz-netwerkmodel | Model voor gegevensuitwisseling in de langdurige zorg waarbij deelnemers zorgadministratieve gegevens direct bij de bron (bronhouder) raadplegen op basis van toegekende rechten, in plaats van berichten naar elkaar te sturen. | [Afsprakenstelsel iWlz-netwerkmodel](https://istandaarden.github.io/Afsprakenstelsel-iWlz) |
+| iWlz-netwerkmodel | Model voor gegevensuitwisseling in de langdurige zorg waarbij deelnemers zorgadministratieve gegevens direct bij de bron (bronhouder) raadplegen op basis van toegekende rechten, in plaats van berichten naar elkaar te sturen. | [Afsprakenstelsel iWlz-netwerkmodel](https://istandaarden.github.io/Afsprakenstelsel-iWlz) - huidige versie |
 
-### J - K
+### J
 | **Begrip** | **Betekenis** | **Link** |
 | --- | --- | --- |
 | Jeugdwet | Wet die de gemeentelijke verantwoordelijkheid regelt voor het voorkomen van, de ondersteuning, hulp en zorg aan jeugdigen en ouders bij opgroei- en opvoedingsproblemen, psychische problemen en stoornissen en voor de uitvoering van de kinderbeschermingsmaatregelen en de jeugdreclassering; inwerkingtreding 1 januari 2015. | [Randvoorwaarden](../organisatiebeleid/randvoorwaarden.md) |
 | JSON Web Token (JWT) | Een string welke een set van claims in de vorm van JSON-objecten beschrijft. Deze kunnen digitaal worden ondertekend en/of MACed (soort van sleutel waarmee de authenticiteit van een bericht kan worden gecontroleerd) en/of versleuteld. |  |
+
+### K
+| **Begrip** | **Betekenis** | **Link** |
+| --- | --- | --- |
 | Keten-incident | Incident waarvan bij melding niet duidelijk is bij welke partij in de keten het ligt of dat meerdere deelnemers raakt; de operationeel netwerkbeheerder onderzoekt waar het incident ontstaat en stemt prioritering af tussen de servicedesks van betrokken deelnemers. | [/Operationeel netwerkbeheer serviceafspraken](../organisatiebeleid/serviceafspraken/operationeel_netwerkbeheer.md) |
 | Ketenpartij | Partij die deelneemt aan het iWlz-ketenproces en op de hoogte gebracht moet kunnen worden van relevante informatie om de voortgang van zorglevering aan een cliënt te waarborgen. | [Notificeren en Melden](../applicatie/diensten/notificeren-en-melden.md) |
 | KIK-V (Afsprakenset KIK-V) | Programma van het Zorginstituut waarin ketenpartijen in de verpleeghuiszorg samenwerken aan het stroomlijnen van de uitwisseling van verantwoordingsgegevens tussen informatievragende partijen en zorgaanbieders. De iWlz-uitwisselprofielen zijn zo veel mogelijk gestructureerd op basis van het modeluitwisselprofiel uit de Afsprakenset KIK-V. | [Uitwisselprofielen](../uitwisselprofiel/index.md) |
@@ -184,7 +196,7 @@ Om tot duidelijke afspraken voor de totstandkoming van het iwlz-netwerkmodel te 
 | Kwaliteitsbeheer | Beheerproces waarbij de bronhouder de kwaliteit van data en services bewaakt; de specifieke kwaliteitseisen zijn vastgelegd in de uitwisselprofielen van de registers. | [Bronhoudersdeel serviceafspraken](../organisatiebeleid/serviceafspraken/bronhoudersdeel.md) |
 
 
-### L - M
+### L
 | **Begrip** | **Betekenis** | **Link** |
 | --- | --- | --- |
  Landelijk vertrouwensstelsel (LVS) | Geheel van landelijk geharmoniseerde en geüniformeerde vertrouwensafspraken over infrastructuur, generieke functies en datakwaliteit; Twiin is aangewezen als centrale vastleggingsplek. | [Achtergrond en toelichting](../inleiding/achtergrond_toelichting.md) |
@@ -194,6 +206,10 @@ Om tot duidelijke afspraken voor de totstandkoming van het iwlz-netwerkmodel te 
 | Loadtest / performancetest | Omvangrijke of belastende test die de beschikbaarheid of performance van het iWlz-netwerk, het register of de centrale (test)infrastructuur merkbaar kan beïnvloeden; wordt vooraf afgestemd met de operationeel netwerkbeheerder. | [Afnemersdeel serviceafspraken](../organisatiebeleid/serviceafspraken/afnemersdeel.md) |
 | Lokalisatievoorziening | Voorziening waarin staat welke bronhouders welk type gegevens van welke cliënten aanbieden, eventueel met een index waarin cliënten gezocht kunnen worden; de aanbieder ervan heet binnen DIZRA een gegevensgids. | [Architectuur](../organisatiebeleid/architectuur.md) |
 | LRZa (Landelijk Register Zorgaanbieders) | Door het CIBG beheerde voorziening met informatie over zorgaanbieders, die verplicht hun gegevens aanleveren; bevat ook het adres van het adresboek waarin de zorgaanbieder detailgegevens publiceert voor adressering. | [Achtergrond en toelichting](../inleiding/achtergrond_toelichting.md) |
+
+### M
+| **Begrip** | **Betekenis** | **Link** |
+| --- | --- | --- |
 | Major-, minor- en patchversie | Versioneringssoorten uit het releasebeleid iStandaarden; onderdelen binnen een registerrelease (codelijsten, koppelvlakken, regelrapporten) kennen afzonderlijke major-, minor- of patchversies (bijvoorbeeld v1.0, v1.1, v1.1.1). | [Releasebeleid](../organisatiebeleid/releasebeleid.md) |
 | MedMij | Stichting en bijbehorend afsprakenstelsel met regels voor het veilig uitwisselen van medische gegevens tussen zorgverleners en burgers via een PGO; het iWlz-netwerkmodel publiceert hiervoor een MedMij-gegevensdienst. | [Achtergrond en toelichting](../inleiding/achtergrond_toelichting.md) |
 | Melden / melding | Dienst waarmee een deelnemer (raadpleger) de bronhouder voorziet van nieuwe informatie naar aanleiding van een gebeurtenis; een verzoek tot muteren of beschikbaar stellen van informatie. Een melding loopt altijd van deelnemer naar bronhouder. | [Notificeren en Melden](../applicatie/diensten/notificeren-en-melden.md) |
@@ -213,7 +229,7 @@ Om tot duidelijke afspraken voor de totstandkoming van het iwlz-netwerkmodel te 
 | Netwerk | Het geheel aan bronhouders, afnemers en andere deelnemers dat gezamenlijk zorgdraagt voor de informatievoorziening in de context van de Wet langdurige zorg. |  |
 | Netwerkfuncties | Activiteiten van een deelnemer in het netwerk. |  |
 | Netwerkpunt | Het aansluitpunt van een deelnemer op het iWlz-netwerk, bestaande uit het bron- en/of doelsysteem en een datastation. | [Applicatiecomponenten](../applicatie/applicatiecomponenten.md) |
-| Nictiz interoperabiliteitsmodel (vijflagenmodel) | Het lagenmodel van Nictiz (organisatiebeleid, proces, informatie, applicatie, IT-infrastructuur) dat als basis dient voor de structuur van het Afsprakenstelsel iWlz-netwerkmodel. | [Afsprakenstelsel iWlz-netwerkmodel](https://istandaarden.github.io/Afsprakenstelsel-iWlz) |
+| Nictiz interoperabiliteitsmodel (vijflagenmodel) | Het lagenmodel van Nictiz (organisatiebeleid, proces, informatie, applicatie, IT-infrastructuur) dat als basis dient voor de structuur van het Afsprakenstelsel iWlz-netwerkmodel. | [Afsprakenstelsel iWlz-netwerkmodel](https://istandaarden.github.io/Afsprakenstelsel-iWlz) - huidige versie |
 | nID | nID is een op open-source componenten gebaseerde privacy raamwerk dat invulling geeft aan een federatief stelsel, waarmee bronregisters de mogelijkheid hebben om gegevens beschikbaar te stellen aan deelnemers. Toegang tot gegevens vindt plaats op basis van autorisaties die gebaseerd zijn op een geldige grondslag. | [nID netwerkstelsel](../applicatie/nid_netwerkstelsel.md) |
 | Notificeren / notificatie | Dienst waarmee een bronhouder een deelnemer op de hoogte stelt dat er nieuwe of gewijzigde informatie in een bron beschikbaar is die directe of afgeleide betrekking heeft op die deelnemer; de ontvanger kan op basis hiervan gericht raadplegen. | [Notificeren en Melden](../applicatie/diensten/notificeren-en-melden.md) |
 | Nuts | Nuts is een initiatief dat ervoor zorgt dat zorgverleners op basis van open standaarden digitaal kunnen samenwerken. Hierbij wordt gebruik gemaakt van zogenaamde decentrale Nuts nodes. | [Nuts](https://nuts.nl/) |
@@ -234,7 +250,7 @@ Om tot duidelijke afspraken voor de totstandkoming van het iwlz-netwerkmodel te 
 | Organisatorische rol | Roltype dat de rollen en verantwoordelijkheden beschrijft voor het organiseren van de samenwerking in het iWlz-proces (bijvoorbeeld zorgorganisatie, indicatiesteller, bemiddelaar, administrateur). | [Rollen en deelnemers](../organisatiebeleid/rollen_deelnemers.md) |
 | Outcomedoelen | De door het Informatieberaad Zorg geformuleerde doelen ('patiënt centraal', 'gestandaardiseerde gegevensuitwisseling', 'eenmalig vastleggen en hergebruik van gegevens') die de basis vormen voor de keuze voor het netwerkmodel. | [Achtergrond en toelichting](../inleiding/achtergrond_toelichting.md) |
 
-### P - Q
+### P
 | **Begrip** | **Betekenis** | **Link** |
 | --- | --- | --- |
 | PGO | Persoonlijke Gezondheidsomgeving (PGO) is een digitale omgeving waar Nederlandse burgers hun medische gegevens kunnen beheren en delen. | [PGO.nl](https://www.pgo.nl) |
@@ -250,6 +266,10 @@ Om tot duidelijke afspraken voor de totstandkoming van het iwlz-netwerkmodel te 
 | Prioriteit (incidentprioriteit) | Classificatie van incidenten (kritiek, hoog, midden, laag) op basis van stagnatie van het bedrijfsproces en tijdkritischheid; bepaalt de reactie- en oplostijden en de communicatiescope. | [Operationeel netwerkbeheer serviceafspraken](../organisatiebeleid/serviceafspraken/operationeel_netwerkbeheer.md) |
 | Probleembeheer | Beheerproces gericht op het analyseren en verhelpen van structurele oorzaken van incidenten; ketenbrede of standaard-rakende problemen worden gemeld bij de centrale servicedesk voor triage en zo nodig via het RFC-proces ingebracht. | [Bronhoudersdeel serviceafspraken](../organisatiebeleid/serviceafspraken/bronhoudersdeel.md) |
 | PRP | Het Policy Retrieval Point (PRP) is het onderdeel binnen het nID-netwerkstelsel dat beleidsregels (policies) opslaat en beschikbaar maakt voor het Policy Decision Point (PDP). Het PRP fungeert als centrale opslagplaats, waar beleidsregels kunnen worden geraadpleegd om toegangsverzoeken te beoordelen. | [nID netwerkstelsel > 7. Policy Retrieval Point (PRP)](../applicatie/nid_netwerkstelsel.md#7-policy-retrieval-point-prp) |
+
+### Q
+| **Begrip** | **Betekenis** | **Link** |
+| --- | --- | --- |
 | Query-template | Voorgedefinieerd querysjabloon per register en rol dat beschrijft hoe een raadpleger binnen het GraphQL-schema mag raadplegen en voldoet aan de geldende autorisatie; afwijkende queries worden door de PDP afgekeurd. | [GraphQL over HTTP](../applicatie/graphql_over_http.md) |
 
 ### R
@@ -326,7 +346,7 @@ Om tot duidelijke afspraken voor de totstandkoming van het iwlz-netwerkmodel te 
 | Uitwisselprofiel | Set specifieke afspraken over de gegevensuitwisseling ten behoeve van één specifiek register, zo veel mogelijk gestructureerd op basis van het modeluitwisselprofiel uit de Afsprakenset KIK-V. In de uitwisselprofielen zijn de kwaliteitseisen vastgelegd waaraan data (zoals uitwisselformaat en actualiteit) en services (zoals interfaces en responstijden) van de bronhouder moeten voldoen. | [Uitwisselprofielen](../uitwisselprofiel/index.md) |
 | UZOVI-code / UZOVI-register | Unieke zorgverzekeraarsidentificatie en bijbehorend register van Vektis waarmee zorgverzekeraars/zorgkantoren in het netwerk worden geïdentificeerd; dient als ledenadministratie. | [Architectuur](../organisatiebeleid/architectuur.md) |
 
-### V - W - X
+### V
 | **Begrip** | **Betekenis** | **Link** |
 | --- | --- | --- |
 | VECOZO | Organisatie die een infrastructurele rol heeft voor de informatieuitwisseling in de zorg en ondersteuning. | [Toetreden](../applicatie/diensten/toetreden.md) |
@@ -344,6 +364,10 @@ Om tot duidelijke afspraken voor de totstandkoming van het iwlz-netwerkmodel te 
 | Verzekeraar betrouwbaarheid | Systeemrol in het iWlz-netwerkmodel. | [Rollen en deelnemers > Systeemrollen](../organisatiebeleid/rollen_deelnemers.md#5-systeemrollen) |
 | Vrijwillige notificatie | Notificatie die alleen wordt verstuurd aan deelnemers die zich daarop hebben geabonneerd; wordt in de eerste implementatie nog niet ondersteund. | [Notificeren en Melden](../applicatie/diensten/notificeren-en-melden.md) |
 | VZVZ | Beheerder van de voorziening ZORG-AB (ZorgAdresboek), die VWS positioneert als potentiële gedeelde voorziening voor adressering. In het iWlz-netwerkmodel is VZVZ (dienst ZORG-AB) ingedeeld in de systeemrol gegevensgids; zolang de generieke functie adressering niet is vastgesteld, gebruikt het netwerk het tijdelijke adresboek. | [Achtergrond en toelichting](../inleiding/achtergrond_toelichting.md) |
+
+### W - X
+| **Begrip** | **Betekenis** | **Link** |
+| --- | --- | --- |
 | Wabb (Wet algemene bepalingen burgerservicenummer) | Wet met algemene normen voor het gebruik van het BSN, onder meer verplicht gebruik bij communicatie tussen burger en overheid en bij gegevensuitwisseling tussen overheden. | [Randvoorwaarden](../organisatiebeleid/randvoorwaarden.md) |
 | Wabvpz (Wet aanvullende bepalingen verwerking persoonsgegevens in de zorg) | Wet die het gebruik van het BSN in de zorgsector specificeert en het begrip 'elektronisch uitwisselingssysteem' definieert; bepalend voor de vraag of registers in het netwerkmodel onder die definitie vallen. | [Randvoorwaarden](../organisatiebeleid/randvoorwaarden.md) |
 | Wallet | Applicatiecomponent voor de opslag en het beheer van attesten (verifiable credentials), aanwezig aan zowel bronhouder- als afnemerzijde; nu nog niet in gebruik omdat attesten bij VECOZO worden opgeslagen. | [Applicatiecomponenten](../applicatie/applicatiecomponenten.md) |
