@@ -1,11 +1,18 @@
 name: Mutatieoverzicht bij release afsprakenstelsel iWlz
 
+# automatisch: workflow start bij publiceren van een release (niet bij concept/draft).
 # Alleen handmatig: Releases -> "Draft a new release" -> "Publish release".
 # Een opgeslagen concept (draft) start de workflow niet, pas bij publiceren.
 # het genereerd mutatieoverzicht wordt toegevoegd aan de releasebeschrijving.
 on:
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag van de release waaraan het mutatieoverzicht moet worden toegevoegd"
+        required: true
+        type: string
 
 permissions:
   contents: write   # nodig om de releasebeschrijving bij te werken
@@ -13,6 +20,8 @@ permissions:
 jobs:
   mutatieoverzicht:
     runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -21,8 +30,6 @@ jobs:
 
       - name: Bepaal te vergelijken commits
         id: range
-        env:
-          TAG: ${{ github.event.release.tag_name }}
         run: |
           # Vorige tag = dichtstbijzijnde tag in de historie van de nieuwe tag
           PREV_TAG=$(git describe --tags --abbrev=0 "${TAG}^" 2>/dev/null || true)
@@ -37,7 +44,6 @@ jobs:
         id: changes
         env:
           BASE_REF: ${{ steps.range.outputs.base }}
-          TAG: ${{ github.event.release.tag_name }}
         run: |
           CHANGED_FILES=$(git diff --name-only "$BASE_REF" "$TAG")
 
@@ -71,47 +77,48 @@ jobs:
           echo "it_infrastructuur=$(check_dir 'docs/it-infrastructuur/')" >> "$GITHUB_OUTPUT"
           echo "uitwisselprofiel=$(check_dir 'docs/uitwisselprofiel/')" >> "$GITHUB_OUTPUT"
           # Specific file output
-          echo "achtergrond_toelichting=$(check_file 'inleiding/achtergrond_toelichting.md')" >> "$GITHUB_OUTPUT"
-          echo "governance=$(check_file 'inleiding/governance.md')" >> "$GITHUB_OUTPUT" 
-          echo "begrippenlijst=$(check_file 'inleiding/begrippenlijst.md')" >>  "$GITHUB_OUTPUT"
-          echo "randvoorwaarden=$(check_file 'organisatiebeleid/randvoorwaarden.md')" >> "$GITHUB_OUTPUT"
-          echo "ontwerpkeuzes=$(check_file 'organisatiebeleid/ontwerpkeuzes.md')" >> "$GITHUB_OUTPUT"
-          echo "architectuur=$(check_file 'organisatiebeleid/architectuur.md')" >> "$GITHUB_OUTPUT"
-          echo "rollen_deelnemers=$(check_file 'organisatiebeleid/rollen_deelnemers.md')" >> "$GITHUB_OUTPUT"
-          echo "serviceafspraken_iWlz_netwerkmodel=$(check_file 'organisatiebeleid/serviceafspraken/overkoepelend.md')" >> "$GITHUB_OUTPUT"
-          echo "serviceafspraken_operationeel_netwerkbeheer=$(check_file 'organisatiebeleid/serviceafspraken/operationeel_netwerkbeheer.md')" >> "$GITHUB_OUTPUT"
-          echo "serviceafspraken_bronhoudersdeel=$(check_file 'organisatiebeleid/serviceafspraken/bronhoudersdeel.md')" >> "$GITHUB_OUTPUT"
-          echo "serviceafspraken_afnemersdeel=$(check_file 'organisatiebeleid/serviceafspraken/afnemersdeel.md')" >> "$GITHUB_OUTPUT"
-          echo "releasebeleid=$(check_file 'organisatiebeleid/releasebeleid.md')" >> "$GITHUB_OUTPUT"
-          echo "wijzigingsverzoeken=$(check_file 'organisatiebeleid/wijzigingsverzoeken.md')" >> "$GITHUB_OUTPUT"
-          echo "netwerkfuncties=$(check_file 'proces/netwerkfuncties.md')" >> "$GITHUB_OUTPUT"
-          echo "procesmodel=$(check_file 'proces/procesmodel.md')" >> "$GITHUB_OUTPUT"
-          echo "informatiestandaard=$(check_file 'informatie/informatiestandaard.md')" >> "$GITHUB_OUTPUT"
-          echo "applicatie_index=$(check_file 'applicatie/index.md')" >> "$GITHUB_OUTPUT"
-          echo "applicatiecomponenten=$(check_file 'applicatie/applicatiecomponenten.md')" >> "$GITHUB_OUTPUT"
-          echo "nid_netwerkstelsel=$(check_file 'applicatie/nid_netwerkstelsel.md')" >> "$GITHUB_OUTPUT"
-          echo "graphql_over_http=$(check_file 'applicatie/graphql_over_http.md')" >> "$GITHUB_OUTPUT"
-          echo "silvester=$(check_file 'applicatie/silvester.md')" >> "$GITHUB_OUTPUT"
-          echo "notificeren_en_melden=$(check_file 'applicatie/diensten/notificeren-en-melden.md')" >> "$GITHUB_OUTPUT"
-          echo "raadplegen=$(check_file 'applicatie/diensten/raadplegen.md')" >> "$GITHUB_OUTPUT"
-          echo "toetreden=$(check_file 'applicatie/diensten/toetreden.md')" >> "$GITHUB_OUTPUT"
-          echo "uittreden=$(check_file 'applicatie/diensten/uittreden.md')" >> "$GITHUB_OUTPUT"
-          echo "testen=$(check_file 'applicatie/diensten/testen.md')" >> "$GITHUB_OUTPUT"
-          echo "identificatie_authenticatie=$(check_file 'it-infrastructuur/identificatie_authenticatie.md')" >> "$GITHUB_OUTPUT"
-          echo "netwerk=$(check_file 'it-infrastructuur/netwerk.md')" >> "$GITHUB_OUTPUT"
-          echo "logging=$(check_file 'it-infrastructuur/logging.md')" >> "$GITHUB_OUTPUT"
-          echo "uitwisselprofiel_index=$(check_file 'uitwisselprofiel/index.md')" >> "$GITHUB_OUTPUT"
-          echo "uitwisselprofiel_indicatie=$(check_file 'uitwisselprofiel/uitwisselprofiel_indicatie.md')" >> "$GITHUB_OUTPUT"
-          echo "uitwisselprofiel_bemiddeling=$(check_file 'uitwisselprofiel/uitwisselprofiel_bemiddeling.md')" >> "$GITHUB_OUTPUT"
-          echo "uitwisselprofiel_levering=$(check_file 'uitwisselprofiel/uitwisselprofiel_levering.md')" >> "$GITHUB_OUTPUT"
+          echo "achtergrond_toelichting=$(check_file 'docs/inleiding/achtergrond_toelichting.md')" >> "$GITHUB_OUTPUT"
+          echo "governance=$(check_file 'docs/inleiding/governance.md')" >> "$GITHUB_OUTPUT" 
+          echo "begrippenlijst=$(check_file 'docs/inleiding/begrippenlijst.md')" >>  "$GITHUB_OUTPUT"
+          echo "randvoorwaarden=$(check_file 'docs/organisatiebeleid/randvoorwaarden.md')" >> "$GITHUB_OUTPUT"
+          echo "ontwerpkeuzes=$(check_file 'docs/organisatiebeleid/ontwerpkeuzes.md')" >> "$GITHUB_OUTPUT"
+          echo "architectuur=$(check_file 'docs/organisatiebeleid/architectuur.md')" >> "$GITHUB_OUTPUT"
+          echo "rollen_deelnemers=$(check_file 'docs/organisatiebeleid/rollen_deelnemers.md')" >> "$GITHUB_OUTPUT"
+          echo "serviceafspraken_iWlz_netwerkmodel=$(check_file 'docs/organisatiebeleid/serviceafspraken/overkoepelend.md')" >> "$GITHUB_OUTPUT"
+          echo "serviceafspraken_operationeel_netwerkbeheer=$(check_file 'docs/organisatiebeleid/serviceafspraken/operationeel_netwerkbeheer.md')" >> "$GITHUB_OUTPUT"
+          echo "serviceafspraken_bronhoudersdeel=$(check_file 'docs/organisatiebeleid/serviceafspraken/bronhoudersdeel.md')" >> "$GITHUB_OUTPUT"
+          echo "serviceafspraken_afnemersdeel=$(check_file 'docs/organisatiebeleid/serviceafspraken/afnemersdeel.md')" >> "$GITHUB_OUTPUT"
+          echo "releasebeleid=$(check_file 'docs/organisatiebeleid/releasebeleid.md')" >> "$GITHUB_OUTPUT"
+          echo "wijzigingsverzoeken=$(check_file 'docs/organisatiebeleid/wijzigingsverzoeken.md')" >> "$GITHUB_OUTPUT"
+          echo "netwerkfuncties=$(check_file 'docs/proces/netwerkfuncties.md')" >> "$GITHUB_OUTPUT"
+          echo "procesmodel=$(check_file 'docs/proces/procesmodel.md')" >> "$GITHUB_OUTPUT"
+          echo "informatiestandaard=$(check_file 'docs/informatie/informatiestandaard.md')" >> "$GITHUB_OUTPUT"
+          echo "applicatie_index=$(check_file 'docs/applicatie/index.md')" >> "$GITHUB_OUTPUT"
+          echo "applicatiecomponenten=$(check_file 'docs/applicatie/applicatiecomponenten.md')" >> "$GITHUB_OUTPUT"
+          echo "nid_netwerkstelsel=$(check_file 'docs/applicatie/nid_netwerkstelsel.md')" >> "$GITHUB_OUTPUT"
+          echo "graphql_over_http=$(check_file 'docs/applicatie/graphql_over_http.md')" >> "$GITHUB_OUTPUT"
+          echo "silvester=$(check_file 'docs/applicatie/silvester.md')" >> "$GITHUB_OUTPUT"
+          echo "notificeren_en_melden=$(check_file 'docs/applicatie/diensten/notificeren-en-melden.md')" >> "$GITHUB_OUTPUT"
+          echo "raadplegen=$(check_file 'docs/applicatie/diensten/raadplegen.md')" >> "$GITHUB_OUTPUT"
+          echo "toetreden=$(check_file 'docs/applicatie/diensten/toetreden.md')" >> "$GITHUB_OUTPUT"
+          echo "uittreden=$(check_file 'docs/applicatie/diensten/uittreden.md')" >> "$GITHUB_OUTPUT"
+          echo "testen=$(check_file 'docs/applicatie/diensten/testen.md')" >> "$GITHUB_OUTPUT"
+          echo "identificatie_authenticatie=$(check_file 'docs/it-infrastructuur/identificatie_authenticatie.md')" >> "$GITHUB_OUTPUT"
+          echo "netwerk=$(check_file 'docs/it-infrastructuur/netwerk.md')" >> "$GITHUB_OUTPUT"
+          echo "logging=$(check_file 'docs/it-infrastructuur/logging.md')" >> "$GITHUB_OUTPUT"
+          echo "uitwisselprofiel_index=$(check_file 'docs/uitwisselprofiel/index.md')" >> "$GITHUB_OUTPUT"
+          echo "uitwisselprofiel_indicatie=$(check_file 'docs/uitwisselprofiel/uitwisselprofiel_indicatie.md')" >> "$GITHUB_OUTPUT"
+          echo "uitwisselprofiel_bemiddeling=$(check_file 'docs/uitwisselprofiel/uitwisselprofiel_bemiddeling.md')" >> "$GITHUB_OUTPUT"
+          echo "uitwisselprofiel_levering=$(check_file 'docs/uitwisselprofiel/uitwisselprofiel_levering.md')" >> "$GITHUB_OUTPUT"
 
+      - name: Haal bestaande releasetekst op
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release view "$TAG" --json body --jq .body > existing-body.txt
 
       - name: Bouw release-tekst
         env:
           PREV_TAG: ${{ steps.range.outputs.prev }}
-          # Wat je zelf in het beschrijvingsveld hebt gezet (bijv. via
-          # "Generate release notes") blijft behouden onder het overzicht.
-          EXISTING_BODY: ${{ github.event.release.body }}
         run: |
           {
             echo "Automatisch gegenereerd mutatieoverzicht van het afsprakenstelsel iWlz."
@@ -125,6 +132,7 @@ jobs:
 
           cat >> release-body.md <<'EOF'
           **Release bevat de volgende wijzigingen in de volgende onderdelen:**
+
           | Onderdeel | Wijziging |
           |-----------|-----------|
           | Welkom: | ${{ steps.changes.outputs.welkom }} |
@@ -170,12 +178,13 @@ jobs:
           Voor meer informatie over de wijzigingen, zie hieronder.
           EOF
 
-          if [ -n "$EXISTING_BODY" ]; then
-            printf '\n---\n\n%s\n' "$EXISTING_BODY" >> release-body.md
+          # Bestaande releasetekst (bijv. gegenereerde release notes) onder het overzicht
+          if [ -s existing-body.txt ]; then
+            printf '\n---\n\n' >> release-body.md
+            cat existing-body.txt >> release-body.md
           fi
 
       - name: Update releasebeschrijving
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TAG: ${{ github.event.release.tag_name }}
         run: gh release edit "$TAG" --notes-file release-body.md
