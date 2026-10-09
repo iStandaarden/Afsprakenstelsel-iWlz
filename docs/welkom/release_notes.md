@@ -2,6 +2,13 @@
 
 ## Release notes
 
+### Versie 1.0.5 - 09-10-2026
+| Laag | Status | Wijzigingen t.o.v. release 1.0.3 | 
+| :--- | :--- | :--- |
+| alle | Definitief | Alle pagina's tonen onderaan de dataum van de laatste update |
+| Begrippenlijst | Definitief | kleine url correctie |
+| Welkom | Definitief | Verwijzingen naar aanvullende informatie toegevoegd |
+
 ### Versie 1.0.4 - 06-10-2026
 | Laag | Status | Wijzigingen t.o.v. release 1.0.3 | 
 | :--- | :--- | :--- |

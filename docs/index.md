@@ -66,12 +66,18 @@ In de [release notes](./welkom/release_notes.md) is per artikel aangegeven wat d
 * **Versie en status artikel**  
   In de release notes is beschreven welke artikelen in deze versie zijn gewijzigd.
   
+## 5. Meer informatie
+  - Portaal voor **iStandaarden** in de Zorg en Ondersteuning: [homepagina iStandaarden](https://www.istandaarden.nl)
+  - Over **Het Netwerkmodel iWlz**: [homepagina iStandaarden > Netwerkmodel](https://www.istandaarden.nl/algemeen/map/netwerkmodel)
+  - De **Informatiemodellen** van de Registers: [Informatiemodel iStandaarden](https://informatiemodel.istandaarden.nl/) 
+  - Aanvullende documentatie: [Aanvullende documentatie Netwerkmodel iWlz](https://istandaarden.github.io/)
 
-## 5. Colofon
+
+## 6. Colofon
 
 | Titel | Afsprakenstelsel iWlz-netwerkmodel |
 | :-- | :-- |
-| Publicatiedatum | 06 oktober 2026 |
+| Publicatiedatum | ga naar [Versiebeheer](./welkom/versiebeheer.md)  voor de laatste publicatiedatum|
 | Auteurs | Het Afsprakenstelsel iWlz-netwerkmodel is opgesteld door het Actieprogramma iWlz in samenwerking met technisch en inhoudelijk experts, beleidsmedewerkers en juristen van betrokken partijen. |
 | Contact | Zorginstituut Nederland Postbus 320 1110 AH Diemen |
 
