@@ -18,6 +18,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   deploy:
@@ -128,6 +129,7 @@ jobs:
               --target "${{ github.sha }}" \
               --title "$TAG" \
               --generate-notes
+            gh workflow run mutation_report.yml -f tag="$TAG"
           fi
       
       # --- Future: alleen bij handmatige trigger, vanaf de door jou gekozen branch ---
