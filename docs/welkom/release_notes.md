@@ -2,6 +2,11 @@
 
 ## Release notes
 
+### Versie 1.0.4 - 06-10-2026
+| Laag | Status | Wijzigingen t.o.v. release 1.0.3 | 
+| :--- | :--- | :--- |
+| Begrippenlijst | Definitief | Diverse begrippen toegevoegd |
+
 ### Versie 1.0.3 - 24-09-2026
 | Laag | Status | Wijzigingen t.o.v. release 1.0.2 |
 | :-- | :-- | :-- |
