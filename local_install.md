@@ -39,8 +39,12 @@ Om te publiceren is dit dus niet noodzakelijk, wel handig.
    ```
 5. Install plugin voor het genereren van een pdf:
     ```
-   pip install mkdocs-to-pdf
-    ``` 
+    pip install mkdocs-to-pdf
+    ```
+6. Install plugin voor het plaatsten van de update-datum
+   ```
+   pip install mkdocs-git-revision-date-localized-plugin
+   ```
 
 ### Opstarten lokale server:
 
