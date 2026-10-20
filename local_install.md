@@ -72,14 +72,18 @@ Standaard wordt er lokaal geen PDF gegenereerd. Dit is om het publicatie proces 
 
 **Fysieke pdf lokaal**  
 Wil je dit wel een keer laten genereren voer dan het volgende uit in de terminal nadat de Python VM is opgestart:  
-`ENABLED_PDF_EXPORT=1 mkdocs build`
+```
+ENABLED_PDF_EXPORT=1 mkdocs build
+```
 
 Daarna zal er een pdf beschikbaar zijn onder: `./site/pdf`
 
 **pdf in runtime lokaal**
 
 PDF beschikbaar stellen in lokale website:  
-`ENABLED_PDF_EXPORT=1 mkdocs serve`
+```
+ENABLED_PDF_EXPORT=1 mkdocs serve
+```
 
 Daarna zal er een pdf beschikbaar zijn via: http://localhost:8000/Afsprakenstelsel-iWlz/pdf/afsprakenstelsel-iWlz.pdf
 
