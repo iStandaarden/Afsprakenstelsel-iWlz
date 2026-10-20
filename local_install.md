@@ -45,6 +45,10 @@ Om te publiceren is dit dus niet noodzakelijk, wel handig.
    ```
    pip install mkdocs-git-revision-date-localized-plugin
    ```
+7. Install plugin voor mermaid naar svg conversie
+   ```
+   pip install mkdocs-mermaid-to-svg
+   ```
 
 ### Opstarten lokale server:
 
