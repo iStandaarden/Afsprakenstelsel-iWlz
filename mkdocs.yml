@@ -39,8 +39,6 @@ theme:
       accent: deep purple
   features:
     - navigation.top
-    # - header.autohide
-    # - navigation.sections
     - navigation.instant
     - navigation.tracking
     - navigation.footer
@@ -56,7 +54,6 @@ theme:
     - content.tabs.link
     - content.tooltips
     - toc.follow
-    # - toc.integrate
 
 # plugins
 plugins:
@@ -68,35 +65,20 @@ plugins:
       timezone: Europe/Amsterdam
       fallback_to_build_date: true
       enable_creation_date: false
-  - to-pdf:
-      enabled_if_env: ENABLED_PDF_EXPORT
-      cover_title: Afsprakenstelsel iWlz
-      cover_subtitle: !ENV [PDF_VERSION_LABEL, "onbekende versie"]
-      cover_logo: docs/assets/ZinBanner.png
-      copyright: "iStandaarden.nl"
-      output_path: pdf/afsprakenstelsel-iWlz.pdf
-      toc_title: Inhoudsopgave
-      toc_level: 2
-      # heading_shift: true
-      # ordered_chapter_level: 2
-      cover: true
-      back_cover: false
 
 # Custom CSS
 extra_css:
   - css/zin.css
   - css/mermaid-zoom.css
-  - css/print.css
 
 # extra JavaScript
 extra_javascript:
-  - assets/javascripts/svg-pan-zoom.min.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js
-  # - assets/javascripts/mermaid-panzoom.js
   - assets/javascripts/mermaid-zoom.js
+  - https://unpkg.com/bpmn-js@17.11.1/dist/bpmn-navigated-viewer.production.min.js
+  - assets/javascripts/bpmn-viewer.js
 
 extra:
-  # pdf_url: pdf/afsprakenstelsel-iWlz.pdf
   # --- mike-versioning ---
   # 'provider: mike' activeert de versie-dropdown in de header van Material.
   # 'default: current' zorgt dat bezoekers die op de root-url landen (.../Afsprakenstelsel-iWlz/)
