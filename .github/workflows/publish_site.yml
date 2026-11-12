@@ -119,10 +119,6 @@ jobs:
         id: future_version
         run: echo "value=$(tr -d '[:space:]' < future-version.txt)" >> "$GITHUB_OUTPUT"
 
-      - name: Set version label for PDF cover (future)
-        if: github.event_name == 'workflow_dispatch' && github.ref != 'refs/heads/main'
-        run: echo "PDF_VERSION_LABEL=Versie ${{ steps.future_version.outputs.value }} ${{ inputs.future_title }}" >> $GITHUB_ENV
-
       - name: Deploy future version with mike (future → /<versie>/, alias future, geen default)
         if: github.event_name == 'workflow_dispatch' && github.ref != 'refs/heads/main'
         run: |
