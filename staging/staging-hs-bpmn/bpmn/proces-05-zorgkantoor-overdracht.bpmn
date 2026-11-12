@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0ctcng6" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.31.1">
+  <bpmn:collaboration id="Collaboration_1njhm15">
+    <bpmn:participant id="Participant_0g1xtzf" name="Huidig verantwoordelijk zorgkantoor" processRef="Process_0gndvaz" />
+    <bpmn:participant id="Participant_07j5cy2" name="Nieuw verantwoordelijk zorgkantoor" processRef="Process_0t2z2oc" />
+    <bpmn:messageFlow id="Flow_0hkdfwj" sourceRef="Activity_0aidfj6" targetRef="Event_0usmgst" />
+    <bpmn:messageFlow id="Flow_1kkmmid" sourceRef="Activity_05flqd3" targetRef="Participant_0g1xtzf" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0gndvaz" isExecutable="false">
+    <bpmn:startEvent id="StartEvent_0zemem9" name="Start overdracht na BRP melding verhuizing">
+      <bpmn:outgoing>Flow_0aahu73</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_0lo8fm4" name="Bepaal over te dragen informatie">
+      <bpmn:incoming>Flow_0aahu73</bpmn:incoming>
+      <bpmn:outgoing>Flow_065p1a8</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_0aidfj6" name="Overdracht voor nieuw verantwoordelijk zorgkantoor opstellen">
+      <bpmn:incoming>Flow_065p1a8</bpmn:incoming>
+      <bpmn:outgoing>Flow_1rw1h1a</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="Event_14lpnnb" name="Overdracht voltooid">
+      <bpmn:incoming>Flow_1rw1h1a</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0aahu73" sourceRef="StartEvent_0zemem9" targetRef="Activity_0lo8fm4" />
+    <bpmn:sequenceFlow id="Flow_065p1a8" sourceRef="Activity_0lo8fm4" targetRef="Activity_0aidfj6" />
+    <bpmn:sequenceFlow id="Flow_1rw1h1a" sourceRef="Activity_0aidfj6" targetRef="Event_14lpnnb" />
+  </bpmn:process>
+  <bpmn:process id="Process_0t2z2oc">
+    <bpmn:intermediateCatchEvent id="Event_0usmgst" name="Client overdracht ontvangen">
+      <bpmn:outgoing>Flow_11vwjuo</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1v20v9l" />
+    </bpmn:intermediateCatchEvent>
+    <bpmn:task id="Activity_05flqd3" name="Overdracht informatie raadplegen">
+      <bpmn:incoming>Flow_11vwjuo</bpmn:incoming>
+      <bpmn:outgoing>Flow_0j0tfq6</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="Event_0ngqxja" name="Overdracht voltooid">
+      <bpmn:incoming>Flow_1467qxg</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:subProcess id="Activity_125tv6k" name="Toeleiden">
+      <bpmn:incoming>Flow_0j0tfq6</bpmn:incoming>
+      <bpmn:outgoing>Flow_1467qxg</bpmn:outgoing>
+    </bpmn:subProcess>
+    <bpmn:sequenceFlow id="Flow_11vwjuo" sourceRef="Event_0usmgst" targetRef="Activity_05flqd3" />
+    <bpmn:sequenceFlow id="Flow_0j0tfq6" sourceRef="Activity_05flqd3" targetRef="Activity_125tv6k" />
+    <bpmn:sequenceFlow id="Flow_1467qxg" sourceRef="Activity_125tv6k" targetRef="Event_0ngqxja" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1njhm15">
+      <bpmndi:BPMNShape id="Participant_0g1xtzf_di" bpmnElement="Participant_0g1xtzf" isHorizontal="true">
+        <dc:Bounds x="160" y="80" width="600" height="230" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_0zemem9">
+        <dc:Bounds x="242" y="172" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="210" y="215" width="100" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0lo8fm4_di" bpmnElement="Activity_0lo8fm4">
+        <dc:Bounds x="330" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0aidfj6_di" bpmnElement="Activity_0aidfj6">
+        <dc:Bounds x="490" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_14lpnnb_di" bpmnElement="Event_14lpnnb">
+        <dc:Bounds x="652" y="172" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="643" y="215" width="55" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0aahu73_di" bpmnElement="Flow_0aahu73">
+        <di:waypoint x="278" y="190" />
+        <di:waypoint x="330" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_065p1a8_di" bpmnElement="Flow_065p1a8">
+        <di:waypoint x="430" y="190" />
+        <di:waypoint x="490" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1rw1h1a_di" bpmnElement="Flow_1rw1h1a">
+        <di:waypoint x="590" y="190" />
+        <di:waypoint x="652" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Participant_07j5cy2_di" bpmnElement="Participant_07j5cy2" isHorizontal="true">
+        <dc:Bounds x="160" y="340" width="600" height="250" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0uhzigt_di" bpmnElement="Event_0usmgst">
+        <dc:Bounds x="242" y="442" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="218" y="485" width="84" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_05flqd3_di" bpmnElement="Activity_05flqd3">
+        <dc:Bounds x="330" y="420" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0ngqxja_di" bpmnElement="Event_0ngqxja">
+        <dc:Bounds x="652" y="442" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="643" y="485" width="55" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_11y1wqm_di" bpmnElement="Activity_125tv6k">
+        <dc:Bounds x="490" y="420" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_11vwjuo_di" bpmnElement="Flow_11vwjuo">
+        <di:waypoint x="278" y="460" />
+        <di:waypoint x="330" y="460" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0j0tfq6_di" bpmnElement="Flow_0j0tfq6">
+        <di:waypoint x="430" y="460" />
+        <di:waypoint x="490" y="460" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1467qxg_di" bpmnElement="Flow_1467qxg">
+        <di:waypoint x="590" y="460" />
+        <di:waypoint x="652" y="460" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hkdfwj_di" bpmnElement="Flow_0hkdfwj">
+        <di:waypoint x="540" y="230" />
+        <di:waypoint x="540" y="370" />
+        <di:waypoint x="260" y="370" />
+        <di:waypoint x="260" y="442" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1kkmmid_di" bpmnElement="Flow_1kkmmid">
+        <di:waypoint x="380" y="420" />
+        <di:waypoint x="380" y="310" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_0uo9r3z">
+    <bpmndi:BPMNPlane id="BPMNPlane_0yf5375" bpmnElement="Activity_125tv6k" />
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
