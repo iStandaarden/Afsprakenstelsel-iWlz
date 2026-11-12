@@ -29,26 +29,25 @@ Om te publiceren is dit dus niet noodzakelijk, wel handig.
    ```
    source venv/bin/activate
    ```   
-3. Install mkdocs material
+3. Install requirements
    ```
-   pip install mkdocs-material
+   pip install -r requirements.txt
    ```
-4. Install plugin glightbox voor het kunnen vergroten van plaatjes in een pop-up:
+4. test installatie
    ```
-   pip install mkdocs-glightbox
+   mkdocs serve
    ```
-5. Install plugin voor het genereren van een pdf:
-    ```
-    pip install mkdocs-to-pdf
-    ```
-6. Install plugin voor het plaatsten van de update-datum
-   ```
-   pip install mkdocs-git-revision-date-localized-plugin
-   ```
-7. Install plugin voor mermaid naar svg conversie
-   ```
-   pip install mkdocs-mermaid-to-svg
-   ```
+
+### Volledige herinstallatie:
+
+  ```shell
+  deactivate
+  rm -rf venv
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+  mkdocs serve
+  ```
 
 ### Opstarten lokale server:
 

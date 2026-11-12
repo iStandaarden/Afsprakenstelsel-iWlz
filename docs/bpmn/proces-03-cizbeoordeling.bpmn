@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_03s20oi" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.31.1">
+  <bpmn:collaboration id="Collaboration_02iirms">
+    <bpmn:participant id="Participant_0qb9mqf" name="CIZ - beoordeling" processRef="Process_1i0zgw3" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1i0zgw3" isExecutable="false">
+    <bpmn:startEvent id="StartEvent_0ieunct" name="Aanvraag Wlz ontvangen">
+      <bpmn:outgoing>Flow_1pys769</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_1c2jkbo" name="Ja" sourceRef="Gateway_1kpdum2" targetRef="Activity_1gxhhp4" />
+    <bpmn:sequenceFlow id="Flow_1h1em65" sourceRef="Activity_1gxhhp4" targetRef="Event_1syiqyk" />
+    <bpmn:task id="Activity_1aruwem" name="Beoordelen aanvraag">
+      <bpmn:incoming>Flow_1pys769</bpmn:incoming>
+      <bpmn:outgoing>Flow_1uxgu3x</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1pys769" sourceRef="StartEvent_0ieunct" targetRef="Activity_1aruwem" />
+    <bpmn:exclusiveGateway id="Gateway_1kpdum2" name="Recht op zorg uit Wlz">
+      <bpmn:incoming>Flow_1uxgu3x</bpmn:incoming>
+      <bpmn:outgoing>Flow_1c2jkbo</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0u3welh</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1uxgu3x" sourceRef="Activity_1aruwem" targetRef="Gateway_1kpdum2" />
+    <bpmn:task id="Activity_1gxhhp4" name="Afgeven indicatiebesluit">
+      <bpmn:incoming>Flow_1c2jkbo</bpmn:incoming>
+      <bpmn:outgoing>Flow_1h1em65</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="Event_1syiqyk" name="Indicatiebesluit afgegeven">
+      <bpmn:incoming>Flow_1h1em65</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0u3welh" name="Nee" sourceRef="Gateway_1kpdum2" targetRef="Event_0yudnrp" />
+    <bpmn:endEvent id="Event_0yudnrp" name="Einde aanvraag Wlz-zorg">
+      <bpmn:incoming>Flow_0u3welh</bpmn:incoming>
+    </bpmn:endEvent>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_02iirms">
+      <bpmndi:BPMNShape id="Participant_0qb9mqf_di" bpmnElement="Participant_0qb9mqf" isHorizontal="true">
+        <dc:Bounds x="156" y="80" width="734" height="270" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_0ieunct">
+        <dc:Bounds x="232" y="162" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="216" y="205" width="69" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1aruwem_di" bpmnElement="Activity_1aruwem">
+        <dc:Bounds x="340" y="140" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1kpdum2_di" bpmnElement="Gateway_1kpdum2" isMarkerVisible="true">
+        <dc:Bounds x="515" y="155" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="498" y="117.5" width="84" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1gxhhp4_di" bpmnElement="Activity_1gxhhp4">
+        <dc:Bounds x="630" y="140" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1syiqyk_di" bpmnElement="Event_1syiqyk">
+        <dc:Bounds x="802" y="162" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="777" y="205" width="86" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0yudnrp_di" bpmnElement="Event_0yudnrp">
+        <dc:Bounds x="662" y="252" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="641" y="295" width="78" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1c2jkbo_di" bpmnElement="Flow_1c2jkbo">
+        <di:waypoint x="565" y="180" />
+        <di:waypoint x="630" y="180" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="564" y="183" width="12" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1h1em65_di" bpmnElement="Flow_1h1em65">
+        <di:waypoint x="730" y="180" />
+        <di:waypoint x="802" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1pys769_di" bpmnElement="Flow_1pys769">
+        <di:waypoint x="268" y="180" />
+        <di:waypoint x="340" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1uxgu3x_di" bpmnElement="Flow_1uxgu3x">
+        <di:waypoint x="440" y="180" />
+        <di:waypoint x="515" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0u3welh_di" bpmnElement="Flow_0u3welh">
+        <di:waypoint x="540" y="205" />
+        <di:waypoint x="540" y="270" />
+        <di:waypoint x="662" y="270" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="545" y="208.5" width="21" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
