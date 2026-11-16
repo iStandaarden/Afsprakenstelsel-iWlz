@@ -67,10 +67,48 @@ In de [release notes](./welkom/release_notes.md) is per artikel aangegeven wat d
   In de release notes is beschreven welke artikelen in deze versie zijn gewijzigd.
   
 ## 5. Meer informatie
-  - Portaal voor **iStandaarden** in de Zorg en Ondersteuning: [homepagina iStandaarden](https://www.istandaarden.nl)
-  - Over **Het Netwerkmodel iWlz**: [homepagina iStandaarden > Netwerkmodel](https://www.istandaarden.nl/algemeen/map/netwerkmodel)
-  - De **Informatiemodellen** van de Registers: [Informatiemodel iStandaarden](https://informatiemodel.istandaarden.nl/) 
-  - Aanvullende documentatie: [Aanvullende documentatie Netwerkmodel iWlz](https://istandaarden.github.io/)
+<div class="grid cards" markdown>
+
+-   :material-monitor-dashboard:{ .lg .middle } __Informatiemodel iStandaarden__
+
+    ---
+
+    In het Informatiemodel iStandaarden liggen de specificaties voor de registers vast. Het model biedt een totaaloverzicht van de lopende releases en ziet u welke releases in ontwikkeling zijn.
+
+    U vindt er ook de informatiemodellen van de iWmo, iJw, iEb en iPgb.
+
+    [lees verder](https://informatiemodel.istandaarden.nl/)
+
+-   :material-graphql:{ .lg .middle } __Documentatie Koppelvlakspecificaties__
+
+    ---
+
+    De toegang tot de gegevens in het netwerkmodel verloopt GraphQL. Hiervoor zijn per register GraphQL specificaties opgesteld. De documentatie bij deze technische specificaties en notificaties is te vinden op de Documentatie Koppelvlakspecificaties site.
+
+    [lees verder](https://istandaarden.github.io/koppelvlakspecificatie-netwerkmodel/)
+
+
+-   :material-information-outline:{ .lg .middle } __Portaal voor iStandaarden in de Zorg en Ondersteuning__
+
+    ---
+
+    Alles over **iStandaarden**: van beheer, governance en samenwerking met de keten tot het informatiemodel voor veilige en eenduidige gegevensuitwisseling in de zorg.
+
+    [lees verder](https://www.istandaarden.nl)
+
+-   :material-lan:{ .lg .middle } __Het Netwerkmodel__
+
+    ---
+
+    Het Netwerkmodel iWlz vervangt het huidige berichtenverkeer binnen de Wlz. Gegevens blijven bij de bron en zijn beschikbaar voor geautoriseerde partijen: betrouwbaar en actueel. Lees er meer over op de website van iStandaarden.
+
+    [lees verder](https://www.istandaarden.nl/algemeen/map/netwerkmodel)
+
+</div>
+
+---  
+
+[Terug](https://istandaarden.github.io/current/) naar *Aanvullende documentatie Netwerkmodel*
 
 
 ## 6. Colofon
