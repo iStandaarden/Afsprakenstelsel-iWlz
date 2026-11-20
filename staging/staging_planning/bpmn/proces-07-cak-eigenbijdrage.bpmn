@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1thqbph" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.31.1">
+  <bpmn:collaboration id="Collaboration_1sdlxgy">
+    <bpmn:participant id="Participant_16tdcp4" name="CAK - eigen bijdrage" processRef="Process_0ewoje7" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0ewoje7" isExecutable="false">
+    <bpmn:startEvent id="StartEvent_1elqesn" name="Zorglevering is gestart">
+      <bpmn:outgoing>Flow_1hpuhn5</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:exclusiveGateway id="Gateway_1py28ia" name="Is de clïent ouder dan 18 jaar?">
+      <bpmn:incoming>Flow_1hpuhn5</bpmn:incoming>
+      <bpmn:outgoing>Flow_0jysfd4</bpmn:outgoing>
+      <bpmn:outgoing>Flow_12kaos8</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Activity_117w86y" name="Opleggen eigen bijdrage">
+      <bpmn:incoming>Flow_0jysfd4</bpmn:incoming>
+      <bpmn:outgoing>Flow_0orj5l8</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="Event_0d08p64" name="Eigen bijdrage opgelegd">
+      <bpmn:incoming>Flow_0orj5l8</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="Event_0zcxn50" name="Er wordt geen eigen bijdrage opgelegd">
+      <bpmn:incoming>Flow_12kaos8</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1hpuhn5" sourceRef="StartEvent_1elqesn" targetRef="Gateway_1py28ia" />
+    <bpmn:sequenceFlow id="Flow_0jysfd4" name="Ja" sourceRef="Gateway_1py28ia" targetRef="Activity_117w86y" />
+    <bpmn:sequenceFlow id="Flow_12kaos8" name="Nee" sourceRef="Gateway_1py28ia" targetRef="Event_0zcxn50" />
+    <bpmn:sequenceFlow id="Flow_0orj5l8" sourceRef="Activity_117w86y" targetRef="Event_0d08p64" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1sdlxgy">
+      <bpmndi:BPMNShape id="Participant_16tdcp4_di" bpmnElement="Participant_16tdcp4" isHorizontal="true">
+        <dc:Bounds x="160" y="80" width="600" height="288" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1elqesn">
+        <dc:Bounds x="246" y="162" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="228" y="205" width="73" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1py28ia_di" bpmnElement="Gateway_1py28ia" isMarkerVisible="true">
+        <dc:Bounds x="335" y="155" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="317" y="105" width="85" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_117w86y_di" bpmnElement="Activity_117w86y">
+        <dc:Bounds x="440" y="140" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0d08p64_di" bpmnElement="Event_0d08p64">
+        <dc:Bounds x="602" y="162" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="585" y="205" width="71" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0zcxn50_di" bpmnElement="Event_0zcxn50">
+        <dc:Bounds x="602" y="272" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="572" y="315" width="95" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1hpuhn5_di" bpmnElement="Flow_1hpuhn5">
+        <di:waypoint x="282" y="180" />
+        <di:waypoint x="335" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0jysfd4_di" bpmnElement="Flow_0jysfd4">
+        <di:waypoint x="385" y="180" />
+        <di:waypoint x="440" y="180" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="384" y="162" width="12" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0orj5l8_di" bpmnElement="Flow_0orj5l8">
+        <di:waypoint x="540" y="180" />
+        <di:waypoint x="602" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12kaos8_di" bpmnElement="Flow_12kaos8">
+        <di:waypoint x="360" y="205" />
+        <di:waypoint x="360" y="290" />
+        <di:waypoint x="602" y="290" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="365" y="217.5" width="21" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
