@@ -1,6 +1,11 @@
 # Release notes
 
-## Release notes
+
+### Versie 1.0.7 - 20-11-2026
+| Laag | Status | Wijzigingen t.o.v. release 1.0.6 | 
+| :--- | :--- | :--- |
+| Welkom | Definitief | Nieuw hoofdstuk voor [Publicatie planning](planning.md) toegevoegd  |
+
 
 ### Versie 1.0.6 - 12-11-2026
 | Laag | Status | Wijzigingen t.o.v. release 1.0.5 | 

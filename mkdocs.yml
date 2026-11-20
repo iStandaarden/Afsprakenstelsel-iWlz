@@ -120,6 +120,7 @@ nav:
       - index.md
       - Versiebeheer: welkom/versiebeheer.md
       - Release notes: welkom/release_notes.md
+      - Publicatie planning: welkom/planning.md
   - Inleiding:
       - inleiding/index.md
       - Achtergrond en toelichting: inleiding/achtergrond_toelichting.md

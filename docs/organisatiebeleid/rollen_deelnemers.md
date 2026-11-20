@@ -4,6 +4,9 @@
 
 Dit artikel geeft inzage in de rollen en verantwoordelijkheden die nodig zijn voor het iWlz-netwerkmodel. Vervolgens wordt aangegeven door welke deelnemers deze rollen worden ingevuld. Iedere deelnemer heeft meerdere rollen.
 
+!!! note
+    Artikel is momenteel onder redactie zie [Welkom > Planning](../welkom/planning.md)
+
 ## 2. Roltypen
 
 Aansluitend op DIZRA (R01, [Randvoorwaarden](./randvoorwaarden.md#r01-de-referentiearchitectuur-voor-een-duurzaam-informatiestelsel-voor-de-zorg-dizra)) worden in het Afsprakenstelsel iWlz-netwerkmodel drie verschillende roltypen onderscheiden. Deze roltypen zijn:

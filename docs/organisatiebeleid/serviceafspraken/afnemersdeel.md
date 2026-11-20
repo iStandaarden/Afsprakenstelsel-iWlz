@@ -1,5 +1,8 @@
 # Serviceafspraken Afnemersdeel
 
+!!! note
+    Artikel is momenteel onder redactie zie [Welkom > Planning](../../welkom/planning.md)
+
 ## 1. Inleiding
 
 In dit artikel zijn de serviceafspraken opgenomen die gelden voor **afnemers** binnen het iWlz-netwerkmodel. Deze afspraken beschrijven de verantwoordelijkheden van afnemers bij het gebruik van het netwerk en de bijbehorende diensten.
@@ -14,6 +17,7 @@ De serviceafspraken in dit deel hebben betrekking op onder meer:
 - het uitvoeren van logging en monitoring binnen de eigen organisatie.
 
 Dit artikel gaat uitsluitend in op de rol van afnemers. Afspraken over diensten van de [operationeel netwerkbeheerder](./operationeel_netwerkbeheer.md) of beheer door [bronhouders](./bronhoudersdeel.md) zijn opgenomen in de desbetreffende delen van het afsprakenstelsel. Daarnaast zijn de algemene afspraken over serviceafspraken van toepassing die zijn verwoord in het artikel [Serviceafspraken iWlz Netwerkmodel](./overkoepelend.md).
+
 
 ## 2. Algemene serviceafspraken afnemers
 

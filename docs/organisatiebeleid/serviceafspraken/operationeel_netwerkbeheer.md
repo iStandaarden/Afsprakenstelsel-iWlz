@@ -1,5 +1,7 @@
 # Serviceafspraken Operationeel netwerkbeheerder
 
+!!! note
+    Artikel is momenteel onder redactie zie [Welkom > Planning](../../welkom/planning.md)
 
 ## 1. Inleiding
 
@@ -9,6 +11,7 @@ De Beschikbaarheid, Integriteit, Vertrouwelijkheid (BIV) classificaties in dit a
 
 !!! warning
     Dit artikel is een informatieve weergave van de serviceafspraken zoals die gelden voor operationeel netwerkbeheer binnen het iWlz-netwerkmodel. De inhoud is afgeleid van formele SLA’s, maar vormt geen 1-op-1 afschrift van ondertekende overeenkomsten. De ondertekende overeenkomsten blijven leidend voor de organisaties (zie ook [Serviceafspraken > 1.2 Positie van de serviceafspraken](./overkoepelend.md#12-positie-van-de-serviceafspraken)).
+
 
 ## 2. Servicevenster en contactgegevens
 
