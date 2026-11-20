@@ -1,6 +1,8 @@
 # Serviceafspraken overkoepelend<br/>iWlz-netwerkmodel
 
-
+!!! note
+    Artikel is momenteel onder redactie zie [Welkom > Planning](../../welkom/planning.md)
+    
 ## 1. Over de iWlz-netwerkmodel serviceafspraken
 
 ### 1.1 Doel

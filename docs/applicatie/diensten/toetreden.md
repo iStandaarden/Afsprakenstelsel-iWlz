@@ -1,5 +1,8 @@
 # Toetreden
 
+!!! note
+    Artikel is momenteel onder redactie zie [Welkom > Planning](../../welkom/planning.md)
+
 ## 1. Inleiding
 
 Dit artikel beschrijft de dienst toetreden, bestaande uit twee onderdelen:
